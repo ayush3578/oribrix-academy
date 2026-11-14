@@ -1,0 +1,14 @@
+[
+ {"id": "vendor-onboarding", "status": "live",
+  "title": {"en": "Vendor Onboarding", "hi": "Vendor Onboarding"},
+  "desc": {"en": "How vendors apply, get approved, list stock, handle prices, orders and payouts. 8 video modules, notes and the final quiz.",
+           "hi": "Vendor kaise apply karta hai, approve hota hai, stock list karta hai, prices, orders aur payouts sambhalta hai. 8 video modules, notes aur final quiz."}},
+ {"id": "admin-portal", "status": "soon",
+  "title": {"en": "Admin Portal", "hi": "Admin Portal"},
+  "desc": {"en": "A full walkthrough of the Oribrix admin panel: live ops, catalog, pricing rules, orders and reports.",
+           "hi": "Oribrix admin panel ka poora walkthrough: live ops, catalog, pricing rules, orders aur reports."}},
+ {"id": "vendor-app", "status": "soon",
+  "title": {"en": "Vendor App", "hi": "Vendor App"},
+  "desc": {"en": "Using the vendor console day to day: inventory, orders, drivers, settlements and support.",
+           "hi": "Vendor console ka roz ka use: inventory, orders, drivers, settlements aur support."}}
+]

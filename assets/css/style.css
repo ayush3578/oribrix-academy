@@ -151,3 +151,55 @@ main{min-height:70vh}
   .stats{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:480px){ .ctrl{gap:4px;padding:8px} .time{display:none} .lang button{padding:5px 8px} }
+
+.notescard{border:1.5px solid #E3C472;background:linear-gradient(135deg,#fff,#FFFBEF)}
+.num.nt{background:#C9992F;font-size:20px}
+.nbtns{display:flex;gap:10px;flex-wrap:wrap}
+.notes-page .nhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin:8px 0 16px}
+.notes-page .nhead p{margin:4px 0 0;color:var(--muted)}
+.pdfwrap{border:1px solid #DCE7F0;border-radius:14px;overflow:hidden;background:#fff;height:80vh}
+.pdfwrap iframe{width:100%;height:100%;border:0}
+
+.practicecard{border:1.5px solid #9DD3F7;background:linear-gradient(135deg,#fff,#F0F8FF)}
+.num.pq{background:#0E8FE0}
+.opt.right{border-color:var(--ok);background:#ECFAF2} .opt.right b{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:#FFF1F1} .opt.wrong b{background:var(--bad);color:#fff}
+.opt.dim{opacity:.55} .opt:disabled{cursor:default}
+.fb{margin-top:14px;padding:12px 14px;border-radius:10px;font-size:15px}
+.fb.ok{background:#ECFAF2;border-left:5px solid var(--ok)} .fb.no{background:#FFF6E6;border-left:5px solid #E0A100}
+
+.adminlink{color:#fff;font-weight:600;font-size:14px;text-decoration:none;background:rgba(255,255,255,.18);padding:6px 12px;border-radius:20px;margin-right:12px}
+.admin .ahead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin:8px 0 18px}
+.admin h1{margin:0}
+.stats{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-bottom:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:26px;color:var(--navy)} .stat span{font-size:13px;color:var(--muted)}
+.agrid{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;margin-bottom:16px}
+.admin .card h3{margin:0 0 12px}
+.funnel>div{display:grid;grid-template-columns:80px 1fr 34px;gap:10px;align-items:center;font-size:14px;margin:7px 0}
+.funnel .bar{margin:0} .funnel b{text-align:right}
+.hardq{margin:0;padding-left:20px;font-size:14px} .hardq li{margin:0 0 8px}
+.tools{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.tools input,.tools select{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.tools input{flex:1;min-width:200px}
+.tablewrap{overflow-x:auto}
+.atable{width:100%;border-collapse:collapse;font-size:14px}
+.atable th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);padding:8px 10px;border-bottom:2px solid var(--line);white-space:nowrap}
+.atable td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.atable small{color:var(--muted)} .atable a.small{font-size:12px}
+.dots{display:flex;gap:3px;margin-bottom:3px} .dots i{width:12px;height:12px;border-radius:3px;background:#E4EAF1} .dots i.on{background:var(--ok)}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:12px;background:#EEF2F6;color:var(--muted);white-space:nowrap}
+.badge.ok,.badge.s-passed{background:#E3F5EA;color:var(--ok)} .badge.no,.badge.s-failed{background:#FDECEC;color:var(--bad)}
+.badge.warn{background:#FFF3DF;color:#B76E00} .badge.s-ready{background:#FFF3DF;color:#B76E00} .badge.s-progress{background:#E3F4FF;color:var(--blue-d)}
+.btn.sm{padding:6px 12px;font-size:13px}
+.pin{font:inherit;font-size:22px;letter-spacing:6px;text-align:center;padding:12px;border:1.5px solid var(--line);border-radius:12px;width:220px;margin:12px auto 0;display:block}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.agrid{grid-template-columns:1fr}}
+
+.ccards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-bottom:40px}
+.ccard{display:flex;flex-direction:column;gap:10px;border-top:5px solid var(--blue)}
+.ccard.done{border-top-color:var(--ok)} .ccard.soon{opacity:.7;border-top-color:#B8C6D4}
+.ccard h2{margin:0;font-size:22px} .ccard p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.ctop{display:flex;justify-content:space-between;align-items:center}
+.cprog{display:flex;align-items:center;gap:10px} .cprog .bar{flex:1;margin:0} .cprog b{font-size:14px;color:var(--navy)}
+.dash>.back,.hub>.back,.cert-page>.back{display:inline-block;margin-top:8px} .hub{padding-top:18px}
+.ccard.done .bar i{background:var(--ok)}

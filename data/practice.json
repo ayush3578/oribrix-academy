@@ -1,0 +1,388 @@
+[
+ {
+  "m": 1,
+  "q": {
+   "en": "A vendor wants to sell a new tile brand that isn't in the app. What should happen?",
+   "hi": "Vendor ek naya tile brand bechna chahta hai jo app mein nahi hai. Kya hona chahiye?"
+  },
+  "o": {
+   "en": [
+    "The vendor creates the product",
+    "The admin adds it to the master catalog",
+    "The customer requests it"
+   ],
+   "hi": [
+    "Vendor khud product banata hai",
+    "Admin use master catalog mein add karta hai",
+    "Customer request karta hai"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Only the admin creates products. Once it is in the master catalog, the vendor can add stock for it.",
+   "hi": "Products sirf admin banata hai. Master catalog mein aane ke baad vendor uska stock add kar sakta hai."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "Which app does the vendor's team use to manage stock, orders and payouts?",
+   "hi": "Vendor ki team stock, orders aur payouts kis app mein manage karti hai?"
+  },
+  "o": {
+   "en": [
+    "Customer app",
+    "Vendor console",
+    "Admin panel"
+   ],
+   "hi": [
+    "Customer app",
+    "Vendor console",
+    "Admin panel"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "The vendor console is the seller's app. The admin panel is for the Oribrix team, and the customer app is for buyers.",
+   "hi": "Vendor console seller ka app hai. Admin panel Oribrix team ke liye hai, aur customer app buyers ke liye."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "A vendor's IFSC is HDFC1000123. What's wrong?",
+   "hi": "Vendor ka IFSC HDFC1000123 hai. Isme kya galat hai?"
+  },
+  "o": {
+   "en": [
+    "Nothing, it's fine",
+    "The 5th character must be 0",
+    "IFSC must be 14 digits"
+   ],
+   "hi": [
+    "Kuch nahi, sahi hai",
+    "5th character 0 hona chahiye",
+    "IFSC 14 digit ka hona chahiye"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "An IFSC has 11 characters and the 5th one is always zero. Here it is 1, so the form rejects it.",
+   "hi": "IFSC 11 characters ka hota hai aur 5th character hamesha zero hota hai. Yahan 1 hai, isliye form reject karega."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "Which of these documents is optional?",
+   "hi": "In mein se kaunsa document optional hai?"
+  },
+  "o": {
+   "en": [
+    "GST certificate",
+    "Cancelled cheque",
+    "ISO 9001 certificate",
+    "Owner Aadhaar"
+   ],
+   "hi": [
+    "GST certificate",
+    "Cancelled cheque",
+    "ISO 9001 certificate",
+    "Owner Aadhaar"
+   ]
+  },
+  "a": 2,
+  "x": {
+   "en": "GST certificate, business PAN, cancelled cheque and owner Aadhaar are mandatory. Trade licence, ISO 9001 and MSME/Udyam are optional.",
+   "hi": "GST certificate, business PAN, cancelled cheque aur owner Aadhaar mandatory hain. Trade licence, ISO 9001 aur MSME/Udyam optional hain."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "All documents show Approved, but the vendor can't log in. Why?",
+   "hi": "Saare documents Approved dikh rahe hain, phir bhi vendor login nahi kar pa raha. Kyun?"
+  },
+  "o": {
+   "en": [
+    "The vendor typed a wrong password",
+    "Final vendor approval wasn't done",
+    "Documents take 24 hours"
+   ],
+   "hi": [
+    "Vendor ne galat password daala",
+    "Final vendor approval nahi hua",
+    "Documents mein 24 ghante lagte hain"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Final approval is a separate step: open the vendor, set Vendor action to Approved and click Update status.",
+   "hi": "Final approval alag step hai: vendor kholo, Vendor action Approved karo aur Update status dabao."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "A vendor asks for a custom category, 'Outdoor sports'. Who decides?",
+   "hi": "Vendor ek custom category 'Outdoor sports' maangta hai. Faisla kaun karta hai?"
+  },
+  "o": {
+   "en": [
+    "It is added automatically",
+    "The admin approves or rejects the request",
+    "The vendor's team lead"
+   ],
+   "hi": [
+    "Apne aap add ho jaati hai",
+    "Admin request approve ya reject karta hai",
+    "Vendor ka team lead"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Custom categories are requests. The admin reviews them during KYC and approves or rejects each one.",
+   "hi": "Custom categories request hoti hain. Admin KYC ke time unhe dekhkar approve ya reject karta hai."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Your CSV upload fails with an error about 'unit'. What do you do?",
+   "hi": "CSV upload 'unit' wale error se fail ho gaya. Aap kya karoge?"
+  },
+  "o": {
+   "en": [
+    "Ask the vendor to add units",
+    "Add the Unit column to the CSV and re-upload",
+    "Turn off auto-create"
+   ],
+   "hi": [
+    "Vendor ko units add karne bolo",
+    "CSV mein Unit column add karke dobara upload karo",
+    "Auto-create band karo"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Unit is a mandatory field. Fill it for every row and upload the file again.",
+   "hi": "Unit mandatory field hai. Har row mein bharo aur file dobara upload karo."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Can a product that has an ongoing active order be deleted?",
+   "hi": "Jis product ka active order chal raha hai, kya use delete kar sakte hain?"
+  },
+  "o": {
+   "en": [
+    "Yes, any time",
+    "No, deleting is blocked while orders are active",
+    "Only the vendor can delete it"
+   ],
+   "hi": [
+    "Haan, kabhi bhi",
+    "Nahi, active orders ke time delete block hota hai",
+    "Sirf vendor delete kar sakta hai"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Products with running orders cannot be deleted. To hide a product, switch it to Inactive instead.",
+   "hi": "Running orders wale products delete nahi hote. Product chhupana ho toh use Inactive kar do."
+  }
+ },
+ {
+  "m": 5,
+  "q": {
+   "en": "A vendor moved their warehouse pin to Lucknow. Products vanished from the app. Why?",
+   "hi": "Vendor ne warehouse ka pin Lucknow pe move kiya aur products app se gayab ho gaye. Kyun?"
+  },
+  "o": {
+   "en": [
+    "Stock was reset to zero",
+    "The warehouse went back to Pending",
+    "Products were deleted"
+   ],
+   "hi": [
+    "Stock zero ho gaya",
+    "Warehouse wapas Pending mein chala gaya",
+    "Products delete ho gaye"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Editing a warehouse location sends it back to Pending. Once the admin approves it again, the products come back.",
+   "hi": "Warehouse location edit karne se woh wapas Pending ho jaata hai. Admin dobara approve kare toh products wapas aa jaate hain."
+  }
+ },
+ {
+  "m": 5,
+  "q": {
+   "en": "A product is in the catalog but customers can't see it. What is the most likely reason?",
+   "hi": "Product catalog mein hai par customers ko nahi dikh raha. Sabse likely reason kya hai?"
+  },
+  "o": {
+   "en": [
+    "The price is too high",
+    "No seller has stock for it in an approved nearby warehouse",
+    "The product photo is missing"
+   ],
+   "hi": [
+    "Price bahut zyada hai",
+    "Kisi seller ka approved nearby warehouse mein uska stock nahi hai",
+    "Product photo nahi hai"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "No seller in an approved warehouse means no listing. Customers only see products stocked near them.",
+   "hi": "Approved warehouse mein seller nahi toh listing nahi. Customers ko sirf paas mein stocked products dikhte hain."
+  }
+ },
+ {
+  "m": 6,
+  "q": {
+   "en": "Admin approved Rs 550 for Vendor A. What does Vendor B see for the same product?",
+   "hi": "Admin ne Vendor A ke liye Rs 550 approve kiya. Same product ke liye Vendor B ko kya dikhega?"
+  },
+  "o": {
+   "en": [
+    "Rs 550",
+    "The catalog price",
+    "Nothing until approved"
+   ],
+   "hi": [
+    "Rs 550",
+    "Catalog price",
+    "Approval tak kuch nahi"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "An approved price applies only to the vendor and warehouse that asked for it. Everyone else keeps the catalog price.",
+   "hi": "Approved price sirf usi vendor aur warehouse pe lagta hai jisne maanga tha. Baaki sab ke liye catalog price rehta hai."
+  }
+ },
+ {
+  "m": 6,
+  "q": {
+   "en": "Who approves a vendor's price change request?",
+   "hi": "Vendor ki price change request kaun approve karta hai?"
+  },
+  "o": {
+   "en": [
+    "It applies automatically",
+    "The admin, from the dashboard",
+    "The customer"
+   ],
+   "hi": [
+    "Apne aap lag jaati hai",
+    "Admin, dashboard se",
+    "Customer"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Price requests reach the admin, who accepts or rejects them from the dashboard after checking the reason.",
+   "hi": "Price requests admin ke paas jaati hain, jo reason dekhkar dashboard se accept ya reject karta hai."
+  }
+ },
+ {
+  "m": 7,
+  "q": {
+   "en": "Shiprocket cancelled a pickup. What's the backup?",
+   "hi": "Shiprocket ne pickup cancel kar diya. Backup kya hai?"
+  },
+  "o": {
+   "en": [
+    "Cancel the customer's order",
+    "Dispatch with a local / in-house driver",
+    "Wait until tomorrow"
+   ],
+   "hi": [
+    "Customer ka order cancel karo",
+    "Local / in-house driver se dispatch karo",
+    "Kal tak wait karo"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Use the local driver tab in the dispatch window. Support must update the customer, because there is no tracking SMS.",
+   "hi": "Dispatch window mein local driver wala tab use karo. Support ko customer ko update karna hoga, kyunki tracking SMS nahi jaata."
+  }
+ },
+ {
+  "m": 7,
+  "q": {
+   "en": "When you click Dispatch via Shiprocket, what does Shiprocket do automatically?",
+   "hi": "Dispatch via Shiprocket dabane pe Shiprocket apne aap kya karta hai?"
+  },
+  "o": {
+   "en": [
+    "Picks the courier, assigns an AWB, makes the label and schedules pickup",
+    "Approves the vendor's warehouse",
+    "Collects payment from the vendor"
+   ],
+   "hi": [
+    "Courier chunta hai, AWB deta hai, label banata hai aur pickup schedule karta hai",
+    "Vendor ka warehouse approve karta hai",
+    "Vendor se payment leta hai"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Shiprocket picks the best courier, assigns an AWB tracking number, generates the shipping label and schedules the pickup.",
+   "hi": "Shiprocket best courier chunta hai, AWB tracking number deta hai, shipping label banata hai aur pickup schedule karta hai."
+  }
+ },
+ {
+  "m": 8,
+  "q": {
+   "en": "What is 'Commission' on Oribrix?",
+   "hi": "Oribrix pe 'Commission' kya hai?"
+  },
+  "o": {
+   "en": [
+    "A fee the customer pays",
+    "Oribrix's share, set by the admin per product",
+    "The vendor's delivery charge"
+   ],
+   "hi": [
+    "Customer ki fee",
+    "Oribrix ka share, admin har product pe set karta hai",
+    "Vendor ka delivery charge"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Commission is Oribrix's share of each sale. The admin sets it per product, and it shows up in settlements.",
+   "hi": "Commission har sale mein Oribrix ka share hai. Admin ise har product pe set karta hai, aur yeh settlements mein dikhta hai."
+  }
+ },
+ {
+  "m": 8,
+  "q": {
+   "en": "What is the target date for the customer-facing launch?",
+   "hi": "Customer launch ka target date kya hai?"
+  },
+  "o": {
+   "en": [
+    "15 November",
+    "1 January",
+    "1 March"
+   ],
+   "hi": [
+    "15 November",
+    "1 January",
+    "1 March"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Vendor onboarding starts first; the customer launch is targeted for 1 January, after the pending fixes.",
+   "hi": "Pehle vendor onboarding shuru hoga; customer launch ka target 1 January hai, pending fixes ke baad."
+  }
+ }
+]
