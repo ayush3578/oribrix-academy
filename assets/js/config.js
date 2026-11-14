@@ -6,7 +6,7 @@ window.ACADEMY_CONFIG = {
   // 1) Paste your Google Apps Script "Web app" URL here (see README, step 3).
   //    While this is empty the site runs in TEST MODE: progress is kept only in
   //    this browser, a sample quiz is used, and nothing is saved to Google Sheets.
-  API_URL: "",
+  API_URL: "https://script.google.com/macros/s/AKfycbw3hGIIoh-xqoe5d3im8uY6rhX7p2Tj_ghoNb1l8Imh6p0Mf_QS32dT6wQXKJVjE3YW/exec",
 
   // 2) Course text
   COURSE_NAME: "Oribrix Vendor Onboarding Academy",
@@ -22,5 +22,5 @@ window.ACADEMY_CONFIG = {
 
   // 4) Public address of the site, used in the certificate's verify link.
   //    Leave empty to use the current address automatically.
-  SITE_URL: ""
+  SITE_URL: "https://housizy.com/"
 };
