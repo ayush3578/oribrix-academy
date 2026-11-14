@@ -16,7 +16,7 @@
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
-    if (data && data.error) { const e = new Error(data.error); e.code = data.code; throw e; }
+    if (data && data.error) { const e = new Error(data.error); e.code = data.code; e.data = data; throw e; }
     return data;
   }
 

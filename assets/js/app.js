@@ -542,7 +542,15 @@
       const pin = $("#a_pin").value.trim(); if (!pin) return;
       $("#a_go").disabled = true; $("#a_err").textContent = "";
       try { await API.call("admin_check", { mobile: me().mobile, pin }); S.adminPin = pin; persist(); viewAdmin(); }
-      catch (e) { $("#a_go").disabled = false; $("#a_err").textContent = e.code === "not_admin" ? "That PIN is not correct." : t("net_err"); }
+      catch (e) {
+        $("#a_go").disabled = false;
+        const why = e.data && e.data.reason;
+        $("#a_err").textContent = e.code !== "not_admin" ? t("net_err")
+          : why === "mobile_not_admin" ? `You are logged in with ${me().mobile}, which is not an admin number. Click "Not you?" and log in with the admin mobile.`
+          : why === "pin_not_set" ? "No Admin PIN is set yet. Run updateQuiz in Apps Script, or type a PIN (4+ digits) in Settings > ADMIN_PIN."
+          : why === "pin_mismatch" ? `That PIN doesn't match the Settings tab (the PIN there has ${e.data.pinLength} digits).`
+          : "That PIN is not correct.";
+      }
     };
     $("#a_go").onclick = goPin; $("#a_pin").onkeydown = e => { if (e.key === "Enter") goPin(); };
     $("#a_pin").focus();

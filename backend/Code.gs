@@ -232,13 +232,21 @@ function setup() {
 function adminMobiles() { return String(setting("ADMIN_MOBILES", "")).split(/[,\s]+/).map(x => x.replace(/\D/g, "").slice(-10)).filter(Boolean); }
 function isAdminMobile(mobile) { return adminMobiles().indexOf(String(mobile)) >= 0; }
 function adminName(mobile) { const list = adminMobiles(); return list.length && list[0] === String(mobile) ? String(setting("ADMIN_NAME", "")).trim() : ""; }
-function isAdmin(p) {
-  let mobile; try { mobile = cleanMobile(p.mobile); } catch (e) { return false; }
-  const pin = String(setting("ADMIN_PIN", "")).replace(/^'/, "").trim();
-  return isAdminMobile(mobile) && pin.length >= 4 && String(p.pin || "").trim() === pin;
+function normPin(v) { return String(v == null ? "" : v).replace(/^'/, "").replace(/\.0+$/, "").replace(/\s+/g, ""); }
+function adminProblem(p) {
+  let mobile; try { mobile = cleanMobile(p.mobile); } catch (e) { return "bad_mobile"; }
+  if (!isAdminMobile(mobile)) return "mobile_not_admin";
+  const pin = normPin(setting("ADMIN_PIN", ""));
+  if (pin.length < 4) return "pin_not_set";
+  return normPin(p.pin) === pin ? "" : "pin_mismatch";
 }
+function isAdmin(p) { return adminProblem(p) === ""; }
 function needAdmin(p) { if (!isAdmin(p)) fail("not_admin"); }
-function adminCheck(p) { needAdmin(p); return { ok: true }; }
+function adminCheck(p) {
+  const why = adminProblem(p);
+  if (why) return { error: "not_admin", code: "not_admin", reason: why, pinLength: normPin(setting("ADMIN_PIN", "")).length };
+  return { ok: true };
+}
 
 function practice(p) {
   const mobile = cleanMobile(p.mobile), l = learner(mobile);
