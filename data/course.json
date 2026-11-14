@@ -1,0 +1,1341 @@
+{
+ "version": 1,
+ "modules": [
+  {
+   "n": 1,
+   "title": {
+    "en": "Welcome & the big picture",
+    "hi": "Welcome & the big picture"
+   },
+   "desc": {
+    "en": "What Oribrix is, the three apps, who does what, key words, and how this course works.",
+    "hi": "Oribrix kya hai, teen apps, kaun kya karta hai, zaroori words, aur ye course kaise kaam karta hai."
+   },
+   "video": {
+    "en": "videos/en/module-01.mp4",
+    "hi": "videos/hi/module-01.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-01.vtt",
+    "hi": "videos/hi/module-01.vtt"
+   },
+   "duration": {
+    "en": 607.6,
+    "hi": 726.2
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 5.0,
+      "title": "Welcome to Oribrix Vendor Onboarding"
+     },
+     {
+      "t": 36.0,
+      "title": "How to use this course"
+     },
+     {
+      "t": 63.2,
+      "title": "What is Oribrix?"
+     },
+     {
+      "t": 92.6,
+      "title": "Three apps, three users"
+     },
+     {
+      "t": 119.7,
+      "title": "Who does what"
+     },
+     {
+      "t": 148.7,
+      "title": "The vendor lifecycle"
+     },
+     {
+      "t": 192.3,
+      "title": "A day in the life of one order"
+     },
+     {
+      "t": 224.0,
+      "title": "Why good onboarding matters"
+     },
+     {
+      "t": 246.2,
+      "title": "Words you'll hear (1 of 2)"
+     },
+     {
+      "t": 286.9,
+      "title": "Words you'll hear (2 of 2)"
+     },
+     {
+      "t": 315.2,
+      "title": "Admin panel: main sections"
+     },
+     {
+      "t": 347.0,
+      "title": "Vendor console: main sections"
+     },
+     {
+      "t": 379.1,
+      "title": "Only Admin creates products"
+     },
+     {
+      "t": 431.7,
+      "title": "5 rules you'll learn in this course"
+     },
+     {
+      "t": 457.2,
+      "title": "Launch timeline"
+     },
+     {
+      "t": 479.8,
+      "title": "What the customer sees"
+     },
+     {
+      "t": 504.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 523.5,
+      "title": "Where to get help"
+     },
+     {
+      "t": 543.6,
+      "title": "Module 1 recap"
+     },
+     {
+      "t": 568.0,
+      "title": "Course map"
+     }
+    ],
+    "hi": [
+     {
+      "t": 5.0,
+      "title": "Welcome to Oribrix Vendor Onboarding"
+     },
+     {
+      "t": 44.9,
+      "title": "How to use this course"
+     },
+     {
+      "t": 80.2,
+      "title": "What is Oribrix?"
+     },
+     {
+      "t": 115.8,
+      "title": "Three apps, three users"
+     },
+     {
+      "t": 150.5,
+      "title": "Who does what"
+     },
+     {
+      "t": 184.9,
+      "title": "The vendor lifecycle"
+     },
+     {
+      "t": 238.1,
+      "title": "A day in the life of one order"
+     },
+     {
+      "t": 277.6,
+      "title": "Why good onboarding matters"
+     },
+     {
+      "t": 305.6,
+      "title": "Words you'll hear (1 of 2)"
+     },
+     {
+      "t": 350.9,
+      "title": "Words you'll hear (2 of 2)"
+     },
+     {
+      "t": 385.5,
+      "title": "Admin panel: main sections"
+     },
+     {
+      "t": 424.1,
+      "title": "Vendor console: main sections"
+     },
+     {
+      "t": 464.2,
+      "title": "Only Admin creates products"
+     },
+     {
+      "t": 516.8,
+      "title": "5 rules you'll learn in this course"
+     },
+     {
+      "t": 548.3,
+      "title": "Launch timeline"
+     },
+     {
+      "t": 573.1,
+      "title": "What the customer sees"
+     },
+     {
+      "t": 604.7,
+      "title": "Quick check"
+     },
+     {
+      "t": 627.1,
+      "title": "Where to get help"
+     },
+     {
+      "t": 653.4,
+      "title": "Module 1 recap"
+     },
+     {
+      "t": 679.9,
+      "title": "Course map"
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "en": "Vendor application & KYC",
+    "hi": "Vendor application & KYC"
+   },
+   "desc": {
+    "en": "The 6-step Apply to sell form, field by field: GSTIN, bank, warehouse, categories and documents.",
+    "hi": "6-step Apply to sell form, field by field: GSTIN, bank, warehouse, categories aur documents."
+   },
+   "video": {
+    "en": "videos/en/module-02.mp4",
+    "hi": "videos/hi/module-02.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-02.vtt",
+    "hi": "videos/hi/module-02.vtt"
+   },
+   "duration": {
+    "en": 867.0,
+    "hi": 917.4
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 5.6,
+      "title": "In this module"
+     },
+     {
+      "t": 28.0,
+      "title": "Apply to sell: 6 steps"
+     },
+     {
+      "t": 54.0,
+      "title": "Step 1: Business"
+     },
+     {
+      "t": 83.1,
+      "title": "Step 1: Business details"
+     },
+     {
+      "t": 160.7,
+      "title": "GSTIN must be valid and unique"
+     },
+     {
+      "t": 217.8,
+      "title": "Step 2: Authorised signatory"
+     },
+     {
+      "t": 247.6,
+      "title": "Step 2: Authorised signatory"
+     },
+     {
+      "t": 301.2,
+      "title": "Bank details are validated"
+     },
+     {
+      "t": 372.5,
+      "title": "Step 3: Banking"
+     },
+     {
+      "t": 441.3,
+      "title": "Step 4: Warehouse"
+     },
+     {
+      "t": 472.5,
+      "title": "Allowed vehicle types"
+     },
+     {
+      "t": 502.0,
+      "title": "Step 4: Warehouse"
+     },
+     {
+      "t": 577.2,
+      "title": "Step 5: Categories"
+     },
+     {
+      "t": 610.5,
+      "title": "Step 5: Categories"
+     },
+     {
+      "t": 666.5,
+      "title": "Step 6: Documents"
+     },
+     {
+      "t": 700.1,
+      "title": "Step 6: Documents and submit"
+     },
+     {
+      "t": 760.1,
+      "title": "Vendor view: KYC & Compliance control center"
+     },
+     {
+      "t": 779.6,
+      "title": "Common mistakes to avoid"
+     },
+     {
+      "t": 807.2,
+      "title": "Quick check"
+     },
+     {
+      "t": 828.4,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 5.8,
+      "title": "In this module"
+     },
+     {
+      "t": 35.2,
+      "title": "Apply to sell: 6 steps"
+     },
+     {
+      "t": 63.1,
+      "title": "Step 1: Business"
+     },
+     {
+      "t": 96.2,
+      "title": "Step 1: Business details"
+     },
+     {
+      "t": 173.8,
+      "title": "GSTIN must be valid and unique"
+     },
+     {
+      "t": 231.0,
+      "title": "Step 2: Authorised signatory"
+     },
+     {
+      "t": 266.6,
+      "title": "Step 2: Authorised signatory"
+     },
+     {
+      "t": 320.2,
+      "title": "Bank details are validated"
+     },
+     {
+      "t": 392.2,
+      "title": "Step 3: Banking"
+     },
+     {
+      "t": 461.0,
+      "title": "Step 4: Warehouse"
+     },
+     {
+      "t": 495.2,
+      "title": "Allowed vehicle types"
+     },
+     {
+      "t": 529.4,
+      "title": "Step 4: Warehouse"
+     },
+     {
+      "t": 604.6,
+      "title": "Step 5: Categories"
+     },
+     {
+      "t": 643.5,
+      "title": "Step 5: Categories"
+     },
+     {
+      "t": 699.5,
+      "title": "Step 6: Documents"
+     },
+     {
+      "t": 732.4,
+      "title": "Step 6: Documents and submit"
+     },
+     {
+      "t": 792.4,
+      "title": "Vendor view: KYC & Compliance control center"
+     },
+     {
+      "t": 815.3,
+      "title": "Common mistakes to avoid"
+     },
+     {
+      "t": 846.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 870.1,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "en": "Admin: approving KYC",
+    "hi": "Admin: approving KYC"
+   },
+   "desc": {
+    "en": "How the admin reviews documents, approves categories and warehouses, and does the final approval.",
+    "hi": "Admin documents kaise review karta hai, categories aur warehouses approve karta hai, aur final approval."
+   },
+   "video": {
+    "en": "videos/en/module-03.mp4",
+    "hi": "videos/hi/module-03.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-03.vtt",
+    "hi": "videos/hi/module-03.vtt"
+   },
+   "duration": {
+    "en": 623.5,
+    "hi": 701.5
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 5.8,
+      "title": "In this module"
+     },
+     {
+      "t": 27.5,
+      "title": "KYC Lifecycle: the four numbers"
+     },
+     {
+      "t": 53.4,
+      "title": "Approval in 5 steps"
+     },
+     {
+      "t": 80.1,
+      "title": "KYC Lifecycle and document review"
+     },
+     {
+      "t": 150.5,
+      "title": "What to check in each document"
+     },
+     {
+      "t": 191.3,
+      "title": "Categories & warehouse"
+     },
+     {
+      "t": 220.6,
+      "title": "Categories and warehouse approval"
+     },
+     {
+      "t": 273.4,
+      "title": "Final approval is a separate step"
+     },
+     {
+      "t": 348.9,
+      "title": "Final approval and what the vendor sees"
+     },
+     {
+      "t": 423.3,
+      "title": "Reject, approve or suspend?"
+     },
+     {
+      "t": 452.9,
+      "title": "Good rejection remarks (examples)"
+     },
+     {
+      "t": 488.9,
+      "title": "Why careful approval matters"
+     },
+     {
+      "t": 516.2,
+      "title": "Approval checklist"
+     },
+     {
+      "t": 541.1,
+      "title": "After approval: the vendor's first day"
+     },
+     {
+      "t": 569.8,
+      "title": "Quick check"
+     },
+     {
+      "t": 590.6,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 6.7,
+      "title": "In this module"
+     },
+     {
+      "t": 35.2,
+      "title": "KYC Lifecycle: the four numbers"
+     },
+     {
+      "t": 62.6,
+      "title": "Approval in 5 steps"
+     },
+     {
+      "t": 96.4,
+      "title": "KYC Lifecycle and document review"
+     },
+     {
+      "t": 166.8,
+      "title": "What to check in each document"
+     },
+     {
+      "t": 215.2,
+      "title": "Categories & warehouse"
+     },
+     {
+      "t": 253.1,
+      "title": "Categories and warehouse approval"
+     },
+     {
+      "t": 305.9,
+      "title": "Final approval is a separate step"
+     },
+     {
+      "t": 382.1,
+      "title": "Final approval and what the vendor sees"
+     },
+     {
+      "t": 456.5,
+      "title": "Reject, approve or suspend?"
+     },
+     {
+      "t": 496.1,
+      "title": "Good rejection remarks (examples)"
+     },
+     {
+      "t": 538.6,
+      "title": "Why careful approval matters"
+     },
+     {
+      "t": 572.7,
+      "title": "Approval checklist"
+     },
+     {
+      "t": 602.2,
+      "title": "After approval: the vendor's first day"
+     },
+     {
+      "t": 637.6,
+      "title": "Quick check"
+     },
+     {
+      "t": 662.1,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "title": {
+    "en": "Admin: product catalog",
+    "hi": "Admin: product catalog"
+   },
+   "desc": {
+    "en": "Bulk CSV upload, reading errors, adding a single product, GST, commission and bulk pricing.",
+    "hi": "Bulk CSV upload, errors samajhna, single product add karna, GST, commission aur bulk pricing."
+   },
+   "video": {
+    "en": "videos/en/module-04.mp4",
+    "hi": "videos/hi/module-04.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-04.vtt",
+    "hi": "videos/hi/module-04.vtt"
+   },
+   "duration": {
+    "en": 867.1,
+    "hi": 924.1
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 5.5,
+      "title": "In this module"
+     },
+     {
+      "t": 28.9,
+      "title": "Catalog page: what each column means"
+     },
+     {
+      "t": 70.4,
+      "title": "Two ways to add products"
+     },
+     {
+      "t": 92.0,
+      "title": "The CSV template: rules"
+     },
+     {
+      "t": 129.1,
+      "title": "Catalog page and bulk upload"
+     },
+     {
+      "t": 198.0,
+      "title": "Upload result and errors"
+     },
+     {
+      "t": 262.8,
+      "title": "Reading upload errors"
+     },
+     {
+      "t": 296.3,
+      "title": "Bulk upload: missing categories"
+     },
+     {
+      "t": 335.5,
+      "title": "Add product: the basics"
+     },
+     {
+      "t": 374.0,
+      "title": "Add product: name, category, brand, unit"
+     },
+     {
+      "t": 516.4,
+      "title": "Size, tax and commission fields"
+     },
+     {
+      "t": 548.3,
+      "title": "Size, HSN, commission and GST"
+     },
+     {
+      "t": 628.3,
+      "title": "GST inclusive vs exclusive"
+     },
+     {
+      "t": 671.1,
+      "title": "Description, photos, save and bulk pricing"
+     },
+     {
+      "t": 762.3,
+      "title": "Bulk pricing example"
+     },
+     {
+      "t": 782.6,
+      "title": "Common catalog mistakes"
+     },
+     {
+      "t": 809.9,
+      "title": "Quick check"
+     },
+     {
+      "t": 829.1,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 6.0,
+      "title": "In this module"
+     },
+     {
+      "t": 33.0,
+      "title": "Catalog page: what each column means"
+     },
+     {
+      "t": 80.4,
+      "title": "Two ways to add products"
+     },
+     {
+      "t": 106.1,
+      "title": "The CSV template: rules"
+     },
+     {
+      "t": 150.7,
+      "title": "Catalog page and bulk upload"
+     },
+     {
+      "t": 220.3,
+      "title": "Upload result and errors"
+     },
+     {
+      "t": 285.1,
+      "title": "Reading upload errors"
+     },
+     {
+      "t": 328.6,
+      "title": "Bulk upload: missing categories"
+     },
+     {
+      "t": 367.8,
+      "title": "Add product: the basics"
+     },
+     {
+      "t": 410.2,
+      "title": "Add product: name, category, brand, unit"
+     },
+     {
+      "t": 552.6,
+      "title": "Size, tax and commission fields"
+     },
+     {
+      "t": 585.1,
+      "title": "Size, HSN, commission and GST"
+     },
+     {
+      "t": 665.1,
+      "title": "GST inclusive vs exclusive"
+     },
+     {
+      "t": 709.4,
+      "title": "Description, photos, save and bulk pricing"
+     },
+     {
+      "t": 800.6,
+      "title": "Bulk pricing example"
+     },
+     {
+      "t": 824.3,
+      "title": "Common catalog mistakes"
+     },
+     {
+      "t": 856.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 878.8,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "title": {
+    "en": "Vendor: adding stock",
+    "hi": "Vendor: adding stock"
+   },
+   "desc": {
+    "en": "Warehouses, adding SKUs, why a product can be invisible, stock status, hiding vs deleting.",
+    "hi": "Warehouses, SKUs add karna, product kyun nahi dikhta, stock status, hide vs delete."
+   },
+   "video": {
+    "en": "videos/en/module-05.mp4",
+    "hi": "videos/hi/module-05.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-05.vtt",
+    "hi": "videos/hi/module-05.vtt"
+   },
+   "duration": {
+    "en": 684.1,
+    "hi": 730.1
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 7.5,
+      "title": "In this module"
+     },
+     {
+      "t": 30.0,
+      "title": "Vendor Console > Warehouses"
+     },
+     {
+      "t": 59.0,
+      "title": "Add SKU in 5 steps"
+     },
+     {
+      "t": 86.7,
+      "title": "Add SKU"
+     },
+     {
+      "t": 170.9,
+      "title": "Add SKU: what each field does"
+     },
+     {
+      "t": 206.9,
+      "title": "No seller, no listing"
+     },
+     {
+      "t": 279.0,
+      "title": "Warehouse location and approval"
+     },
+     {
+      "t": 372.6,
+      "title": "Editing a warehouse location needs re-approval"
+     },
+     {
+      "t": 425.2,
+      "title": "Stock status"
+     },
+     {
+      "t": 445.9,
+      "title": "Hiding vs deleting a product"
+     },
+     {
+      "t": 472.7,
+      "title": "Product view and active toggle"
+     },
+     {
+      "t": 541.7,
+      "title": "Delete is blocked during orders"
+     },
+     {
+      "t": 608.1,
+      "title": "Troubleshooting: 'I can't see my product'"
+     },
+     {
+      "t": 629.9,
+      "title": "Quick check"
+     },
+     {
+      "t": 649.3,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 8.2,
+      "title": "In this module"
+     },
+     {
+      "t": 34.1,
+      "title": "Vendor Console > Warehouses"
+     },
+     {
+      "t": 66.6,
+      "title": "Add SKU in 5 steps"
+     },
+     {
+      "t": 100.4,
+      "title": "Add SKU"
+     },
+     {
+      "t": 184.8,
+      "title": "Add SKU: what each field does"
+     },
+     {
+      "t": 228.3,
+      "title": "No seller, no listing"
+     },
+     {
+      "t": 301.2,
+      "title": "Warehouse location and approval"
+     },
+     {
+      "t": 394.8,
+      "title": "Editing a warehouse location needs re-approval"
+     },
+     {
+      "t": 447.4,
+      "title": "Stock status"
+     },
+     {
+      "t": 472.7,
+      "title": "Hiding vs deleting a product"
+     },
+     {
+      "t": 503.9,
+      "title": "Product view and active toggle"
+     },
+     {
+      "t": 573.6,
+      "title": "Delete is blocked during orders"
+     },
+     {
+      "t": 640.0,
+      "title": "Troubleshooting: 'I can't see my product'"
+     },
+     {
+      "t": 666.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 688.5,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 6,
+   "title": {
+    "en": "Price change requests",
+    "hi": "Price change requests"
+   },
+   "desc": {
+    "en": "How vendors request a different price, what admin checks, and the same-city rule.",
+    "hi": "Vendor alag price kaise maangta hai, admin kya check karta hai, aur same-city rule."
+   },
+   "video": {
+    "en": "videos/en/module-06.mp4",
+    "hi": "videos/hi/module-06.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-06.vtt",
+    "hi": "videos/hi/module-06.vtt"
+   },
+   "duration": {
+    "en": 761.7,
+    "hi": 801.8
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 4.5,
+      "title": "In this module"
+     },
+     {
+      "t": 30.0,
+      "title": "Why vendors request a price change"
+     },
+     {
+      "t": 54.2,
+      "title": "How it works"
+     },
+     {
+      "t": 81.5,
+      "title": "Vendor requests Rs 550"
+     },
+     {
+      "t": 170.3,
+      "title": "What the admin sees"
+     },
+     {
+      "t": 206.5,
+      "title": "Admin accepts the price"
+     },
+     {
+      "t": 288.1,
+      "title": "Example from the session"
+     },
+     {
+      "t": 311.2,
+      "title": "Vendor sees the accepted price"
+     },
+     {
+      "t": 345.6,
+      "title": "An approved price is vendor- and warehouse-specific"
+     },
+     {
+      "t": 396.9,
+      "title": "Same product, second warehouse"
+     },
+     {
+      "t": 498.5,
+      "title": "One vendor, two warehouses"
+     },
+     {
+      "t": 525.8,
+      "title": "The same-city discussion"
+     },
+     {
+      "t": 631.4,
+      "title": "Same city = same price"
+     },
+     {
+      "t": 689.9,
+      "title": "Before you accept a price"
+     },
+     {
+      "t": 709.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 728.4,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 4.7,
+      "title": "In this module"
+     },
+     {
+      "t": 35.5,
+      "title": "Why vendors request a price change"
+     },
+     {
+      "t": 64.3,
+      "title": "How it works"
+     },
+     {
+      "t": 96.0,
+      "title": "Vendor requests Rs 550"
+     },
+     {
+      "t": 184.8,
+      "title": "What the admin sees"
+     },
+     {
+      "t": 225.3,
+      "title": "Admin accepts the price"
+     },
+     {
+      "t": 306.9,
+      "title": "Example from the session"
+     },
+     {
+      "t": 333.0,
+      "title": "Vendor sees the accepted price"
+     },
+     {
+      "t": 367.4,
+      "title": "An approved price is vendor- and warehouse-specific"
+     },
+     {
+      "t": 419.4,
+      "title": "Same product, second warehouse"
+     },
+     {
+      "t": 521.0,
+      "title": "One vendor, two warehouses"
+     },
+     {
+      "t": 549.8,
+      "title": "The same-city discussion"
+     },
+     {
+      "t": 655.4,
+      "title": "Same city = same price"
+     },
+     {
+      "t": 713.9,
+      "title": "Before you accept a price"
+     },
+     {
+      "t": 739.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 761.0,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 7,
+   "title": {
+    "en": "Orders & dispatch",
+    "hi": "Orders & dispatch"
+   },
+   "desc": {
+    "en": "Verify & accept, split shipments, Shiprocket Normal/Cargo/Express, and local drivers.",
+    "hi": "Verify & accept, split shipments, Shiprocket Normal/Cargo/Express, aur local drivers."
+   },
+   "video": {
+    "en": "videos/en/module-07.mp4",
+    "hi": "videos/hi/module-07.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-07.vtt",
+    "hi": "videos/hi/module-07.vtt"
+   },
+   "duration": {
+    "en": 766.9,
+    "hi": 826.4
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 4.7,
+      "title": "In this module"
+     },
+     {
+      "t": 26.3,
+      "title": "Order Management: the four numbers"
+     },
+     {
+      "t": 49.3,
+      "title": "Order flow"
+     },
+     {
+      "t": 72.8,
+      "title": "Orders with items from many vendors"
+     },
+     {
+      "t": 101.9,
+      "title": "Verify & accept an order"
+     },
+     {
+      "t": 193.1,
+      "title": "Dispatch via Shiprocket"
+     },
+     {
+      "t": 220.3,
+      "title": "Order management and Shiprocket dispatch"
+     },
+     {
+      "t": 311.5,
+      "title": "Verify each warehouse in Shiprocket"
+     },
+     {
+      "t": 391.6,
+      "title": "Shiprocket services"
+     },
+     {
+      "t": 418.9,
+      "title": "Express order: manual process (for now)"
+     },
+     {
+      "t": 441.8,
+      "title": "Local / in-house driver"
+     },
+     {
+      "t": 533.0,
+      "title": "Local driver: what to fill"
+     },
+     {
+      "t": 559.6,
+      "title": "Local drivers: no SMS tracking link"
+     },
+     {
+      "t": 615.5,
+      "title": "Handover and order details"
+     },
+     {
+      "t": 682.7,
+      "title": "Dispatch checklist"
+     },
+     {
+      "t": 707.9,
+      "title": "Quick check"
+     },
+     {
+      "t": 729.5,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 4.9,
+      "title": "In this module"
+     },
+     {
+      "t": 30.8,
+      "title": "Order Management: the four numbers"
+     },
+     {
+      "t": 57.8,
+      "title": "Order flow"
+     },
+     {
+      "t": 87.1,
+      "title": "Orders with items from many vendors"
+     },
+     {
+      "t": 125.9,
+      "title": "Verify & accept an order"
+     },
+     {
+      "t": 217.1,
+      "title": "Dispatch via Shiprocket"
+     },
+     {
+      "t": 249.3,
+      "title": "Order management and Shiprocket dispatch"
+     },
+     {
+      "t": 340.5,
+      "title": "Verify each warehouse in Shiprocket"
+     },
+     {
+      "t": 420.6,
+      "title": "Shiprocket services"
+     },
+     {
+      "t": 451.9,
+      "title": "Express order: manual process (for now)"
+     },
+     {
+      "t": 479.2,
+      "title": "Local / in-house driver"
+     },
+     {
+      "t": 570.4,
+      "title": "Local driver: what to fill"
+     },
+     {
+      "t": 604.6,
+      "title": "Local drivers: no SMS tracking link"
+     },
+     {
+      "t": 661.2,
+      "title": "Handover and order details"
+     },
+     {
+      "t": 728.4,
+      "title": "Dispatch checklist"
+     },
+     {
+      "t": 759.3,
+      "title": "Quick check"
+     },
+     {
+      "t": 783.5,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 8,
+   "title": {
+    "en": "Payouts, disputes & what's pending",
+    "hi": "Payouts, disputes & what's pending"
+   },
+   "desc": {
+    "en": "Settlements and payouts, disputes, vendor settings, pending items, FAQs and the final recap.",
+    "hi": "Settlements aur payouts, disputes, vendor settings, pending items, FAQs aur final recap."
+   },
+   "video": {
+    "en": "videos/en/module-08.mp4",
+    "hi": "videos/hi/module-08.mp4"
+   },
+   "subtitles": {
+    "en": "videos/en/module-08.vtt",
+    "hi": "videos/hi/module-08.vtt"
+   },
+   "duration": {
+    "en": 614.2,
+    "hi": 693.7
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 5.7,
+      "title": "In this module"
+     },
+     {
+      "t": 26.3,
+      "title": "Earnings & Settlements: the four numbers"
+     },
+     {
+      "t": 48.7,
+      "title": "Reading a settlement row"
+     },
+     {
+      "t": 77.5,
+      "title": "A payout, step by step (example)"
+     },
+     {
+      "t": 111.1,
+      "title": "Earnings, settlements and the vendor panel"
+     },
+     {
+      "t": 212.7,
+      "title": "Raising a dispute"
+     },
+     {
+      "t": 243.9,
+      "title": "Creating a dispute"
+     },
+     {
+      "t": 324.7,
+      "title": "A good dispute has..."
+     },
+     {
+      "t": 344.6,
+      "title": "Vendor settings & support"
+     },
+     {
+      "t": 376.6,
+      "title": "How customers see prices today"
+     },
+     {
+      "t": 406.4,
+      "title": "Still pending (as of 13 Nov 2026)"
+     },
+     {
+      "t": 440.4,
+      "title": "FAQ: questions vendors ask"
+     },
+     {
+      "t": 477.2,
+      "title": "Is this vendor ready to sell?"
+     },
+     {
+      "t": 508.0,
+      "title": "Final recap: the 8 rules"
+     },
+     {
+      "t": 546.1,
+      "title": "What this means for your role"
+     },
+     {
+      "t": 582.0,
+      "title": "What's next"
+     }
+    ],
+    "hi": [
+     {
+      "t": 6.1,
+      "title": "In this module"
+     },
+     {
+      "t": 32.7,
+      "title": "Earnings & Settlements: the four numbers"
+     },
+     {
+      "t": 57.1,
+      "title": "Reading a settlement row"
+     },
+     {
+      "t": 88.2,
+      "title": "A payout, step by step (example)"
+     },
+     {
+      "t": 124.5,
+      "title": "Earnings, settlements and the vendor panel"
+     },
+     {
+      "t": 226.1,
+      "title": "Raising a dispute"
+     },
+     {
+      "t": 263.9,
+      "title": "Creating a dispute"
+     },
+     {
+      "t": 344.7,
+      "title": "A good dispute has..."
+     },
+     {
+      "t": 367.6,
+      "title": "Vendor settings & support"
+     },
+     {
+      "t": 408.1,
+      "title": "How customers see prices today"
+     },
+     {
+      "t": 442.2,
+      "title": "Still pending (as of 13 Nov 2026)"
+     },
+     {
+      "t": 480.6,
+      "title": "FAQ: questions vendors ask"
+     },
+     {
+      "t": 525.6,
+      "title": "Is this vendor ready to sell?"
+     },
+     {
+      "t": 562.8,
+      "title": "Final recap: the 8 rules"
+     },
+     {
+      "t": 605.6,
+      "title": "What this means for your role"
+     },
+     {
+      "t": 652.9,
+      "title": "What's next"
+     }
+    ]
+   }
+  }
+ ]
+}

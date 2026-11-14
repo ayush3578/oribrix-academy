@@ -1,0 +1,409 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.474
+Module five. Vendor stock kaise add karta hai, aur products customers ko kab dikhte
+
+2
+00:00:06.474 --> 00:00:06.816
+Hain.
+
+3
+00:00:09.000 --> 00:00:12.712
+Vendor approve ho gaya. Ab use bechna shuru karna hai.
+
+4
+00:00:12.712 --> 00:00:14.568
+Ye module wahi dikhata hai.
+
+5
+00:00:15.018 --> 00:00:17.791
+Hum warehouses page se shuru karenge.
+
+6
+00:00:18.241 --> 00:00:21.164
+Phir SKU add karna, field by field.
+
+7
+00:00:21.614 --> 00:00:24.409
+Koi product customers ko kyun nahi dikhta.
+
+8
+00:00:24.859 --> 00:00:28.357
+Stock status: in stock, low stock aur out of stock.
+
+9
+00:00:28.807 --> 00:00:32.455
+Aur product ko hide karne aur delete karne mein farka.
+
+10
+00:00:34.867 --> 00:00:40.988
+Ye vendor ka warehouses page hai. Upar: active warehouses, total capacity, open
+
+11
+00:00:40.988 --> 00:00:43.080
+Orders aur total SKUs live.
+
+12
+00:00:43.530 --> 00:00:49.076
+Har warehouse card pe uska status dikhta hai. Naya ya edit kiya hua warehouse, admin
+
+13
+00:00:49.076 --> 00:00:51.189
+Approval tak Pending dikhta hai.
+
+14
+00:00:51.639 --> 00:00:57.079
+Approved ka matlab is warehouse ke products nearby customers ko dikh sakte hain.
+
+15
+00:00:57.529 --> 00:01:02.065
+Aur Add warehouse se approved vendor aur locations jod sakta hai.
+
+16
+00:01:02.065 --> 00:01:04.996
+Har nayi location ko bhi approval chahiye.
+
+17
+00:01:07.400 --> 00:01:09.768
+Stock add karne mein paanch steps hain.
+
+18
+00:01:10.218 --> 00:01:13.823
+Inventory mein jaiye, aur Add SKU pe click kijiye.
+
+19
+00:01:14.273 --> 00:01:19.777
+Category se filter kijiye, aur master catalog mein se product select kijiye.
+
+20
+00:01:20.227 --> 00:01:22.766
+Stock kis warehouse mein hai, wo chuniye.
+
+21
+00:01:23.216 --> 00:01:26.352
+Stock quantity, aur minimum order quantity daaliye.
+
+22
+00:01:26.802 --> 00:01:33.009
+Warranty aur return policy check kijiye, cash on delivery chuniye, aur Create SKU pe
+
+23
+00:01:33.009 --> 00:01:33.970
+Click kijiye.
+
+24
+00:01:36.367 --> 00:01:39.012
+Chaliye ise live demo mein dekhte hain.
+
+25
+00:01:42.800 --> 00:01:48.688
+Vendor ke paas ek warehouse hai, Central City. Ab Inventory, phir Add new SKU.
+
+26
+00:02:04.400 --> 00:02:09.386
+Category se filter kiya. Sirf vendor ki approved categories dikhti hain.
+
+27
+00:02:09.386 --> 00:02:13.957
+Safety equipment chuna, phir product: 3M industrial safety helmet.
+
+28
+00:02:24.400 --> 00:02:28.862
+Warehouse select hua, phir stock quantity aur minimum order quantity.
+
+29
+00:02:28.862 --> 00:02:30.672
+Yahan minimum order one hai.
+
+30
+00:02:38.000 --> 00:02:41.861
+Warranty aur return policy master listing se aati hain.
+
+31
+00:02:41.861 --> 00:02:47.548
+Vendor reason ke saath change request kar sakta hai, lekin admin ko approve karna
+
+32
+00:02:47.548 --> 00:02:47.899
+Hoga.
+
+33
+00:02:56.400 --> 00:03:01.933
+SKU ban gaya, aur product inventory mein dikh raha hai, warehouse, price, stock
+
+34
+00:03:01.933 --> 00:03:03.824
+Level aur status ke saatha.
+
+35
+00:03:05.620 --> 00:03:08.436
+Har field ko thoda dhyaan se dekhte hain.
+
+36
+00:03:08.886 --> 00:03:14.628
+Product hamesha master catalog se aata hai, aur sirf vendor ki approved categories
+
+37
+00:03:14.628 --> 00:03:14.838
+Se.
+
+38
+00:03:15.288 --> 00:03:19.107
+Warehouse wo jagah hai jahan ye stock physically rakha hai.
+
+39
+00:03:19.557 --> 00:03:23.081
+Stock quantity bechne ke liye available units hain.
+
+40
+00:03:23.081 --> 00:03:26.191
+Ise sahi rakhiye, nahi toh orders fail honge.
+
+41
+00:03:26.641 --> 00:03:31.893
+Minimum order quantity wo sabse kam quantity hai jo customer kharid sakta hai.
+
+42
+00:03:31.893 --> 00:03:35.260
+Jaise bricks ka minimum five hundred ho sakta hai.
+
+43
+00:03:35.710 --> 00:03:40.979
+Kisi bhi policy change request ke liye reason aur admin approval chahiye.
+
+44
+00:03:41.429 --> 00:03:46.720
+Aur allow COD is SKU ke liye cash on delivery on ya off karta hai.
+
+45
+00:03:49.120 --> 00:03:53.933
+Ye rule yaad rakhiye. No seller, no listing. Master catalog ka product customers se
+
+46
+00:03:53.933 --> 00:03:58.689
+Tab tak chhupa rehta hai, jab tak koi vendor use unke paas wale approved warehouse
+
+47
+00:03:58.689 --> 00:04:03.502
+Mein add nahi karta. Toh agar koi bole ki app mein product nahi dikh raha, toh teen
+
+48
+00:04:03.502 --> 00:04:07.910
+Cheezein check kijiye: kya kisi vendor ke paas stock hai, kya uska warehouse
+
+49
+00:04:07.910 --> 00:04:11.157
+Approved hai, aur kya customer us warehouse ke paas hai.
+
+50
+00:04:57.120 --> 00:04:59.765
+Chaliye ise live demo mein dekhte hain.
+
+51
+00:05:03.553 --> 00:05:08.938
+Demo ki problem dekhiye. Helmet add ho gaya, lekin Lucknow ke customer ko app mein
+
+52
+00:05:08.938 --> 00:05:10.252
+Nahi dikh raha thaa.
+
+53
+00:05:27.553 --> 00:05:31.328
+Wajah: Central City warehouse ka pin Bengaluru mein thaa.
+
+54
+00:05:31.328 --> 00:05:33.910
+Toh vendor warehouse ko edit karta hai.
+
+55
+00:05:53.953 --> 00:05:58.625
+Map pe location Lucknow kar di gayi, aur vehicles waise hi rakhe gaye.
+
+56
+00:06:18.753 --> 00:06:24.474
+Dekhiye, status ab Pending hai. Admin ne nayi location approve ki, aur phir product
+
+57
+00:06:24.474 --> 00:06:25.921
+App mein dikhne laga.
+
+58
+00:06:35.553 --> 00:06:40.799
+Ye jaanna zaroori hai. Jab vendor kisi warehouse ki location edit karta hai, toh
+
+59
+00:06:40.799 --> 00:06:46.176
+Warehouse vaapas pending ho jaata hai. Uske products tab tak chhupe rahte hain jab
+
+60
+00:06:46.176 --> 00:06:51.487
+Tak admin dobara approve nahi karta. Isliye location change ke baad admin team ko
+
+61
+00:06:51.487 --> 00:06:54.241
+Jaldi approve karne ke liye remind kijiye.
+
+62
+00:07:28.153 --> 00:07:31.936
+Inventory mein har SKU ka ek stock status hota hai.
+
+63
+00:07:31.936 --> 00:07:34.681
+Page ke upar iska breakdown hota hai.
+
+64
+00:07:35.131 --> 00:07:38.694
+In stock matlab bechne ke liye kaafi units hain.
+
+65
+00:07:39.144 --> 00:07:44.413
+Low stock matlab stock kam ho raha hai, vendor ko jaldi restock karna chahiye.
+
+66
+00:07:44.863 --> 00:07:50.647
+Aur out of stock matlab zero units. Stock add hone tak customer order nahi kar
+
+67
+00:07:50.647 --> 00:07:51.092
+Sakta.
+
+68
+00:07:53.487 --> 00:07:57.498
+Ab admin catalog mein, product hatane ke do tareeke hain.
+
+69
+00:07:57.948 --> 00:08:02.989
+Inactive toggle product ko vendors aur customers dono se chhupa deta hai.
+
+70
+00:08:02.989 --> 00:08:07.270
+Ise kabhi bhi vaapas on kar sakte hain. Pehle yahi use kijiye.
+
+71
+00:08:07.720 --> 00:08:12.971
+Delete permanent hai, aur jab tak us product ka koi order chal raha hai, delete
+
+72
+00:08:12.971 --> 00:08:17.491
+Block rehta hai. Wo orders complete hone ke baad delete allowed hai.
+
+73
+00:08:19.887 --> 00:08:22.532
+Chaliye ise live demo mein dekhte hain.
+
+74
+00:08:26.320 --> 00:08:29.845
+Ye admin catalog mein ek product ka detail view hai.
+
+75
+00:08:29.845 --> 00:08:35.539
+Neeche: vendors offering this product. Yahan abhi kisi vendor ne ise list nahi kiya,
+
+76
+00:08:35.539 --> 00:08:37.776
+Isliye customers ko nahi dikhega.
+
+77
+00:08:55.120 --> 00:09:00.893
+Vaapas list mein, status toggle badla gaya. Message aaya product deactivated, phir
+
+78
+00:09:00.893 --> 00:09:02.160
+Product activated.
+
+79
+00:09:29.520 --> 00:09:32.165
+Chaliye ise live demo mein dekhte hain.
+
+80
+00:09:37.553 --> 00:09:43.313
+Ab ek aise product ko delete karne ki try ki gayi jiska order chal raha hai.
+
+81
+00:10:03.953 --> 00:10:07.430
+Order chalte hue ise delete nahi kiya ja sakta.
+
+82
+00:10:07.430 --> 00:10:10.908
+Order complete hone ke baad delete kaam karega.
+
+83
+00:10:40.753 --> 00:10:46.498
+Jab vendor bole ki mujhe app mein apna product nahi dikh raha, tab ye checklist use
+
+84
+00:10:46.498 --> 00:10:46.982
+Kijiye.
+
+85
+00:10:47.432 --> 00:10:51.038
+Kya SKU bana hai, aur stock zero se zyada hai?
+
+86
+00:10:51.488 --> 00:10:54.282
+Kya warehouse approved hai, pending toh nahi?
+
+87
+00:10:54.732 --> 00:10:57.250
+Kya warehouse ka pin sahi city mein hai?
+
+88
+00:10:57.700 --> 00:11:00.708
+Kya product admin catalog mein active hai?
+
+89
+00:11:01.158 --> 00:11:04.422
+Aur kya customer sach mein us warehouse ke paas hai?
+
+90
+00:11:06.820 --> 00:11:11.754
+Quick check. Ek vendor ne apne warehouse ka pin Lucknow pe move kiya, aur uske
+
+91
+00:11:11.754 --> 00:11:14.095
+Products app se gaayab ho gaye. Kyun?
+
+92
+00:11:18.045 --> 00:11:22.777
+Kyunki location edit karne se warehouse vaapas pending ho jaata hai.
+
+93
+00:11:22.777 --> 00:11:26.535
+Admin approve karega, toh products vaapas aa jaayenge.
+
+94
+00:11:29.320 --> 00:11:31.197
+Module five ka summary.
+
+95
+00:11:31.647 --> 00:11:37.264
+SKU add karne ka matlab: product, warehouse, stock, minimum order aur cash on
+
+96
+00:11:37.264 --> 00:11:38.431
+Delivery chunna.
+
+97
+00:11:38.881 --> 00:11:43.148
+Policy changes ke liye reason aur admin approval chahiye.
+
+98
+00:11:43.598 --> 00:11:46.841
+Approved warehouse mein seller nahi, toh listing nahin.
+
+99
+00:11:47.291 --> 00:11:51.707
+Location edit karne se warehouse vaapas pending ho jaata hai.
+
+100
+00:11:52.157 --> 00:11:58.135
+Aur delete ki jagah inactive prefer kijiye. Orders ke dauran delete block rehta hai.
+
+101
+00:11:58.135 --> 00:12:00.626
+Agla module: price change requests.
+
+102
+00:12:03.020 --> 00:12:08.673
+Module 5 yahin khatam hota hai. Agla hai module 6: Price change requests.

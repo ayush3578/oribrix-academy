@@ -1,0 +1,541 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.192
+Module two. The vendor application, and KYC.
+
+2
+00:00:06.400 --> 00:00:11.136
+In this module, we'll go through the vendor application slowly, field by field.
+
+3
+00:00:11.586 --> 00:00:13.826
+The six steps of the Apply to sell form.
+
+4
+00:00:14.276 --> 00:00:17.092
+What every field means, and how the system checks it.
+
+5
+00:00:17.542 --> 00:00:19.633
+The documents a vendor must upload.
+
+6
+00:00:20.083 --> 00:00:22.906
+And the common mistakes that slow approval down.
+
+7
+00:00:22.906 --> 00:00:26.376
+If you help vendors fill this form, this module is for you.
+
+8
+00:00:28.767 --> 00:00:32.413
+A new vendor opens the vendor link and clicks Apply to sell.
+
+9
+00:00:32.413 --> 00:00:37.214
+The form has six steps, and it takes about five minutes if the vendor has their
+
+10
+00:00:37.214 --> 00:00:38.004
+Papers ready.
+
+11
+00:00:38.454 --> 00:00:39.926
+One, business details.
+
+12
+00:00:40.376 --> 00:00:42.318
+Two, the authorised signatory.
+
+13
+00:00:42.768 --> 00:00:44.410
+Three, banking, for payouts.
+
+14
+00:00:44.860 --> 00:00:46.055
+Four, the warehouse.
+
+15
+00:00:46.505 --> 00:00:48.702
+Five, the categories they want to sell.
+
+16
+00:00:49.152 --> 00:00:52.416
+And six, documents. Then they confirm KYC.
+
+17
+00:00:54.800 --> 00:00:56.677
+Step one is business details.
+
+18
+00:00:57.127 --> 00:01:02.533
+The legal business name. Tell vendors to type it exactly as it appears on their GST
+
+19
+00:01:02.533 --> 00:01:03.314
+Certificate.
+
+20
+00:01:03.764 --> 00:01:07.945
+The entity type, such as private limited, partnership or proprietorship.
+
+21
+00:01:08.395 --> 00:01:10.657
+The business PAN and the GSTIN.
+
+22
+00:01:11.107 --> 00:01:15.480
+The CIN, which companies have, and the year the business was established.
+
+23
+00:01:15.930 --> 00:01:17.338
+And the registered address.
+
+24
+00:01:19.733 --> 00:01:21.653
+Let's watch this in the live demo.
+
+25
+00:01:24.667 --> 00:01:29.339
+Here is the real form. On the left, you can see it's step one of six: Business.
+
+26
+00:01:35.867 --> 00:01:39.254
+The legal business name goes first, then the entity type.
+
+27
+00:01:39.254 --> 00:01:41.691
+In the demo, Private Limited is selected.
+
+28
+00:01:50.267 --> 00:01:54.896
+Next come the PAN, the GSTIN and the CIN, and the year established.
+
+29
+00:02:03.067 --> 00:02:08.705
+Look at the red message under GSTIN. The format is wrong, so the form shows the
+
+30
+00:02:08.705 --> 00:02:11.131
+Expected fifteen character format.
+
+31
+00:02:20.667 --> 00:02:26.829
+And here, a second check. A vendor with this GSTIN is already registered.
+
+32
+00:02:26.829 --> 00:02:30.459
+One GSTIN can only be used once on Oribrix.
+
+33
+00:02:41.467 --> 00:02:46.489
+So remember two checks on the GSTIN. It must be fifteen characters in the correct
+
+34
+00:02:46.489 --> 00:02:50.457
+Format, and it must not already be registered by another vendor.
+
+35
+00:02:50.457 --> 00:02:55.478
+If a vendor sees the already registered message, they may have applied before, so
+
+36
+00:02:55.478 --> 00:02:58.640
+Check the admin panel before creating anything new.
+
+37
+00:03:38.633 --> 00:03:43.313
+Step two is the authorised signatory. This is the person who can sign for the
+
+38
+00:03:43.313 --> 00:03:43.860
+Business.
+
+39
+00:03:44.310 --> 00:03:46.998
+Their full name, exactly as on their PAN card.
+
+40
+00:03:47.448 --> 00:03:50.541
+Their designation, for example director or owner.
+
+41
+00:03:50.991 --> 00:03:52.954
+Their Aadhaar and personal PAN.
+
+42
+00:03:53.404 --> 00:03:54.492
+A mobile number.
+
+43
+00:03:54.942 --> 00:04:00.110
+And an email. This email becomes the vendor's login, so it must be one that hasn't
+
+44
+00:04:00.110 --> 00:04:01.875
+Been used on Oribrix before.
+
+45
+00:04:04.267 --> 00:04:06.187
+Let's watch this in the live demo.
+
+46
+00:04:10.000 --> 00:04:15.447
+Now step two. The signatory's name is entered as per PAN, and the designation, here
+
+47
+00:04:15.447 --> 00:04:16.037
+Director.
+
+48
+00:04:27.600 --> 00:04:30.928
+Then the Aadhaar number, the personal PAN, and the mobile number.
+
+49
+00:04:45.200 --> 00:04:50.342
+Last is the email. In the demo, the team had to try a few emails, because each one
+
+50
+00:04:50.342 --> 00:04:52.475
+Had already been used for a login.
+
+51
+00:05:02.000 --> 00:05:06.970
+Step three is banking. This is where Oribrix sends the vendor's payouts, so it's
+
+52
+00:05:06.970 --> 00:05:11.877
+Checked carefully. The account number must be nine to eighteen digits, and some
+
+53
+00:05:11.877 --> 00:05:16.847
+Banks have a fixed length. In the demo, Bank of Baroda accepted exactly fourteen
+
+54
+00:05:16.847 --> 00:05:22.002
+Digits. The IFSC code has eleven characters, and the fifth character must always be
+
+55
+00:05:22.002 --> 00:05:22.437
+A zero.
+
+56
+00:06:09.167 --> 00:06:11.087
+Let's watch this in the live demo.
+
+57
+00:06:15.700 --> 00:06:19.049
+Here is the banking step. First the account holder's name.
+
+58
+00:06:28.500 --> 00:06:33.427
+Then the bank is chosen from the list. Bank of Baroda is selected, and the account
+
+59
+00:06:33.427 --> 00:06:34.388
+Number is typed.
+
+60
+00:06:48.500 --> 00:06:54.088
+Now Canara Bank is tried. Watch the IFSC box. The message says the fifth character
+
+61
+00:06:54.088 --> 00:06:55.519
+Of IFSC must be zero.
+
+62
+00:07:06.900 --> 00:07:11.753
+Branch and account type finish this step. Tip: ask vendors to keep a cancelled
+
+63
+00:07:11.753 --> 00:07:14.367
+Cheque handy, it has all of these details.
+
+64
+00:07:22.100 --> 00:07:27.313
+Step four is the warehouse. For KYC, every vendor must show one real, physical
+
+65
+00:07:27.313 --> 00:07:30.655
+Warehouse. This is where orders will be picked up.
+
+66
+00:07:31.105 --> 00:07:34.454
+A warehouse name, and the storage capacity in square feet.
+
+67
+00:07:34.904 --> 00:07:38.948
+The exact location on the map, using Locate me or the search box.
+
+68
+00:07:38.948 --> 00:07:41.624
+Make sure the pin is on the right building.
+
+69
+00:07:42.074 --> 00:07:43.759
+Opening and closing times.
+
+70
+00:07:44.209 --> 00:07:46.791
+The vehicle types that can reach this warehouse.
+
+71
+00:07:47.241 --> 00:07:50.910
+After KYC approval, the vendor can add more warehouses.
+
+72
+00:07:53.300 --> 00:07:57.467
+Why do vehicle types matter? Because a big truck can't enter every lane.
+
+73
+00:07:57.467 --> 00:07:58.740
+These are the options.
+
+74
+00:07:59.190 --> 00:08:02.475
+Mini truck or pickup, for small loads and narrow lanes.
+
+75
+00:08:02.925 --> 00:08:04.376
+Light commercial vehicles.
+
+76
+00:08:04.826 --> 00:08:06.426
+Medium commercial vehicles.
+
+77
+00:08:06.876 --> 00:08:10.289
+Heavy commercial vehicles, for bulk loads on wide roads.
+
+78
+00:08:10.739 --> 00:08:15.382
+And trailers and containers. Only tick the vehicles that can really reach the
+
+79
+00:08:15.382 --> 00:08:16.286
+Warehouse gate.
+
+80
+00:08:18.700 --> 00:08:20.620
+Let's watch this in the live demo.
+
+81
+00:08:25.233 --> 00:08:29.372
+Here's step four. The warehouse name and storage capacity come first.
+
+82
+00:08:39.633 --> 00:08:43.900
+Locate me finds the current location, or you can search and drag the pin.
+
+83
+00:08:58.833 --> 00:09:04.667
+Then the timings, and the allowed vehicle list: mini truck, LCV, MCV, HCV, and
+
+84
+00:09:04.667 --> 00:09:05.340
+Trailers.
+
+85
+00:09:19.633 --> 00:09:24.631
+In the demo, the warehouse is named Central City, with ten thousand square feet of
+
+86
+00:09:24.631 --> 00:09:25.180
+Capacity.
+
+87
+00:09:38.033 --> 00:09:42.738
+Step five is categories. This decides which products the vendor will be allowed to
+
+88
+00:09:42.738 --> 00:09:43.025
+Sell.
+
+89
+00:09:43.475 --> 00:09:48.645
+Standard categories are picked from the list: tiles, plumbing, electrical, tools,
+
+90
+00:09:48.645 --> 00:09:51.646
+Roofing, safety equipment, concrete and bricks.
+
+91
+00:09:52.096 --> 00:09:57.573
+If something is missing, the vendor clicks Other, types a name and uploads an image.
+
+92
+00:09:57.573 --> 00:10:00.768
+A custom category goes to the admin for approval.
+
+93
+00:10:00.768 --> 00:10:04.810
+Also note: some categories need brand authorisation documents.
+
+94
+00:10:07.200 --> 00:10:09.120
+Let's watch this in the live demo.
+
+95
+00:10:13.733 --> 00:10:18.448
+Here are the category cards. Concrete, bricks and safety equipment are selected.
+
+96
+00:10:29.733 --> 00:10:34.213
+Now Other is clicked. A small window asks for a category name and an image.
+
+97
+00:10:50.533 --> 00:10:53.895
+Outdoor sports now shows as a private custom category.
+
+98
+00:10:53.895 --> 00:10:55.888
+It will wait for admin approval.
+
+99
+00:11:07.333 --> 00:11:11.621
+Step six is documents. Four are mandatory and four are optional.
+
+100
+00:11:12.071 --> 00:11:17.711
+The mandatory ones are the GST certificate, the business PAN, a cancelled cheque,
+
+101
+00:11:17.711 --> 00:11:22.098
+And the owner's Aadhaar. Without these, KYC can't be confirmed.
+
+102
+00:11:22.548 --> 00:11:28.493
+The optional ones are a trade licence, the Oribrix agreement, an ISO nine thousand
+
+103
+00:11:28.493 --> 00:11:31.974
+One certificate, and MSME or Udyam registration.
+
+104
+00:11:31.974 --> 00:11:34.366
+These can also be uploaded later.
+
+105
+00:11:36.767 --> 00:11:38.687
+Let's watch this in the live demo.
+
+106
+00:11:43.300 --> 00:11:48.250
+This is the documents step. Each row has an upload button, and every file is
+
+107
+00:11:48.250 --> 00:11:49.423
+Encrypted at rest.
+
+108
+00:12:04.100 --> 00:12:08.391
+Uploaded files show as selected, with a view and replace option.
+
+109
+00:12:08.391 --> 00:12:10.671
+Optional rows are marked optional.
+
+110
+00:12:24.100 --> 00:12:29.646
+After Confirm KYC, the documents show as received, and the status changes to In
+
+111
+00:12:29.646 --> 00:12:30.137
+Review.
+
+112
+00:12:40.900 --> 00:12:45.956
+After submitting, the vendor lands on this KYC and compliance control center.
+
+113
+00:12:46.406 --> 00:12:48.689
+It shows how many documents are uploaded,
+
+114
+00:12:49.139 --> 00:12:53.213
+The verification status, which stays In review until the admin acts,
+
+115
+00:12:53.663 --> 00:12:58.015
+And the approval progress. Approvals usually land within twenty four hours.
+
+116
+00:13:00.400 --> 00:13:05.222
+Here are the mistakes we see most often. Help vendors avoid them, and approval
+
+117
+00:13:05.222 --> 00:13:06.459
+Becomes much faster.
+
+118
+00:13:06.909 --> 00:13:10.194
+The business name doesn't match the GST certificate.
+
+119
+00:13:10.644 --> 00:13:13.801
+The login email has already been used on Oribrix.
+
+120
+00:13:14.251 --> 00:13:17.217
+A wrong IFSC code, or the wrong account number length.
+
+121
+00:13:17.667 --> 00:13:20.227
+The warehouse pin is placed on the wrong building.
+
+122
+00:13:20.677 --> 00:13:25.583
+And blurry or cut-off document photos. Ask for clear scans or PDFs.
+
+123
+00:13:28.000 --> 00:13:33.352
+Quick check. A vendor typed the IFSC code H D F C one zero zero zero one two three.
+
+124
+00:13:33.352 --> 00:13:36.640
+What's wrong with it? Pause and think for a moment.
+
+125
+00:13:40.590 --> 00:13:43.894
+The answer: the fifth character of an IFSC must be zero.
+
+126
+00:13:43.894 --> 00:13:46.371
+Here it's one, so the form will reject it.
+
+127
+00:13:49.167 --> 00:13:50.639
+Let's sum up module two.
+
+128
+00:13:51.089 --> 00:13:56.399
+The form has six steps: business, signatory, banking, warehouse, categories, and
+
+129
+00:13:56.399 --> 00:13:57.062
+Documents.
+
+130
+00:13:57.512 --> 00:14:01.267
+The GSTIN must be valid, and not already registered.
+
+131
+00:14:01.717 --> 00:14:05.536
+The login email must be new, and the bank details are validated.
+
+132
+00:14:05.986 --> 00:14:08.460
+Custom categories need admin approval.
+
+133
+00:14:08.910 --> 00:14:13.414
+And all four mandatory documents are needed before confirming KYC.
+
+134
+00:14:13.414 --> 00:14:17.849
+Next, we'll switch sides and see how the admin approves a vendor.
+
+135
+00:14:20.233 --> 00:14:25.588
+That's the end of module 2. Next up, module 3: Admin: approving KYC.

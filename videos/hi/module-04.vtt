@@ -1,0 +1,541 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.640
+Module four. Admin product catalog kaise banata hai.
+
+2
+00:00:06.833 --> 00:00:10.513
+Golden rule yaad hai? Products sirf admin banata hai.
+
+3
+00:00:10.513 --> 00:00:14.470
+Toh is module mein dekhenge ki ye exactly kaise hota hai.
+
+4
+00:00:14.920 --> 00:00:17.822
+Pehle, catalog page aur uske columns.
+
+5
+00:00:18.272 --> 00:00:21.045
+Phir CSV template se bulk upload.
+
+6
+00:00:21.495 --> 00:00:23.628
+Upload errors ko kaise padhen.
+
+7
+00:00:24.078 --> 00:00:27.278
+Ek single product add karna, field by field.
+
+8
+00:00:27.728 --> 00:00:31.376
+Aur aakhir mein GST, commission aur bulk pricing.
+
+9
+00:00:33.767 --> 00:00:39.254
+Admin panel mein Catalog kholiye. Upar total products, pending, verified aur empty
+
+10
+00:00:39.254 --> 00:00:42.667
+Products dikhte hain. Neeche products ki table hai.
+
+11
+00:00:42.667 --> 00:00:44.540
+Har column ka matlab ye hai.
+
+12
+00:00:44.990 --> 00:00:50.644
+SKU code apne aap generate hota hai, product name aur photo ke saatha.
+
+13
+00:00:51.094 --> 00:00:56.786
+Category aur brand se tay hota hai ki product kahan list hoga aur use kaun banata
+
+14
+00:00:56.786 --> 00:00:57.067
+Hai.
+
+15
+00:00:57.517 --> 00:01:02.680
+HSN aur GST percent, tax classification aur tax rate hain.
+
+16
+00:01:03.130 --> 00:01:05.732
+Commission percent, Oribrix ka share hai.
+
+17
+00:01:06.182 --> 00:01:11.217
+MRP printed price hai, aur selling price wo hai jo customer pay karta hai.
+
+18
+00:01:11.667 --> 00:01:17.246
+Status batata hai ki product active hai ya nahi, aur Tally batata hai ki accounting
+
+19
+00:01:17.246 --> 00:01:18.792
+Mein sync hua ya nahin.
+
+20
+00:01:21.200 --> 00:01:23.696
+Products add karne ke do tareeke hain.
+
+21
+00:01:24.146 --> 00:01:29.831
+Bulk upload. Standard template download kijiye, har product ke liye ek row bhariye
+
+22
+00:01:29.831 --> 00:01:34.061
+Photo links ke saath, phir CSV file drop karke upload kijiye.
+
+23
+00:01:34.061 --> 00:01:38.290
+Bahut saare products ek saath daalne hon toh yahi use kijiye.
+
+24
+00:01:38.740 --> 00:01:44.205
+Ya single product, Add product form se. Ye one-off ya special items ke liye best
+
+25
+00:01:44.205 --> 00:01:44.479
+Hai.
+
+26
+00:01:46.867 --> 00:01:51.155
+Upload karne se pehle CSV template ke rules jaan lijiye.
+
+27
+00:01:51.605 --> 00:01:55.041
+Hamesha download kiye hue template se shuru kijiye.
+
+28
+00:01:55.041 --> 00:01:57.130
+Apne column names mat banayiye.
+
+29
+00:01:57.580 --> 00:02:02.816
+Har row ke liye chaar fields mandatory hain: product name, category name, brand
+
+30
+00:02:02.816 --> 00:02:03.810
+Name, aur unit.
+
+31
+00:02:04.260 --> 00:02:08.633
+Photo links public URLs hone chahiye jo browser mein khulen.
+
+32
+00:02:09.083 --> 00:02:14.540
+Auto-create missing subcategories and brands ko tick kijiye, taaki naye brands apne
+
+33
+00:02:14.540 --> 00:02:15.526
+Aap ban jaayen.
+
+34
+00:02:15.976 --> 00:02:21.818
+Aur files chhoti rakhiye. Demo mein ek badi file too large bolke reject ho gayi thi,
+
+35
+00:02:21.818 --> 00:02:24.253
+Isliye lambi lists ko split kijiye.
+
+36
+00:02:26.667 --> 00:02:29.312
+Chaliye ise live demo mein dekhte hain.
+
+37
+00:02:32.300 --> 00:02:37.579
+Ye catalog page hai. Thirty seven products verified hain, aur Add product, Bulk
+
+38
+00:02:37.579 --> 00:02:41.388
+Upload, Category requests aur Tally sync ke buttons hain.
+
+39
+00:02:53.900 --> 00:02:59.468
+Yahan ka har product bulk upload se aaya hai. Bulk upload ek window kholta hai.
+
+40
+00:03:13.900 --> 00:03:19.340
+Step one, standard template download kijiye. Step two, apni CSV file chuniye.
+
+41
+00:03:19.340 --> 00:03:21.601
+Neeche required guidelines hain.
+
+42
+00:03:36.300 --> 00:03:38.945
+Chaliye ise live demo mein dekhte hain.
+
+43
+00:03:43.533 --> 00:03:48.363
+File upload ho gayi. Result mein do boxes dikhte hain: products created
+
+44
+00:03:48.363 --> 00:03:50.744
+Successfully, aur rows with errors.
+
+45
+00:04:01.133 --> 00:04:06.735
+Error details bilkul clear hain. Row three, ACC Gold Water Shield cement, catalog
+
+46
+00:04:06.735 --> 00:04:09.432
+Mein pehle se hai, isliye skip ho gaya.
+
+47
+00:04:23.533 --> 00:04:27.096
+Naye products ab list mein sabse upar dikh rahe hain.
+
+48
+00:04:36.333 --> 00:04:41.176
+Agli try mein upload fail hua, kyunki file mein unit column nahi thaa.
+
+49
+00:04:45.933 --> 00:04:49.688
+Toh errors ka matlab kya hai, aur aapko kya karna chahiye?
+
+50
+00:04:50.138 --> 00:04:55.362
+Already exists ka matlab same name wala product catalog mein pehle se hai.
+
+51
+00:04:55.362 --> 00:04:59.034
+Wo row skip ho jaati hai, taaki duplicates na banen.
+
+52
+00:04:59.484 --> 00:05:04.604
+Existing product ke liye, sirf uska stock related data update hota hai.
+
+53
+00:05:05.054 --> 00:05:09.662
+Agar unit missing hai, toh file theek karke dobara upload kijiye.
+
+54
+00:05:10.112 --> 00:05:16.201
+Agar category exist nahi karti, toh pehle category uski image ke saath banaiye, phir
+
+55
+00:05:16.201 --> 00:05:17.216
+Upload kijiye.
+
+56
+00:05:17.666 --> 00:05:22.146
+Aur agar file too large hai, toh use chhoti files mein split kijiye.
+
+57
+00:05:24.533 --> 00:05:27.178
+Chaliye ise live demo mein dekhte hain.
+
+58
+00:05:30.967 --> 00:05:36.632
+Ye ek bada upload hai. Bahut saare products bane, aur auto-created masters box un
+
+59
+00:05:36.632 --> 00:05:41.527
+Naye brands aur subcategories ki list dikha raha hai jo apne aap bane.
+
+60
+00:05:48.567 --> 00:05:53.901
+Error list mein wo rows hain jo pehle se exist karti hain, aur wo rows jinki
+
+61
+00:05:53.901 --> 00:05:58.743
+Category abhi exist nahi karti. Unke liye pehle category banani hogi.
+
+62
+00:06:08.567 --> 00:06:12.527
+Ab single product add karna. Add product pe click kijiye.
+
+63
+00:06:12.527 --> 00:06:13.986
+Ye hain basic fields.
+
+64
+00:06:14.436 --> 00:06:20.036
+Name. Ise clear aur specific rakhiye, brand, grade aur size ke saath, jaise
+
+65
+00:06:20.036 --> 00:06:23.844
+UltraTech OPC fifty three grade cement, fifty kilo.
+
+66
+00:06:24.294 --> 00:06:26.278
+Category aur sub category.
+
+67
+00:06:26.728 --> 00:06:30.760
+Brand. List mein se chuniye, ya wahin pe naya brand add kijiye.
+
+68
+00:06:31.210 --> 00:06:36.735
+Unit, jaise piece, bag, kilogram ya box. Customer isi unit mein kharidega.
+
+69
+00:06:37.185 --> 00:06:42.484
+Aur unit weight per quantity. Ye delivery ke liye zaroori hai, kyunki bhari orders
+
+70
+00:06:42.484 --> 00:06:43.777
+Cargo se jaate hain.
+
+71
+00:06:46.167 --> 00:06:48.812
+Chaliye ise live demo mein dekhte hain.
+
+72
+00:06:52.600 --> 00:06:57.936
+Add product pe click kiya, aur form khul gaya. Example product hai House solar
+
+73
+00:06:57.936 --> 00:06:58.893
+Installations.
+
+74
+00:07:20.600 --> 00:07:25.258
+Category list khuli. Roofing, safety equipment, steel, tiles, tools.
+
+75
+00:07:25.258 --> 00:07:26.765
+Electrical chuna gaya.
+
+76
+00:07:48.600 --> 00:07:53.933
+Sub category yahin edit ho sakti hai. Sub category mein Solar select kiya gaya.
+
+77
+00:08:12.600 --> 00:08:16.517
+Brand abhi list mein nahi hai, isliye Add brand khula.
+
+78
+00:08:16.517 --> 00:08:21.667
+Existing brands dikh rahe hain, jaise 3M, ACC, Ambuja aur Asian Paints.
+
+79
+00:08:40.600 --> 00:08:46.321
+Naya brand add ho gaya, aur unit piece rakha gaya, kyunki solar installation ko kilo
+
+80
+00:08:46.321 --> 00:08:48.024
+Mein nahi naapa ja sakta.
+
+81
+00:09:00.600 --> 00:09:05.443
+Phir unit weight per quantity. Yahan ek unit lagbhag eighty kilo ka hai.
+
+82
+00:09:13.400 --> 00:09:15.469
+Ab size, tax aur commission.
+
+83
+00:09:15.919 --> 00:09:20.207
+Length, breadth aur height centimetres mein, packing aur delivery ke liye.
+
+84
+00:09:20.657 --> 00:09:24.583
+HSN code, jo product ka tax classification hai.
+
+85
+00:09:25.033 --> 00:09:27.571
+Commission percent, Oribrix ka share.
+
+86
+00:09:28.021 --> 00:09:30.453
+GST on commission percent.
+
+87
+00:09:30.903 --> 00:09:37.768
+Aur pricing block: MRP, final price, GST percent, aur price GST inclusive hai ya
+
+88
+00:09:37.768 --> 00:09:38.626
+Exclusive.
+
+89
+00:09:41.033 --> 00:09:43.678
+Chaliye ise live demo mein dekhte hain.
+
+90
+00:09:47.467 --> 00:09:50.667
+Length aur breadth bhare gaye. Height optional hai.
+
+91
+00:10:05.067 --> 00:10:10.251
+Phir HSN code, aur commission. Demo mein sirf test values use huyin.
+
+92
+00:10:25.067 --> 00:10:31.019
+Ye hai pricing and tax configuration. Inclusive of GST box tick kiya gaya hai.
+
+93
+00:10:45.067 --> 00:10:51.240
+MRP one hundred, final price one hundred, aur ten percent GST ke saath system ne
+
+94
+00:10:51.240 --> 00:10:54.944
+Base price ninety point nine one calculate kiya.
+
+95
+00:11:05.867 --> 00:11:11.181
+Inclusive aur exclusive ko demo ke numbers se bilkul clear karte hain.
+
+96
+00:11:11.181 --> 00:11:14.900
+Demo mein ten percent GST sirf test ke liye thaa.
+
+97
+00:11:14.900 --> 00:11:18.240
+Hamesha product ka asli GST rate use kijiye.
+
+98
+00:11:18.690 --> 00:11:22.588
+Inclusive ka matlab price mein GST pehle se shamil hai.
+
+99
+00:11:22.588 --> 00:11:28.469
+Customer one hundred pay karta hai. Uske andar ninety point nine one base price hai
+
+100
+00:11:28.469 --> 00:11:30.808
+Aur nine point zero nine GST hai.
+
+101
+00:11:31.258 --> 00:11:37.054
+Exclusive ka matlab GST upar se judta hai. One hundred ka base, ten percent pe one
+
+102
+00:11:37.054 --> 00:11:42.991
+Hundred and ten ban jaata hai. Galat option chuna, toh customer ka price galat hoga.
+
+103
+00:11:45.400 --> 00:11:48.045
+Chaliye ise live demo mein dekhte hain.
+
+104
+00:11:51.833 --> 00:11:56.356
+Ab description, thumbnail, images, warranty aur return policy.
+
+105
+00:12:09.433 --> 00:12:13.651
+Ek red message bol raha hai GST percent is required.
+
+106
+00:12:13.651 --> 00:12:16.409
+Ye bhare bina form save nahi hoga.
+
+107
+00:12:27.033 --> 00:12:33.417
+Product ban gaya. View mein har detail dikh rahi hai: category, brand, HSN, GST,
+
+108
+00:12:33.417 --> 00:12:37.486
+Commission, MRP, price type, unit aur package size.
+
+109
+00:12:49.433 --> 00:12:54.910
+Bulk pricing khula. Ten units, eighty five rupees each, aur fifteen units, eighty
+
+110
+00:12:54.910 --> 00:12:57.006
+Rupees each. Phir Save pricing.
+
+111
+00:13:21.433 --> 00:13:27.077
+Bulk pricing bade orders ko reward karta hai. Construction customers aksar bulk mein
+
+112
+00:13:27.077 --> 00:13:29.966
+Kharidte hain, isliye ye bahut kaam ka hai.
+
+113
+00:13:30.416 --> 00:13:33.958
+Nine units tak normal price, one hundred rupees.
+
+114
+00:13:34.408 --> 00:13:37.245
+Ten ya zyada, eighty five rupees each.
+
+115
+00:13:37.695 --> 00:13:42.730
+Fifteen ya zyada, eighty rupees each. Add tier se aur tiers jod sakte hain.
+
+116
+00:13:45.133 --> 00:13:49.506
+In mistakes se bachiye. Inka asar sidha customers pe padta hai.
+
+117
+00:13:49.956 --> 00:13:55.695
+Vague names, jaise sirf cement bag. Customers ko brand, grade aur size chahiye.
+
+118
+00:13:56.145 --> 00:14:00.774
+Galat GST rate, ya inclusive aur exclusive mein confusion.
+
+119
+00:14:01.224 --> 00:14:04.147
+Galat unit, jaise bag ki jagah kilo.
+
+120
+00:14:04.597 --> 00:14:08.821
+Unit weight missing, jisse delivery mode galat chuna jaata hai.
+
+121
+00:14:09.271 --> 00:14:14.903
+Aur broken photo links. Upload ke baad kuch products kholke check zaroor kijiye.
+
+122
+00:14:17.300 --> 00:14:22.456
+Quick check. Aapka CSV upload unit wale error ke saath fail ho gaya.
+
+123
+00:14:22.456 --> 00:14:24.276
+Aapko kya karna chahiye?
+
+124
+00:14:28.226 --> 00:14:33.676
+CSV mein unit column jodiye, har row mein bhariye, aur dobara upload kijiye.
+
+125
+00:14:33.676 --> 00:14:36.759
+Unit chaar mandatory fields mein se ek hai.
+
+126
+00:14:39.567 --> 00:14:41.402
+Module four ka summary.
+
+127
+00:14:41.852 --> 00:14:46.609
+Products sirf admin banata hai, bulk CSV se ya ek ek karke.
+
+128
+00:14:47.059 --> 00:14:52.923
+CSV ke liye template use kijiye, chaar mandatory fields bhariye, aur files chhoti
+
+129
+00:14:52.923 --> 00:14:53.502
+Rakhiye.
+
+130
+00:14:53.952 --> 00:14:59.050
+Errors padhiye. Duplicates skip hote hain, aur categories pehle se honi chahiye.
+
+131
+00:14:59.500 --> 00:15:04.343
+GST sahi rakhiye: rate bhi, aur inclusive ya exclusive bhi.
+
+132
+00:15:04.793 --> 00:15:08.531
+Aur bade orders ke liye bulk pricing tiers use kijiye.
+
+133
+00:15:08.531 --> 00:15:14.346
+Agle module mein dekhenge ki vendors in products ko live listings mein kaise badalte
+
+134
+00:15:14.346 --> 00:15:14.692
+Hain.
+
+135
+00:15:17.100 --> 00:15:22.711
+Module 4 yahin khatam hota hai. Agla hai module 5: Vendor: adding stock.

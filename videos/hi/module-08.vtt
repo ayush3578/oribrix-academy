@@ -1,0 +1,533 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.704
+Module eight. Payouts, disputes, aur jo abhi pending hai.
+
+2
+00:00:06.900 --> 00:00:10.548
+Ye aakhiri module hai. Iske baad aap quiz denge.
+
+3
+00:00:10.998 --> 00:00:14.646
+Earnings and Settlements mein ek payout padhna sikhenge.
+
+4
+00:00:15.096 --> 00:00:18.147
+Dispute raise aur handle karna dekhenge.
+
+5
+00:00:18.597 --> 00:00:21.221
+Vendor settings aur support dekhenge.
+
+6
+00:00:21.671 --> 00:00:25.361
+Samjhenge ki customers ko aaj prices kaise dikhte hain.
+
+7
+00:00:25.811 --> 00:00:31.102
+Aur pending items, common questions aur final recap ke saath khatam karenge.
+
+8
+00:00:33.500 --> 00:00:36.863
+Vendor console mein Earnings and Settlements kholiye.
+
+9
+00:00:36.863 --> 00:00:38.385
+Upar chaar numbers hain.
+
+10
+00:00:38.835 --> 00:00:43.401
+Total settled payout: ab tak vendor ko jitna paisa pay ho chuka hai.
+
+11
+00:00:43.851 --> 00:00:46.389
+Next payout: aane wala settlement.
+
+12
+00:00:46.839 --> 00:00:51.447
+Deductions: Oribrix jo kaatta hai, yaani logistics plus commission.
+
+13
+00:00:51.897 --> 00:00:55.460
+Aur open disputes: wo tickets jo abhi review mein hain.
+
+14
+00:00:57.867 --> 00:01:01.468
+Neeche settlements table hai. Har row ek payout hai.
+
+15
+00:01:01.468 --> 00:01:02.646
+Ise aise padhiye.
+
+16
+00:01:03.096 --> 00:01:08.130
+Settlement ID. Kabhi koi problem ho, toh dispute mein yahi ID likhiye.
+
+17
+00:01:08.580 --> 00:01:11.034
+Date, aur kitne orders included hain.
+
+18
+00:01:11.484 --> 00:01:14.172
+GMV, un orders ki total value.
+
+19
+00:01:14.622 --> 00:01:16.371
+GST ka hissa.
+
+20
+00:01:16.821 --> 00:01:19.786
+Deductions, jo logistics plus commission hain.
+
+21
+00:01:20.236 --> 00:01:25.705
+Aur payout amount, uske status ke saath: settled, ya accounting mein jaane ke baad
+
+22
+00:01:25.705 --> 00:01:26.572
+Tally synced.
+
+23
+00:01:28.967 --> 00:01:32.445
+Ek payout ko simple example numbers se samajhte hain.
+
+24
+00:01:32.445 --> 00:01:35.858
+Ye asli rates nahi hain, sirf samjhane ke liye hain.
+
+25
+00:01:36.308 --> 00:01:40.776
+Maan lijiye is settlement ke orders ten thousand rupees ke hain.
+
+26
+00:01:40.776 --> 00:01:41.684
+Yahi GMV hai.
+
+27
+00:01:42.134 --> 00:01:47.851
+Oribrix logistics aur commission kaatta hai. Is example mein six hundred rupees.
+
+28
+00:01:48.301 --> 00:01:54.104
+Toh payout hoga nine thousand four hundred rupees, jo KYC wale bank account mein
+
+29
+00:01:54.104 --> 00:01:58.093
+Jaata hai. Isiliye sahi bank details itni zaroori hain.
+
+30
+00:02:00.500 --> 00:02:03.145
+Chaliye ise live demo mein dekhte hain.
+
+31
+00:02:06.933 --> 00:02:12.173
+Ye hai Earnings and Settlements, upar chaar numbers, aur payouts aur disputes ke
+
+32
+00:02:12.173 --> 00:02:12.501
+Tabs.
+
+33
+00:02:22.133 --> 00:02:27.360
+Vendor ke warehouses page pe ab do approved warehouses hain, dono Lucknow men.
+
+34
+00:02:47.733 --> 00:02:53.402
+Settlements table mein har payout hai. Tally XML aur CSV export karne ke buttons
+
+35
+00:02:53.402 --> 00:02:55.882
+Hain, vendor ke accountant ke liye.
+
+36
+00:03:15.733 --> 00:03:20.947
+Team ne confirm kiya ki returns, disputes, KYC aur settings kaam kar rahe hain.
+
+37
+00:03:20.947 --> 00:03:26.293
+Settings mein vendors password reset kar sakte hain aur staff add kar sakte hain.
+
+38
+00:03:46.933 --> 00:03:51.738
+Agar vendor ko lage ki payout galat hai, toh wo dispute raise karta hai.
+
+39
+00:03:51.738 --> 00:03:55.274
+Dispute, vendor aur admin ke bich ki ek baatchit hai.
+
+40
+00:03:55.724 --> 00:03:57.943
+Earnings and Settlements mein jaayiye.
+
+41
+00:03:58.393 --> 00:04:02.105
+Disputes kholiye, aur Create new dispute pe click kijiye.
+
+42
+00:04:02.555 --> 00:04:06.779
+Subject mein settlement ID, ya missing order ID likhiye.
+
+43
+00:04:07.229 --> 00:04:12.570
+Issue ko detail mein explain kijiye, aur proof attach kijiye, jaise proof of
+
+44
+00:04:12.570 --> 00:04:13.202
+Delivery.
+
+45
+00:04:13.652 --> 00:04:17.450
+Submit kijiye. Admin usi thread mein reply karega.
+
+46
+00:04:19.866 --> 00:04:22.511
+Chaliye ise live demo mein dekhte hain.
+
+47
+00:04:26.300 --> 00:04:30.567
+Disputes tab. Create new dispute ek chhota form kholta hai.
+
+48
+00:04:45.500 --> 00:04:51.185
+Subject, settlement ya missing ID ke saatha. Issue ko detail mein explain karne ke
+
+49
+00:04:51.185 --> 00:04:53.265
+Liye box. Aur file attachment.
+
+50
+00:05:09.500 --> 00:05:15.365
+Team ne vendor, customer, staff aur settlement IDs ke standard formats bhi maange.
+
+51
+00:05:15.365 --> 00:05:19.441
+Abhi IDs random hain, isliye standard format pending hai.
+
+52
+00:05:45.500 --> 00:05:50.780
+Achha dispute jaldi solve hota hai. Vendors ko sikhaiye ki ye cheezein zaroor
+
+53
+00:05:50.780 --> 00:05:51.260
+Daalen.
+
+54
+00:05:51.710 --> 00:05:54.611
+Exact settlement ID ya order ID.
+
+55
+00:05:55.061 --> 00:05:57.813
+Kya galat hai, ek do saaf sentences men.
+
+56
+00:05:58.263 --> 00:06:01.421
+Jitna amount expected tha, aur jitna mila.
+
+57
+00:06:01.871 --> 00:06:05.988
+Aur proof, jaise proof of delivery, invoice, ya screenshot.
+
+58
+00:06:08.400 --> 00:06:12.475
+Kuch aur cheezein jinke baare mein vendors aapse poochhenge.
+
+59
+00:06:12.925 --> 00:06:15.741
+Password, Settings se reset ho sakta hai.
+
+60
+00:06:16.191 --> 00:06:21.932
+Vendors apni team ke liye staff accounts add kar sakte hain, taaki ek hi login share
+
+61
+00:06:21.932 --> 00:06:22.889
+Na karna pade.
+
+62
+00:06:23.339 --> 00:06:29.206
+Optional KYC documents KYC section se kabhi bhi upload ho sakte hain.
+
+63
+00:06:29.656 --> 00:06:33.034
+Data deletion requests support ke paas jaati hain.
+
+64
+00:06:33.034 --> 00:06:38.506
+Session ke time ye developer ke address pe ja rahi thi, aur ab Oribrix support pe
+
+65
+00:06:38.506 --> 00:06:39.789
+Shift ho rahi hain.
+
+66
+00:06:40.239 --> 00:06:45.814
+Aur WhatsApp support access ki details development team ke saath abhi confirm ho
+
+67
+00:06:45.814 --> 00:06:46.511
+Rahi thin.
+
+68
+00:06:48.900 --> 00:06:54.202
+Session mein ek bada sawaal aaya. Agar kayi vendors same product alag prices pe
+
+69
+00:06:54.202 --> 00:06:55.343
+Bechein, toh kya?
+
+70
+00:06:55.793 --> 00:07:01.230
+Aaj app nearest vendor ka product aur price dikhata hai, isliye customer ko har
+
+71
+00:07:01.230 --> 00:07:03.707
+Product card pe ek price dikhta hai.
+
+72
+00:07:04.157 --> 00:07:09.519
+Discussion mein hai: doosre vendors ke prices bhi dikhana, vendor ya warehouse names
+
+73
+00:07:09.519 --> 00:07:12.647
+Ke saath, thoda doosre quick commerce apps jaisa.
+
+74
+00:07:12.647 --> 00:07:17.945
+Ye un markets mein zaroori hai jahan ek hi gali mein bahut saare sellers hote hain.
+
+75
+00:07:17.945 --> 00:07:20.563
+Development team iska plan bana rahi hai.
+
+76
+00:07:22.966 --> 00:07:28.804
+Thirteen November tak ye items pending the. Ho sakta hai aapke dekhne tak kuch poore
+
+77
+00:07:28.804 --> 00:07:29.707
+Ho chuke hon.
+
+78
+00:07:30.157 --> 00:07:34.509
+Category name ka display bug, jo object object dikha raha thaa.
+
+79
+00:07:34.959 --> 00:07:37.989
+CSV template mein unit field jodna.
+
+80
+00:07:38.439 --> 00:07:40.529
+Same city price validation.
+
+81
+00:07:40.979 --> 00:07:43.006
+Shiprocket express API.
+
+82
+00:07:43.456 --> 00:07:46.592
+Tally ko live cloud ID se connect karna.
+
+83
+00:07:47.042 --> 00:07:51.629
+Vendor, customer, staff aur settlement IDs ke standard formats.
+
+84
+00:07:52.079 --> 00:07:55.343
+Multiple vendors ke prices dikhane ka plan.
+
+85
+00:07:55.793 --> 00:07:59.014
+Aur poore admin panel ka ek walkthrough session.
+
+86
+00:08:01.399 --> 00:08:06.455
+Ye paanch sawaal vendors sabse zyada poochhte hain, short answers ke saatha.
+
+87
+00:08:06.905 --> 00:08:12.877
+Maine KYC submit kar diya, kab bech paunga? Admin approval ke baad, usually twenty
+
+88
+00:08:12.877 --> 00:08:16.228
+Four hours mein, final approval step ke baada.
+
+89
+00:08:16.678 --> 00:08:19.926
+Kya main apna product add kar sakta hoon? Nahi.
+
+90
+00:08:19.926 --> 00:08:23.590
+Admin team ko boliye ki master catalog mein add kare.
+
+91
+00:08:24.040 --> 00:08:29.699
+Mera product nahi dikh raha. Stock, warehouse approval, map pin, aur product active
+
+92
+00:08:29.699 --> 00:08:31.677
+Hai ya nahi, ye check kijiye.
+
+93
+00:08:32.127 --> 00:08:37.567
+Kya main sasta bech sakta hoon? Haan, reason ke saath price change request kijiye.
+
+94
+00:08:38.017 --> 00:08:43.498
+Mera payout galat lag raha hai. Settlement ID aur proof ke saath dispute raise
+
+95
+00:08:43.498 --> 00:08:43.990
+Kijiye.
+
+96
+00:08:46.399 --> 00:08:49.830
+Ye ek checklist hai jo poore course ko jodti hai.
+
+97
+00:08:49.830 --> 00:08:54.591
+Isse decide kijiye ki naya vendor bechne ke liye ready hai ya nahin.
+
+98
+00:08:55.041 --> 00:08:58.881
+KYC approved hai, final approval step ke saatha.
+
+99
+00:08:59.331 --> 00:09:03.086
+Warehouse approved hai, aur Shiprocket mein verified hai.
+
+100
+00:09:03.536 --> 00:09:06.992
+SKUs add ho chuke hain, asli stock ke saatha.
+
+101
+00:09:07.442 --> 00:09:11.943
+Prices check ho gaye hain, aur har price request pe decision ho gaya hai.
+
+102
+00:09:12.393 --> 00:09:16.958
+Vendor login kar paa raha hai, aur zaroorat ho toh staff add ho gaye hain.
+
+103
+00:09:17.408 --> 00:09:21.248
+Aur local drivers backup ke liye add hain. Ye optional hai.
+
+104
+00:09:23.633 --> 00:09:27.046
+Poore course ke aath rules ke saath khatam karte hain.
+
+105
+00:09:27.496 --> 00:09:30.120
+One. Products sirf admin banata hai.
+
+106
+00:09:30.570 --> 00:09:35.776
+Two. GSTIN valid aur unique hona chahiye, aur login email naya.
+
+107
+00:09:36.226 --> 00:09:39.490
+Three. Final vendor approval ek alag step hai.
+
+108
+00:09:39.940 --> 00:09:43.417
+Four. Approved warehouse mein seller nahi, toh listing nahin.
+
+109
+00:09:43.867 --> 00:09:49.051
+Five. Warehouse ki location edit karne se wo vaapas pending ho jaata hai.
+
+110
+00:09:49.501 --> 00:09:55.022
+Six. Approved prices ek vendor aur ek warehouse ke liye hote hain, aur same city
+
+111
+00:09:55.022 --> 00:09:56.264
+Matlab same price.
+
+112
+00:09:56.714 --> 00:10:00.084
+Seven. Har warehouse Shiprocket mein verify kijiye.
+
+113
+00:10:00.534 --> 00:10:03.990
+Eight. Disputes mein hamesha settlement ID likhiye.
+
+114
+00:10:06.399 --> 00:10:09.919
+Aakhir mein, aapke role ke liye iska kya matlab hai?
+
+115
+00:10:10.369 --> 00:10:15.720
+Agar aap onboarding executive hain, toh vendors ko pehli baar mein hi form sahi
+
+116
+00:10:15.720 --> 00:10:17.345
+Bharne mein help kijiye.
+
+117
+00:10:17.795 --> 00:10:23.463
+Agar aap KYC review karte hain, toh har document check kijiye, aur final approval
+
+118
+00:10:23.463 --> 00:10:24.792
+Kabhi mat bhooliye.
+
+119
+00:10:25.242 --> 00:10:31.287
+Agar aap catalog manage karte hain, toh clear names, aur sahi GST, unit aur weight
+
+120
+00:10:31.287 --> 00:10:31.877
+Rakhiye.
+
+121
+00:10:32.327 --> 00:10:38.130
+Operations mein Shiprocket verification aur dispatch issues aapki zimmedari hain.
+
+122
+00:10:38.580 --> 00:10:44.090
+Support mein aap product visibility, payouts aur disputes handle karenge, is course
+
+123
+00:10:44.090 --> 00:10:45.684
+Ki checklists ke saatha.
+
+124
+00:10:46.134 --> 00:10:51.296
+Aur sabke liye: rules follow kijiye, aur jab doubt ho, toh escalate kijiye.
+
+125
+00:10:53.699 --> 00:10:57.240
+Aapne aathon modules poore kar liye. Bahut badhiya.
+
+126
+00:10:57.690 --> 00:11:02.384
+Ab quiz dijiye. Sirf ek attempt milega, isliye aaram se dijiye.
+
+127
+00:11:02.834 --> 00:11:06.119
+Quiz ke baad apna certificate download kijiye.
+
+128
+00:11:06.569 --> 00:11:12.154
+Ye course link sambhalke rakhiye, aur jab zaroorat ho kisi bhi module pe vaapas
+
+129
+00:11:12.154 --> 00:11:12.649
+Aayiye.
+
+130
+00:11:13.099 --> 00:11:17.150
+Aur koi sawaal ho, toh apne Oribrix team lead se poochhiye.
+
+131
+00:11:17.150 --> 00:11:21.888
+Thank you, aur Oribrix mein aapka swagat hai. Order now, build today.
+
+132
+00:11:24.299 --> 00:11:29.290
+Module 8 yahin khatam hota hai. Aapne aathon modules poore kar liye hain.
+
+133
+00:11:29.290 --> 00:11:32.299
+Ab quiz dijiye, aur apna certificate lijiye.

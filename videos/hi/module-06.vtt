@@ -1,0 +1,397 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:03.317
+Module six. Price change requests.
+
+2
+00:00:05.533 --> 00:00:09.112
+Catalog ke har product ka ek catalog price hota hai.
+
+3
+00:00:09.112 --> 00:00:14.686
+Lekin har vendor alag hota hai, aur kabhi kabhi unhe alag price chahiye hota hai.
+
+4
+00:00:14.686 --> 00:00:17.714
+Ye module samjhata hai ki wo kaise hota hai.
+
+5
+00:00:18.164 --> 00:00:20.660
+Vendors alag price kyun maangte hain.
+
+6
+00:00:21.110 --> 00:00:23.073
+Wo request kaise karte hain.
+
+7
+00:00:23.523 --> 00:00:26.659
+Admin ko kya dikhta hai, aur decision kaise len.
+
+8
+00:00:27.109 --> 00:00:31.952
+Approved price sirf ek vendor aur ek warehouse pe hi kyun laagu hota hai.
+
+9
+00:00:32.402 --> 00:00:33.852
+Aur same city rule.
+
+10
+00:00:36.267 --> 00:00:39.510
+Form khud kuch common reasons suggest karta hai.
+
+11
+00:00:39.960 --> 00:00:43.309
+Promotional offer, yaani kuch samay ka discount.
+
+12
+00:00:43.759 --> 00:00:48.516
+Margin update, jab vendor ki apni cost upar ya neeche jaati hai.
+
+13
+00:00:48.966 --> 00:00:52.934
+Bulk discount, kyunki wo volume mein sasta bech sakte hain.
+
+14
+00:00:53.384 --> 00:00:57.765
+Ya local competition, nearby market rates se match karne ke liye.
+
+15
+00:00:57.765 --> 00:01:02.686
+Vendor zyada price bhi maang sakta hai, lekin decision admin ka hota hai.
+
+16
+00:01:05.100 --> 00:01:06.423
+Poora flow ye hai.
+
+17
+00:01:06.873 --> 00:01:12.697
+SKU add ya edit karte samay vendor requested price aur reason daalta hai.
+
+18
+00:01:13.147 --> 00:01:15.771
+Admin ko notification milta hai.
+
+19
+00:01:16.221 --> 00:01:21.298
+Admin catalog price, current price aur requested price ko compare karta hai.
+
+20
+00:01:21.748 --> 00:01:24.500
+Admin accept ya reject karta hai.
+
+21
+00:01:24.950 --> 00:01:29.537
+Accept hua, toh naya price live ho jaata hai, sirf usi vendor ke liye.
+
+22
+00:01:31.933 --> 00:01:34.578
+Chaliye ise live demo mein dekhte hain.
+
+23
+00:01:38.367 --> 00:01:44.186
+Is vendor ke do warehouses hain: Lucknow mein abc, jo pending hai, aur Kengeri, jo
+
+24
+00:01:44.186 --> 00:01:45.108
+Approved hai.
+
+25
+00:02:06.367 --> 00:02:12.267
+Add new SKU mein policy section ke neeche, is listing ke liye cash on delivery allow
+
+26
+00:02:12.267 --> 00:02:13.812
+Karne ka checkbox hai.
+
+27
+00:02:30.367 --> 00:02:36.067
+Ye raha master catalog se product pricing: MRP nine hundred, selling price six
+
+28
+00:02:36.067 --> 00:02:41.183
+Hundred sixty one, inclusive of GST. Uske neeche Request price change.
+
+29
+00:02:48.767 --> 00:02:52.739
+Vendor ne reason ke saath five hundred fifty request kiya.
+
+30
+00:02:52.739 --> 00:02:56.916
+Inventory mein price request status ab pending dikh raha hai.
+
+31
+00:03:05.567 --> 00:03:10.772
+Admin panel mein request, vendor change requests naam ki window mein khulti hai.
+
+32
+00:03:11.222 --> 00:03:14.486
+Catalog price, jo universal master price hai.
+
+33
+00:03:14.936 --> 00:03:18.478
+Current price jo abhi is vendor ke liye active hai.
+
+34
+00:03:18.928 --> 00:03:22.106
+Requested price, jo vendor ne propose kiya hai.
+
+35
+00:03:22.556 --> 00:03:24.092
+Vendor ka reason.
+
+36
+00:03:24.542 --> 00:03:30.751
+Accept ya reject. Ek note yaad dilata hai ki accept karne se sirf is vendor ka price
+
+37
+00:03:30.751 --> 00:03:33.929
+Badlega, aur catalog price vaisa hi rahega.
+
+38
+00:03:34.379 --> 00:03:38.880
+Aur ek doosra tab, warranty aur return policy requests ke liye.
+
+39
+00:03:41.267 --> 00:03:43.912
+Chaliye ise live demo mein dekhte hain.
+
+40
+00:03:47.700 --> 00:03:51.332
+Vendor ki inventory mein request pending dikh rahi hai.
+
+41
+00:03:51.332 --> 00:03:54.633
+Ab admin mein chalte hain, Warehouses and Vendors.
+
+42
+00:04:15.700 --> 00:04:20.594
+Vendor ki row pe ek chhota badge bata raha hai ki change request aayi hai.
+
+43
+00:04:20.594 --> 00:04:24.297
+Click karne pe vendor change requests window khulti hai.
+
+44
+00:04:33.300 --> 00:04:38.722
+Catalog price six sixty one, current price six sixty one, requested five fifty.
+
+45
+00:04:38.722 --> 00:04:40.575
+Vendor ka reason: too high.
+
+46
+00:04:49.300 --> 00:04:54.892
+Accept price pe click kiya. Neeche ek aur request dikh rahi hai jo reject hui thi,
+
+47
+00:04:54.892 --> 00:04:57.620
+Jahan vendor ne zyada price maanga thaa.
+
+48
+00:05:07.700 --> 00:05:09.364
+Toh numbers mein ye huaa.
+
+49
+00:05:09.814 --> 00:05:13.216
+Catalog price six hundred sixty one rupees thaa.
+
+50
+00:05:13.216 --> 00:05:15.979
+Baaki sabke liye wo vaisa hi rehta hai.
+
+51
+00:05:16.429 --> 00:05:19.501
+Vendor ne five hundred fifty request kiya.
+
+52
+00:05:19.951 --> 00:05:25.367
+Approval ke baad five fifty live hai, lekin sirf is vendor ke liye, aur sirf usi
+
+53
+00:05:25.367 --> 00:05:26.586
+Warehouse ke liye.
+
+54
+00:05:29.000 --> 00:05:31.645
+Chaliye ise live demo mein dekhte hain.
+
+55
+00:05:35.433 --> 00:05:40.112
+Vendor ki inventory mein status ab accepted, five fifty bol raha hai.
+
+56
+00:05:40.112 --> 00:05:44.926
+Aur customer app mein product five hundred fifty rupees dikha raha hai.
+
+57
+00:06:08.233 --> 00:06:13.606
+Rule ye hai. Approved price ek vendor aur ek warehouse ke liye specific hota hai.
+
+58
+00:06:13.606 --> 00:06:19.044
+Baaki vendors ko catalog price hi dikhta hai. Aur jaisa abhi dekhenge, same vendor
+
+59
+00:06:19.044 --> 00:06:22.825
+Ke doosre warehouses bhi catalog price hi use karte hain.
+
+60
+00:06:55.400 --> 00:06:58.045
+Chaliye ise live demo mein dekhte hain.
+
+61
+00:07:01.833 --> 00:07:07.287
+Ab vendor Lucknow mein ek doosra warehouse add karta hai, aur admin use approve
+
+62
+00:07:07.287 --> 00:07:07.977
+Karta hai.
+
+63
+00:07:47.433 --> 00:07:52.276
+Warehouse ki details edit hui: name, address, pin code aur timings.
+
+64
+00:08:13.833 --> 00:08:19.398
+Phir same floor tile ko naye SKU ki tarah dobara add kiya, is baar naye warehouse
+
+65
+00:08:19.398 --> 00:08:21.940
+Mein, bina price change request kiye.
+
+66
+00:08:41.833 --> 00:08:44.137
+Inventory mein result dekhiye.
+
+67
+00:08:44.587 --> 00:08:49.302
+Warehouse one pe five fifty, kyunki wahan price change approve hua thaa.
+
+68
+00:08:49.752 --> 00:08:55.138
+Warehouse two pe six sixty one, yaani catalog price, kyunki uske liye koi request
+
+69
+00:08:55.138 --> 00:09:00.458
+Nahi huyi. Demo mein customer app mein card pe six sixty one dikh raha tha lekin
+
+70
+00:09:00.458 --> 00:09:03.384
+Andar five fifty, jisse sab confuse ho gaye.
+
+71
+00:09:05.800 --> 00:09:08.445
+Chaliye ise live demo mein dekhte hain.
+
+72
+00:09:12.233 --> 00:09:16.713
+Ye inventory hai dono rows ke saath: same tile, do prices pe.
+
+73
+00:09:40.233 --> 00:09:45.233
+Team ne ispe discuss kiya. Kisi vendor ki main branch Lucknow mein aur doosra
+
+74
+00:09:45.233 --> 00:09:49.779
+Warehouse Bangalore mein ho sakta hai, aur wo wahan alag prices chahe.
+
+75
+00:09:49.779 --> 00:09:50.558
+Ye fair hai.
+
+76
+00:10:12.233 --> 00:10:17.998
+Lekin same city mein do warehouses ke alag prices se customers confuse hote hain.
+
+77
+00:10:17.998 --> 00:10:20.276
+Isliye ek naya rule decide huaa.
+
+78
+00:10:56.233 --> 00:11:01.417
+Same city rule. Vendor same city ke warehouses ke liye alag prices set nahi kar
+
+79
+00:11:01.417 --> 00:11:06.534
+Sakta. Alag cities, jaise Lucknow aur Bangalore, ke prices alag ho sakte hain.
+
+80
+00:11:06.534 --> 00:11:12.046
+Session ke time ye validation ban raha tha, isliye jab tak ye live nahi hota, admins
+
+81
+00:11:12.046 --> 00:11:16.180
+Ko price accept karne se pehle ye manually check karna chahiye.
+
+82
+00:11:54.667 --> 00:11:57.910
+Accept pe click karne se pehle ye check kijiye.
+
+83
+00:11:58.360 --> 00:12:00.280
+Vendor ka reason padhiye.
+
+84
+00:12:00.730 --> 00:12:04.932
+Ise catalog price se, aur nearby vendors se compare kijiye.
+
+85
+00:12:05.382 --> 00:12:07.430
+Same city rule check kijiye.
+
+86
+00:12:07.880 --> 00:12:11.976
+Yaad rakhiye, ye sirf is vendor aur warehouse pe laagu hoga.
+
+87
+00:12:12.426 --> 00:12:17.397
+Aur unclear requests ko reject kijiye, saath mein note likhiye ki kyon.
+
+88
+00:12:19.800 --> 00:12:24.231
+Quick check. Admin ne vendor A ke liye five fifty approve kiya.
+
+89
+00:12:24.231 --> 00:12:28.099
+Same product ke liye vendor B ko kaun sa price dikhega?
+
+90
+00:12:32.049 --> 00:12:37.746
+Catalog price. Approved price sirf usi vendor aur warehouse pe laagu hota hai jisne
+
+91
+00:12:37.746 --> 00:12:38.982
+Request kiya thaa.
+
+92
+00:12:41.767 --> 00:12:43.602
+Module six ka summary.
+
+93
+00:12:44.052 --> 00:12:49.364
+Vendors SKU add karte samay price aur reason ke saath request karte hain.
+
+94
+00:12:49.814 --> 00:12:54.016
+Admin catalog, current aur requested price compare karta hai.
+
+95
+00:12:54.466 --> 00:12:58.456
+Approved price sirf us vendor aur us warehouse ke liye hai.
+
+96
+00:12:58.906 --> 00:13:03.706
+Same city matlab same price. Abhi ke liye ise manually check kijiye.
+
+97
+00:13:04.156 --> 00:13:09.940
+Aur vendors zyada price bhi request kar sakte hain, lekin decision admin ka hai.
+
+98
+00:13:09.940 --> 00:13:12.326
+Agla module: orders aur dispatch.
+
+99
+00:13:14.733 --> 00:13:20.322
+Module 6 yahin khatam hota hai. Agla hai module 7: Orders and dispatch.

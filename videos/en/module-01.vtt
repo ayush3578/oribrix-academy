@@ -1,0 +1,573 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:03.637
+Module one. Welcome, and the big picture.
+
+2
+00:00:05.833 --> 00:00:08.489
+Welcome to the Oribrix vendor onboarding course.
+
+3
+00:00:08.489 --> 00:00:11.422
+Thank you for taking the time to learn this properly.
+
+4
+00:00:11.872 --> 00:00:16.814
+This course is for everyone who onboards vendors, approves them, or supports them
+
+5
+00:00:16.814 --> 00:00:17.974
+After they go live.
+
+6
+00:00:18.424 --> 00:00:22.136
+There are eight video modules. Each one is around ten minutes long.
+
+7
+00:00:22.586 --> 00:00:27.272
+You need to watch every video fully. Skipping ahead is not allowed, but you can
+
+8
+00:00:27.272 --> 00:00:28.815
+Change the speed any time.
+
+9
+00:00:29.265 --> 00:00:33.576
+After all eight modules, you take a short quiz, and you get your certificate with
+
+10
+00:00:33.576 --> 00:00:34.428
+Your name on it.
+
+11
+00:00:36.833 --> 00:00:39.649
+Before we start, a quick guide to using this course.
+
+12
+00:00:40.099 --> 00:00:45.006
+You can change the speed any time, from very slow, point one x, up to three x.
+
+13
+00:00:45.456 --> 00:00:48.634
+Subtitles can be turned on or off with the C C button.
+
+14
+00:00:49.084 --> 00:00:52.007
+At the top, you can switch between English and Hinglish.
+
+15
+00:00:52.457 --> 00:00:56.276
+You can't skip ahead, but you can always go back and watch a part again.
+
+16
+00:00:56.726 --> 00:01:01.397
+And if you close the tab, don't worry. Next time, the video resumes where you left
+
+17
+00:01:01.397 --> 00:01:01.568
+It.
+
+18
+00:01:03.967 --> 00:01:05.482
+First, what is Oribrix?
+
+19
+00:01:05.932 --> 00:01:10.849
+Oribrix is a quick commerce platform for construction and building materials.
+
+20
+00:01:10.849 --> 00:01:15.895
+Think cement, bricks, tiles, pipes, electricals and safety equipment, delivered
+
+21
+00:01:15.895 --> 00:01:16.214
+Fast.
+
+22
+00:01:16.664 --> 00:01:18.371
+We are starting in Uttar Pradesh.
+
+23
+00:01:18.821 --> 00:01:23.952
+Oribrix is a marketplace. Many vendors sell through us, and customers see everything
+
+24
+00:01:23.952 --> 00:01:24.624
+In one app.
+
+25
+00:01:25.074 --> 00:01:28.775
+Oribrix runs the platform, the payments and the delivery.
+
+26
+00:01:28.775 --> 00:01:31.047
+Vendors focus on stock and packing.
+
+27
+00:01:33.433 --> 00:01:35.332
+There are three apps you should know about.
+
+28
+00:01:35.782 --> 00:01:39.553
+The customer app, where builders and home owners browse and order.
+
+29
+00:01:39.553 --> 00:01:42.182
+They only see products from vendors near them.
+
+30
+00:01:42.632 --> 00:01:47.581
+The vendor console, where the seller manages stock, orders, warehouses and payouts.
+
+31
+00:01:48.031 --> 00:01:53.262
+And the admin panel, used by the Oribrix team for approvals, the product catalog and
+
+32
+00:01:53.262 --> 00:01:58.058
+Pricing. Most of this course is about the vendor console and the admin panel.
+
+33
+00:02:00.467 --> 00:02:02.814
+Now, let's be very clear about who does what.
+
+34
+00:02:03.264 --> 00:02:08.536
+The admin, that's the Oribrix team, approves KYC and categories, creates every
+
+35
+00:02:08.536 --> 00:02:14.079
+Product in the catalog, approves warehouses and price changes, and verifies pickup
+
+36
+00:02:14.079 --> 00:02:15.701
+Addresses in Shiprocket.
+
+37
+00:02:16.151 --> 00:02:21.444
+The vendor applies and uploads documents, picks the products they want to sell, sets
+
+38
+00:02:21.444 --> 00:02:26.611
+Stock and minimum order quantity, can request price changes, and accepts and packs
+
+39
+00:02:26.611 --> 00:02:27.052
+Orders.
+
+40
+00:02:29.467 --> 00:02:33.542
+Every vendor goes through the same six steps. Let's walk through them once.
+
+41
+00:02:33.992 --> 00:02:38.002
+Step one. The vendor opens the vendor link and clicks Apply to sell.
+
+42
+00:02:38.452 --> 00:02:43.359
+Step two. They fill in six short sections and submit their KYC documents.
+
+43
+00:02:43.809 --> 00:02:48.536
+Step three. The admin team checks every document and approves the vendor.
+
+44
+00:02:48.536 --> 00:02:51.126
+Only then the vendor gets login details.
+
+45
+00:02:51.576 --> 00:02:57.148
+Step four. The vendor adds stock. In Oribrix, a product in a warehouse with a stock
+
+46
+00:02:57.148 --> 00:02:58.894
+Quantity is called an SKU.
+
+47
+00:02:59.344 --> 00:03:03.589
+Step five. Customers nearby can now see the product and place orders.
+
+48
+00:03:04.039 --> 00:03:09.075
+Step six. The vendor accepts, packs and hands over the order, and it is dispatched,
+
+49
+00:03:09.075 --> 00:03:10.652
+Mostly through Shiprocket.
+
+50
+00:03:13.067 --> 00:03:18.030
+Let's make this real with one example. A builder in Lucknow needs twenty bags of
+
+51
+00:03:18.030 --> 00:03:18.464
+Cement.
+
+52
+00:03:18.914 --> 00:03:21.901
+He opens the Oribrix app and orders twenty bags.
+
+53
+00:03:22.351 --> 00:03:26.703
+The order goes to the nearest vendor who has that cement in an approved warehouse.
+
+54
+00:03:27.153 --> 00:03:30.225
+The vendor checks stock, accepts the order, and packs it.
+
+55
+00:03:30.675 --> 00:03:33.150
+Shiprocket picks it up from the vendor's warehouse.
+
+56
+00:03:33.600 --> 00:03:36.010
+The cement is delivered to the builder's site.
+
+57
+00:03:36.460 --> 00:03:39.306
+And the vendor's money comes in the next settlement.
+
+58
+00:03:39.306 --> 00:03:42.370
+Every module of this course is one part of this journey.
+
+59
+00:03:44.767 --> 00:03:46.922
+Why does careful onboarding matter so much?
+
+60
+00:03:47.372 --> 00:03:52.117
+Customers trust whatever they see in the app: the product, the price, the delivery
+
+61
+00:03:52.117 --> 00:03:52.406
+Time.
+
+62
+00:03:52.856 --> 00:03:57.806
+A wrong detail during onboarding means a wrong price, or a failed delivery, later.
+
+63
+00:03:58.256 --> 00:04:00.965
+Correct bank details protect the vendor's payouts.
+
+64
+00:04:01.415 --> 00:04:04.615
+And a smooth start keeps good vendors with us for the long run.
+
+65
+00:04:07.000 --> 00:04:10.669
+Before we go further, here are some words you will hear again and again.
+
+66
+00:04:11.119 --> 00:04:16.718
+KYC means Know Your Customer. It's the set of identity, bank and business checks we
+
+67
+00:04:16.718 --> 00:04:18.607
+Do before a vendor can sell.
+
+68
+00:04:19.057 --> 00:04:24.476
+GSTIN is the fifteen character GST number of the vendor's business.
+
+69
+00:04:24.926 --> 00:04:28.574
+The master catalog is the list of all products on Oribrix.
+
+70
+00:04:28.574 --> 00:04:30.963
+Only the admin creates products in it.
+
+71
+00:04:31.413 --> 00:04:35.909
+An SKU is one product, in one warehouse, with a stock quantity.
+
+72
+00:04:35.909 --> 00:04:39.691
+The same cement bag in two warehouses means two SKUs.
+
+73
+00:04:40.141 --> 00:04:44.417
+And a warehouse is the vendor's pickup location, where orders are packed and
+
+74
+00:04:44.417 --> 00:04:45.261
+Collected from.
+
+75
+00:04:47.667 --> 00:04:48.670
+And five more.
+
+76
+00:04:49.120 --> 00:04:53.834
+Commission is Oribrix's share on a sale. The admin sets it for each product.
+
+77
+00:04:54.284 --> 00:04:58.423
+A settlement is the payout Oribrix sends to the vendor for their orders.
+
+78
+00:04:58.873 --> 00:05:01.902
+Shiprocket is our main delivery and courier partner.
+
+79
+00:05:02.352 --> 00:05:07.771
+COD means cash on delivery. The vendor can allow or block it for each SKU.
+
+80
+00:05:08.221 --> 00:05:12.727
+And a dispute is a ticket between the vendor and the admin, for example about a
+
+81
+00:05:12.727 --> 00:05:13.640
+Missing payment.
+
+82
+00:05:16.033 --> 00:05:20.108
+Here's a quick tour of the admin panel. You'll see these sections in the demos.
+
+83
+00:05:20.558 --> 00:05:25.934
+Live Ops shows network operations at a glance: orders, revenue and delivery health.
+
+84
+00:05:26.384 --> 00:05:30.224
+Warehouses and Vendors lists every vendor and every warehouse.
+
+85
+00:05:30.674 --> 00:05:34.706
+KYC Lifecycle is where new vendors wait for verification.
+
+86
+00:05:35.156 --> 00:05:38.718
+Catalog holds the master products, brands and categories.
+
+87
+00:05:39.168 --> 00:05:41.771
+Orders shows every order across all vendors.
+
+88
+00:05:42.221 --> 00:05:45.357
+And Pricing Rules is where price requests are handled.
+
+89
+00:05:47.767 --> 00:05:49.602
+And this is the vendor console.
+
+90
+00:05:50.052 --> 00:05:53.742
+The dashboard shows orders, sales value and recent activity.
+
+91
+00:05:54.192 --> 00:05:59.611
+Inventory is where the vendor adds SKUs, updates stock and requests price changes.
+
+92
+00:06:00.061 --> 00:06:03.133
+Orders is where they accept, pack and hand over orders.
+
+93
+00:06:03.583 --> 00:06:08.255
+Drivers and Fleet holds their own local drivers, as a backup to Shiprocket.
+
+94
+00:06:08.705 --> 00:06:12.502
+Earnings and Settlements shows payouts, and lets them raise disputes.
+
+95
+00:06:12.952 --> 00:06:17.454
+And Warehouses shows their pickup locations, and whether each one is approved.
+
+96
+00:06:19.867 --> 00:06:24.416
+Here is the golden rule of Oribrix. Only the admin creates products.
+
+97
+00:06:24.416 --> 00:06:29.835
+Vendors never create products. They pick from the admin's master catalog, and add
+
+98
+00:06:29.835 --> 00:06:35.320
+Stock to their own warehouse. This keeps product names, photos, GST and commission
+
+99
+00:06:35.320 --> 00:06:37.595
+Correct and the same for everyone.
+
+100
+00:07:12.467 --> 00:07:16.072
+By the end of this course, these five rules should feel natural to you.
+
+101
+00:07:16.522 --> 00:07:18.442
+Only the admin creates products.
+
+102
+00:07:18.892 --> 00:07:22.647
+Final vendor approval is a separate step, after the documents.
+
+103
+00:07:23.097 --> 00:07:27.385
+If no vendor has the product in an approved warehouse, customers can't see it.
+
+104
+00:07:27.835 --> 00:07:32.230
+Approved prices are only for that vendor, and one city means one price.
+
+105
+00:07:32.680 --> 00:07:35.624
+And every warehouse must be verified in Shiprocket.
+
+106
+00:07:38.033 --> 00:07:39.761
+Here's where we are on the timeline.
+
+107
+00:07:40.211 --> 00:07:43.902
+Vendor onboarding starts in mid November, twenty twenty six.
+
+108
+00:07:44.352 --> 00:07:49.088
+The target for the customer launch is the first of January, twenty twenty seven.
+
+109
+00:07:49.538 --> 00:07:54.316
+Before that, the team will finish bug fixes, the Tally integration, and Shiprocket
+
+110
+00:07:54.316 --> 00:07:58.220
+Express delivery. You'll see the full pending list in module eight.
+
+111
+00:08:00.633 --> 00:08:04.826
+It helps to know what the customer sees, because every mistake we make shows up
+
+112
+00:08:04.826 --> 00:08:05.092
+Here.
+
+113
+00:08:05.542 --> 00:08:09.232
+Customers see products only from vendors near their location.
+
+114
+00:08:09.682 --> 00:08:11.709
+Each product card shows one price.
+
+115
+00:08:12.159 --> 00:08:14.399
+Bigger quantities can get bulk prices.
+
+116
+00:08:14.849 --> 00:08:18.838
+Cash on delivery is offered if the vendor allows it for that product.
+
+117
+00:08:19.288 --> 00:08:22.936
+And after ordering, they see the live status until delivery.
+
+118
+00:08:25.333 --> 00:08:29.460
+Quick check. A vendor wants to sell a new tile brand that isn't in the app yet.
+
+119
+00:08:29.460 --> 00:08:30.453
+What should happen?
+
+120
+00:08:34.403 --> 00:08:38.867
+The admin adds it to the master catalog. Then the vendor can add stock.
+
+121
+00:08:38.867 --> 00:08:41.507
+Remember, only the admin creates products.
+
+122
+00:08:44.299 --> 00:08:46.560
+And if you get stuck, here's where to get help.
+
+123
+00:08:47.010 --> 00:08:51.405
+You can re-watch any module, any time, even after your certificate.
+
+124
+00:08:51.855 --> 00:08:54.778
+Each module ends with checklists you can use at work.
+
+125
+00:08:55.228 --> 00:08:56.934
+Ask your Oribrix team lead.
+
+126
+00:08:57.384 --> 00:09:01.992
+And report technical issues, like a bug in the app, to the Oribrix tech team.
+
+127
+00:09:04.399 --> 00:09:07.279
+Before the course map, a quick recap of this module.
+
+128
+00:09:07.729 --> 00:09:12.389
+Oribrix is a quick commerce marketplace for building materials, starting in Uttar
+
+129
+00:09:12.389 --> 00:09:12.849
+Pradesh.
+
+130
+00:09:13.299 --> 00:09:17.566
+There are three apps: the customer app, the vendor console, and the admin panel.
+
+131
+00:09:18.016 --> 00:09:22.773
+Every vendor goes through six steps, from Apply to sell, all the way to dispatch.
+
+132
+00:09:23.223 --> 00:09:26.402
+And the golden rule: only the admin creates products.
+
+133
+00:09:28.799 --> 00:09:31.231
+Finally, here is the map of the whole course.
+
+134
+00:09:31.681 --> 00:09:33.089
+You are in module one.
+
+135
+00:09:33.539 --> 00:09:37.251
+Module two covers the vendor application and KYC.
+
+136
+00:09:37.701 --> 00:09:40.752
+Module three shows how the admin approves a vendor.
+
+137
+00:09:41.202 --> 00:09:43.804
+Module four is about the product catalog.
+
+138
+00:09:44.254 --> 00:09:46.729
+Module five shows how vendors add stock.
+
+139
+00:09:47.179 --> 00:09:49.739
+Module six covers price change requests.
+
+140
+00:09:50.189 --> 00:09:52.685
+Module seven is orders and dispatch.
+
+141
+00:09:53.135 --> 00:09:57.065
+And module eight covers payouts, disputes, and what's still pending.
+
+142
+00:09:57.065 --> 00:09:58.106
+Let's get started.
+
+143
+00:10:00.499 --> 00:10:06.131
+That's the end of module 1. Next up, module 2: Vendor application and KYC.

@@ -1,0 +1,489 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.299
+Module eight. Payouts, disputes, and what's still pending.
+
+2
+00:00:06.500 --> 00:00:09.828
+This is the last module. After this, you'll take the quiz.
+
+3
+00:00:10.278 --> 00:00:12.561
+We'll read a payout in Earnings and Settlements.
+
+4
+00:00:13.011 --> 00:00:15.080
+See how to raise and handle a dispute.
+
+5
+00:00:15.530 --> 00:00:17.343
+Look at vendor settings and support.
+
+6
+00:00:17.793 --> 00:00:20.311
+Understand how customers see prices today.
+
+7
+00:00:20.761 --> 00:00:24.686
+And finish with what's pending, common questions, and a final recap.
+
+8
+00:00:27.100 --> 00:00:30.241
+In the vendor console, open Earnings and Settlements.
+
+9
+00:00:30.241 --> 00:00:31.900
+At the top are four numbers.
+
+10
+00:00:32.350 --> 00:00:36.147
+Total settled payout: all the money already paid out to the vendor.
+
+11
+00:00:36.597 --> 00:00:38.795
+Next payout: the upcoming settlement.
+
+12
+00:00:39.245 --> 00:00:43.490
+Deductions: what Oribrix deducts, which is logistics plus commission.
+
+13
+00:00:43.940 --> 00:00:47.097
+And open disputes: tickets that are still under review.
+
+14
+00:00:49.500 --> 00:00:52.913
+Below is the settlements table. Each row is one payout.
+
+15
+00:00:52.913 --> 00:00:54.279
+Here's how to read it.
+
+16
+00:00:54.729 --> 00:00:59.337
+The settlement ID. If there's ever a problem, quote this ID in the dispute.
+
+17
+00:00:59.787 --> 00:01:02.069
+The date, and how many orders are included.
+
+18
+00:01:02.519 --> 00:01:05.143
+GMV, the total value of those orders.
+
+19
+00:01:05.593 --> 00:01:07.065
+The GST portion.
+
+20
+00:01:07.515 --> 00:01:10.182
+Deductions, which are logistics plus commission.
+
+21
+00:01:10.632 --> 00:01:15.280
+And the payout amount, with its status: settled, or Tally synced once it's in
+
+22
+00:01:15.280 --> 00:01:15.944
+Accounting.
+
+23
+00:01:18.333 --> 00:01:21.910
+Let's walk through one payout with simple example numbers.
+
+24
+00:01:21.910 --> 00:01:25.117
+These are not real rates, just to show how it works.
+
+25
+00:01:25.567 --> 00:01:29.473
+Say the orders in this settlement are worth ten thousand rupees.
+
+26
+00:01:29.473 --> 00:01:30.388
+That's the GMV.
+
+27
+00:01:30.838 --> 00:01:36.065
+Oribrix deducts logistics and commission. In this example, six hundred rupees.
+
+28
+00:01:36.515 --> 00:01:41.749
+So the payout is nine thousand four hundred rupees, sent to the bank account from
+
+29
+00:01:41.749 --> 00:01:45.368
+The KYC. That's why correct bank details matter so much.
+
+30
+00:01:47.767 --> 00:01:49.687
+Let's watch this in the live demo.
+
+31
+00:01:53.500 --> 00:01:58.079
+Here is Earnings and Settlements, with the four numbers at the top, and tabs for
+
+32
+00:01:58.079 --> 00:01:59.281
+Payouts and disputes.
+
+33
+00:02:08.700 --> 00:02:13.585
+The vendor's warehouses page now shows two approved warehouses, both in Lucknow.
+
+34
+00:02:34.300 --> 00:02:39.822
+The settlements table lists each payout. There are buttons to export Tally XML and
+
+35
+00:02:39.822 --> 00:02:42.044
+CSV, for the vendor's accountant.
+
+36
+00:03:02.300 --> 00:03:07.256
+The team confirmed that returns, disputes, KYC and settings are working.
+
+37
+00:03:07.256 --> 00:03:11.111
+Settings let vendors reset their password and add staff.
+
+38
+00:03:33.500 --> 00:03:37.119
+If a vendor thinks a payout is wrong, they raise a dispute.
+
+39
+00:03:37.119 --> 00:03:40.860
+A dispute is a conversation between the vendor and the admin.
+
+40
+00:03:41.310 --> 00:03:42.931
+Go to Earnings and Settlements.
+
+41
+00:03:43.381 --> 00:03:45.941
+Open disputes, and click Create new dispute.
+
+42
+00:03:46.391 --> 00:03:50.402
+In the subject, write the settlement ID, or the missing order ID.
+
+43
+00:03:50.852 --> 00:03:55.033
+Explain the issue in detail, and attach proof, like a proof of delivery.
+
+44
+00:03:55.483 --> 00:03:58.129
+Submit. The admin will reply in the same thread.
+
+45
+00:04:00.533 --> 00:04:02.453
+Let's watch this in the live demo.
+
+46
+00:04:06.267 --> 00:04:09.915
+The disputes tab. Create new dispute opens a small form.
+
+47
+00:04:25.467 --> 00:04:30.886
+Subject, with the settlement or missing ID. A box to explain the issue in detail.
+
+48
+00:04:30.886 --> 00:04:32.358
+And a file attachment.
+
+49
+00:04:49.467 --> 00:04:55.240
+The team also asked for standard formats for vendor, customer, staff and settlement
+
+50
+00:04:55.240 --> 00:04:59.622
+IDs. Right now IDs are random, so a standard format is pending.
+
+51
+00:05:25.467 --> 00:05:29.499
+A good dispute gets solved quickly. Teach vendors to include these.
+
+52
+00:05:29.949 --> 00:05:32.680
+The exact settlement ID or order ID.
+
+53
+00:05:33.130 --> 00:05:35.647
+What's wrong, in one or two clear sentences.
+
+54
+00:05:36.097 --> 00:05:39.020
+The amount they expected, and the amount they received.
+
+55
+00:05:39.470 --> 00:05:43.032
+And proof, like a proof of delivery, an invoice, or a screenshot.
+
+56
+00:05:45.433 --> 00:05:47.822
+A few more things vendors will ask you about.
+
+57
+00:05:48.272 --> 00:05:50.256
+Passwords can be reset from Settings.
+
+58
+00:05:50.706 --> 00:05:54.824
+Vendors can add staff accounts for their team, so they don't share one login.
+
+59
+00:05:55.274 --> 00:06:00.458
+Optional KYC documents can be uploaded any time from the KYC section.
+
+60
+00:06:00.908 --> 00:06:05.768
+Data deletion requests go to support. At the time of the session, they were routed
+
+61
+00:06:05.768 --> 00:06:09.740
+To the developer's address, and are being moved to Oribrix support.
+
+62
+00:06:10.190 --> 00:06:14.717
+And WhatsApp support access details were still being confirmed with the development
+
+63
+00:06:14.717 --> 00:06:14.990
+Team.
+
+64
+00:06:17.399 --> 00:06:22.258
+A big question came up in the session. What if several vendors sell the same product
+
+65
+00:06:22.258 --> 00:06:23.415
+At different prices?
+
+66
+00:06:23.865 --> 00:06:28.553
+Today, the app shows the nearest vendor's product and price, so the customer sees
+
+67
+00:06:28.553 --> 00:06:30.116
+One price per product card.
+
+68
+00:06:30.566 --> 00:06:35.847
+Under discussion: showing other vendors' prices too, with vendor or warehouse names,
+
+69
+00:06:35.847 --> 00:06:41.128
+A bit like other quick commerce apps. This matters in markets where many sellers sit
+
+70
+00:06:41.128 --> 00:06:44.838
+In the same lane. The development team is preparing a plan.
+
+71
+00:06:47.233 --> 00:06:50.973
+As of the thirteenth of November, these items were still pending.
+
+72
+00:06:50.973 --> 00:06:53.505
+Some may be done by the time you watch this.
+
+73
+00:06:53.955 --> 00:06:57.496
+The category name display bug, which showed object object.
+
+74
+00:06:57.946 --> 00:07:00.656
+Adding the unit field to the CSV template.
+
+75
+00:07:01.106 --> 00:07:03.047
+The same city price validation.
+
+76
+00:07:03.497 --> 00:07:05.374
+The Shiprocket express API.
+
+77
+00:07:05.824 --> 00:07:08.278
+Connecting Tally to the live cloud ID.
+
+78
+00:07:08.728 --> 00:07:12.973
+Standard formats for vendor, customer, staff and settlement IDs.
+
+79
+00:07:13.423 --> 00:07:16.026
+A plan to show prices from multiple vendors.
+
+80
+00:07:16.476 --> 00:07:18.758
+And a full admin panel walkthrough session.
+
+81
+00:07:21.166 --> 00:07:25.049
+Here are the five questions vendors ask most, with the short answers.
+
+82
+00:07:25.499 --> 00:07:31.202
+I submitted KYC, when can I sell? After admin approval, usually within twenty four
+
+83
+00:07:31.202 --> 00:07:34.053
+Hours, and after the final approval step.
+
+84
+00:07:34.503 --> 00:07:39.901
+Can I add my own product? No. Ask the admin team to add it to the master catalog.
+
+85
+00:07:40.351 --> 00:07:45.224
+My product isn't showing. Check stock, warehouse approval, the map pin, and whether
+
+86
+00:07:45.224 --> 00:07:46.516
+The product is active.
+
+87
+00:07:46.966 --> 00:07:50.785
+Can I sell cheaper? Yes, request a price change with a reason.
+
+88
+00:07:51.235 --> 00:07:55.629
+My payout looks wrong. Raise a dispute with the settlement ID and proof.
+
+89
+00:07:58.032 --> 00:08:01.566
+Here's one checklist that brings the whole course together.
+
+90
+00:08:01.566 --> 00:08:04.560
+Use it to decide if a new vendor is ready to sell.
+
+91
+00:08:05.010 --> 00:08:08.679
+KYC is approved, including the final approval step.
+
+92
+00:08:09.129 --> 00:08:12.265
+The warehouse is approved, and verified in Shiprocket.
+
+93
+00:08:12.715 --> 00:08:14.934
+SKUs are added, with real stock.
+
+94
+00:08:15.384 --> 00:08:18.691
+Prices are checked, and any price requests are decided.
+
+95
+00:08:19.141 --> 00:08:22.170
+The vendor can log in, and staff are added if needed.
+
+96
+00:08:22.620 --> 00:08:26.396
+And local drivers are added as a backup. This one is optional.
+
+97
+00:08:28.799 --> 00:08:31.423
+Let's finish with the eight rules from this whole course.
+
+98
+00:08:31.873 --> 00:08:34.156
+One. Only the admin creates products.
+
+99
+00:08:34.606 --> 00:08:39.832
+Two. The GSTIN must be valid and unique, and the login email must be new.
+
+100
+00:08:40.282 --> 00:08:43.205
+Three. Final vendor approval is a separate step.
+
+101
+00:08:43.655 --> 00:08:47.111
+Four. No seller in an approved warehouse means no listing.
+
+102
+00:08:47.561 --> 00:08:51.124
+Five. Editing a warehouse location sends it back to pending.
+
+103
+00:08:51.574 --> 00:08:56.695
+Six. Approved prices are for one vendor and one warehouse, and the same city means
+
+104
+00:08:56.695 --> 00:08:57.632
+The same price.
+
+105
+00:08:58.082 --> 00:09:00.941
+Seven. Verify every warehouse in Shiprocket.
+
+106
+00:09:01.391 --> 00:09:04.527
+Eight. In disputes, always quote the settlement ID.
+
+107
+00:09:06.932 --> 00:09:09.279
+Finally, what does all this mean for your role?
+
+108
+00:09:09.729 --> 00:09:14.294
+If you're an onboarding executive, help vendors fill the form right the first time.
+
+109
+00:09:14.744 --> 00:09:19.544
+If you review KYC, check every document, and never skip final approval.
+
+110
+00:09:19.994 --> 00:09:25.114
+If you manage the catalog, use clear names, and the right GST, unit and weight.
+
+111
+00:09:25.564 --> 00:09:29.660
+In operations, own Shiprocket verification and dispatch issues.
+
+112
+00:09:30.110 --> 00:09:34.490
+In support, you'll handle product visibility, payouts and disputes, using the
+
+113
+00:09:34.490 --> 00:09:36.083
+Checklists from this course.
+
+114
+00:09:36.533 --> 00:09:40.395
+And for everyone: follow the rules, and when you're unsure, escalate.
+
+115
+00:09:42.799 --> 00:09:45.124
+You've finished all eight modules. Well done.
+
+116
+00:09:45.574 --> 00:09:49.350
+Now take the quiz. You get only one attempt, so take your time.
+
+117
+00:09:49.800 --> 00:09:52.190
+After the quiz, download your certificate.
+
+118
+00:09:52.640 --> 00:09:56.458
+Keep this course link, and come back to any module whenever you need it.
+
+119
+00:09:56.908 --> 00:10:00.313
+And if you have questions, ask your Oribrix team lead.
+
+120
+00:10:00.313 --> 00:10:03.970
+Thank you, and welcome to Oribrix. Order now, build today.
+
+121
+00:10:06.366 --> 00:10:10.109
+That's the end of module 8. You've completed all eight modules.
+
+122
+00:10:10.109 --> 00:10:12.723
+Now take the quiz, and get your certificate.

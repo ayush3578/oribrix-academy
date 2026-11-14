@@ -1,0 +1,481 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:03.488
+Module seven. Orders aur dispatch.
+
+2
+00:00:05.700 --> 00:00:11.076
+Yahin sab kuch judta hai: customer order karta hai, aur vendor deliver karta hai.
+
+3
+00:00:11.526 --> 00:00:14.107
+Hum order management page dekhenge.
+
+4
+00:00:14.557 --> 00:00:18.739
+Order ko item by item verify aur accept kaise karen.
+
+5
+00:00:19.189 --> 00:00:21.983
+Multi vendor orders mein kya hota hai.
+
+6
+00:00:22.433 --> 00:00:26.145
+Shiprocket se dispatch, uski teen services ke saatha.
+
+7
+00:00:26.595 --> 00:00:29.219
+Aur local drivers, backup ke taur pe.
+
+8
+00:00:31.633 --> 00:00:35.686
+Vendor console mein Orders kholiye. Upar chaar numbers hain.
+
+9
+00:00:36.136 --> 00:00:40.667
+Awaiting action: naye orders jinhe verify aur accept karna hai.
+
+10
+00:00:40.667 --> 00:00:43.112
+Ise zero rakhne ki koshish kijiye.
+
+11
+00:00:43.562 --> 00:00:47.594
+In fulfilment: accepted orders jo pick aur pack ho rahe hain.
+
+12
+00:00:48.044 --> 00:00:52.034
+On the road: orders jo customer ki taraf dispatch ho chuke hain.
+
+13
+00:00:52.484 --> 00:00:56.238
+Aur open value: saare open orders ki total value.
+
+14
+00:00:58.633 --> 00:01:01.150
+Har order isi raaste pe chalta hai.
+
+15
+00:01:01.600 --> 00:01:04.608
+Vendor console mein naya order aata hai.
+
+16
+00:01:05.058 --> 00:01:10.434
+Vendor har item ko apne stock se verify karta hai, aur accept karta hai.
+
+17
+00:01:10.884 --> 00:01:16.738
+Team order pick aur pack karti hai. Status admin panel aur customer app mein update
+
+18
+00:01:16.738 --> 00:01:17.796
+Hota rehta hai.
+
+19
+00:01:18.246 --> 00:01:20.636
+Vendor handover pe click karta hai.
+
+20
+00:01:21.086 --> 00:01:25.502
+Aur order dispatch hota hai, Shiprocket se ya local driver se.
+
+21
+00:01:27.900 --> 00:01:31.796
+Kuch customer orders mein bahut saare items hote hain.
+
+22
+00:01:31.796 --> 00:01:34.321
+Oribrix unhe aise handle karta hai.
+
+23
+00:01:34.771 --> 00:01:40.553
+Vendor sirf wahi items accept kar sakta hai jo wo sach mein supply kar sakta hai.
+
+24
+00:01:41.003 --> 00:01:46.955
+Jo items wo select nahi karta, wo kisi doosre nearby vendor ko dhoondhne lagte hain.
+
+25
+00:01:47.405 --> 00:01:52.269
+Jab doosra vendor unhe accept karta hai, toh order split ho jaata hai.
+
+26
+00:01:52.719 --> 00:01:55.974
+Aur customer app mein do alag shipments dikhte hain.
+
+27
+00:01:55.974 --> 00:01:59.417
+Ye normal hai, customer poochhe toh unhe samjha dijiye.
+
+28
+00:02:01.833 --> 00:02:04.478
+Chaliye ise live demo mein dekhte hain.
+
+29
+00:02:09.066 --> 00:02:14.674
+Hum vendor ki inventory se shuru karte hain, aur Bengaluru se ek naya order aaya
+
+30
+00:02:14.674 --> 00:02:14.954
+Hai.
+
+31
+00:02:42.666 --> 00:02:46.220
+Order products verification list ke saath khulta hai.
+
+32
+00:02:46.220 --> 00:02:50.175
+Har item pe quantity, price aur available stock dikhta hai.
+
+33
+00:03:05.066 --> 00:03:08.953
+Vendor wo items tick karta hai jo wo supply kar sakta hai.
+
+34
+00:03:08.953 --> 00:03:13.578
+Select all sab tick kar deta hai. Neeche delivery address dikhta hai.
+
+35
+00:03:22.666 --> 00:03:28.172
+Verify and accept. Jo item tick nahi hua, wo doosre vendor ke paas jaata hai, aur
+
+36
+00:03:28.172 --> 00:03:30.687
+Customer ko do shipments dikhte hain.
+
+37
+00:03:37.866 --> 00:03:42.209
+Handover ke baad vendor Shiprocket se dispatch kar sakta hai.
+
+38
+00:03:42.209 --> 00:03:43.989
+Ye sab apne aap hota hai.
+
+39
+00:03:44.439 --> 00:03:50.130
+Shiprocket sabse achha available courier partner chunta hai, jaise Delhivery,
+
+40
+00:03:50.130 --> 00:03:51.756
+BlueDart ya Shadowfax.
+
+41
+00:03:52.206 --> 00:03:56.345
+Ye ek AWB assign karta hai, jo tracking number hai.
+
+42
+00:03:56.795 --> 00:03:59.099
+Shipping label generate karta hai.
+
+43
+00:03:59.549 --> 00:04:02.898
+Aur vendor ke warehouse se pickup schedule karta hai.
+
+44
+00:04:05.300 --> 00:04:07.945
+Chaliye ise live demo mein dekhte hain.
+
+45
+00:04:11.733 --> 00:04:16.764
+Ye order management hai. Chaar numbers dikh rahe hain, aur order list customer,
+
+46
+00:04:16.764 --> 00:04:20.202
+Warehouse, items, amount, payment aur stage ke saatha.
+
+47
+00:04:39.733 --> 00:04:45.177
+Dispatch order window mein do tabs hain: Shiprocket courier, jo automatic hai, aur
+
+48
+00:04:45.177 --> 00:04:46.837
+Local ya in-house driver.
+
+49
+00:04:58.933 --> 00:05:02.261
+Isme destination, aur pickup warehouse dikhta hai.
+
+50
+00:05:02.261 --> 00:05:05.589
+Dispatch via Shiprocket se shipment ban jaata hai.
+
+51
+00:05:18.933 --> 00:05:24.685
+Session ka ek important point: vendor ka warehouse pehle se Shiprocket portal ke
+
+52
+00:05:24.685 --> 00:05:26.698
+Andar verified hona chahiye.
+
+53
+00:05:41.333 --> 00:05:45.602
+Ye admin ka kaam hai, aur ye Oribrix admin panel se nahi hota.
+
+54
+00:05:45.602 --> 00:05:50.974
+Vendor ka warehouse approve karne se pehle Shiprocket portal kholiye aur wahan
+
+55
+00:05:50.974 --> 00:05:56.000
+Pickup address verify kijiye. Shiprocket phone number se track karta hai.
+
+56
+00:05:56.000 --> 00:06:01.165
+Naye vendor ke phone number pe ek baar OTP aata hai, isliye vendor ke saath
+
+57
+00:06:01.165 --> 00:06:06.812
+Coordinate kijiye. Agar same vendor same number se doosra warehouse add karta hai,
+
+58
+00:06:06.812 --> 00:06:11.770
+Toh OTP nahi chahiye. Ye vendor ke KYC lifecycle ka hissa ban jaata hai.
+
+59
+00:07:01.433 --> 00:07:06.861
+Shiprocket ki teen services hain. Yahin pe module four wala unit weight kaam aata
+
+60
+00:07:06.861 --> 00:07:07.129
+Hai.
+
+61
+00:07:07.579 --> 00:07:12.010
+Normal delivery, five hundred kilo se kam ke orders ke liye.
+
+62
+00:07:12.010 --> 00:07:13.339
+Iska API live hai.
+
+63
+00:07:13.789 --> 00:07:19.140
+Shiprocket cargo, five hundred kilo se zyada ke bulk orders ke liye.
+
+64
+00:07:19.140 --> 00:07:20.872
+Iska API bhi live hai.
+
+65
+00:07:21.322 --> 00:07:26.493
+Aur express. Express ka API abhi nahi hai, isliye express orders abhi normal
+
+66
+00:07:26.493 --> 00:07:30.303
+Delivery mein jaate hain, ya manually banaye jaate hain.
+
+67
+00:07:32.700 --> 00:07:37.009
+Jab tak express API nahi aata, manual process ye hai.
+
+68
+00:07:37.459 --> 00:07:41.001
+Customer express delivery ke saath order karta hai.
+
+69
+00:07:41.451 --> 00:07:44.160
+Oribrix order ID copy kijiye.
+
+70
+00:07:44.610 --> 00:07:46.466
+Shiprocket portal kholiye.
+
+71
+00:07:46.916 --> 00:07:49.839
+Wahan order manually express mein banayiye.
+
+72
+00:07:50.289 --> 00:07:52.763
+Aur customer ko update karte rahiye.
+
+73
+00:07:55.166 --> 00:07:57.811
+Chaliye ise live demo mein dekhte hain.
+
+74
+00:08:01.600 --> 00:08:07.302
+Ab doosra tab: local ya in-house driver. Ye tab ke liye hai jab Shiprocket cancel
+
+75
+00:08:07.302 --> 00:08:09.344
+Kar de, ya order na le paaye.
+
+76
+00:08:29.600 --> 00:08:34.858
+Quick select se saved delivery partner chun sakte hain, ya naya type kar sakte hain:
+
+77
+00:08:34.858 --> 00:08:36.235
+Name aur phone number.
+
+78
+00:08:49.600 --> 00:08:55.437
+Customer ko ye phone number milta hai, taaki wo delivery coordination ke liye driver
+
+79
+00:08:55.437 --> 00:08:56.619
+Ko call kar sake.
+
+80
+00:09:09.600 --> 00:09:14.497
+Phir vehicle model, jaise Tata Ace, aur vehicle number, jo optional hai.
+
+81
+00:09:14.497 --> 00:09:16.469
+Phir Dispatch and link phone.
+
+82
+00:09:31.200 --> 00:09:36.853
+Local drivers ko achhe se use karne ke liye unhe pehle se set up kijiye.
+
+83
+00:09:37.303 --> 00:09:41.805
+Delivery partner ka naam, ya saved driver ko quick select kijiye.
+
+84
+00:09:42.255 --> 00:09:47.545
+Phone number. Customer isi number pe call karega, isliye ye sahi hona chahiye.
+
+85
+00:09:47.995 --> 00:09:49.190
+Vehicle model.
+
+86
+00:09:49.640 --> 00:09:53.395
+Vehicle number. Optional hai, lekin daalna achha hai.
+
+87
+00:09:53.845 --> 00:09:59.306
+Vendors ko pehle Drivers and Fleet section mein apne drivers add karne chahiye.
+
+88
+00:09:59.756 --> 00:10:03.020
+Wahan har driver on trip ya idle dikhta hai.
+
+89
+00:10:05.433 --> 00:10:10.979
+Ye limitation jaan lijiye. Jab local driver use hota hai, toh customer ko Shiprocket
+
+90
+00:10:10.979 --> 00:10:16.196
+Wala tracking SMS nahi milta. App mein source aur destination dikhta hai, lekin
+
+91
+00:10:16.196 --> 00:10:21.478
+Customer ko update rakhna support ka kaam hai. Isliye local drivers ko backup ki
+
+92
+00:10:21.478 --> 00:10:24.185
+Tarah use kijiye, default ki tarah nahin.
+
+93
+00:10:57.166 --> 00:10:59.811
+Chaliye ise live demo mein dekhte hain.
+
+94
+00:11:04.400 --> 00:11:08.048
+Vaapas dispatch window men. Shiprocket tab default hai.
+
+95
+00:11:34.800 --> 00:11:40.246
+Order details mein products unke status ke saath, delivery address, aur do buttons
+
+96
+00:11:40.246 --> 00:11:44.763
+Dikhte hain: Cancel order, aur Handover and assign delivery partner.
+
+97
+00:11:56.400 --> 00:12:01.540
+Dispatch hone ke baad order on trip dikhta hai, aur on the road mein chala jaata
+
+98
+00:12:01.540 --> 00:12:01.797
+Hai.
+
+99
+00:12:09.200 --> 00:12:12.272
+Vendors aur support ke liye dispatch checklist.
+
+100
+00:12:12.722 --> 00:12:16.711
+Sirf wahi items accept kijiye jo sach mein stock mein hain.
+
+101
+00:12:17.161 --> 00:12:20.127
+Pack kijiye, phir handover pe click kijiye.
+
+102
+00:12:20.577 --> 00:12:24.075
+Check kijiye ki warehouse Shiprocket mein verified hai.
+
+103
+00:12:24.525 --> 00:12:28.579
+Five hundred kilo se bhari orders cargo se jaate hain.
+
+104
+00:12:29.029 --> 00:12:31.887
+Express orders abhi manually bante hain.
+
+105
+00:12:32.337 --> 00:12:37.735
+Aur local driver ke saath sahi phone number daaliye, aur customer ko update rakhiye.
+
+106
+00:12:40.133 --> 00:12:43.377
+Quick check. Shiprocket ne pickup cancel kar diya.
+
+107
+00:12:43.377 --> 00:12:44.805
+Backup option kya hai?
+
+108
+00:12:48.755 --> 00:12:54.876
+Dispatch window ke doosre tab se local ya in-house driver ke saath dispatch kijiye.
+
+109
+00:12:54.876 --> 00:13:01.070
+Aur yaad rakhiye, support ko customer ko update karna hoga, kyunki tracking SMS nahi
+
+110
+00:13:01.070 --> 00:13:01.512
+Jaata.
+
+111
+00:13:04.300 --> 00:13:06.199
+Module seven ka summary.
+
+112
+00:13:06.649 --> 00:13:12.828
+Item by item verify aur accept kijiye. Jo accept nahi hua wo doosre vendor ke paas
+
+113
+00:13:12.828 --> 00:13:13.582
+Jaata hai.
+
+114
+00:13:14.032 --> 00:13:16.144
+Pack, handover, phir dispatch.
+
+115
+00:13:16.594 --> 00:13:20.178
+Har warehouse Shiprocket mein verified hona chahiye.
+
+116
+00:13:20.628 --> 00:13:26.409
+Five hundred kilo se kam normal, usse upar cargo, aur express abhi manual hai.
+
+117
+00:13:26.859 --> 00:13:30.931
+Aur local drivers sirf backup hain, tracking SMS ke bina.
+
+118
+00:13:30.931 --> 00:13:36.289
+Aakhiri module mein payouts, disputes aur jo abhi pending hai, wo dekhenge.
+
+119
+00:13:38.700 --> 00:13:44.395
+Module 7 yahin khatam hota hai. Agla hai module 8: Payouts, disputes and what's
+
+120
+00:13:44.395 --> 00:13:44.972
+Pending.

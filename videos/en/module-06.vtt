@@ -1,0 +1,393 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:03.147
+Module six. Price change requests.
+
+2
+00:00:05.333 --> 00:00:08.527
+Every product in the catalog has one catalog price.
+
+3
+00:00:08.527 --> 00:00:12.849
+But vendors are different, and sometimes they need a different price.
+
+4
+00:00:12.849 --> 00:00:15.104
+This module explains how that works.
+
+5
+00:00:15.554 --> 00:00:17.623
+Why vendors ask for a different price.
+
+6
+00:00:18.073 --> 00:00:19.310
+How they request it.
+
+7
+00:00:19.760 --> 00:00:22.107
+What the admin sees, and how to decide.
+
+8
+00:00:22.557 --> 00:00:26.610
+Why an approved price only applies to one vendor and one warehouse.
+
+9
+00:00:27.060 --> 00:00:28.404
+And the same city rule.
+
+10
+00:00:30.800 --> 00:00:33.189
+The form itself suggests common reasons.
+
+11
+00:00:33.639 --> 00:00:36.583
+A promotional offer, which is a short term discount.
+
+12
+00:00:37.033 --> 00:00:40.660
+A margin update, when the vendor's own cost goes up or down.
+
+13
+00:00:41.110 --> 00:00:44.353
+A bulk discount, because they can sell cheaper in volume.
+
+14
+00:00:44.803 --> 00:00:48.256
+Or local competition, to match nearby market rates.
+
+15
+00:00:48.256 --> 00:00:52.589
+A vendor can also ask for a higher price, but the admin decides.
+
+16
+00:00:55.000 --> 00:00:56.259
+Here's the whole flow.
+
+17
+00:00:56.709 --> 00:01:01.935
+While adding or editing an SKU, the vendor enters a requested price and a reason.
+
+18
+00:01:02.385 --> 00:01:04.391
+The admin gets a notification.
+
+19
+00:01:04.841 --> 00:01:09.491
+The admin compares the catalog price, the current price and the requested price.
+
+20
+00:01:09.941 --> 00:01:11.797
+The admin accepts or rejects.
+
+21
+00:01:12.247 --> 00:01:15.725
+If accepted, the new price goes live, for that vendor only.
+
+22
+00:01:18.133 --> 00:01:20.053
+Let's watch this in the live demo.
+
+23
+00:01:23.867 --> 00:01:29.206
+This vendor has two warehouses: abc in Lucknow, which is pending, and Kengeri, which
+
+24
+00:01:29.206 --> 00:01:29.968
+Is approved.
+
+25
+00:01:51.867 --> 00:01:56.811
+In Add new SKU, below the policy section, there's a checkbox to allow cash on
+
+26
+00:01:56.811 --> 00:01:58.480
+Delivery for this listing.
+
+27
+00:02:15.867 --> 00:02:21.871
+Here's product pricing from the master catalog: MRP nine hundred, selling price six
+
+28
+00:02:21.871 --> 00:02:26.790
+Hundred sixty one, inclusive of GST. Below it, Request price change.
+
+29
+00:02:34.267 --> 00:02:37.661
+The vendor requests five hundred fifty, with a reason.
+
+30
+00:02:37.661 --> 00:02:41.243
+In inventory, the price request status now shows pending.
+
+31
+00:02:51.067 --> 00:02:55.931
+In the admin panel, the request opens in a window called vendor change requests.
+
+32
+00:02:56.381 --> 00:02:59.730
+The catalog price, which is the universal master price.
+
+33
+00:03:00.180 --> 00:03:03.210
+The current price that's active for this vendor right now.
+
+34
+00:03:03.660 --> 00:03:06.220
+The requested price, proposed by the vendor.
+
+35
+00:03:06.670 --> 00:03:07.843
+The vendor's reason.
+
+36
+00:03:08.293 --> 00:03:13.402
+Accept or reject. A note reminds you that accepting changes the price for this
+
+37
+00:03:13.402 --> 00:03:16.677
+Vendor only, and the catalog price stays the same.
+
+38
+00:03:17.127 --> 00:03:20.775
+And a second tab, for warranty and return policy requests.
+
+39
+00:03:23.167 --> 00:03:25.087
+Let's watch this in the live demo.
+
+40
+00:03:28.900 --> 00:03:32.502
+Back in the vendor's inventory, the request shows pending.
+
+41
+00:03:32.502 --> 00:03:35.172
+Now we go to admin, Warehouses and Vendors.
+
+42
+00:03:56.900 --> 00:04:00.811
+A small badge on the vendor's row shows there's a change request.
+
+43
+00:04:00.811 --> 00:04:03.940
+Clicking it opens the vendor change requests window.
+
+44
+00:04:14.500 --> 00:04:19.701
+Catalog price six sixty one, current price six sixty one, requested five fifty.
+
+45
+00:04:19.701 --> 00:04:22.137
+The reason from the vendor: too high.
+
+46
+00:04:30.500 --> 00:04:35.679
+Accept price is clicked. Below, you can see another request that was rejected, where
+
+47
+00:04:35.679 --> 00:04:37.775
+A vendor asked for a higher price.
+
+48
+00:04:48.900 --> 00:04:50.735
+So here's what happened in numbers.
+
+49
+00:04:51.185 --> 00:04:54.375
+The catalog price was six hundred sixty one rupees.
+
+50
+00:04:54.375 --> 00:04:56.753
+That stays the same for everyone else.
+
+51
+00:04:57.203 --> 00:04:59.528
+The vendor requested five hundred fifty.
+
+52
+00:04:59.978 --> 00:05:04.807
+After approval, five fifty is live, but only for this vendor, and only for that
+
+53
+00:05:04.807 --> 00:05:05.418
+Warehouse.
+
+54
+00:05:07.833 --> 00:05:09.753
+Let's watch this in the live demo.
+
+55
+00:05:13.567 --> 00:05:17.824
+In the vendor's inventory, the status now says accepted, five fifty.
+
+56
+00:05:17.824 --> 00:05:22.143
+And in the customer app, the product shows five hundred fifty rupees.
+
+57
+00:05:46.367 --> 00:05:51.438
+This is the rule. An approved price is specific to one vendor, and one warehouse.
+
+58
+00:05:51.438 --> 00:05:56.447
+Other vendors still see the catalog price. And as you'll see next, even the same
+
+59
+00:05:56.447 --> 00:05:59.828
+Vendor's other warehouses still use the catalog price.
+
+60
+00:06:33.533 --> 00:06:35.453
+Let's watch this in the live demo.
+
+61
+00:06:39.267 --> 00:06:43.534
+Now the vendor adds a second warehouse in Lucknow, and the admin approves it.
+
+62
+00:07:24.867 --> 00:07:29.539
+The warehouse details are edited: name, address, pin code and timings.
+
+63
+00:07:51.267 --> 00:07:55.950
+Then the same floor tile is added again as a new SKU, this time in the new
+
+64
+00:07:55.950 --> 00:07:58.798
+Warehouse, without requesting a price change.
+
+65
+00:08:19.267 --> 00:08:21.230
+Look at the result in the inventory.
+
+66
+00:08:21.680 --> 00:08:26.074
+Warehouse one shows five fifty, because the price change was approved there.
+
+67
+00:08:26.524 --> 00:08:31.912
+Warehouse two shows six sixty one, the catalog price, because no request was made
+
+68
+00:08:31.912 --> 00:08:37.232
+For it. In the demo, the customer app even showed six sixty one on the card, but
+
+69
+00:08:37.232 --> 00:08:40.092
+Five fifty inside, which confused everyone.
+
+70
+00:08:42.500 --> 00:08:44.420
+Let's watch this in the live demo.
+
+71
+00:08:48.233 --> 00:08:52.436
+Here's the inventory with both rows: the same tile at two prices.
+
+72
+00:09:16.233 --> 00:09:21.081
+The team discussed this. A vendor might have a main branch in Lucknow and another
+
+73
+00:09:21.081 --> 00:09:24.432
+Warehouse in Bangalore, and want different prices there.
+
+74
+00:09:24.432 --> 00:09:25.150
+That's fair.
+
+75
+00:09:48.233 --> 00:09:52.913
+But two warehouses in the same city with different prices confuses customers.
+
+76
+00:09:52.913 --> 00:09:54.676
+So they agreed on a new rule.
+
+77
+00:10:32.233 --> 00:10:37.279
+The same city rule. A vendor cannot set different prices for warehouses in the same
+
+78
+00:10:37.279 --> 00:10:42.020
+City. Different cities, like Lucknow and Bangalore, can have different prices.
+
+79
+00:10:42.020 --> 00:10:46.822
+This validation was being built at the time of the session, so until it's live,
+
+80
+00:10:46.822 --> 00:10:50.409
+Admins should check this manually before accepting a price.
+
+81
+00:11:30.667 --> 00:11:32.864
+Before you click accept, run through this.
+
+82
+00:11:33.314 --> 00:11:34.722
+Read the vendor's reason.
+
+83
+00:11:35.172 --> 00:11:38.543
+Compare it with the catalog price, and with nearby vendors.
+
+84
+00:11:38.993 --> 00:11:40.422
+Check the same city rule.
+
+85
+00:11:40.872 --> 00:11:43.944
+Remember, it only applies to this vendor and warehouse.
+
+86
+00:11:44.394 --> 00:11:47.850
+And reject unclear requests, with a note explaining why.
+
+87
+00:11:50.267 --> 00:11:53.659
+Quick check. The admin approved five fifty for vendor A.
+
+88
+00:11:53.659 --> 00:11:56.688
+What price does vendor B see for the same product?
+
+89
+00:12:00.638 --> 00:12:05.573
+The catalog price. An approved price only applies to the vendor and warehouse that
+
+90
+00:12:05.573 --> 00:12:06.356
+Requested it.
+
+91
+00:12:09.167 --> 00:12:10.682
+Let's sum up module six.
+
+92
+00:12:11.132 --> 00:12:14.844
+Vendors request a price and a reason while adding an SKU.
+
+93
+00:12:15.294 --> 00:12:18.899
+The admin compares the catalog, current and requested price.
+
+94
+00:12:19.349 --> 00:12:22.784
+An approved price is only for that vendor and that warehouse.
+
+95
+00:12:23.234 --> 00:12:26.626
+Same city means same price. Check it manually for now.
+
+96
+00:12:27.076 --> 00:12:31.342
+And vendors can request higher prices too, but the admin decides.
+
+97
+00:12:31.342 --> 00:12:33.049
+Next, orders and dispatch.
+
+98
+00:12:35.433 --> 00:12:40.297
+That's the end of module 6. Next up, module 7: Orders and dispatch.

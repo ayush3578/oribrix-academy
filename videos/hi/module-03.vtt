@@ -1,0 +1,485 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:05.344
+Module three. Admin, vendor ka KYC approve kaise karta hai.
+
+2
+00:00:07.533 --> 00:00:13.165
+Ye module Oribrix team ke un members ke liye hai jo vendors ko approve karte hain.
+
+3
+00:00:13.615 --> 00:00:17.242
+Hum KYC lifecycle page se shuru karenge.
+
+4
+00:00:17.692 --> 00:00:21.702
+Phir har document ko sahi tareeke se review kaise karen.
+
+5
+00:00:22.152 --> 00:00:25.992
+Custom categories aur warehouses ko approve kaise karen.
+
+6
+00:00:26.442 --> 00:00:29.834
+Final approval step, jo log aksar bhool jaate hain.
+
+7
+00:00:30.284 --> 00:00:33.570
+Aur approve hone ke baad vendor ko kya dikhta hai.
+
+8
+00:00:35.967 --> 00:00:41.785
+Admin panel mein KYC Lifecycle kholiye. Upar total applications dikhte hain, aur ye
+
+9
+00:00:41.785 --> 00:00:44.799
+Teen numbers. Ye figures demo data ke hain.
+
+10
+00:00:45.249 --> 00:00:50.284
+Pending verification aapki work queue hai. Ye vendors aapka wait kar rahe hain.
+
+11
+00:00:50.734 --> 00:00:52.568
+Approved vendors live hain.
+
+12
+00:00:53.018 --> 00:00:56.691
+Aur suspended vendors ko kisi admin ne block kiya hai.
+
+13
+00:00:56.691 --> 00:01:00.976
+Suspend button kahan hai, wo hum isi module mein aage dekhenge.
+
+14
+00:01:03.367 --> 00:01:07.527
+Vendor ko approve karne mein hamesha ye paanch steps hote hain.
+
+15
+00:01:07.977 --> 00:01:11.881
+Pending verification list mein se vendor ko open kijiye.
+
+16
+00:01:12.331 --> 00:01:15.574
+Har document ko ek ek karke review kijiye.
+
+17
+00:01:16.024 --> 00:01:22.030
+Custom categories ko approve ya reject kijiye, aur registration warehouse ko approve
+
+18
+00:01:22.030 --> 00:01:22.530
+Kijiye.
+
+19
+00:01:22.980 --> 00:01:25.540
+Phir final vendor approval kijiye.
+
+20
+00:01:25.990 --> 00:01:29.980
+Aur vendor ko apne aap login wala email mil jaata hai.
+
+21
+00:01:32.367 --> 00:01:35.012
+Chaliye ise live demo mein dekhte hain.
+
+22
+00:01:38.000 --> 00:01:44.251
+Ye KYC lifecycle page hai. Naya vendor, oribrix, pending verification mein dikh raha
+
+23
+00:01:44.251 --> 00:01:47.749
+Hai, list mein hi GSTIN aur PAN dikh rahe hain.
+
+24
+00:01:54.800 --> 00:01:59.387
+Right side wala eye icon poori KYC details kholta hai.
+
+25
+00:02:10.800 --> 00:02:16.288
+Har document ka apna card hai. Click karne pe file alag window mein khulti hai,
+
+26
+00:02:16.288 --> 00:02:18.928
+Taaki aap side by side check kar sako.
+
+27
+00:02:24.400 --> 00:02:30.157
+Dropdown se status chuniye, zaroorat ho toh remark daaliye, aur Update doc status pe
+
+28
+00:02:30.157 --> 00:02:34.064
+Click kijiye. Ek chhota message update confirm karta hai.
+
+29
+00:02:47.600 --> 00:02:52.443
+Document kholna kaafi nahi hai. Asal mein check kya karna hai, wo ye hai.
+
+30
+00:02:52.893 --> 00:02:59.580
+GST certificate pe business name aur GSTIN wahi hone chahiye jo vendor ne form mein
+
+31
+00:02:59.580 --> 00:03:00.466
+Daale hain.
+
+32
+00:03:00.916 --> 00:03:04.223
+Business PAN pe number aur name match hone chahiye.
+
+33
+00:03:04.673 --> 00:03:09.950
+Cancelled cheque pe account number aur IFSC, banking step se match hone chahiye.
+
+34
+00:03:09.950 --> 00:03:12.523
+Isse vendor ke payouts safe rahte hain.
+
+35
+00:03:12.973 --> 00:03:17.240
+Aadhaar pe naam authorised signatory se match hona chahiye.
+
+36
+00:03:17.690 --> 00:03:21.274
+Optional documents mein validity dates check kijiye.
+
+37
+00:03:21.724 --> 00:03:25.242
+Aur har file clear, complete aur valid honi chahiye.
+
+38
+00:03:25.242 --> 00:03:30.587
+Kuch bhi galat ho, toh us document ko saaf remark ke saath reject kijiye, taaki
+
+39
+00:03:30.587 --> 00:03:33.564
+Vendor ko pata chale ki kya theek karna hai.
+
+40
+00:03:35.967 --> 00:03:40.063
+Neeche scroll karenge toh categories aur warehouses aate hain.
+
+41
+00:03:40.513 --> 00:03:45.164
+Vendor ne jo standard categories chuni hain, wo reference ke liye dikhti hain.
+
+42
+00:03:45.614 --> 00:03:49.308
+Custom category requests pe decision lena hota hai.
+
+43
+00:03:49.308 --> 00:03:51.843
+Har ek ko approve ya reject kijiye.
+
+44
+00:03:52.293 --> 00:03:55.728
+Registration warehouse ko bhi approval chahiye.
+
+45
+00:03:56.178 --> 00:04:01.863
+Approve karne se pehle check kijiye ki map ka pin sach mein address se match karta
+
+46
+00:04:01.863 --> 00:04:06.716
+Hai. Usi pin ke aaspas ke customers ko is vendor ke products dikhenge.
+
+47
+00:04:09.100 --> 00:04:11.745
+Chaliye ise live demo mein dekhte hain.
+
+48
+00:04:14.733 --> 00:04:20.357
+Yahan owner details, bank details dikh rahi hain, aur right side pe categories aur
+
+49
+00:04:20.357 --> 00:04:21.112
+Warehouses.
+
+50
+00:04:26.733 --> 00:04:31.158
+Custom category request ke saath Approve aur Reject buttons hain.
+
+51
+00:04:31.158 --> 00:04:36.808
+Demo mein naam object object dikh raha tha, ye ek display bug hai jise team fix kar
+
+52
+00:04:36.808 --> 00:04:37.421
+Rahi hai.
+
+53
+00:04:44.333 --> 00:04:49.545
+Registration warehouse, Central City, yahan approve kiya gaya, toh uska status
+
+54
+00:04:49.545 --> 00:04:51.416
+Pending se approved ho gaya.
+
+55
+00:05:06.733 --> 00:05:11.664
+Ab is module ka sabse important step. Har document approve karna kaafi nahi hai.
+
+56
+00:05:11.664 --> 00:05:16.841
+Vendor abhi bhi pending hai. Aapko Vendor action mein jaake Approved chunna hai, aur
+
+57
+00:05:16.841 --> 00:05:22.019
+Update status pe click karna hai. Tabhi vendor ka registration approve hota hai, aur
+
+58
+00:05:22.019 --> 00:05:27.073
+Tabhi use login email milta hai. Agar koi vendor bole ki maine sab upload kar diya
+
+59
+00:05:27.073 --> 00:05:30.648
+Lekin login nahi ho raha, toh usually yahi wajah hoti hai.
+
+60
+00:06:18.067 --> 00:06:20.712
+Chaliye ise live demo mein dekhte hain.
+
+61
+00:06:23.700 --> 00:06:29.044
+Pehle vendor ki screen. Paanchon documents aa gaye, progress one hundred percent
+
+62
+00:06:29.044 --> 00:06:32.852
+Dikh raha hai, lekin verification abhi bhi In review hai.
+
+63
+00:06:40.500 --> 00:06:46.062
+Vaapas admin mein, ek green note bol raha hai ki saare uploaded items review ho
+
+64
+00:06:46.062 --> 00:06:50.356
+Gaye, aur ab aap registration approve ya reject kar sakte ho.
+
+65
+00:06:54.900 --> 00:06:59.517
+Vendor action ko Approved kiya gaya, aur Update status pe click kiya gaya.
+
+66
+00:06:59.517 --> 00:07:02.637
+Suspend vendor button dekhiye jo ab dikh raha hai.
+
+67
+00:07:02.637 --> 00:07:05.695
+Baad mein vendor ko block aise hi kiya jaata hai.
+
+68
+00:07:12.500 --> 00:07:17.385
+Vendor ki side pe: Your account is verified. Dashboard unlock ho gaya.
+
+69
+00:07:26.900 --> 00:07:30.847
+Aur ye raha vendor dashboard, stock add karne ke liye ready.
+
+70
+00:07:37.300 --> 00:07:41.268
+Toh aapke paas teen tools hain. Kaun sa kab use karna hai?
+
+71
+00:07:41.718 --> 00:07:47.611
+Kisi ek document ko reject kijiye jab file galat ho, dhundhli ho ya expired ho.
+
+72
+00:07:47.611 --> 00:07:52.683
+Hamesha saaf remark daaliye, aur vendor dobara upload kar sakta hai.
+
+73
+00:07:53.133 --> 00:07:58.173
+Vendor ko tabhi approve kijiye jab saare mandatory documents approved hon,
+
+74
+00:07:58.173 --> 00:08:02.328
+Categories pe decision ho gaya ho, aur warehouse approved ho.
+
+75
+00:08:02.778 --> 00:08:08.465
+Suspend baad ke liye hai, agar kisi approved vendor ke saath koi serious problem ho.
+
+76
+00:08:08.465 --> 00:08:13.881
+Isse vendor block ho jaata hai, isliye dhyaan se use kijiye, aur apne manager ko
+
+77
+00:08:13.881 --> 00:08:14.490
+Batayiye.
+
+78
+00:08:16.900 --> 00:08:22.105
+Bina saaf remark wala rejection bas ek extra phone call banata hai.
+
+79
+00:08:22.105 --> 00:08:25.135
+Achhe remarks ke kuch examples ye rahe.
+
+80
+00:08:25.585 --> 00:08:31.102
+GST certificate ke liye: certificate pe naam business name se match nahi karta,
+
+81
+00:08:31.102 --> 00:08:33.755
+Please sahi certificate upload kijiye.
+
+82
+00:08:34.205 --> 00:08:39.406
+Cancelled cheque ke liye: account number bank details se match nahi karta, please
+
+83
+00:08:39.406 --> 00:08:40.691
+Dobara check kijiye.
+
+84
+00:08:41.141 --> 00:08:46.589
+Aadhaar ke liye: image dhundhli hai aur naam padha nahi ja raha, please clear scan
+
+85
+00:08:46.589 --> 00:08:47.519
+Upload kijiye.
+
+86
+00:08:47.969 --> 00:08:53.383
+Aur warehouse ke liye: map pin, address wali city se alag city mein hai, please pin
+
+87
+00:08:53.383 --> 00:08:57.036
+Move kijiye. Specific, polite, aur samajhne mein aasana.
+
+88
+00:08:59.433 --> 00:09:03.913
+Itna dhyaan kyun? Kyunki har approval ka asar baad mein dikhta hai.
+
+89
+00:09:04.363 --> 00:09:08.886
+Galat bank details ka matlab payouts galat account mein jaayenge.
+
+90
+00:09:09.336 --> 00:09:14.754
+Galat GSTIN ka matlab invoices aur tax filings galat hongi.
+
+91
+00:09:15.204 --> 00:09:20.811
+Galat warehouse pin ka matlab galat area ke customers ko ye vendor dikhega, aur
+
+92
+00:09:20.811 --> 00:09:22.372
+Deliveries fail hongi.
+
+93
+00:09:22.822 --> 00:09:28.014
+Aur fake vendor ko approve karne ka matlab failed orders aur naaraz customers.
+
+94
+00:09:28.014 --> 00:09:31.142
+Doubt ho, toh approve karne se pehle poochhiye.
+
+95
+00:09:33.533 --> 00:09:35.880
+Har baar ye checklist use kijiye.
+
+96
+00:09:36.330 --> 00:09:41.642
+GSTIN aur business name, GST certificate se match karte hain.
+
+97
+00:09:42.092 --> 00:09:44.737
+Cheque, bank details se match karta hai.
+
+98
+00:09:45.187 --> 00:09:48.344
+Aadhaar ka naam signatory se match karta hai.
+
+99
+00:09:48.794 --> 00:09:52.357
+Har custom category approve ya reject ho chuki hai.
+
+100
+00:09:52.807 --> 00:09:56.007
+Warehouse ka pin check hoke approve ho gaya hai.
+
+101
+00:09:56.457 --> 00:10:00.617
+Aur aakhir mein, vendor action Approved, phir Update status.
+
+102
+00:10:03.033 --> 00:10:08.346
+Approval finish line nahi hai. Vendor ke pehle din ye hona chahiye, aur aap unhe
+
+103
+00:10:08.346 --> 00:10:10.073
+Isme guide kar sakte hain.
+
+104
+00:10:10.523 --> 00:10:14.406
+Login email, signatory ke email address pe aata hai.
+
+105
+00:10:14.856 --> 00:10:18.546
+Vendor login karta hai, aur apna password badalta hai.
+
+106
+00:10:18.996 --> 00:10:23.263
+Zaroorat ho toh apni team ke liye staff accounts add karta hai.
+
+107
+00:10:23.713 --> 00:10:28.256
+Admin ye ensure karta hai ki warehouse Shiprocket mein verified ho.
+
+108
+00:10:28.256 --> 00:10:30.561
+Ye aap module seven mein sikhenge.
+
+109
+00:10:31.011 --> 00:10:35.960
+Aur vendor apne pehle SKUs add karta hai, jo module five mein hai.
+
+110
+00:10:38.367 --> 00:10:43.628
+Quick check. Saare documents approved dikh rahe hain, lekin vendor bol raha hai ki
+
+111
+00:10:43.628 --> 00:10:46.708
+Login nahi ho raha. Sabse likely reason kya hai?
+
+112
+00:10:50.658 --> 00:10:56.485
+Sahi, final vendor approval nahi hua thaa. Vendor ko open kijiye, Vendor action ko
+
+113
+00:10:56.485 --> 00:11:00.109
+Approved kijiye, aur Update status pe click kijiye.
+
+114
+00:11:02.900 --> 00:11:04.671
+Module three ka summary.
+
+115
+00:11:05.121 --> 00:11:09.942
+KYC lifecycle ki pending verification list se kaam kijiye.
+
+116
+00:11:10.392 --> 00:11:15.277
+Har document kholiye aur vendor ne jo type kiya hai usse match kijiye.
+
+117
+00:11:15.727 --> 00:11:19.653
+Kuch bhi reject karein, toh hamesha saaf remark daaliye.
+
+118
+00:11:20.103 --> 00:11:22.961
+Categories aur warehouse ko approve kijiye.
+
+119
+00:11:23.411 --> 00:11:28.402
+Aur hamesha vendor action Approved aur Update status se finish kijiye.
+
+120
+00:11:28.402 --> 00:11:31.753
+Agle module mein hum product catalog banayenge.
+
+121
+00:11:34.167 --> 00:11:40.098
+Module 3 yahin khatam hota hai. Agla hai module 4: Admin: product catalog.

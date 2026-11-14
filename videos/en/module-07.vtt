@@ -1,0 +1,453 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:03.296
+Module seven. Orders and dispatch.
+
+2
+00:00:05.500 --> 00:00:10.215
+This is where everything comes together: a customer orders, and the vendor delivers.
+
+3
+00:00:10.665 --> 00:00:12.627
+We'll look at the order management page.
+
+4
+00:00:13.077 --> 00:00:16.235
+How to verify and accept an order, item by item.
+
+5
+00:00:16.685 --> 00:00:18.967
+What happens with multi vendor orders.
+
+6
+00:00:19.417 --> 00:00:22.297
+Dispatch through Shiprocket, with its three services.
+
+7
+00:00:22.747 --> 00:00:24.731
+And local drivers, as a backup.
+
+8
+00:00:27.133 --> 00:00:31.122
+In the vendor console, open Orders. At the top are four numbers.
+
+9
+00:00:31.572 --> 00:00:35.796
+Awaiting action: new orders that need to be verified and accepted.
+
+10
+00:00:35.796 --> 00:00:36.948
+Keep this at zero.
+
+11
+00:00:37.398 --> 00:00:40.577
+In fulfilment: accepted orders being picked and packed.
+
+12
+00:00:41.027 --> 00:00:43.672
+On the road: orders dispatched to the customer.
+
+13
+00:00:44.122 --> 00:00:47.664
+And open value: the total value of all open orders.
+
+14
+00:00:50.067 --> 00:00:51.838
+Every order follows this path.
+
+15
+00:00:52.288 --> 00:00:54.677
+A new order arrives in the vendor console.
+
+16
+00:00:55.127 --> 00:00:58.690
+The vendor verifies each item against their stock, and accepts.
+
+17
+00:00:59.140 --> 00:01:04.161
+The team picks and packs the order. The status keeps updating in the admin panel and
+
+18
+00:01:04.161 --> 00:01:05.177
+The customer app.
+
+19
+00:01:05.627 --> 00:01:07.120
+The vendor clicks handover.
+
+20
+00:01:07.570 --> 00:01:11.154
+And the order is dispatched, through Shiprocket or a local driver.
+
+21
+00:01:13.567 --> 00:01:17.940
+Some customer orders have many items. Here's how Oribrix handles that.
+
+22
+00:01:18.390 --> 00:01:22.038
+A vendor can accept only the items they can actually supply.
+
+23
+00:01:22.488 --> 00:01:26.051
+The items they don't select start looking for another nearby vendor.
+
+24
+00:01:26.501 --> 00:01:29.338
+When another vendor accepts them, the order is split.
+
+25
+00:01:29.788 --> 00:01:32.805
+And the customer app shows two separate shipments.
+
+26
+00:01:32.805 --> 00:01:36.124
+This is normal, so explain it to customers if they ask.
+
+27
+00:01:38.533 --> 00:01:40.453
+Let's watch this in the live demo.
+
+28
+00:01:45.067 --> 00:01:49.590
+We start in the vendor's inventory, and a new order has come in, from Bengaluru.
+
+29
+00:02:18.667 --> 00:02:21.837
+The order opens with a products verification list.
+
+30
+00:02:21.837 --> 00:02:25.387
+Each item shows the quantity, price and available stock.
+
+31
+00:02:41.067 --> 00:02:45.447
+The vendor ticks the items they can supply. Select all ticks everything.
+
+32
+00:02:45.447 --> 00:02:47.638
+The delivery address is shown below.
+
+33
+00:02:58.667 --> 00:03:04.061
+Verify and accept. Any item not ticked goes to another vendor, and the customer sees
+
+34
+00:03:04.061 --> 00:03:04.960
+Two shipments.
+
+35
+00:03:13.867 --> 00:03:17.169
+After handover, the vendor can dispatch through Shiprocket.
+
+36
+00:03:17.169 --> 00:03:19.072
+Here's what happens automatically.
+
+37
+00:03:19.522 --> 00:03:24.851
+Shiprocket picks the best available courier partner, like Delhivery, BlueDart or
+
+38
+00:03:24.851 --> 00:03:25.517
+Shadowfax.
+
+39
+00:03:25.967 --> 00:03:29.359
+It assigns an AWB, which is the tracking number.
+
+40
+00:03:29.809 --> 00:03:31.580
+It generates the shipping label.
+
+41
+00:03:32.030 --> 00:03:34.568
+And it schedules pickup from the vendor's warehouse.
+
+42
+00:03:36.967 --> 00:03:38.887
+Let's watch this in the live demo.
+
+43
+00:03:42.700 --> 00:03:47.439
+This is order management. You can see the four numbers, and the order list with
+
+44
+00:03:47.439 --> 00:03:50.679
+Customer, warehouse, items, amount, payment and stage.
+
+45
+00:04:10.700 --> 00:04:15.963
+The dispatch order window has two tabs: Shiprocket courier, which is automatic, and
+
+46
+00:04:15.963 --> 00:04:17.548
+Local or in-house driver.
+
+47
+00:04:29.900 --> 00:04:32.994
+It shows the destination, and the pickup warehouse.
+
+48
+00:04:32.994 --> 00:04:35.724
+Dispatch via Shiprocket creates the shipment.
+
+49
+00:04:49.900 --> 00:04:54.423
+One important point from the session: the vendor's warehouse must already be
+
+50
+00:04:54.423 --> 00:04:56.684
+Verified inside the Shiprocket portal.
+
+51
+00:05:12.300 --> 00:05:16.715
+This is an admin job, and it can't be done from the Oribrix admin panel.
+
+52
+00:05:16.715 --> 00:05:21.621
+Before approving a vendor's warehouse, open the Shiprocket portal and verify the
+
+53
+00:05:21.621 --> 00:05:25.055
+Pickup address there. Shiprocket tracks by phone number.
+
+54
+00:05:25.055 --> 00:05:29.776
+A new vendor's phone number needs an OTP once, so coordinate with the vendor.
+
+55
+00:05:29.776 --> 00:05:34.743
+If the same vendor adds another warehouse with the same number, no OTP is needed.
+
+56
+00:05:34.743 --> 00:05:37.687
+This becomes part of the vendor's KYC lifecycle.
+
+57
+00:06:32.400 --> 00:06:37.328
+Shiprocket has three services. This is where unit weight from module four matters.
+
+58
+00:06:37.778 --> 00:06:41.563
+Normal delivery, for orders under five hundred kilos.
+
+59
+00:06:41.563 --> 00:06:42.706
+Its API is live.
+
+60
+00:06:43.156 --> 00:06:47.463
+Shiprocket cargo, for bulk orders over five hundred kilos.
+
+61
+00:06:47.463 --> 00:06:49.023
+Its API is also live.
+
+62
+00:06:49.473 --> 00:06:54.987
+And express. There's no express API yet, so express orders currently go as normal
+
+63
+00:06:54.987 --> 00:06:57.302
+Delivery, or are created manually.
+
+64
+00:06:59.700 --> 00:07:03.241
+Until the express API arrives, here's the manual process.
+
+65
+00:07:03.691 --> 00:07:06.571
+A customer places an order with express delivery.
+
+66
+00:07:07.021 --> 00:07:08.856
+Copy the Oribrix order ID.
+
+67
+00:07:09.306 --> 00:07:10.906
+Open the Shiprocket portal.
+
+68
+00:07:11.356 --> 00:07:13.959
+Create the order there manually, as express.
+
+69
+00:07:14.409 --> 00:07:16.115
+And keep the customer updated.
+
+70
+00:07:18.500 --> 00:07:20.420
+Let's watch this in the live demo.
+
+71
+00:07:24.233 --> 00:07:29.564
+Now the second tab: local or in-house driver. This is for when Shiprocket cancels,
+
+72
+00:07:29.564 --> 00:07:31.124
+Or can't take the order.
+
+73
+00:07:52.233 --> 00:07:56.876
+Quick select picks a saved delivery partner, or you can type a new one: name and
+
+74
+00:07:56.876 --> 00:07:57.630
+Phone number.
+
+75
+00:08:12.233 --> 00:08:16.317
+The customer receives this phone number, to call the driver for delivery
+
+76
+00:08:16.317 --> 00:08:17.054
+Coordination.
+
+77
+00:08:32.233 --> 00:08:37.006
+Then the vehicle model, like Tata Ace, and the vehicle number, which is optional.
+
+78
+00:08:37.006 --> 00:08:38.420
+Dispatch and link phone.
+
+79
+00:08:53.833 --> 00:08:56.841
+To use local drivers well, set them up in advance.
+
+80
+00:08:57.291 --> 00:09:00.811
+The delivery partner's name, or quick select a saved driver.
+
+81
+00:09:01.261 --> 00:09:05.293
+A phone number. The customer will call this number, so it must be correct.
+
+82
+00:09:05.743 --> 00:09:06.874
+The vehicle model.
+
+83
+00:09:07.324 --> 00:09:10.246
+The vehicle number. It's optional, but recommended.
+
+84
+00:09:10.696 --> 00:09:14.686
+Vendors should add their drivers in the Drivers and Fleet section first.
+
+85
+00:09:15.136 --> 00:09:18.016
+There, each driver shows as on trip, or idle.
+
+86
+00:09:20.400 --> 00:09:25.705
+Know this limitation. When a local driver is used, the customer does not get the
+
+87
+00:09:25.705 --> 00:09:31.209
+Shiprocket tracking SMS. The app shows the source and destination, but support must
+
+88
+00:09:31.209 --> 00:09:36.315
+Keep the customer updated. So use local drivers as a backup, not the default.
+
+89
+00:10:12.133 --> 00:10:14.053
+Let's watch this in the live demo.
+
+90
+00:10:18.667 --> 00:10:22.294
+Back in the dispatch window. The Shiprocket tab is the default.
+
+91
+00:10:49.067 --> 00:10:53.854
+In the order details, you see the products with their status, the delivery address,
+
+92
+00:10:53.854 --> 00:10:58.006
+And two buttons: Cancel order, and Handover and assign delivery partner.
+
+93
+00:11:10.667 --> 00:11:14.422
+Once dispatched, the order shows on trip, and moves to on the road.
+
+94
+00:11:23.467 --> 00:11:26.198
+Here's a dispatch checklist for vendors and support.
+
+95
+00:11:26.648 --> 00:11:29.122
+Accept only items you truly have in stock.
+
+96
+00:11:29.572 --> 00:11:31.130
+Pack, then click handover.
+
+97
+00:11:31.580 --> 00:11:34.225
+Make sure the warehouse is verified in Shiprocket.
+
+98
+00:11:34.675 --> 00:11:38.003
+Heavy orders over five hundred kilos go by cargo.
+
+99
+00:11:38.453 --> 00:11:41.141
+Express orders are created manually for now.
+
+100
+00:11:41.591 --> 00:11:45.818
+And with a local driver, use the correct phone number, and keep the customer
+
+101
+00:11:45.818 --> 00:11:46.263
+Updated.
+
+102
+00:11:48.667 --> 00:11:52.486
+Quick check. Shiprocket cancelled a pickup. What's the backup option?
+
+103
+00:11:56.436 --> 00:12:01.624
+Dispatch with a local or in-house driver, from the second tab in the dispatch
+
+104
+00:12:01.624 --> 00:12:07.217
+Window. And remember, support must update the customer, because there's no tracking
+
+105
+00:12:07.217 --> 00:12:07.486
+SMS.
+
+106
+00:12:10.300 --> 00:12:11.879
+Let's sum up module seven.
+
+107
+00:12:12.329 --> 00:12:17.598
+Verify and accept item by item. Anything not accepted goes to another vendor.
+
+108
+00:12:18.048 --> 00:12:19.733
+Pack, handover, then dispatch.
+
+109
+00:12:20.183 --> 00:12:22.871
+Every warehouse must be verified in Shiprocket.
+
+110
+00:12:23.321 --> 00:12:28.377
+Normal under five hundred kilos, cargo above, and express is manual for now.
+
+111
+00:12:28.827 --> 00:12:32.576
+And local drivers are a backup only, with no tracking SMS.
+
+112
+00:12:32.576 --> 00:12:37.489
+In the last module, we'll cover payouts, disputes, and what's still pending.
+
+113
+00:12:39.900 --> 00:12:45.489
+That's the end of module 7. Next up, module 8: Payouts, disputes and what's pending.

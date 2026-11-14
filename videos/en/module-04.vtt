@@ -1,0 +1,513 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.128
+Module four. How the admin builds the product catalog.
+
+2
+00:00:06.333 --> 00:00:09.973
+Remember the golden rule: only the admin creates products.
+
+3
+00:00:09.973 --> 00:00:12.797
+So this module shows exactly how that's done.
+
+4
+00:00:13.247 --> 00:00:15.679
+First, the catalog page and its columns.
+
+5
+00:00:16.129 --> 00:00:19.052
+Then bulk upload using the CSV template.
+
+6
+00:00:19.502 --> 00:00:20.995
+How to read upload errors.
+
+7
+00:00:21.445 --> 00:00:23.834
+Adding a single product, field by field.
+
+8
+00:00:24.284 --> 00:00:27.335
+And finally GST, commission and bulk pricing.
+
+9
+00:00:29.733 --> 00:00:35.023
+Open Catalog in the admin panel. At the top you'll see total products, pending,
+
+10
+00:00:35.023 --> 00:00:38.839
+Verified and empty products. Below is the products table.
+
+11
+00:00:38.839 --> 00:00:40.848
+Here's what each column means.
+
+12
+00:00:41.298 --> 00:00:46.354
+The SKU code is generated automatically, next to the product name and photo.
+
+13
+00:00:46.804 --> 00:00:50.878
+Category and brand decide where the product is listed and who makes it.
+
+14
+00:00:51.328 --> 00:00:56.427
+HSN and GST percent are the tax classification and the tax rate.
+
+15
+00:00:56.877 --> 00:00:59.181
+Commission percent is Oribrix's share.
+
+16
+00:00:59.631 --> 00:01:04.154
+MRP is the printed price, and selling price is what the customer pays.
+
+17
+00:01:04.604 --> 00:01:08.785
+Status shows if it's active, and Tally shows whether it's synced to accounting.
+
+18
+00:01:11.200 --> 00:01:13.035
+There are two ways to add products.
+
+19
+00:01:13.485 --> 00:01:18.866
+Bulk upload. Download the standard template, fill one row per product with photo
+
+20
+00:01:18.866 --> 00:01:24.045
+Links, then drop the CSV file and upload. Use this for many products at once.
+
+21
+00:01:24.495 --> 00:01:27.624
+Or a single product, using the Add product form.
+
+22
+00:01:27.624 --> 00:01:30.361
+This is best for one-off or special items.
+
+23
+00:01:32.767 --> 00:01:36.074
+Before you upload, know the rules of the CSV template.
+
+24
+00:01:36.524 --> 00:01:40.684
+Always start from the downloaded template. Don't make your own column names.
+
+25
+00:01:41.134 --> 00:01:46.260
+Four fields are mandatory for every row: product name, category name, brand name,
+
+26
+00:01:46.260 --> 00:01:46.830
+And unit.
+
+27
+00:01:47.280 --> 00:01:51.098
+Photo links must be public URLs that open in a browser.
+
+28
+00:01:51.548 --> 00:01:56.303
+Tick auto-create missing subcategories and brands, so new brands are created for
+
+29
+00:01:56.303 --> 00:01:56.540
+You.
+
+30
+00:01:56.990 --> 00:02:02.606
+And keep files small. In the demo, a big file was rejected as too large, so split
+
+31
+00:02:02.606 --> 00:02:03.369
+Long lists.
+
+32
+00:02:05.767 --> 00:02:07.687
+Let's watch this in the live demo.
+
+33
+00:02:10.700 --> 00:02:15.988
+This is the catalog page. Thirty seven products are verified, and there are buttons
+
+34
+00:02:15.988 --> 00:02:20.001
+For Add product, Bulk upload, Category requests and Tally sync.
+
+35
+00:02:32.300 --> 00:02:36.695
+Every product here came from a bulk upload. Bulk upload opens a window.
+
+36
+00:02:52.300 --> 00:02:57.350
+Step one, download the standard template. Step two, choose your CSV file.
+
+37
+00:02:57.350 --> 00:02:59.703
+Below are the required guidelines.
+
+38
+00:03:14.700 --> 00:03:16.620
+Let's watch this in the live demo.
+
+39
+00:03:21.233 --> 00:03:26.680
+The file is uploaded. The result shows two boxes: products created successfully, and
+
+40
+00:03:26.680 --> 00:03:27.782
+Rows with errors.
+
+41
+00:03:38.833 --> 00:03:44.221
+The error details are specific. Row three, ACC Gold Water Shield cement, already
+
+42
+00:03:44.221 --> 00:03:46.982
+Exists in the catalog, so it was skipped.
+
+43
+00:04:01.233 --> 00:04:03.729
+The new products now appear at the top of the list.
+
+44
+00:04:14.033 --> 00:04:18.507
+In the next try, the upload failed because the unit column was missing from the
+
+45
+00:04:18.507 --> 00:04:18.790
+File.
+
+46
+00:04:23.633 --> 00:04:26.150
+So what do the errors mean, and what should you do?
+
+47
+00:04:26.600 --> 00:04:30.665
+Already exists means a product with the same name is in the catalog.
+
+48
+00:04:30.665 --> 00:04:33.534
+That row is skipped, so there are no duplicates.
+
+49
+00:04:33.984 --> 00:04:38.080
+For an existing product, only its stock related data is updated.
+
+50
+00:04:38.530 --> 00:04:41.623
+If unit is missing, fix the file and upload again.
+
+51
+00:04:42.073 --> 00:04:46.809
+If a category doesn't exist, create the category first, with its image, then upload.
+
+52
+00:04:47.259 --> 00:04:50.544
+And if the file is too large, split it into smaller files.
+
+53
+00:04:52.933 --> 00:04:54.853
+Let's watch this in the live demo.
+
+54
+00:04:58.667 --> 00:05:03.733
+Here is a bigger upload. Many products were created, and the auto-created masters
+
+55
+00:05:03.733 --> 00:05:06.923
+Box lists the new brands and subcategories it made.
+
+56
+00:05:16.267 --> 00:05:21.453
+The error list shows rows that already exist, and rows whose category doesn't exist
+
+57
+00:05:21.453 --> 00:05:24.139
+Yet. Those need the category created first.
+
+58
+00:05:36.267 --> 00:05:39.214
+Now, adding a single product. Click Add product.
+
+59
+00:05:39.214 --> 00:05:40.811
+Here are the basic fields.
+
+60
+00:05:41.261 --> 00:05:47.274
+The name. Make it clear and specific, with brand, grade and size, like UltraTech OPC
+
+61
+00:05:47.274 --> 00:05:49.922
+Fifty three grade cement, fifty kilo.
+
+62
+00:05:50.372 --> 00:05:52.378
+The category and sub category.
+
+63
+00:05:52.828 --> 00:05:56.326
+The brand. Pick it from the list, or add a new brand right there.
+
+64
+00:05:56.776 --> 00:06:02.152
+The unit, such as piece, bag, kilogram or box. This is how the customer will buy it.
+
+65
+00:06:02.602 --> 00:06:07.709
+And the unit weight per quantity. This matters for delivery, because heavy orders go
+
+66
+00:06:07.709 --> 00:06:08.256
+By cargo.
+
+67
+00:06:10.667 --> 00:06:12.587
+Let's watch this in the live demo.
+
+68
+00:06:16.400 --> 00:06:21.228
+Add product is clicked, and a form opens. The example product is House solar
+
+69
+00:06:21.228 --> 00:06:22.117
+Installations.
+
+70
+00:06:44.400 --> 00:06:49.404
+The category list opens. Roofing, safety equipment, steel, tiles, tools.
+
+71
+00:06:49.404 --> 00:06:50.864
+Electrical is chosen.
+
+72
+00:07:12.400 --> 00:07:17.563
+A sub category can be edited right here. Solar is selected as the sub category.
+
+73
+00:07:36.400 --> 00:07:40.066
+The brand isn't in the list yet, so Add brand opens.
+
+74
+00:07:40.066 --> 00:07:44.720
+You can see existing brands like 3M, ACC, Ambuja and Asian Paints.
+
+75
+00:08:04.400 --> 00:08:09.327
+The new brand is added, and the unit is set to piece, because a solar installation
+
+76
+00:08:09.327 --> 00:08:10.949
+Can't be measured in kilos.
+
+77
+00:08:24.400 --> 00:08:28.987
+Then unit weight per quantity. Here, one unit weighs around eighty kilos.
+
+78
+00:08:37.200 --> 00:08:39.547
+Next come size, tax and commission.
+
+79
+00:08:39.997 --> 00:08:44.029
+Length, breadth and height in centimetres, used for packing and delivery.
+
+80
+00:08:44.479 --> 00:08:48.468
+The HSN code, which is the tax classification of the product.
+
+81
+00:08:48.918 --> 00:08:51.115
+Commission percent, Oribrix's share.
+
+82
+00:08:51.565 --> 00:08:53.464
+GST on commission percent.
+
+83
+00:08:53.914 --> 00:09:00.139
+And the pricing block: MRP, final price, GST percent, and whether the price is
+
+84
+00:09:00.139 --> 00:09:02.533
+Inclusive or exclusive of GST.
+
+85
+00:09:04.933 --> 00:09:06.853
+Let's watch this in the live demo.
+
+86
+00:09:10.667 --> 00:09:13.504
+Length and breadth are filled in. Height is optional.
+
+87
+00:09:28.267 --> 00:09:32.918
+Then the HSN code, and the commission. The demo used test values only.
+
+88
+00:09:48.267 --> 00:09:53.664
+Here is the pricing and tax configuration. The Inclusive of GST box is ticked.
+
+89
+00:10:08.267 --> 00:10:14.010
+MRP is one hundred, the final price is one hundred, and with ten percent GST, the
+
+90
+00:10:14.010 --> 00:10:18.123
+System calculates the base price as ninety point nine one.
+
+91
+00:10:29.067 --> 00:10:34.691
+Let's make inclusive and exclusive crystal clear, using the demo's numbers.
+
+92
+00:10:34.691 --> 00:10:40.840
+The demo used ten percent GST only as a test. Always use the real GST rate for the
+
+93
+00:10:40.840 --> 00:10:41.440
+Product.
+
+94
+00:10:41.890 --> 00:10:45.437
+Inclusive means the price already includes GST.
+
+95
+00:10:45.437 --> 00:10:51.700
+The customer pays one hundred. Inside that, ninety point nine one is the base price
+
+96
+00:10:51.700 --> 00:10:54.114
+And nine point zero nine is GST.
+
+97
+00:10:54.564 --> 00:11:00.324
+Exclusive means GST is added on top. A base of one hundred becomes one hundred and
+
+98
+00:11:00.324 --> 00:11:05.380
+Ten at ten percent. Pick the wrong one, and the customer price is wrong.
+
+99
+00:11:07.767 --> 00:11:09.687
+Let's watch this in the live demo.
+
+100
+00:11:13.500 --> 00:11:17.660
+Now the description, thumbnail, images, warranty and return policy.
+
+101
+00:11:31.100 --> 00:11:36.711
+A red message says GST percent is required. The form won't save until it's filled.
+
+102
+00:11:48.700 --> 00:11:55.052
+The product is created. The view shows every detail: category, brand, HSN, GST,
+
+103
+00:11:55.052 --> 00:11:59.153
+Commission, MRP, price type, unit and package size.
+
+104
+00:12:11.100 --> 00:12:16.178
+Bulk pricing opens. Ten units at eighty five rupees each, and fifteen units at
+
+105
+00:12:16.178 --> 00:12:18.652
+Eighty rupees each. Then Save pricing.
+
+106
+00:12:43.100 --> 00:12:48.548
+Bulk pricing rewards bigger orders. Construction customers often buy in bulk, so
+
+107
+00:12:48.548 --> 00:12:49.841
+This matters a lot.
+
+108
+00:12:50.291 --> 00:12:53.534
+Up to nine units, the normal price, one hundred rupees.
+
+109
+00:12:53.984 --> 00:12:56.053
+Ten or more, eighty five rupees each.
+
+110
+00:12:56.503 --> 00:13:00.962
+Fifteen or more, eighty rupees each. You can add more tiers with Add tier.
+
+111
+00:13:03.367 --> 00:13:07.015
+Watch out for these mistakes. They directly affect customers.
+
+112
+00:13:07.465 --> 00:13:12.222
+Vague names, like just cement bag. Customers need brand, grade and size.
+
+113
+00:13:12.672 --> 00:13:16.491
+The wrong GST rate, or inclusive and exclusive mixed up.
+
+114
+00:13:16.941 --> 00:13:19.480
+The wrong unit, like kilo instead of bag.
+
+115
+00:13:19.930 --> 00:13:23.279
+Missing unit weight, so the delivery mode is chosen wrongly.
+
+116
+00:13:23.729 --> 00:13:28.294
+And broken photo links. Always open a few products after upload to check.
+
+117
+00:13:30.700 --> 00:13:34.329
+Quick check. Your CSV upload fails with an error about unit.
+
+118
+00:13:34.329 --> 00:13:35.479
+What should you do?
+
+119
+00:13:39.429 --> 00:13:44.322
+Add the unit column to the CSV, fill it for every row, and upload again.
+
+120
+00:13:44.322 --> 00:13:47.109
+Unit is one of the four mandatory fields.
+
+121
+00:13:49.900 --> 00:13:51.393
+Let's sum up module four.
+
+122
+00:13:51.843 --> 00:13:56.238
+Only the admin creates products, by bulk CSV or one by one.
+
+123
+00:13:56.688 --> 00:14:02.171
+For CSV, use the template, fill the four mandatory fields, and keep files small.
+
+124
+00:14:02.621 --> 00:14:07.143
+Read the errors. Duplicates are skipped, and categories must exist first.
+
+125
+00:14:07.593 --> 00:14:11.241
+Get GST right: the rate, and inclusive or exclusive.
+
+126
+00:14:11.691 --> 00:14:16.717
+And use bulk pricing tiers for big orders. Next, we'll see how vendors turn these
+
+127
+00:14:16.717 --> 00:14:18.454
+Products into live listings.
+
+128
+00:14:20.867 --> 00:14:25.646
+That's the end of module 4. Next up, module 5: Vendor: adding stock.

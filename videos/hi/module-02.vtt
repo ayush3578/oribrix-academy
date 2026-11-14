@@ -1,0 +1,557 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.405
+Module two. Vendor application, aur KYC.
+
+2
+00:00:06.600 --> 00:00:12.424
+Is module mein hum vendor application ko aaram se, ek ek field karke dekhenge.
+
+3
+00:00:12.874 --> 00:00:15.306
+Apply to sell form ke chhah steps.
+
+4
+00:00:15.756 --> 00:00:20.087
+Har field ka matlab kya hai, aur system use kaise check karta hai.
+
+5
+00:00:20.537 --> 00:00:23.971
+Vendor ko kaun se documents upload karne hain.
+
+6
+00:00:24.421 --> 00:00:27.821
+Aur wo common mistakes jinse approval late hota hai.
+
+7
+00:00:27.821 --> 00:00:33.312
+Agar aap vendors ko ye form bharne mein help karte hain, toh ye module aapke liye hi
+
+8
+00:00:33.312 --> 00:00:33.573
+Hai.
+
+9
+00:00:35.967 --> 00:00:40.064
+Naya vendor, vendor link kholke Apply to sell pe click karta hai.
+
+10
+00:00:40.064 --> 00:00:45.044
+Form mein chhah steps hain, aur agar papers ready hon toh lagbhag paanch minute
+
+11
+00:00:45.044 --> 00:00:45.738
+Lagte hain.
+
+12
+00:00:46.188 --> 00:00:47.894
+Ek, business details.
+
+13
+00:00:48.344 --> 00:00:50.456
+Do, authorised signatory.
+
+14
+00:00:50.906 --> 00:00:53.018
+Teen, banking, payouts ke liye.
+
+15
+00:00:53.468 --> 00:00:54.748
+Chaar, warehouse.
+
+16
+00:00:55.198 --> 00:00:57.310
+Paanch, jo categories bechni hain.
+
+17
+00:00:57.760 --> 00:01:01.536
+Aur chhah, documents. Phir wo KYC confirm karte hain.
+
+18
+00:01:03.933 --> 00:01:06.216
+Step one hai business details.
+
+19
+00:01:06.666 --> 00:01:12.689
+Legal business name. Vendors ko boliye ki ye bilkul vaisa hi likhein jaisa unke GST
+
+20
+00:01:12.689 --> 00:01:14.068
+Certificate pe hai.
+
+21
+00:01:14.518 --> 00:01:19.062
+Entity type, jaise private limited, partnership ya proprietorship.
+
+22
+00:01:19.512 --> 00:01:22.094
+Business PAN aur GSTIN.
+
+23
+00:01:22.544 --> 00:01:27.642
+CIN, jo companies ke paas hota hai, aur business kis saal shuru hua thaa.
+
+24
+00:01:28.092 --> 00:01:29.778
+Aur registered address.
+
+25
+00:01:32.167 --> 00:01:34.812
+Chaliye ise live demo mein dekhte hain.
+
+26
+00:01:37.800 --> 00:01:43.091
+Ye raha asli form. Left side pe dikh raha hai ki ye six mein se step one hai:
+
+27
+00:01:43.091 --> 00:01:43.709
+Business.
+
+28
+00:01:49.000 --> 00:01:52.233
+Sabse pehle legal business name, phir entity type.
+
+29
+00:01:52.233 --> 00:01:55.272
+Demo mein Private Limited select kiya gaya hai.
+
+30
+00:02:03.400 --> 00:02:08.349
+Uske baad PAN, GSTIN aur CIN, aur year established.
+
+31
+00:02:16.200 --> 00:02:22.390
+GSTIN ke neeche red message dekhiye. Format galat hai, isliye form bata raha hai ki
+
+32
+00:02:22.390 --> 00:02:25.224
+Sahi fifteen character format kya hai.
+
+33
+00:02:33.800 --> 00:02:39.748
+Aur yahan doosra check. Is GSTIN se ek vendor pehle se registered hai.
+
+34
+00:02:39.748 --> 00:02:43.997
+Oribrix pe ek GSTIN sirf ek baar use ho sakta hai.
+
+35
+00:02:54.600 --> 00:03:00.022
+Toh GSTIN ke do checks yaad rakhiye. Ye sahi format mein fifteen characters ka hona
+
+36
+00:03:00.022 --> 00:03:05.249
+Chahiye, aur kisi doosre vendor ne ise pehle se register nahi kiya hona chahiye.
+
+37
+00:03:05.249 --> 00:03:10.540
+Agar vendor ko already registered wala message dikhe, toh ho sakta hai usne pehle
+
+38
+00:03:10.540 --> 00:03:15.571
+Apply kiya ho, isliye naya kuch banane se pehle admin panel check kar lijiye.
+
+39
+00:03:51.767 --> 00:03:57.543
+Step two hai authorised signatory. Ye wo person hai jo business ki taraf se sign kar
+
+40
+00:03:57.543 --> 00:03:58.231
+Sakta hai.
+
+41
+00:03:58.681 --> 00:04:02.457
+Unka poora naam, bilkul waise jaise PAN card pe hai.
+
+42
+00:04:02.907 --> 00:04:06.086
+Unka designation, jaise director ya owner.
+
+43
+00:04:06.536 --> 00:04:08.989
+Unka Aadhaar aur personal PAN.
+
+44
+00:04:09.439 --> 00:04:10.804
+Ek mobile number.
+
+45
+00:04:11.254 --> 00:04:16.902
+Aur ek email. Yahi email vendor ka login banta hai, isliye ye aisa email hona
+
+46
+00:04:16.902 --> 00:04:20.129
+Chahiye jo Oribrix pe pehle use nahi hua ho.
+
+47
+00:04:22.533 --> 00:04:25.178
+Chaliye ise live demo mein dekhte hain.
+
+48
+00:04:28.967 --> 00:04:34.554
+Ab step two. Signatory ka naam PAN ke hisaab se daala gaya hai, aur designation,
+
+49
+00:04:34.554 --> 00:04:35.602
+Yahan Director.
+
+50
+00:04:46.567 --> 00:04:50.194
+Phir Aadhaar number, personal PAN, aur mobile number.
+
+51
+00:05:04.167 --> 00:05:09.913
+Aakhir mein email. Demo mein team ko kayi emails try karne pade, kyunki har ek pehle
+
+52
+00:05:09.913 --> 00:05:12.444
+Se kisi login mein use ho chuka thaa.
+
+53
+00:05:20.967 --> 00:05:26.069
+Step three hai banking. Yahin pe Oribrix vendor ke payouts bhejta hai, isliye ise
+
+54
+00:05:26.069 --> 00:05:30.982
+Dhyaan se check kiya jaata hai. Account number nine se eighteen digits ka hona
+
+55
+00:05:30.982 --> 00:05:34.069
+Chahiye, aur kuch banks ki length fixed hoti hai.
+
+56
+00:05:34.069 --> 00:05:38.100
+Demo mein Bank of Baroda ne exactly fourteen digits accept kiye.
+
+57
+00:05:38.100 --> 00:05:43.328
+IFSC code eleven characters ka hota hai, aur uska fifth character hamesha zero hota
+
+58
+00:05:43.328 --> 00:05:43.580
+Hai.
+
+59
+00:06:28.133 --> 00:06:30.778
+Chaliye ise live demo mein dekhte hain.
+
+60
+00:06:35.367 --> 00:06:38.887
+Ye raha banking step. Pehle account holder ka naama.
+
+61
+00:06:48.167 --> 00:06:53.425
+Phir list mein se bank chuna jaata hai. Bank of Baroda select kiya gaya, aur account
+
+62
+00:06:53.425 --> 00:06:54.802
+Number type kiya gaya.
+
+63
+00:07:08.167 --> 00:07:11.530
+Ab Canara Bank try kiya gaya. IFSC box dekhiye.
+
+64
+00:07:11.530 --> 00:07:16.252
+Message bol raha hai ki IFSC ka fifth character zero hona chahiye.
+
+65
+00:07:26.567 --> 00:07:30.325
+Branch aur account type ke saath ye step poora hota hai.
+
+66
+00:07:30.325 --> 00:07:35.895
+Tip: vendors ko boliye ki cancelled cheque paas rakhein, usme ye saari details hoti
+
+67
+00:07:35.895 --> 00:07:36.231
+Hain.
+
+68
+00:07:41.767 --> 00:07:47.102
+Step four hai warehouse. KYC ke liye har vendor ko ek asli, physical warehouse
+
+69
+00:07:47.102 --> 00:07:50.386
+Dikhana hota hai. Yahin se orders pick up honge.
+
+70
+00:07:50.836 --> 00:07:54.505
+Warehouse ka naam, aur storage capacity square feet men.
+
+71
+00:07:54.955 --> 00:07:58.549
+Map pe exact location, Locate me ya search box se.
+
+72
+00:07:58.549 --> 00:08:01.568
+Dhyaan rakhiye ki pin sahi building pe ho.
+
+73
+00:08:02.018 --> 00:08:03.917
+Opening aur closing time.
+
+74
+00:08:04.367 --> 00:08:08.271
+Kaun kaun si vehicles is warehouse tak pahunch sakti hain.
+
+75
+00:08:08.721 --> 00:08:13.606
+KYC approval ke baad vendor aur warehouses add kar sakta hai.
+
+76
+00:08:16.000 --> 00:08:21.006
+Vehicle types kyun zaroori hain? Kyunki har gali mein bada truck nahi ghus sakta.
+
+77
+00:08:21.006 --> 00:08:21.995
+Ye options hain.
+
+78
+00:08:22.445 --> 00:08:26.413
+Mini truck ya pickup, chhote loads aur tang galiyon ke liye.
+
+79
+00:08:26.863 --> 00:08:28.548
+Light commercial vehicles.
+
+80
+00:08:28.998 --> 00:08:30.875
+Medium commercial vehicles.
+
+81
+00:08:31.325 --> 00:08:35.293
+Heavy commercial vehicles, chaudi roads pe bulk loads ke liye.
+
+82
+00:08:35.743 --> 00:08:40.976
+Aur trailers and containers. Sirf wahi vehicles tick kijiye jo sach mein warehouse
+
+83
+00:08:40.976 --> 00:08:42.954
+Ke gate tak pahunch sakti hain.
+
+84
+00:08:45.367 --> 00:08:48.012
+Chaliye ise live demo mein dekhte hain.
+
+85
+00:08:52.600 --> 00:08:57.037
+Ye hai step four. Pehle warehouse ka naam aur storage capacity.
+
+86
+00:09:07.000 --> 00:09:12.493
+Locate me current location dhoondh leta hai, ya aap search karke pin drag kar sakte
+
+87
+00:09:12.493 --> 00:09:12.824
+Hain.
+
+88
+00:09:26.200 --> 00:09:33.048
+Phir timings, aur allowed vehicles ki list: mini truck, LCV, MCV, HCV, aur trailers.
+
+89
+00:09:47.000 --> 00:09:52.270
+Demo mein warehouse ka naam Central City rakha gaya, ten thousand square feet
+
+90
+00:09:52.270 --> 00:09:53.571
+Capacity ke saatha.
+
+91
+00:10:05.400 --> 00:10:11.203
+Step five hai categories. Isse tay hota hai ki vendor kaun se products bech paayega.
+
+92
+00:10:11.653 --> 00:10:16.671
+Standard categories list mein se chuni jaati hain: tiles, plumbing, electrical,
+
+93
+00:10:16.671 --> 00:10:20.101
+Tools, roofing, safety equipment, concrete aur bricks.
+
+94
+00:10:20.551 --> 00:10:25.762
+Agar kuch missing hai, toh vendor Other pe click karke naam type karta hai aur ek
+
+95
+00:10:25.762 --> 00:10:30.972
+Image upload karta hai. Custom category admin ke paas approval ke liye jaati hai.
+
+96
+00:10:30.972 --> 00:10:35.926
+Aur dhyaan rakhiye: kuch categories ke liye brand authorisation documents bhi
+
+97
+00:10:35.926 --> 00:10:37.084
+Chahiye hote hain.
+
+98
+00:10:39.500 --> 00:10:42.145
+Chaliye ise live demo mein dekhte hain.
+
+99
+00:10:46.733 --> 00:10:51.938
+Ye rahe category cards. Concrete, bricks aur safety equipment select kiye gaye hain.
+
+100
+00:11:02.733 --> 00:11:08.130
+Ab Other pe click kiya. Ek chhoti window category ka naam aur image maang rahi hai.
+
+101
+00:11:23.533 --> 00:11:28.359
+Outdoor sports ab ek private custom category ki tarah dikh rahi hai.
+
+102
+00:11:28.359 --> 00:11:30.701
+Ye admin approval ka wait karegi.
+
+103
+00:11:40.333 --> 00:11:44.856
+Step six hai documents. Chaar mandatory hain aur chaar optional.
+
+104
+00:11:45.306 --> 00:11:51.134
+Mandatory hain GST certificate, business PAN, cancelled cheque, aur owner ka
+
+105
+00:11:51.134 --> 00:11:54.586
+Aadhaar. Inke bina KYC confirm nahi ho sakta.
+
+106
+00:11:55.036 --> 00:12:00.917
+Optional hain trade licence, Oribrix agreement, ISO nine thousand one certificate,
+
+107
+00:12:00.917 --> 00:12:05.937
+Aur MSME ya Udyam registration. Ye baad mein bhi upload ho sakte hain.
+
+108
+00:12:08.333 --> 00:12:10.978
+Chaliye ise live demo mein dekhte hain.
+
+109
+00:12:15.567 --> 00:12:21.001
+Ye documents step hai. Har row mein upload button hai, aur har file encrypted rehti
+
+110
+00:12:21.001 --> 00:12:21.263
+Hai.
+
+111
+00:12:36.367 --> 00:12:41.230
+Upload hui files selected dikhti hain, view aur replace option ke saatha.
+
+112
+00:12:41.230 --> 00:12:43.962
+Optional rows pe optional likha hota hai.
+
+113
+00:12:56.367 --> 00:13:02.242
+Confirm KYC ke baad documents received dikhte hain, aur status In review ho jaata
+
+114
+00:13:02.242 --> 00:13:02.532
+Hai.
+
+115
+00:13:13.167 --> 00:13:19.183
+Submit karne ke baad vendor is KYC and compliance control center pe pahunchta hai.
+
+116
+00:13:19.633 --> 00:13:23.004
+Yahan dikhta hai ki kitne documents upload hue,
+
+117
+00:13:23.454 --> 00:13:27.912
+Verification status, jo admin ke action tak In review rehta hai,
+
+118
+00:13:28.362 --> 00:13:33.717
+Aur approval progress. Approval usually twenty four hours ke andar ho jaata hai.
+
+119
+00:13:36.133 --> 00:13:41.988
+Ye wo mistakes hain jo sabse zyada hoti hain. Vendors ko inse bachaiye, toh approval
+
+120
+00:13:41.988 --> 00:13:43.173
+Bahut jaldi hoga.
+
+121
+00:13:43.623 --> 00:13:47.548
+Business name, GST certificate se match nahi karta.
+
+122
+00:13:47.998 --> 00:13:51.689
+Login email pehle se Oribrix pe use ho chuka hai.
+
+123
+00:13:52.139 --> 00:13:55.702
+Galat IFSC code, ya account number ki galat length.
+
+124
+00:13:56.152 --> 00:13:59.053
+Warehouse ka pin galat building pe laga hai.
+
+125
+00:13:59.503 --> 00:14:04.858
+Aur dhundhli ya kati hui document photos. Clear scans ya PDFs maangiye.
+
+126
+00:14:07.267 --> 00:14:13.171
+Quick check. Ek vendor ne IFSC code type kiya, H D F C one zero zero zero one two
+
+127
+00:14:13.171 --> 00:14:16.888
+Three. Isme galat kya hai? Ek second rukke sochiye.
+
+128
+00:14:20.838 --> 00:14:24.486
+Answer: IFSC ka fifth character zero hona chahiye.
+
+129
+00:14:24.486 --> 00:14:28.134
+Yahan wo one hai, isliye form ise reject kar dega.
+
+130
+00:14:30.933 --> 00:14:33.493
+Chaliye module two ko sum up karte hain.
+
+131
+00:14:33.943 --> 00:14:39.376
+Form mein chhah steps hain: business, signatory, banking, warehouse, categories, aur
+
+132
+00:14:39.376 --> 00:14:40.023
+Documents.
+
+133
+00:14:40.473 --> 00:14:46.318
+GSTIN valid hona chahiye, aur pehle se registered nahi hona chahiye.
+
+134
+00:14:46.768 --> 00:14:51.611
+Login email naya hona chahiye, aur bank details validate hoti hain.
+
+135
+00:14:52.061 --> 00:14:55.240
+Custom categories ko admin approval chahiye.
+
+136
+00:14:55.690 --> 00:15:00.527
+Aur KYC confirm karne se pehle charon mandatory documents chahiye.
+
+137
+00:15:00.527 --> 00:15:06.464
+Agle module mein hum doosri side jaayenge aur dekhenge ki admin vendor ko approve
+
+138
+00:15:06.464 --> 00:15:07.636
+Kaise karta hai.
+
+139
+00:15:10.033 --> 00:15:15.985
+Module 2 yahin khatam hota hai. Agla hai module 3: Admin: approving KYC.

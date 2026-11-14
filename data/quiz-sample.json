@@ -1,0 +1,23 @@
+[
+  {"id": "S1", "module": 1, "answer": 1,
+   "q_en": "(Sample) Who creates products in the Oribrix catalog?",
+   "q_hi": "(Sample) Oribrix catalog mein products kaun banata hai?",
+   "options_en": ["The vendor", "Only the admin", "The customer", "Shiprocket"],
+   "options_hi": ["Vendor", "Sirf admin", "Customer", "Shiprocket"],
+   "exp_en": "Only the admin creates products. Vendors pick from the master catalog.",
+   "exp_hi": "Products sirf admin banata hai. Vendor master catalog se chunta hai."},
+  {"id": "S2", "module": 3, "answer": 2,
+   "q_en": "(Sample) All documents are approved but the vendor can't log in. Why?",
+   "q_hi": "(Sample) Saare documents approved hain par vendor login nahi kar pa raha. Kyun?",
+   "options_en": ["Wrong password", "Documents take 24 hours", "Final vendor approval wasn't done", "GSTIN expired"],
+   "options_hi": ["Galat password", "Documents mein 24 ghante lagte hain", "Final vendor approval nahi hua", "GSTIN expire ho gaya"],
+   "exp_en": "Final approval is a separate step: Vendor action > Approved > Update status.",
+   "exp_hi": "Final approval alag step hai: Vendor action > Approved > Update status."},
+  {"id": "S3", "module": 7, "answer": 1,
+   "q_en": "(Sample) An order weighs 650 kg. Which Shiprocket service is used?",
+   "q_hi": "(Sample) Ek order 650 kg ka hai. Kaunsi Shiprocket service use hogi?",
+   "options_en": ["Normal", "Cargo", "Express", "Local driver only"],
+   "options_hi": ["Normal", "Cargo", "Express", "Sirf local driver"],
+   "exp_en": "Normal is under 500 kg; Cargo is over 500 kg.",
+   "exp_hi": "500 kg se kam Normal, 500 kg se zyada Cargo."}
+]

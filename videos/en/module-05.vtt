@@ -1,0 +1,385 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.069
+Module five. How a vendor adds stock, and when products become visible to customers.
+
+2
+00:00:08.267 --> 00:00:11.726
+The vendor is approved. Now they need to start selling.
+
+3
+00:00:11.726 --> 00:00:13.110
+This module shows how.
+
+4
+00:00:13.560 --> 00:00:15.437
+We'll start with the warehouses page.
+
+5
+00:00:15.887 --> 00:00:18.426
+Then adding an SKU, field by field.
+
+6
+00:00:18.876 --> 00:00:21.372
+Why a product can be invisible to customers.
+
+7
+00:00:21.822 --> 00:00:25.064
+Stock status: in stock, low stock and out of stock.
+
+8
+00:00:25.514 --> 00:00:28.416
+And the difference between hiding and deleting a product.
+
+9
+00:00:30.800 --> 00:00:36.902
+This is the vendor's warehouses page. At the top: active warehouses, total capacity,
+
+10
+00:00:36.902 --> 00:00:39.227
+Open orders and total SKUs live.
+
+11
+00:00:39.677 --> 00:00:44.955
+Each warehouse card shows its status. A new or edited warehouse shows Pending until
+
+12
+00:00:44.955 --> 00:00:46.354
+The admin approves it.
+
+13
+00:00:46.804 --> 00:00:51.071
+Approved means products in this warehouse can be shown to nearby customers.
+
+14
+00:00:51.521 --> 00:00:55.355
+And Add warehouse lets an approved vendor add more locations.
+
+15
+00:00:55.355 --> 00:00:57.366
+Each new one needs approval too.
+
+16
+00:00:59.767 --> 00:01:01.644
+Adding stock takes five steps.
+
+17
+00:01:02.094 --> 00:01:04.526
+Go to Inventory, and click Add SKU.
+
+18
+00:01:04.976 --> 00:01:08.944
+Filter by category, and select the product from the master catalog.
+
+19
+00:01:09.394 --> 00:01:11.442
+Choose which warehouse the stock is in.
+
+20
+00:01:11.892 --> 00:01:14.879
+Enter the stock quantity, and the minimum order quantity.
+
+21
+00:01:15.329 --> 00:01:20.918
+Check the warranty and return policy, choose cash on delivery, and click Create SKU.
+
+22
+00:01:23.333 --> 00:01:25.253
+Let's watch this in the live demo.
+
+23
+00:01:29.067 --> 00:01:34.358
+The vendor has one warehouse, Central City. Now Inventory, then Add new SKU.
+
+24
+00:01:50.667 --> 00:01:55.276
+Filter by category. Only the vendor's approved categories appear.
+
+25
+00:01:55.276 --> 00:02:00.523
+Safety equipment is chosen, then the product: 3M industrial safety helmet.
+
+26
+00:02:10.667 --> 00:02:15.214
+The warehouse is selected, then stock quantity and minimum order quantity.
+
+27
+00:02:15.214 --> 00:02:16.811
+Minimum order is one here.
+
+28
+00:02:24.267 --> 00:02:27.744
+Warranty and return policy come from the master listing.
+
+29
+00:02:27.744 --> 00:02:32.587
+The vendor can request a change, with a reason, but the admin must approve it.
+
+30
+00:02:42.667 --> 00:02:48.313
+The SKU is created, and it appears in product inventory, with its warehouse, price,
+
+31
+00:02:48.313 --> 00:02:49.878
+Stock level and status.
+
+32
+00:02:51.677 --> 00:02:53.448
+Let's look closer at each field.
+
+33
+00:02:53.898 --> 00:02:58.137
+The product always comes from the master catalog, and only from the vendor's
+
+34
+00:02:58.137 --> 00:02:59.252
+Approved categories.
+
+35
+00:02:59.702 --> 00:03:02.156
+The warehouse is where this stock physically sits.
+
+36
+00:03:02.606 --> 00:03:06.060
+Stock quantity is the number of units available to sell.
+
+37
+00:03:06.060 --> 00:03:08.280
+Keep it honest, or orders will fail.
+
+38
+00:03:08.730 --> 00:03:12.708
+Minimum order quantity is the smallest amount a customer can buy.
+
+39
+00:03:12.708 --> 00:03:16.197
+For example, bricks might have a minimum of five hundred.
+
+40
+00:03:16.647 --> 00:03:20.274
+Any policy change request needs a reason, and admin approval.
+
+41
+00:03:20.724 --> 00:03:25.289
+And allow COD turns cash on delivery on or off for this SKU.
+
+42
+00:03:27.677 --> 00:03:32.452
+Remember this rule. No seller, no listing. A product in the master catalog stays
+
+43
+00:03:32.452 --> 00:03:37.226
+Hidden from customers until at least one vendor adds it to an approved warehouse
+
+44
+00:03:37.226 --> 00:03:41.882
+Near them. So if someone says, I can't see the product in the app, check three
+
+45
+00:03:41.882 --> 00:03:46.597
+Things: does a vendor have it in stock, is their warehouse approved, and is the
+
+46
+00:03:46.597 --> 00:03:48.328
+Customer near that warehouse.
+
+47
+00:04:35.677 --> 00:04:37.597
+Let's watch this in the live demo.
+
+48
+00:04:41.410 --> 00:04:46.110
+Here's the problem from the demo. The helmet was added, but it wasn't showing in the
+
+49
+00:04:46.110 --> 00:04:47.789
+App for a customer in Lucknow.
+
+50
+00:05:05.410 --> 00:05:09.109
+The reason: the Central City warehouse was pinned in Bengaluru.
+
+51
+00:05:09.109 --> 00:05:11.106
+So the vendor edits the warehouse.
+
+52
+00:05:31.810 --> 00:05:35.757
+The location is changed to Lucknow on the map, and the vehicles are kept.
+
+53
+00:05:56.610 --> 00:06:01.555
+Notice the status is now Pending. The admin approved the new location, and then the
+
+54
+00:06:01.555 --> 00:06:03.223
+Product appeared in the app.
+
+55
+00:06:13.410 --> 00:06:18.464
+Good to know. When a vendor edits a warehouse location, the warehouse goes back to
+
+56
+00:06:18.464 --> 00:06:22.716
+Pending. Products in it are hidden until the admin approves it again.
+
+57
+00:06:22.716 --> 00:06:27.277
+So after any location change, remind the admin team to approve it quickly.
+
+58
+00:07:06.010 --> 00:07:11.335
+In inventory, every SKU has a stock status. There's a breakdown at the top of the
+
+59
+00:07:11.335 --> 00:07:11.663
+Page.
+
+60
+00:07:12.113 --> 00:07:14.588
+In stock means there are enough units to sell.
+
+61
+00:07:15.038 --> 00:07:18.793
+Low stock means it's running low, so the vendor should restock soon.
+
+62
+00:07:19.243 --> 00:07:24.341
+And out of stock means zero units. Customers can't order it until stock is added.
+
+63
+00:07:26.743 --> 00:07:30.818
+Now, in the admin catalog, there are two ways to take a product down.
+
+64
+00:07:31.268 --> 00:07:35.601
+The inactive toggle hides the product from both vendors and customers.
+
+65
+00:07:35.601 --> 00:07:38.820
+It can be switched back on any time. Use this first.
+
+66
+00:07:39.270 --> 00:07:44.080
+Delete is permanent, and it's blocked while any order for that product is ongoing.
+
+67
+00:07:44.080 --> 00:07:47.014
+Once those orders are complete, delete is allowed.
+
+68
+00:07:49.410 --> 00:07:51.330
+Let's watch this in the live demo.
+
+69
+00:07:55.143 --> 00:07:58.585
+This is a product's detail view in the admin catalog.
+
+70
+00:07:58.585 --> 00:08:03.975
+At the bottom: vendors offering this product. Here, no vendor has listed it yet, so
+
+71
+00:08:03.975 --> 00:08:05.468
+Customers can't see it.
+
+72
+00:08:23.943 --> 00:08:26.919
+Back in the list, the status toggle is switched.
+
+73
+00:08:26.919 --> 00:08:30.578
+A message says product deactivated, then product activated.
+
+74
+00:08:58.343 --> 00:09:00.263
+Let's watch this in the live demo.
+
+75
+00:09:05.677 --> 00:09:09.154
+Now a delete is tried on a product that has an ongoing order.
+
+76
+00:09:32.077 --> 00:09:35.024
+It can't be deleted while the order is in progress.
+
+77
+00:09:35.024 --> 00:09:37.624
+Once the order is complete, delete will work.
+
+78
+00:10:08.877 --> 00:10:13.570
+This is the checklist to use when a vendor says, I can't see my product in the app.
+
+79
+00:10:14.020 --> 00:10:17.092
+Is the SKU created, with stock above zero?
+
+80
+00:10:17.542 --> 00:10:19.910
+Is the warehouse approved, and not pending?
+
+81
+00:10:20.360 --> 00:10:22.302
+Is the warehouse pin in the right city?
+
+82
+00:10:22.752 --> 00:10:25.205
+Is the product active in the admin catalog?
+
+83
+00:10:25.655 --> 00:10:28.343
+And is the customer actually near that warehouse?
+
+84
+00:10:30.743 --> 00:10:35.212
+Quick check. A vendor moved their warehouse pin to Lucknow, and their products
+
+85
+00:10:35.212 --> 00:10:36.759
+Vanished from the app. Why?
+
+86
+00:10:40.709 --> 00:10:44.427
+Because editing the location sends the warehouse back to pending.
+
+87
+00:10:44.427 --> 00:10:47.344
+Once the admin approves it, the products come back.
+
+88
+00:10:50.143 --> 00:10:51.700
+Let's sum up module five.
+
+89
+00:10:52.150 --> 00:10:57.454
+Adding an SKU means choosing the product, warehouse, stock, minimum order and cash
+
+90
+00:10:57.454 --> 00:10:58.230
+On delivery.
+
+91
+00:10:58.680 --> 00:11:01.688
+Policy changes need a reason and admin approval.
+
+92
+00:11:02.138 --> 00:11:05.168
+No seller in an approved warehouse means no listing.
+
+93
+00:11:05.618 --> 00:11:08.306
+Location edits send a warehouse back to pending.
+
+94
+00:11:08.756 --> 00:11:13.219
+And prefer inactive over delete. Delete is blocked during orders.
+
+95
+00:11:13.219 --> 00:11:15.348
+Next up: price change requests.
+
+96
+00:11:17.743 --> 00:11:22.628
+That's the end of module 5. Next up, module 6: Price change requests.

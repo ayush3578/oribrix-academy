@@ -1,0 +1,465 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.448
+Module three. How the admin approves a vendor's KYC.
+
+2
+00:00:06.633 --> 00:00:10.366
+This module is for the Oribrix team members who approve vendors.
+
+3
+00:00:10.816 --> 00:00:13.483
+We'll start with the KYC lifecycle page.
+
+4
+00:00:13.933 --> 00:00:16.344
+Then how to review each document properly.
+
+5
+00:00:16.794 --> 00:00:19.503
+How to approve custom categories and warehouses.
+
+6
+00:00:19.953 --> 00:00:23.068
+The final approval step, which people often forget.
+
+7
+00:00:23.518 --> 00:00:25.928
+And what the vendor sees once they're approved.
+
+8
+00:00:28.333 --> 00:00:33.926
+In the admin panel, open KYC Lifecycle. At the top you see the total applications,
+
+9
+00:00:33.926 --> 00:00:38.360
+And these three numbers. The figures here are from the demo data.
+
+10
+00:00:38.810 --> 00:00:42.991
+Pending verification is your work queue. These vendors are waiting for you.
+
+11
+00:00:43.441 --> 00:00:45.041
+Approved vendors are live.
+
+12
+00:00:45.491 --> 00:00:48.449
+And suspended vendors have been blocked by an admin.
+
+13
+00:00:48.449 --> 00:00:51.806
+We'll see where the suspend button is later in this module.
+
+14
+00:00:54.200 --> 00:00:57.037
+Approving a vendor always takes these five steps.
+
+15
+00:00:57.487 --> 00:01:00.325
+Open the vendor from the pending verification list.
+
+16
+00:01:00.775 --> 00:01:02.993
+Review each document, one by one.
+
+17
+00:01:03.443 --> 00:01:08.265
+Approve or reject the custom categories, and approve the registration warehouse.
+
+18
+00:01:08.715 --> 00:01:10.635
+Then do the final vendor approval.
+
+19
+00:01:11.085 --> 00:01:14.391
+And the vendor automatically gets an email with their login.
+
+20
+00:01:16.800 --> 00:01:18.720
+Let's watch this in the live demo.
+
+21
+00:01:21.733 --> 00:01:27.592
+This is the KYC lifecycle page. The new vendor, oribrix, shows as pending
+
+22
+00:01:27.592 --> 00:01:31.845
+Verification, with GSTIN and PAN visible in the list.
+
+23
+00:01:38.533 --> 00:01:42.586
+The eye icon on the right opens the full KYC details.
+
+24
+00:01:54.533 --> 00:01:59.625
+Each document has its own card. Click it to open the file in a separate window, so
+
+25
+00:01:59.625 --> 00:02:01.488
+You can check it side by side.
+
+26
+00:02:08.133 --> 00:02:13.331
+Choose the status from the dropdown, add a remark if needed, and click Update doc
+
+27
+00:02:13.331 --> 00:02:16.154
+Status. A small message confirms the update.
+
+28
+00:02:31.333 --> 00:02:34.960
+Opening a document isn't enough. Here's what to actually check.
+
+29
+00:02:35.410 --> 00:02:41.420
+On the GST certificate, the business name and GSTIN must match what the vendor typed
+
+30
+00:02:41.420 --> 00:02:42.279
+In the form.
+
+31
+00:02:42.729 --> 00:02:45.545
+On the business PAN, the number and the name should match.
+
+32
+00:02:45.995 --> 00:02:50.538
+On the cancelled cheque, the account number and IFSC must match the banking step.
+
+33
+00:02:50.538 --> 00:02:52.502
+This protects the vendor's payouts.
+
+34
+00:02:52.952 --> 00:02:56.493
+On the Aadhaar, the name should match the authorised signatory.
+
+35
+00:02:56.943 --> 00:02:59.866
+For optional documents, check the validity dates.
+
+36
+00:03:00.316 --> 00:03:03.805
+And every file must be clear, complete, and not expired.
+
+37
+00:03:03.805 --> 00:03:08.976
+If anything is wrong, reject that document with a clear remark, so the vendor knows
+
+38
+00:03:08.976 --> 00:03:09.724
+What to fix.
+
+39
+00:03:12.133 --> 00:03:15.098
+Scroll down, and you reach categories and warehouses.
+
+40
+00:03:15.548 --> 00:03:19.026
+The standard categories the vendor picked are shown for reference.
+
+41
+00:03:19.476 --> 00:03:24.084
+Custom category requests need a decision. Approve or reject each one.
+
+42
+00:03:24.534 --> 00:03:27.350
+The registration warehouse needs approval too.
+
+43
+00:03:27.800 --> 00:03:31.759
+Before approving it, check that the map pin really matches the address.
+
+44
+00:03:31.759 --> 00:03:34.882
+Customers near that pin will see this vendor's products.
+
+45
+00:03:37.267 --> 00:03:39.187
+Let's watch this in the live demo.
+
+46
+00:03:42.200 --> 00:03:46.650
+Here you see the owner details, bank details, and on the right, categories and
+
+47
+00:03:46.650 --> 00:03:47.277
+Warehouses.
+
+48
+00:03:54.200 --> 00:03:58.104
+The custom category request has Approve and Reject buttons.
+
+49
+00:03:58.104 --> 00:04:03.331
+In the demo the name showed as object object, a display bug the team is fixing.
+
+50
+00:04:11.800 --> 00:04:16.854
+The registration warehouse, Central City, is approved here, so its status changes
+
+51
+00:04:16.854 --> 00:04:18.413
+From pending to approved.
+
+52
+00:04:34.200 --> 00:04:39.433
+Now, the most important step in this module. Approving every document is not enough.
+
+53
+00:04:39.433 --> 00:04:44.354
+The vendor is still pending. You must go to Vendor action, choose Approved, and
+
+54
+00:04:44.354 --> 00:04:49.525
+Click Update status. Only then is the vendor's registration approved, and only then
+
+55
+00:04:49.525 --> 00:04:54.633
+Do they get their login email. If a vendor says, I uploaded everything but I can't
+
+56
+00:04:54.633 --> 00:04:56.813
+Log in, this is usually the reason.
+
+57
+00:05:45.533 --> 00:05:47.453
+Let's watch this in the live demo.
+
+58
+00:05:50.467 --> 00:05:55.541
+First, the vendor's screen. All five documents are in, progress shows one hundred
+
+59
+00:05:55.541 --> 00:05:58.360
+Percent, but verification is still In review.
+
+60
+00:06:07.267 --> 00:06:12.496
+Back in admin, a green note says all uploaded items are reviewed, and you can now
+
+61
+00:06:12.496 --> 00:06:14.755
+Approve or reject the registration.
+
+62
+00:06:21.667 --> 00:06:25.589
+Vendor action is set to Approved, and Update status is clicked.
+
+63
+00:06:25.589 --> 00:06:30.819
+Notice the Suspend vendor button that appears. That's how a vendor is blocked later.
+
+64
+00:06:39.267 --> 00:06:43.534
+On the vendor side: Your account is verified. The dashboard is unlocked.
+
+65
+00:06:53.667 --> 00:06:57.123
+And here is the vendor dashboard, ready for them to add stock.
+
+66
+00:07:04.067 --> 00:07:06.584
+So you have three tools. When do you use which?
+
+67
+00:07:07.034 --> 00:07:11.392
+Reject a single document when the file is wrong, blurry or expired.
+
+68
+00:07:11.392 --> 00:07:15.034
+Always add a clear remark, and the vendor can re-upload.
+
+69
+00:07:15.484 --> 00:07:20.431
+Approve the vendor only when all mandatory documents are approved, the categories
+
+70
+00:07:20.431 --> 00:07:23.058
+Are decided, and the warehouse is approved.
+
+71
+00:07:23.508 --> 00:07:27.866
+Suspend is for later, if there's a serious problem with an approved vendor.
+
+72
+00:07:27.866 --> 00:07:31.294
+It blocks them, so use it with care, and tell your manager.
+
+73
+00:07:33.700 --> 00:07:37.399
+A rejection without a clear remark just creates a phone call.
+
+74
+00:07:37.399 --> 00:07:39.460
+Here are examples of good remarks.
+
+75
+00:07:39.910 --> 00:07:45.149
+For a GST certificate: the name on the certificate doesn't match the business name,
+
+76
+00:07:45.149 --> 00:07:47.547
+Please upload the correct certificate.
+
+77
+00:07:47.997 --> 00:07:52.471
+For a cancelled cheque: the account number doesn't match the bank details, please
+
+78
+00:07:52.471 --> 00:07:52.968
+Re-check.
+
+79
+00:07:53.418 --> 00:07:58.313
+For an Aadhaar: the image is blurry and the name isn't readable, please upload a
+
+80
+00:07:58.313 --> 00:07:58.986
+Clear scan.
+
+81
+00:07:59.436 --> 00:08:04.256
+And for a warehouse: the map pin is in a different city from the address, please
+
+82
+00:08:04.256 --> 00:08:07.329
+Move the pin. Specific, polite, and easy to act on.
+
+83
+00:08:09.733 --> 00:08:13.552
+Why be so careful? Because every approval has consequences later.
+
+84
+00:08:14.002 --> 00:08:17.308
+Wrong bank details mean payouts go to the wrong account.
+
+85
+00:08:17.758 --> 00:08:21.918
+A wrong GSTIN means invoices and tax filings go wrong.
+
+86
+00:08:22.368 --> 00:08:26.668
+A wrong warehouse pin means customers in the wrong area see this vendor, and
+
+87
+00:08:26.668 --> 00:08:27.574
+Deliveries fail.
+
+88
+00:08:28.024 --> 00:08:32.377
+And approving a fake vendor means failed orders and unhappy customers.
+
+89
+00:08:32.377 --> 00:08:34.616
+When in doubt, ask before approving.
+
+90
+00:08:37.000 --> 00:08:39.261
+Use this checklist every single time.
+
+91
+00:08:39.711 --> 00:08:44.021
+GSTIN and business name match the GST certificate.
+
+92
+00:08:44.471 --> 00:08:46.476
+The cheque matches the bank details.
+
+93
+00:08:46.926 --> 00:08:49.294
+The Aadhaar name matches the signatory.
+
+94
+00:08:49.744 --> 00:08:52.880
+Every custom category is approved or rejected.
+
+95
+00:08:53.330 --> 00:08:55.527
+The warehouse pin is checked and approved.
+
+96
+00:08:55.977 --> 00:08:59.476
+And finally, vendor action Approved, then Update status.
+
+97
+00:09:01.867 --> 00:09:06.089
+Approval isn't the finish line. Here's what should happen on the vendor's first day,
+
+98
+00:09:06.089 --> 00:09:07.798
+And you can guide them through it.
+
+99
+00:09:08.248 --> 00:09:11.896
+The login email arrives at the signatory's email address.
+
+100
+00:09:12.346 --> 00:09:15.098
+The vendor logs in, and changes their password.
+
+101
+00:09:15.548 --> 00:09:18.257
+If needed, they add staff accounts for their team.
+
+102
+00:09:18.707 --> 00:09:22.063
+The admin makes sure the warehouse is verified in Shiprocket.
+
+103
+00:09:22.063 --> 00:09:23.934
+You'll learn this in module seven.
+
+104
+00:09:24.384 --> 00:09:28.202
+And the vendor adds their first SKUs, which is module five.
+
+105
+00:09:30.600 --> 00:09:35.504
+Quick check. All the documents show approved, but the vendor says they can't log in.
+
+106
+00:09:35.504 --> 00:09:37.256
+What's the most likely reason?
+
+107
+00:09:41.206 --> 00:09:46.457
+Right, the final vendor approval wasn't done. Open the vendor, set Vendor action to
+
+108
+00:09:46.457 --> 00:09:48.609
+Approved, and click Update status.
+
+109
+00:09:51.400 --> 00:09:52.893
+Let's sum up module three.
+
+110
+00:09:53.343 --> 00:09:57.269
+Work from the pending verification list in KYC lifecycle.
+
+111
+00:09:57.719 --> 00:10:01.068
+Open every document and match it to what the vendor typed.
+
+112
+00:10:01.518 --> 00:10:04.462
+If you reject something, always add a clear remark.
+
+113
+00:10:04.912 --> 00:10:06.917
+Approve the categories and the warehouse.
+
+114
+00:10:07.367 --> 00:10:11.350
+And always finish with vendor action Approved, and Update status.
+
+115
+00:10:11.350 --> 00:10:14.535
+In the next module, we'll build the product catalog.
+
+116
+00:10:16.933 --> 00:10:22.096
+That's the end of module 3. Next up, module 4: Admin: product catalog.
