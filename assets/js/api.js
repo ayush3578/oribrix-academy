@@ -48,12 +48,12 @@
         return { ok: true, completed: Object.keys(d.progress[p.mobile]).map(Number) };
       }
       case "quiz": {
-        if (d.results[p.mobile]) { const e = new Error("already_submitted"); e.code = "already_submitted"; throw e; }
+        if (d.results[p.mobile] && d.results[p.mobile].passed) { const e = new Error("already_submitted"); e.code = "already_submitted"; throw e; }
         const q = await loadSample();
         return { questions: q.map(x => ({ id: x.id, module: x.module, q: x["q_" + p.lang] || x.q_en, options: x["options_" + p.lang] || x.options_en })), passPercent: 80 };
       }
       case "submit": {
-        if (d.results[p.mobile]) { const e = new Error("already_submitted"); e.code = "already_submitted"; throw e; }
+        if (d.results[p.mobile] && d.results[p.mobile].passed) { const e = new Error("already_submitted"); e.code = "already_submitted"; throw e; }
         const q = await loadSample(); let s = 0;
         const review = q.map(x => { const ok = p.answers[x.id] === x.answer; if (ok) s++; return { id: x.id, chosen: p.answers[x.id] ?? null, correct: x.answer, explanation: x["exp_" + p.lang] || x.exp_en }; });
         const pc = Math.round(100 * s / q.length), ok = pc >= 80;

@@ -160,7 +160,8 @@
           <h3>${t("module")} ${m.n}: ${esc(m.title[S.lang] || m.title.en)}</h3><p>${esc(m.desc[S.lang] || m.desc.en)}</p>
           <div class="bar"><i style="width:${isDone ? 100 : p}%"></i></div>${btn}</div></article>`;
     }).join("");
-    const quiz = res ? `<a class="btn" href="#certificate">${t("cert_view")}</a>` :
+    const quiz = res && res.passed ? `<a class="btn" href="#certificate">${t("cert_view")}</a>` :
+      res ? `<p class="hint">${t("retake_last", { p: res.percent })}</p><a class="btn" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>` :
       allDone() ? `<a class="btn" href="#quiz">${t("quiz_start")}</a><p class="hint">${t("quiz_ready")}</p>` : `<p class="hint">${t("quiz_locked")}</p>`;
     render(`<section class="wrap dash"><a class="back" href="#" data-go="home">&larr; ${t("my_courses")}</a>
       <div class="dhead"><div><h1>${t("hello", { name: esc(me().name) })}</h1><p>${t("progress", { done: d.size, total: n })}</p></div>
@@ -175,7 +176,7 @@
           <h3>${t("pr_title")}</h3><p>${t("pr_desc")}</p>
           <a class="btn" href="#practice">${t("pr_start")}</a></div></article></div>
       <article class="card quizcard ${allDone() || res ? "" : "locked"}"><div class="num q">?</div><div class="mbody">
-        <h3>${res ? t("quiz_done") : t("quiz_title")}</h3>${quiz}</div></article>
+        <h3>${res && res.passed ? t("quiz_done") : t("quiz_title")}</h3>${quiz}</div></article>
     </section>`);
   }
 
@@ -188,11 +189,12 @@
       if (c.status !== "live") return `<article class="card ccard soon"><div class="ctop"><span class="pill">${t("soon")}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p><div class="bar"><i style="width:0"></i></div><p class="hint">${t("soon_hint")}</p></article>`;
       const d = doneSet(), n = COURSE.modules.length, res = (S.result || {})[me().mobile];
-      const passed = res && res.passed, pctDone = passed ? 100 : Math.round(100 * Math.min(d.size, n) / (n + 1)) + (res ? Math.round(100 / (n + 1)) : 0);
-      const pill = passed ? `<span class="pill ok">${t("c_completed")}</span>` : res ? `<span class="pill">${t("c_quiz_done", { p: res.percent })}</span>`
+      const passed = res && res.passed, pctDone = passed ? 100 : Math.round(100 * Math.min(d.size, n) / (n + 1));
+      const pill = passed ? `<span class="pill ok">${t("c_completed")}</span>` : res ? `<span class="pill warn">${t("c_retake_pill", { p: res.percent })}</span>`
         : d.size >= n ? `<span class="pill on">${t("c_quiz_ready")}</span>` : d.size ? `<span class="pill on">${t("c_in_progress")}</span>` : `<span class="pill">${t("status_new")}</span>`;
       const btns = passed ? `<a class="btn" href="#certificate">${t("c_open_cert")}</a><a class="btn ghost" href="#certificate-download">&#8681; ${t("c_dl_cert")}</a><a class="btn ghost" href="#course">${t("c_review")}</a>`
-        : `<a class="btn" href="#course">${d.size || res ? t("continue_btn") : t("c_start")}</a>`;
+        : res ? `<a class="btn" href="#quiz">${t("retake_btn")}</a><a class="btn ghost" href="#course">${t("c_review")}</a>`
+        : `<a class="btn" href="#course">${d.size ? t("continue_btn") : t("c_start")}</a>`;
       return `<article class="card ccard ${passed ? "done" : ""}"><div class="ctop">${pill}<span class="dur">${t("c_modules", { d: Math.min(d.size, n), n })}${res ? " · " + t("c_quiz_short", { p: res.percent }) : ""}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p>
         <div class="cprog"><div class="bar"><i style="width:${pctDone}%"></i></div><b>${pctDone}%</b></div>
@@ -320,7 +322,8 @@
 
   // ---------------- quiz ----------------
   async function viewQuiz() {
-    if ((S.result || {})[me().mobile]) return go("certificate");
+    const prevRes = (S.result || {})[me().mobile];
+    if (prevRes && prevRes.passed) return go("certificate");
     if (!allDone()) return go("course");
     render(`<section class="wrap narrow"><p class="hint">${t("loading")}</p></section>`);
     let data;
@@ -377,7 +380,7 @@
     }).join("");
     render(`<section class="wrap narrow">
       <div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div>
-        <p>${t("result_score", { s: r.score, n: r.total, p: r.percent })}</p><p>${r.passed ? t("result_pass") : t("result_fail")}</p>
+        <p>${t("result_score", { s: r.score, n: r.total, p: r.percent })}</p><p>${r.passed ? t("result_pass") : t("result_fail")}</p>${r.passed ? "" : `<a class="btn big" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>`}
         ${r.passed ? `<a class="btn big" href="#certificate">${t("get_cert")}</a>` : ""}</div>
       <ol class="review">${rev}</ol></section>`);
   }
@@ -460,7 +463,7 @@
       return list.map(x => {
         const st = statusOf(x);
         const dots = Array.from({ length: N }, (_, i) => `<i class="${x.modules.includes(i + 1) ? "on" : ""}" title="Module ${i + 1}${x.moduleDates[i + 1] ? ": " + x.moduleDates[i + 1] : ""}"></i>`).join("");
-        const quiz = x.result ? `<span class="badge ${x.result.passed ? "ok" : "no"}">${x.result.percent}%</span> <small>${x.result.score}/${x.result.total} · ${esc(x.result.at.slice(0, 10))}</small>
+        const quiz = x.result ? `<span class="badge ${x.result.passed ? "ok" : "no"}">${x.result.percent}%</span> <small>${x.result.score}/${x.result.total} · ${esc(x.result.at.slice(0, 10))}${x.attempts > 1 ? ` · attempt ${x.attempts}` : ""}</small>
             ${x.result.certId ? `<br><a class="small" href="?verify=${encodeURIComponent(x.result.certId)}" target="_blank" rel="noopener">${esc(x.result.certId)}</a>` : ""}
             ${x.result.flag ? `<br><span class="badge warn" title="Same name used with another mobile">check name</span>` : ""}` : `<span class="hint">—</span>`;
         const pr = x.practice ? `<b>${x.practice.best}%</b> best<br><small>${x.practice.attempts} attempt${x.practice.attempts > 1 ? "s" : ""} · last ${x.practice.last}%</small>` : `<span class="hint">—</span>`;
@@ -561,7 +564,7 @@
     let r = (S.result || {})[me().mobile];
     if (!r) { await sync(); r = (S.result || {})[me().mobile]; }
     if (!r) return go("course");
-    if (!r.passed) return render(`<section class="wrap narrow"><div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div><p>${t("result_fail")}</p></div></section>`);
+    if (!r.passed) return render(`<section class="wrap narrow"><div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div><p>${t("result_fail")}</p><a class="btn big" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p></div></section>`);
     const url = verifyUrl(r.certId);
     render(`<section class="wrap cert-page"><a class="back" href="#" data-go="home">&larr; ${t("my_courses")}</a><h1>${t("cert_title")}</h1>
       <div class="certbtns"><button class="btn" id="pdf">&#8681; ${t("dl_pdf")}</button><button class="btn" id="png">&#8681; ${t("dl_png")}</button>

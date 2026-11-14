@@ -203,3 +203,5 @@ main{min-height:70vh}
 .cprog{display:flex;align-items:center;gap:10px} .cprog .bar{flex:1;margin:0} .cprog b{font-size:14px;color:var(--navy)}
 .dash>.back,.hub>.back,.cert-page>.back{display:inline-block;margin-top:8px} .hub{padding-top:18px}
 .ccard.done .bar i{background:var(--ok)}
+
+.pill.warn{background:#FFF3DF;color:#B76E00}

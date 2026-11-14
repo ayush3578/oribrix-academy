@@ -9,7 +9,8 @@
  *  4. Copy the Web app URL into assets/js/config.js (API_URL).
  *
  * Maintenance: edit questions in the "Quiz" tab and rules in the "Settings" tab.
- * To let someone retake the quiz, use "Allow retake" in the admin dashboard (or delete their row in "Results").
+ * Learners who fail can retake the quiz themselves (a new question set each time); a pass ends it.
+ * Earlier attempts are kept in the "ResetLog" tab. Admins can also use "Allow retake".
  * Admin: the mobiles in ADMIN_MOBILES (Settings) can open the admin dashboard with the ADMIN_PIN (Settings).
  */
 
@@ -20,7 +21,7 @@ const TABS = {
   Quiz: ["id", "module", "active", "question_en", "question_hi", "A_en", "B_en", "C_en", "D_en", "A_hi", "B_hi", "C_hi", "D_hi", "correct", "explanation_en", "explanation_hi"],
   Settings: ["key", "value", "notes"],
   Practice: ["at", "mobile", "name", "score", "total", "percent"],
-  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id"]
+  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "reason"]
 };
 const DEFAULT_SETTINGS = [
   ["TOTAL_MODULES", 8, "Number of video modules a learner must complete before the quiz"],
@@ -123,12 +124,22 @@ function progress(p) {
   return { ok: true, completed: completed(mobile) };
 }
 
+function isPassed(r) { return !!r && (r.passed === true || String(r.passed).toUpperCase() === "TRUE"); }
+function archivedCount(mobile) { return rows("ResetLog").filter(r => String(r.mobile) === mobile).length; }
+/* 0 for the first attempt, 1 for the first retake, ... (same value in quiz() and submit()). */
+function attemptNo(mobile) { return archivedCount(mobile) + (resultOf(mobile) ? 1 : 0); }
+function archiveResult(r, reason) {
+  append("ResetLog", { reset_at: now(), submitted_at: r.submitted_at, mobile: "'" + String(r.mobile), name: r.name, score: r.score, total: r.total,
+                       percent: r.percent, passed: r.passed, cert_id: r.cert_id, reason: reason });
+  sh("Results").deleteRow(r._row);
+}
+
 /* Deterministic shuffle so a learner always gets the same question set. */
 function seeded(seed) { let h = 0; for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0; return () => { h = (h * 1664525 + 1013904223) >>> 0; return h / 4294967296; }; }
-function pickQuestions(mobile) {
+function pickQuestions(mobile, attempt) {
   const per = Number(setting("QUESTIONS_PER_MODULE", 3));
   const all = rows("Quiz").filter(q => q.active === true || String(q.active).toUpperCase() === "TRUE");
-  const rnd = seeded(mobile + "|oribrix");
+  const rnd = seeded(mobile + "|oribrix" + (attempt ? "|" + attempt : ""));
   const byMod = {};
   all.forEach(q => (byMod[q.module] = byMod[q.module] || []).push(q));
   let set = [], rest = [];
@@ -143,19 +154,27 @@ function pickQuestions(mobile) {
 }
 function checkEligible(mobile, p) {
   if (!learner(mobile)) fail("not_registered");
-  if (resultOf(mobile)) fail("already_submitted");
+  if (isPassed(resultOf(mobile))) fail("already_submitted");     // failed learners may retake
   if (p && isAdmin(p)) return;                       // admins may skip the videos
   const total = Number(setting("TOTAL_MODULES", 8));
   if (completed(mobile).length < total) fail("modules_incomplete");
 }
+/* Option order is shuffled per learner, per attempt and per question (same order in quiz() and submit()). */
+function optionOrder(mobile, attempt, q) {
+  const n = ["A", "B", "C", "D"].filter(k => String(q[k + "_en"] || "") !== "").length;
+  const rnd = seeded(mobile + "|opt|" + attempt + "|" + q.id), idx = [];
+  for (let i = 0; i < n; i++) idx.push(i);
+  for (let i = n - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = idx[i]; idx[i] = idx[j]; idx[j] = t; }
+  return idx;                                   // idx[shownPosition] = original option index
+}
 function quiz(p) {
   const mobile = cleanMobile(p.mobile); checkEligible(mobile, p);
-  const lang = p.lang === "hi" ? "hi" : "en";
-  const qs = pickQuestions(mobile).map(q => ({
-    id: String(q.id), module: Number(q.module),
-    q: (lang === "hi" && q.question_hi) ? q.question_hi : q.question_en,
-    options: ["A", "B", "C", "D"].map(k => (lang === "hi" && q[k + "_hi"]) ? q[k + "_hi"] : q[k + "_en"]).filter(x => x !== "")
-  }));
+  const lang = p.lang === "hi" ? "hi" : "en", attempt = attemptNo(mobile);
+  const qs = pickQuestions(mobile, attempt).map(q => {
+    const opts = ["A", "B", "C", "D"].map(k => (lang === "hi" && q[k + "_hi"]) ? q[k + "_hi"] : q[k + "_en"]);
+    return { id: String(q.id), module: Number(q.module), q: (lang === "hi" && q.question_hi) ? q.question_hi : q.question_en,
+             options: optionOrder(mobile, attempt, q).map(i => opts[i]) };
+  });
   return { questions: qs, passPercent: Number(setting("PASS_PERCENT", 80)) };
 }
 
@@ -163,13 +182,17 @@ function submit(p) {
   const mobile = cleanMobile(p.mobile); checkEligible(mobile, p);
   const lang = p.lang === "hi" ? "hi" : "en";
   const answers = p.answers || {};
-  const qs = pickQuestions(mobile);
-  let score = 0;
+  const attempt = attemptNo(mobile), qs = pickQuestions(mobile, attempt);
+  const prev = resultOf(mobile); if (prev) archiveResult(prev, "retake");
+  let score = 0; const stored = {};
   const review = qs.map(q => {
-    const correct = "ABCD".indexOf(String(q.correct).trim().toUpperCase());
-    const chosen = answers[String(q.id)] === undefined ? null : Number(answers[String(q.id)]);
-    if (chosen === correct) score++;
-    return { id: String(q.id), chosen: chosen, correct: correct, explanation: (lang === "hi" && q.explanation_hi) ? q.explanation_hi : q.explanation_en };
+    const order = optionOrder(mobile, attempt, q);
+    const correctOrig = "ABCD".indexOf(String(q.correct).trim().toUpperCase());
+    const shown = answers[String(q.id)] === undefined ? null : Number(answers[String(q.id)]);
+    const chosenOrig = shown === null || order[shown] === undefined ? null : order[shown];
+    if (chosenOrig !== null) stored[String(q.id)] = chosenOrig;   // saved as original A-D index
+    if (chosenOrig === correctOrig) score++;
+    return { id: String(q.id), chosen: shown, correct: order.indexOf(correctOrig), explanation: (lang === "hi" && q.explanation_hi) ? q.explanation_hi : q.explanation_en };
   });
   const total = qs.length, percent = total ? Math.round(100 * score / total) : 0;
   const passed = percent >= Number(setting("PASS_PERCENT", 80));
@@ -177,8 +200,8 @@ function submit(p) {
   const certId = passed ? newCertId() : "";
   const dup = rows("Results").some(r => String(r.name).toLowerCase() === String(l.name).toLowerCase() && String(r.mobile) !== mobile);
   append("Results", { submitted_at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: percent, passed: passed,
-                      cert_id: certId, lang: lang, answers_json: JSON.stringify(answers), same_name_other_mobile: dup ? "CHECK" : "" });
-  return { name: l.name, startDate: ymd(l.registered_at), score: score, total: total, percent: percent, passed: passed, certId: certId,
+                      cert_id: certId, lang: lang, answers_json: JSON.stringify(stored), same_name_other_mobile: dup ? "CHECK" : "" });
+  return { name: l.name, startDate: ymd(l.registered_at), attempt: attempt + 1, score: score, total: total, percent: percent, passed: passed, certId: certId,
            date: Utilities.formatDate(now(), "Asia/Kolkata", "yyyy-MM-dd"), review: review };
 }
 function newCertId() {
@@ -262,6 +285,7 @@ function adminData(p) {
   const total = Number(setting("TOTAL_MODULES", 8));
   const prog = {}; rows("Progress").forEach(r => { const m = String(r.mobile); (prog[m] = prog[m] || {})[Number(r.module)] = f(r.completed_at); });
   const res = {}; rows("Results").forEach(r => { res[String(r.mobile)] = r; });
+  const att = {}; rows("ResetLog").forEach(r => { const m = String(r.mobile); att[m] = (att[m] || 0) + 1; });
   const pr = {}; rows("Practice").forEach(r => {
     const m = String(r.mobile), x = pr[m] = pr[m] || { attempts: 0, best: 0, last: null, lastAt: "" };
     x.attempts++; x.best = Math.max(x.best, Number(r.percent) || 0); x.last = Number(r.percent) || 0; x.lastAt = f(r.at);
@@ -272,7 +296,7 @@ function adminData(p) {
       modules: Object.keys(done).map(Number).sort((a, b) => a - b), moduleDates: done,
       result: r ? { score: Number(r.score), total: Number(r.total), percent: Number(r.percent), passed: r.passed === true || r.passed === "TRUE",
                     certId: r.cert_id, at: f(r.submitted_at), lang: r.lang, flag: r.same_name_other_mobile } : null,
-      practice: pr[m] || null, admin: isAdminMobile(m) };
+      attempts: (att[m] || 0) + (r ? 1 : 0), practice: pr[m] || null, admin: isAdminMobile(m) };
   });
   // question statistics from submitted answers
   const key = {}, qs = {};
@@ -289,9 +313,7 @@ function adminReset(p) {
   needAdmin(p);
   const target = cleanMobile(p.target), r = resultOf(target);
   if (!r) fail("no_result");
-  append("ResetLog", { reset_at: now(), submitted_at: r.submitted_at, mobile: "'" + target, name: r.name, score: r.score, total: r.total,
-                       percent: r.percent, passed: r.passed, cert_id: r.cert_id });
-  sh("Results").deleteRow(r._row);
+  archiveResult(r, "admin");
   return { ok: true };
 }
 
@@ -332,7 +354,7 @@ const SEED_QUESTIONS = [
  ["Q402", 4, true, "Which column is NOT one of the four mandatory columns in the bulk CSV?", "Bulk CSV ke chaar mandatory columns mein se kaunsa NAHI hai?", "HSN code", "ProductName", "BrandName", "Unit", "HSN code", "ProductName", "BrandName", "Unit", "A", "The four mandatory columns are ProductName, CategoryName, BrandName and Unit.", "Chaar mandatory columns hain: ProductName, CategoryName, BrandName aur Unit."],
  ["Q403", 4, true, "A bulk upload has 50 rows. Row 3 is a product that already exists in the catalog. What happens?", "Bulk upload mein 50 rows hain. Row 3 ka product catalog mein pehle se hai. Kya hoga?", "The whole upload fails", "A second copy of the product is created", "The existing product is deleted and replaced", "Row 3 is skipped as a duplicate; the other rows are processed", "Poora upload fail hoga", "Product ki doosri copy ban jaayegi", "Purana product delete hokar replace hoga", "Row 3 duplicate maanke skip hogi; baaki rows process hongi", "D", "Duplicates are reported as 'already exists' and skipped. The rest of the file still uploads.", "Duplicates 'already exists' dikhte hain aur skip hote hain. Baaki file upload ho jaati hai."],
  ["Q404", 4, true, "Bulk pricing for a tile: 10+ units at Rs 85 each, 15+ units at Rs 80 each. A builder orders 12 units. What does he pay per unit?", "Tile ki bulk pricing: 10+ units pe Rs 85, 15+ units pe Rs 80. Builder 12 units order karta hai. Per unit kitna dega?", "Rs 80", "The normal price", "Rs 85", "Rs 82.50", "Rs 80", "Normal price", "Rs 85", "Rs 82.50", "C", "12 units qualifies for the 10+ tier (Rs 85) but not yet the 15+ tier (Rs 80).", "12 units 10+ wale tier (Rs 85) mein aata hai, 15+ wale (Rs 80) mein nahi."],
- ["Q405", 4, true, "Why must 'unit weight per quantity' be filled correctly?", "'Unit weight per quantity' sahi bharna kyun zaroori hai?", "It decides the commission", "Wrong weight sends orders by the wrong delivery mode", "It changes the GST rate", "Customers can't search without it", "Isse commission decide hota hai", "Galat weight se order galat delivery mode se jaata hai", "Isse GST rate badalta hai", "Iske bina customer search nahi kar sakta", "B", "Weight decides how an order ships, for example Normal below 500 kg and Cargo above. Missing weight is a common catalog mistake.", "Weight decide karta hai order kaise ship hoga, jaise 500 kg se kam Normal aur upar Cargo. Weight na bharna common catalog mistake hai."],
+ ["Q405", 4, true, "Why must 'unit weight per quantity' be filled correctly?", "“Unit weight per quantity” sahi bharna kyun zaroori hai?", "It decides the commission", "Wrong weight sends orders by the wrong delivery mode", "It changes the GST rate", "Customers can't search without it", "Isse commission decide hota hai", "Galat weight se order galat delivery mode se jaata hai", "Isse GST rate badalta hai", "Iske bina customer search nahi kar sakta", "B", "Weight decides how an order ships, for example Normal below 500 kg and Cargo above. Missing weight is a common catalog mistake.", "Weight decide karta hai order kaise ship hoga, jaise 500 kg se kam Normal aur upar Cargo. Weight na bharna common catalog mistake hai."],
  ["Q501", 5, true, "While adding an SKU, which products can a vendor choose from?", "SKU add karte waqt vendor kaunse products choose kar sakta hai?", "Any product they type in", "All products in every category", "Only products other vendors already sell", "Master-catalog products in their approved categories", "Jo bhi product woh type karein", "Har category ke saare products", "Sirf woh products jo doosre vendors bechte hain", "Apni approved categories ke master-catalog products", "D", "Only the vendor's approved categories appear, and products always come from the admin's master catalog.", "Sirf vendor ki approved categories dikhti hain, aur products hamesha admin ke master catalog se aate hain."],
  ["Q502", 5, true, "A helmet SKU has stock 50, the product is Active and the warehouse shows Approved, but a Lucknow customer can't see it. What is the most likely cause?", "Helmet SKU ka stock 50 hai, product Active hai aur warehouse Approved hai, par Lucknow ke customer ko nahi dikh raha. Sabse likely wajah?", "The price is too low", "COD is switched off", "The warehouse pin is in another city", "The helmet needs a price change request", "Price bahut kam hai", "COD band hai", "Warehouse ka pin doosre city mein hai", "Helmet ko price change request chahiye", "C", "In the demo the Central City warehouse was pinned in Bengaluru, so Lucknow customers couldn't see the helmet until the pin was fixed and re-approved.", "Demo mein Central City warehouse Bengaluru mein pinned tha, isliye Lucknow ke customers ko helmet tab tak nahi dikha jab tak pin theek hokar dobara approve nahi hua."],
  ["Q503", 5, true, "A vendor sets the minimum order quantity of a cement SKU to 10. A customer wants 5 bags. What happens?", "Vendor ne cement SKU ki minimum order quantity 10 rakhi. Customer 5 bags chahta hai. Kya hoga?", "She gets 5 bags at the bulk price", "She can't order fewer than 10 from that SKU", "The order goes to the admin for approval", "The vendor gets a price change request", "Use 5 bags bulk price pe milenge", "Woh us SKU se 10 se kam order nahi kar sakti", "Order admin approval ke liye jaayega", "Vendor ko price change request milegi", "B", "Minimum order quantity is the smallest quantity a customer can buy for that SKU.", "Minimum order quantity us SKU ki sabse kam quantity hai jo customer khareed sakta hai."],
@@ -349,8 +371,8 @@ const SEED_QUESTIONS = [
  ["Q704", 7, true, "While verifying a new warehouse in the Shiprocket portal, when is an OTP needed?", "Shiprocket portal mein naya warehouse verify karte waqt OTP kab chahiye?", "Once, for a new phone number; the same number later doesn't need it", "Every time a warehouse is added", "Only for Cargo orders", "Never", "Ek baar, naye phone number ke liye; wahi number baad mein OTP nahi maangta", "Har baar warehouse add karne pe", "Sirf Cargo orders ke liye", "Kabhi nahi", "A", "A new phone number needs OTP once in Shiprocket. Every warehouse must be verified before it can dispatch.", "Naye phone number pe Shiprocket mein ek baar OTP aata hai. Har warehouse dispatch se pehle verify hona chahiye."],
  ["Q705", 7, true, "With a local / in-house driver, which detail does the customer receive?", "Local / in-house driver ke saath customer ko kya milta hai?", "A Shiprocket tracking SMS", "An AWB tracking number", "Nothing at all", "The driver's phone number, to coordinate delivery", "Shiprocket tracking SMS", "AWB tracking number", "Kuch bhi nahi", "Driver ka phone number, delivery coordinate karne ke liye", "D", "The customer gets the driver's number but no Shiprocket tracking SMS, so support must keep them updated.", "Customer ko driver ka number milta hai par Shiprocket tracking SMS nahi, isliye support ko update dete rehna hai."],
  ["Q801", 8, true, "A settlement shows GMV Rs 10,000 and deductions of Rs 1,200. What is the payout?", "Settlement mein GMV Rs 10,000 aur deductions Rs 1,200 hain. Payout kitna hoga?", "Rs 10,000", "Rs 8,800", "Rs 11,200", "Rs 1,200", "Rs 10,000", "Rs 8,800", "Rs 11,200", "Rs 1,200", "B", "Payout = GMV minus deductions (logistics + commission): 10,000 - 1,200 = 8,800.", "Payout = GMV minus deductions (logistics + commission): 10,000 - 1,200 = 8,800."],
- ["Q802", 8, true, "Which dispute is most likely to be resolved quickly?", "Kaunsa dispute sabse jaldi resolve hoga?", "'STL-1042: expected Rs 8,800, received Rs 8,000. Invoice attached.'", "'My payment is wrong, please check.'", "'Call me urgently about money.'", "'Last month's payouts are all wrong.'", "'STL-1042: Rs 8,800 aana tha, Rs 8,000 aaya. Invoice attached.'", "'Mera payment galat hai, check karo.'", "'Paise ke baare mein urgent call karo.'", "'Pichhle mahine ke saare payouts galat hain.'", "A", "A good dispute has the exact settlement or order ID, what's wrong, expected vs received, and proof attached.", "Achhe dispute mein exact settlement ya order ID, kya galat hai, expected vs received, aur proof attached hota hai."],
+ ["Q802", 8, true, "Which dispute is most likely to be resolved quickly?", "Kaunsa dispute sabse jaldi resolve hoga?", "“STL-1042: expected Rs 8,800, received Rs 8,000. Invoice attached.”", "“My payment is wrong, please check.”", "“Call me urgently about money.”", "“Last month's payouts are all wrong.”", "“STL-1042: Rs 8,800 aana tha, Rs 8,000 aaya. Invoice attached.”", "“Mera payment galat hai, check karo.”", "“Paise ke baare mein urgent call karo.”", "“Pichhle mahine ke saare payouts galat hain.”", "A", "A good dispute has the exact settlement or order ID, what's wrong, expected vs received, and proof attached.", "Achhe dispute mein exact settlement ya order ID, kya galat hai, expected vs received, aur proof attached hota hai."],
  ["Q803", 8, true, "A vendor's accountant needs settlement data for their books. What helps?", "Vendor ke accountant ko books ke liye settlement data chahiye. Kya kaam aayega?", "Screenshots of the dashboard", "A dispute for every settlement", "Asking Shiprocket for a report", "Export Tally XML or CSV from Earnings & Settlements", "Dashboard ke screenshots", "Har settlement ke liye dispute", "Shiprocket se report maangna", "Earnings & Settlements se Tally XML ya CSV export", "D", "The settlements table has Tally XML and CSV export buttons for the vendor's accountant.", "Settlements table mein vendor ke accountant ke liye Tally XML aur CSV export buttons hain."],
- ["Q804", 8, true, "On the 'ready to sell' checklist, which item is optional?", "'Ready to sell' checklist mein kaunsa item optional hai?", "Final vendor approval done", "Warehouse verified in Shiprocket", "Local drivers added as a backup", "SKUs added with real stock", "Final vendor approval hona", "Shiprocket mein warehouse verify hona", "Backup ke liye local drivers add karna", "Real stock ke saath SKUs add hona", "C", "Local drivers are a recommended backup but optional. The rest are required before a vendor can sell.", "Local drivers recommended backup hain par optional. Baaki sab sell karne se pehle zaroori hain."],
+ ["Q804", 8, true, "On the 'ready to sell' checklist, which item is optional?", "“Ready to sell” checklist mein kaunsa item optional hai?", "Final vendor approval done", "Warehouse verified in Shiprocket", "Local drivers added as a backup", "SKUs added with real stock", "Final vendor approval hona", "Shiprocket mein warehouse verify hona", "Backup ke liye local drivers add karna", "Real stock ke saath SKUs add hona", "C", "Local drivers are a recommended backup but optional. The rest are required before a vendor can sell.", "Local drivers recommended backup hain par optional. Baaki sab sell karne se pehle zaroori hain."],
  ["Q805", 8, true, "Today, when two vendors near a customer sell the same product, what does the customer app show?", "Aaj, agar customer ke paas do vendors same product bechte hain, toh customer app kya dikhata hai?", "Both vendors' prices side by side", "The nearest vendor's product, with one price per card", "The lowest price from any vendor in UP", "The catalog price only", "Dono vendors ke prices saath mein", "Sabse paas wale vendor ka product, ek card pe ek price", "UP ke kisi bhi vendor ka sabse kam price", "Sirf catalog price", "B", "Today the app shows the nearest vendor's product and price. Showing several vendors' prices is still under discussion.", "Aaj app sabse paas wale vendor ka product aur price dikhata hai. Kai vendors ke prices dikhana abhi discussion mein hai."]
 ];
