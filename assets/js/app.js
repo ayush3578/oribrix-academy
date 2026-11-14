@@ -42,7 +42,8 @@
   }
   function modDuration(m, lang = S.lang) { return (m.duration && m.duration[lang]) || 600; }
   function pct(m, lang = S.lang) { const p = progOf(m.n, lang); return Math.min(100, Math.round(100 * covered(p.ranges) / modDuration(m, lang))); }
-  function isAdm() { return !!(S.user && S.user.admin && S.adminPin); }
+  function admUser(u) { u = u || S.user; return !!(u && (u.admin || (C.ADMIN_MOBILES || []).includes(u.mobile))); }
+  function isAdm() { return !!(admUser() && S.adminPin); }
   function unlocked(m) { if (isAdm() || !C.SEQUENTIAL || m.n === 1) return true; return doneSet().has(m.n - 1) || doneSet().has(m.n); }
   function allDone() { if (isAdm()) return true; const d = doneSet(); return COURSE.modules.every(m => d.has(m.n)); }
 
@@ -56,7 +57,7 @@
         <button class="${S.lang === "en" ? "on" : ""}" data-lang="en">English</button>
         <button class="${S.lang === "hi" ? "on" : ""}" data-lang="hi">Hinglish</button>
       </div>
-      ${u && u.admin ? `<a class="adminlink" href="#admin">&#9881; Admin</a>` : ""}
+      ${admUser(u) ? `<a class="adminlink" href="#admin">&#9881; Admin</a>` : ""}
       ${u ? `<div class="who"><span>${esc(u.name)}</span><button class="link" data-act="logout">${t("not_you")}</button></div>` : ""}
     </div></header>${API.TEST ? `<div class="testbar">${t("test_mode")}</div>` : ""}`;
   }
@@ -136,7 +137,7 @@
     try {
       const s = await API.call("status", { mobile: me().mobile });
       if (s.name) S.user.name = s.name;
-      S.user.admin = !!s.admin; if (!s.admin) delete S.adminPin;
+      S.user.admin = !!s.admin;
       const set = new Set([...(S.done[me().mobile] || []), ...(s.completed || [])].map(Number));
       S.done[me().mobile] = [...set].sort((a, b) => a - b);
       S.result = S.result || {}; if (s.result) S.result[me().mobile] = s.result;
@@ -434,7 +435,7 @@
 
   // ---------------- admin ----------------
   async function viewAdmin() {
-    if (!me() || !me().admin) return go("home");
+    if (!me()) return go("home");
     if (!S.adminPin) return adminLogin();
     render(`<section class="wrap"><p class="hint">${t("loading")}</p></section>`);
     let d;

@@ -22,5 +22,8 @@ window.ACADEMY_CONFIG = {
 
   // 4) Public address of the site, used in the certificate's verify link.
   //    Leave empty to use the current address automatically.
+  // Mobiles that see the Admin button (the dashboard still needs the Admin PIN)
+  ADMIN_MOBILES: ["7398832290"],
+
   SITE_URL: "https://housizy.com/"
 };
