@@ -31,7 +31,7 @@ window.I18N = {
     get_cert: "Get your certificate", already_done: "You have already submitted this quiz.",
     dl_png: "Download PNG", dl_pdf: "Download PDF", copy_link: "Copy verify link", copied: "Copied!",
     verify_title: "Certificate verification", verify_ok: "This certificate is valid.", verify_bad: "No certificate found with this ID.",
-    verify_name: "Name", verify_date: "Date", verify_score: "Score", verify_id: "Certificate ID",
+    verify_name: "Name", verify_start: "Course started", verify_date: "Completed on", verify_score: "Score", verify_id: "Certificate ID",
     test_mode: "TEST MODE: not connected to Google Sheets yet. Progress is saved only in this browser.",
     net_err: "Couldn't reach the server. Check your internet and try again.",
     loading: "Loading…", footer: "Order Now. Build Today."
@@ -67,7 +67,7 @@ window.I18N = {
     get_cert: "Apna certificate lijiye", already_done: "Aap ye quiz pehle hi submit kar chuke hain.",
     dl_png: "PNG download", dl_pdf: "PDF download", copy_link: "Verify link copy karein", copied: "Copy ho gaya!",
     verify_title: "Certificate verification", verify_ok: "Ye certificate valid hai.", verify_bad: "Is ID ka koi certificate nahi mila.",
-    verify_name: "Naam", verify_date: "Date", verify_score: "Score", verify_id: "Certificate ID",
+    verify_name: "Naam", verify_start: "Course start", verify_date: "Complete hua", verify_score: "Score", verify_id: "Certificate ID",
     test_mode: "TEST MODE: abhi Google Sheets se connected nahi hai. Progress sirf is browser mein save ho rahi hai.",
     net_err: "Server tak nahi pahunch paaye. Internet check karke dobara try kijiye.",
     loading: "Load ho raha hai…", footer: "Order Now. Build Today."

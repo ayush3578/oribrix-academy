@@ -74,8 +74,10 @@ function now() { return new Date(); }
 function learner(mobile) { return rows("Learners").find(r => String(r.mobile) === mobile); }
 function completed(mobile) { return Array.from(new Set(rows("Progress").filter(r => String(r.mobile) === mobile).map(r => Number(r.module)))).sort((a, b) => a - b); }
 function resultOf(mobile) { return rows("Results").find(r => String(r.mobile) === mobile); }
+function ymd(d) { try { return d ? Utilities.formatDate(new Date(d), "Asia/Kolkata", "yyyy-MM-dd") : ""; } catch (e) { return ""; } }
+function startOf(mobile) { const l = learner(String(mobile).replace(/^'/, "")); return l ? ymd(l.registered_at) : ""; }
 function publicResult(r) {
-  return r ? { name: r.name, score: Number(r.score), total: Number(r.total), percent: Number(r.percent), passed: r.passed === true || r.passed === "TRUE",
+  return r ? { startDate: startOf(r.mobile), name: r.name, score: Number(r.score), total: Number(r.total), percent: Number(r.percent), passed: r.passed === true || r.passed === "TRUE",
                certId: r.cert_id, date: Utilities.formatDate(new Date(r.submitted_at), "Asia/Kolkata", "yyyy-MM-dd") } : null;
 }
 
@@ -84,10 +86,10 @@ function register(p) {
   const name = String(p.name || "").replace(/\s+/g, " ").trim().slice(0, 60);
   if (name.length < 3) fail("bad_name");
   const ex = learner(mobile);
-  if (ex) { sh("Learners").getRange(ex._row, 4).setValue(now()); return { name: ex.name, existing: true }; }
+  if (ex) { sh("Learners").getRange(ex._row, 4).setValue(now()); return { name: ex.name, existing: true, startDate: ymd(ex.registered_at) }; }
   // Mobile column is stored as text so leading digits are kept exactly
   append("Learners", { mobile: "'" + mobile, name: name, registered_at: now(), last_seen: now(), lang: p.lang || "en" });
-  return { name: name, existing: false };
+  return { name: name, existing: false, startDate: ymd(now()) };
 }
 
 function status(p) {
@@ -156,7 +158,7 @@ function submit(p) {
   const dup = rows("Results").some(r => String(r.name).toLowerCase() === String(l.name).toLowerCase() && String(r.mobile) !== mobile);
   append("Results", { submitted_at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: percent, passed: passed,
                       cert_id: certId, lang: lang, answers_json: JSON.stringify(answers), same_name_other_mobile: dup ? "CHECK" : "" });
-  return { name: l.name, score: score, total: total, percent: percent, passed: passed, certId: certId,
+  return { name: l.name, startDate: ymd(l.registered_at), score: score, total: total, percent: percent, passed: passed, certId: certId,
            date: Utilities.formatDate(now(), "Asia/Kolkata", "yyyy-MM-dd"), review: review };
 }
 function newCertId() {
@@ -174,7 +176,7 @@ function verify(p) {
   const r = rows("Results").find(x => String(x.cert_id).toUpperCase() === id && id);
   if (!r) return { valid: false };
   const pr = publicResult(r);
-  return { valid: true, name: pr.name, date: pr.date, percent: pr.percent, course: setting("COURSE_NAME", "Oribrix Vendor Onboarding Academy") };
+  return { valid: true, name: pr.name, startDate: pr.startDate, date: pr.date, percent: pr.percent, course: setting("COURSE_NAME", "Oribrix Vendor Onboarding Academy") };
 }
 
 /* ------------------------------------------------------------------ */

@@ -37,7 +37,7 @@
       case "register": {
         const ex = d.learners[p.mobile];
         if (!ex) { d.learners[p.mobile] = { name: p.name, at: new Date().toISOString() }; save(d); }
-        return { name: (ex || d.learners[p.mobile]).name, existing: !!ex };
+        const L = ex || d.learners[p.mobile]; return { name: L.name, existing: !!ex, startDate: (L.at || "").slice(0, 10) };
       }
       case "status": {
         const l = d.learners[p.mobile];
@@ -57,13 +57,13 @@
         const q = await loadSample(); let s = 0;
         const review = q.map(x => { const ok = p.answers[x.id] === x.answer; if (ok) s++; return { id: x.id, chosen: p.answers[x.id] ?? null, correct: x.answer, explanation: x["exp_" + p.lang] || x.exp_en }; });
         const pc = Math.round(100 * s / q.length), ok = pc >= 80;
-        const r = { name: d.learners[p.mobile].name, score: s, total: q.length, percent: pc, passed: ok,
+        const r = { name: d.learners[p.mobile].name, startDate: (d.learners[p.mobile].at || "").slice(0, 10), score: s, total: q.length, percent: pc, passed: ok,
                     certId: ok ? certId() : "", date: new Date().toISOString().slice(0, 10), review };
         d.results[p.mobile] = r; save(d); return r;
       }
       case "verify": {
         const r = Object.values(d.results).find(x => x.certId === p.certId);
-        return r ? { valid: true, name: r.name, date: r.date, percent: r.percent } : { valid: false };
+        return r ? { valid: true, name: r.name, startDate: r.startDate, date: r.date, percent: r.percent } : { valid: false };
       }
     }
     throw new Error("unknown action");
