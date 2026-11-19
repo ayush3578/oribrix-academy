@@ -1,0 +1,537 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.192
+Module three. Warehouses. Where the goods are picked up from, and why the admin must
+
+2
+00:00:06.192 --> 00:00:07.989
+Verify every pickup address.
+
+3
+00:00:10.200 --> 00:00:15.081
+Every S K U lives in a warehouse, and every order is picked up from a warehouse.
+
+4
+00:00:15.081 --> 00:00:19.779
+If the warehouse is wrong, nothing else works. So let's get warehouses right.
+
+5
+00:00:20.229 --> 00:00:21.957
+First, the warehouses page.
+
+6
+00:00:22.407 --> 00:00:24.860
+Then adding a new warehouse, field by field.
+
+7
+00:00:25.310 --> 00:00:28.702
+Why a new warehouse stays pending until the admin approves it.
+
+8
+00:00:29.152 --> 00:00:33.355
+The new agreed process for verifying the pickup address in Shiprocket.
+
+9
+00:00:33.805 --> 00:00:38.477
+And the buttons on each warehouse card: pause intake, staff and view inventory.
+
+10
+00:00:40.867 --> 00:00:43.000
+This is the vendor's warehouses page.
+
+11
+00:00:43.450 --> 00:00:47.248
+Active warehouses. How many pickup locations the vendor has.
+
+12
+00:00:47.698 --> 00:00:50.343
+Capacity. The total space, in square feet.
+
+13
+00:00:50.793 --> 00:00:54.612
+Open orders. Orders still to be fulfilled from these warehouses.
+
+14
+00:00:55.062 --> 00:00:58.987
+Total S K Us live. Products that customers can buy right now.
+
+15
+00:00:59.437 --> 00:01:00.888
+The Add warehouse button.
+
+16
+00:01:01.338 --> 00:01:04.801
+And each card shows a status. Approved means it can sell.
+
+17
+00:01:04.801 --> 00:01:07.354
+Pending means it is waiting for the admin.
+
+18
+00:01:09.767 --> 00:01:13.372
+Before we watch it, here is every field on the add warehouse form.
+
+19
+00:01:13.822 --> 00:01:18.157
+Pickup location name. Use a clear name, like the city plus a number.
+
+20
+00:01:18.157 --> 00:01:19.305
+It must be unique.
+
+21
+00:01:19.755 --> 00:01:24.510
+Full address and pincode. This is the exact address the courier will come to.
+
+22
+00:01:24.510 --> 00:01:26.795
+Spelling and pincode must be correct.
+
+23
+00:01:27.245 --> 00:01:28.760
+Capacity in square feet.
+
+24
+00:01:29.210 --> 00:01:33.818
+Opening and closing time. Pickups are only scheduled inside these hours.
+
+25
+00:01:34.268 --> 00:01:37.972
+Pin the exact location on Google Map, or use Locate Me.
+
+26
+00:01:37.972 --> 00:01:40.262
+Drag the pin to the real entrance.
+
+27
+00:01:40.712 --> 00:01:45.254
+And the vehicle types that can reach the warehouse, from mini truck to trailer, plus
+
+28
+00:01:45.254 --> 00:01:46.174
+Warehouse photos.
+
+29
+00:01:48.567 --> 00:01:50.487
+Let's watch this in the live demo.
+
+30
+00:01:53.500 --> 00:01:56.785
+Here is the live demo. The vendor opens Warehouses.
+
+31
+00:02:00.700 --> 00:02:02.087
+And clicks Add warehouse.
+
+32
+00:02:04.700 --> 00:02:09.820
+The form opens. Name, pincode, capacity, timings, map and vehicle types.
+
+33
+00:02:12.700 --> 00:02:17.718
+The vendor names it Gorakhpur one, enters the address, and the pincode two seven
+
+34
+00:02:17.718 --> 00:02:18.972
+Three zero zero one.
+
+35
+00:02:27.100 --> 00:02:30.855
+Opening time nine in the morning, closing time six in the evening.
+
+36
+00:02:32.700 --> 00:02:37.585
+Then the pin on the map. The tip says: click anywhere on the map or drag the pin to
+
+37
+00:02:37.585 --> 00:02:39.292
+The exact warehouse entrance.
+
+38
+00:02:41.500 --> 00:02:46.656
+Next, the allowed vehicles. Mini truck, light commercial vehicle, medium and heavy
+
+39
+00:02:46.656 --> 00:02:48.668
+Commercial vehicle, and trailer.
+
+40
+00:02:49.268 --> 00:02:51.828
+Photos are added, and the warehouse is saved.
+
+41
+00:02:52.700 --> 00:02:56.947
+The new card, Gorakhpur one, appears first, with the status pending.
+
+42
+00:02:56.947 --> 00:02:58.759
+It cannot receive orders yet.
+
+43
+00:03:11.100 --> 00:03:14.380
+Each card has Pause Intake, Staff and View inventory.
+
+44
+00:03:14.380 --> 00:03:16.113
+We'll come to those shortly.
+
+45
+00:03:23.900 --> 00:03:28.444
+On the admin side, the vendor's details page lists every store and warehouse.
+
+46
+00:03:28.894 --> 00:03:31.283
+A pending warehouse, like Gorakhpur one.
+
+47
+00:03:31.733 --> 00:03:33.248
+The admin can approve it.
+
+48
+00:03:33.698 --> 00:03:36.578
+Or reject it, for example if the address is wrong.
+
+49
+00:03:37.028 --> 00:03:41.760
+Once approved, the badge turns to approved, and products in this warehouse can be
+
+50
+00:03:41.760 --> 00:03:43.279
+Shown to nearby customers.
+
+51
+00:03:45.667 --> 00:03:50.226
+In the live session, the team found a real problem, and agreed on a fix.
+
+52
+00:03:50.226 --> 00:03:53.582
+This is important, so let's compare before and after.
+
+53
+00:03:54.032 --> 00:03:58.595
+Before. A warehouse got approved, a customer ordered, and the vendor tried to
+
+54
+00:03:58.595 --> 00:04:03.515
+Dispatch through Shiprocket. But Shiprocket had never verified that pickup address,
+
+55
+00:04:03.515 --> 00:04:06.597
+So the vendor saw an error, and the order got stuck.
+
+56
+00:04:07.047 --> 00:04:10.770
+Now. When a vendor adds a warehouse, the admin is notified.
+
+57
+00:04:10.770 --> 00:04:15.880
+The admin first verifies the pickup address in Shiprocket, and only then approves
+
+58
+00:04:15.880 --> 00:04:21.054
+The warehouse. So by the time any order comes in, the address is already verified,
+
+59
+00:04:21.054 --> 00:04:23.388
+And the vendor never sees that error.
+
+60
+00:04:25.800 --> 00:04:30.173
+Here is exactly how the admin verifies a pickup address in Shiprocket.
+
+61
+00:04:30.623 --> 00:04:33.013
+Log in to the Oribrix Shiprocket account.
+
+62
+00:04:33.463 --> 00:04:34.465
+Open Settings.
+
+63
+00:04:34.915 --> 00:04:36.259
+Go to Company Setup.
+
+64
+00:04:36.709 --> 00:04:40.976
+Open Pick Up Addresses. The new warehouse appears here as unverified.
+
+65
+00:04:41.426 --> 00:04:46.668
+Click verify. An O T P goes to the phone number registered for that pickup address.
+
+66
+00:04:46.668 --> 00:04:49.383
+Enter it, and the address becomes verified.
+
+67
+00:04:49.833 --> 00:04:53.375
+Only then, go back to the admin panel and approve the warehouse.
+
+68
+00:04:55.767 --> 00:04:59.210
+This was agreed in the session, so treat it as a rule.
+
+69
+00:04:59.210 --> 00:05:04.119
+Never approve a warehouse whose pickup address is not verified in Shiprocket.
+
+70
+00:05:04.119 --> 00:05:09.410
+Verify first, approve second. Vendors should never see a pickup verification error.
+
+71
+00:05:09.410 --> 00:05:12.215
+If one does, it means this step was skipped.
+
+72
+00:05:47.933 --> 00:05:52.968
+Back on the vendor side. View inventory on a card opens that warehouse's stock.
+
+73
+00:05:53.418 --> 00:05:55.466
+How many S K Us are in this warehouse.
+
+74
+00:05:55.916 --> 00:05:57.366
+The total stock value.
+
+75
+00:05:57.816 --> 00:05:59.331
+How many are low on stock.
+
+76
+00:05:59.781 --> 00:06:02.789
+And each S K U, with brand, stock and price.
+
+77
+00:06:05.200 --> 00:06:07.312
+Every warehouse card has a few buttons.
+
+78
+00:06:07.762 --> 00:06:12.459
+Pause Intake. Temporarily hides this warehouse's items from customers.
+
+79
+00:06:12.459 --> 00:06:16.082
+Useful during a holiday, a stock count, or a shortage.
+
+80
+00:06:16.532 --> 00:06:19.668
+Staff. Shows which staff logins can work on this warehouse.
+
+81
+00:06:20.118 --> 00:06:23.787
+View inventory. Shows the S K Us and stock in this warehouse.
+
+82
+00:06:24.237 --> 00:06:29.233
+Edit, the pencil icon. Editing a warehouse sends it back to pending, for the admin
+
+83
+00:06:29.233 --> 00:06:30.147
+To check again.
+
+84
+00:06:30.597 --> 00:06:33.455
+And open or closed, which shows today's status.
+
+85
+00:06:35.867 --> 00:06:38.753
+Most warehouse problems start with a careless form.
+
+86
+00:06:38.753 --> 00:06:42.374
+Before a vendor clicks save, they should check these six things.
+
+87
+00:06:42.824 --> 00:06:47.508
+The name is clear and unique, for example the city plus a number, so staff and
+
+88
+00:06:47.508 --> 00:06:49.309
+Couriers know which one it is.
+
+89
+00:06:49.759 --> 00:06:52.783
+The address matches the real gate, with a landmark.
+
+90
+00:06:52.783 --> 00:06:54.324
+Couriers follow this text.
+
+91
+00:06:54.774 --> 00:06:59.404
+The pincode is correct. A wrong pincode can make Shiprocket reject the pickup.
+
+92
+00:06:59.854 --> 00:07:04.120
+The map pin is dragged to the actual entrance, not just the middle of the city.
+
+93
+00:07:04.570 --> 00:07:09.392
+The opening and closing times match when staff are really there to hand over goods.
+
+94
+00:07:09.842 --> 00:07:15.031
+And the phone number on the account is real and answered, because O T Ps and pickup
+
+95
+00:07:15.031 --> 00:07:16.156
+Messages go there.
+
+96
+00:07:18.567 --> 00:07:23.112
+The map pin decides which customers see the vendor's stock, and where the courier
+
+97
+00:07:23.112 --> 00:07:25.692
+Goes. Let's compare a good pin with a bad one.
+
+98
+00:07:26.142 --> 00:07:30.393
+A good pin sits on the warehouse gate, in the same area as the address.
+
+99
+00:07:30.393 --> 00:07:35.124
+Nearby customers see the stock, and the courier finds the place the first time.
+
+100
+00:07:35.574 --> 00:07:39.174
+A bad pin sits in the city centre, or even in another city.
+
+101
+00:07:39.174 --> 00:07:42.042
+The address says one place and the pin another.
+
+102
+00:07:42.042 --> 00:07:46.131
+The wrong customers see the stock, and pickups fail or get delayed.
+
+103
+00:07:46.131 --> 00:07:50.891
+When you review a warehouse as admin, always compare the pin with the address.
+
+104
+00:07:53.300 --> 00:07:57.669
+When someone says a product isn't showing in the customer app, go through this list
+
+105
+00:07:57.669 --> 00:07:58.143
+In order.
+
+106
+00:07:58.593 --> 00:08:01.857
+Is the warehouse approved? Pending warehouses don't sell.
+
+107
+00:08:02.307 --> 00:08:05.528
+Is intake paused? Then the items are hidden on purpose.
+
+108
+00:08:05.978 --> 00:08:09.711
+Is the S K U in stock? Out of stock items can't be ordered.
+
+109
+00:08:10.161 --> 00:08:14.663
+Is the customer near this warehouse? Customers only see nearby warehouses.
+
+110
+00:08:15.113 --> 00:08:19.742
+And is the vendor account suspended? We'll cover suspension in module six.
+
+111
+00:08:22.133 --> 00:08:25.607
+Quick check. A vendor added a new warehouse ten minutes ago.
+
+112
+00:08:25.607 --> 00:08:29.024
+What must the admin do before approving it? Think about it.
+
+113
+00:08:32.974 --> 00:08:38.255
+The answer: verify the pickup address in Shiprocket, under Settings, Company Setup,
+
+114
+00:08:38.255 --> 00:08:40.291
+Pick Up Addresses. Then approve.
+
+115
+00:08:43.099 --> 00:08:47.043
+Before we finish, here are the warehouse words once more, in the order a new
+
+116
+00:08:47.043 --> 00:08:48.496
+Warehouse goes through them.
+
+117
+00:08:48.946 --> 00:08:52.616
+Pickup location. The warehouse address the courier comes to.
+
+118
+00:08:53.066 --> 00:08:56.906
+Pending. The warehouse is saved, and waiting for the admin's checks.
+
+119
+00:08:57.356 --> 00:09:02.390
+Verified, in Shiprocket. The pickup address has been confirmed with an O T P.
+
+120
+00:09:02.840 --> 00:09:06.190
+Approved. The warehouse can now sell to nearby customers.
+
+121
+00:09:06.640 --> 00:09:11.333
+And paused. The vendor has hidden its items for now, and can resume any time.
+
+122
+00:09:13.733 --> 00:09:18.217
+One more check. A vendor's warehouse will be closed for Diwali for three days.
+
+123
+00:09:18.217 --> 00:09:20.517
+What should they do? Think for a moment.
+
+124
+00:09:24.467 --> 00:09:27.923
+The answer: pause intake, and resume it after Diwali.
+
+125
+00:09:27.923 --> 00:09:33.075
+Deleting the warehouse or zeroing stock creates extra work, and a new warehouse
+
+126
+00:09:33.075 --> 00:09:34.771
+Would need approval again.
+
+127
+00:09:37.566 --> 00:09:39.315
+Let's summarise module three.
+
+128
+00:09:39.765 --> 00:09:43.051
+A warehouse is an exact pickup address, with a map pin.
+
+129
+00:09:43.501 --> 00:09:45.570
+A new or edited warehouse is pending.
+
+130
+00:09:46.020 --> 00:09:49.519
+The admin first verifies the pickup address in Shiprocket.
+
+131
+00:09:49.969 --> 00:09:51.889
+Then the admin approves the warehouse.
+
+132
+00:09:52.339 --> 00:09:57.598
+And pause intake hides the items temporarily. Next, in module four, orders and
+
+133
+00:09:57.598 --> 00:09:58.205
+Dispatch.
+
+134
+00:10:00.599 --> 00:10:05.250
+That's the end of module 3. Next up, module 4: Orders and dispatch.

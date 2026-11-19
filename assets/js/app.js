@@ -4,9 +4,20 @@
   const $ = (s, r = document) => r.querySelector(s);
   const app = $("#app");
   const LS = "oribrix_academy_v1";
-  const NOTES = "notes/Oribrix-Vendor-Onboarding-Notes.pdf";
+  const LEGACY = "vendor-onboarding";
   const SIGNATURE = "data:image/png;base64,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";
-  let COURSE = null;
+  let COURSE = null, COURSES = null, CUR = LEGACY;
+  const DATA = {};
+  const cinfo = (id = CUR) => (COURSES || []).find(c => c.id === id) || {};
+  const ctx = (o, L = S.lang) => (o && (o[L] || o.en)) || "";
+  const K = (id = CUR) => { const m = me() && me().mobile; return id === LEGACY ? m : m + "@" + id; };   // per-course storage key
+  const H = (v, id = CUR) => id === LEGACY ? v : "c/" + id + (v === "course" ? "" : "/" + v);       // per-course hash
+  async function useCourse(id) {
+    const c = cinfo(id); if (!c.id || c.status !== "live") return false;
+    if (!DATA[id]) { try { DATA[id] = await (await fetch(c.data, { cache: "no-cache" })).json(); } catch (e) { return false; } }
+    CUR = id; COURSE = DATA[id]; return true;
+  }
+  const courseName = () => cinfo().certName || C.COURSE_NAME;
 
   // ---------------- state ----------------
   const S = load();
@@ -28,10 +39,13 @@
     el.textContent = msg; el.classList.add("show"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("show"), ms);
   }
   function me() { return S.user || null; }
-  function doneSet() { return new Set((S.done[me()?.mobile] || []).map(Number)); }
-  function progOf(n, lang = S.lang) { return ((S.prog[me()?.mobile] || {})[lang] || {})[n] || { max: 0, ranges: [] }; }
+  function doneSet(id = CUR) { return new Set((S.done[K(id)] || []).map(Number)); }
+  function resOf(id = CUR) { return (S.result || {})[K(id)]; }
+  function setRes(r, id = CUR) { S.result = S.result || {}; if (r) S.result[K(id)] = r; else delete S.result[K(id)]; persist(); }
+  function bestOf() { return (S.bests || {})[K()] ?? (CUR === LEGACY ? S.best : null); }
+  function progOf(n, lang = S.lang) { return ((S.prog[K()] || {})[lang] || {})[n] || { max: 0, ranges: [] }; }
   function setProg(n, p, lang = S.lang) {
-    const m = me().mobile; S.prog[m] = S.prog[m] || {}; S.prog[m][lang] = S.prog[m][lang] || {}; S.prog[m][lang][n] = p; persist();
+    const m = K(); S.prog[m] = S.prog[m] || {}; S.prog[m][lang] = S.prog[m][lang] || {}; S.prog[m][lang][n] = p; persist();
   }
   function covered(ranges) { return ranges.reduce((a, r) => a + Math.max(0, r[1] - r[0]), 0); }
   function addRange(ranges, a, b) {
@@ -67,19 +81,22 @@
   document.addEventListener("click", e => {
     const el = e.target.closest("[data-lang],[data-go],[data-act]"); if (!el) return;
     if (el.dataset.lang) { e.preventDefault(); if (S.lang !== el.dataset.lang) { S.lang = el.dataset.lang; persist(); route(); } }
-    else if (el.dataset.go) { e.preventDefault(); go(el.dataset.go); }
+    else if (el.dataset.go) { e.preventDefault(); go(el.dataset.go === "course" ? H("course") : el.dataset.go); }
     else if (el.dataset.act === "logout") { e.preventDefault(); delete S.user; delete S.adminPin; persist(); go("home"); }
   });
 
   // ---------------- routing (hash) ----------------
   function go(r) { if (location.hash === "#" + r) route(); else location.hash = r; }
   window.addEventListener("hashchange", route);
-  function route() {
+  async function route() {
     stopPlayer();
     const qs = new URLSearchParams(location.search);
     if (qs.get("verify")) return viewVerify(qs.get("verify"));
-    const h = location.hash.replace("#", "");
+    let h = location.hash.replace("#", ""), cid = LEGACY;
+    if (h.startsWith("c/")) { const p = h.split("/"); cid = p[1]; h = p.slice(2).join("/") || "course"; }
+    if (!(await useCourse(cid))) { await useCourse(LEGACY); if (me()) return viewCourses(); }
     if (!me()) return viewRegister();
+    if (h === "admin") return viewAdmin();
     if (h.startsWith("module-")) return viewPlayer(parseInt(h.split("-")[1], 10));
     if (h === "quiz") return viewQuiz();
     if (h === "certificate") return viewCertificate();
@@ -87,7 +104,6 @@
     if (h === "course" || h === "course-vendor-onboarding") return viewHome();
     if (h === "notes") return viewNotes();
     if (h === "practice") return viewPractice();
-    if (h === "admin") return viewAdmin();
     return viewCourses();
   }
 
@@ -135,66 +151,67 @@
 
   async function sync() {
     try {
-      const s = await API.call("status", { mobile: me().mobile });
+      const s = await API.call("status", { mobile: me().mobile, course: CUR });
       if (s.name) S.user.name = s.name;
       S.user.admin = !!s.admin;
-      const set = new Set([...(S.done[me().mobile] || []), ...(s.completed || [])].map(Number));
-      S.done[me().mobile] = [...set].sort((a, b) => a - b);
-      S.result = S.result || {}; if (s.result) S.result[me().mobile] = s.result;
+      const per = s.courses || { [CUR]: { completed: s.completed, result: s.result } };
+      Object.keys(per).forEach(id => {
+        const set = new Set([...(S.done[K(id)] || []), ...(per[id].completed || [])].map(Number));
+        S.done[K(id)] = [...set].sort((a, b) => a - b);
+        S.result = S.result || {}; if (per[id].result) S.result[K(id)] = per[id].result;
+      });
       persist(); return s;
     } catch (e) { return null; }
   }
 
   // ---------------- home ----------------
   function viewHome() {
-    const d = doneSet(), n = COURSE.modules.length, res = (S.result || {})[me().mobile];
+    const d = doneSet(), n = COURSE.modules.length, res = resOf(), ci = cinfo(), NOTES = ci.notes;
     const cards = COURSE.modules.map(m => {
       const isDone = d.has(m.n), open = unlocked(m), p = pct(m);
       const status = isDone ? `<span class="pill ok">${t("status_done")}</span>` : !open ? `<span class="pill">${t("status_locked")}</span>` :
         p > 0 ? `<span class="pill on">${t("status_progress", { p })}</span>` : `<span class="pill">${t("status_new")}</span>`;
       const btn = !open ? `<span class="hint">${t("locked_hint")}</span>` :
-        `<a class="btn ${isDone ? "ghost" : ""}" href="#module-${m.n}">${isDone ? t("rewatch") : p > 0 ? t("continue_btn") : t("watch")}</a>`;
+        `<a class="btn ${isDone ? "ghost" : ""}" href="#${H("module-" + m.n)}">${isDone ? t("rewatch") : p > 0 ? t("continue_btn") : t("watch")}</a>`;
       return `<article class="mod card ${open ? "" : "locked"} ${isDone ? "done" : ""}">
         <div class="num">${isDone ? "&#10003;" : m.n}</div>
         <div class="mbody"><div class="mtop">${status}<span class="dur">${Math.round(modDuration(m) / 60)} ${t("min")}</span></div>
           <h3>${t("module")} ${m.n}: ${esc(m.title[S.lang] || m.title.en)}</h3><p>${esc(m.desc[S.lang] || m.desc.en)}</p>
           <div class="bar"><i style="width:${isDone ? 100 : p}%"></i></div>${btn}</div></article>`;
     }).join("");
-    const quiz = res && res.passed ? `<a class="btn" href="#certificate">${t("cert_view")}</a>` :
-      res ? `<p class="hint">${t("retake_last", { p: res.percent })}</p><a class="btn" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>` :
-      allDone() ? `<a class="btn" href="#quiz">${t("quiz_start")}</a><p class="hint">${t("quiz_ready")}</p>` : `<p class="hint">${t("quiz_locked")}</p>`;
+    const quiz = res && res.passed ? `<a class="btn" href="#${H("certificate")}">${t("cert_view")}</a>` :
+      res ? `<p class="hint">${t("retake_last", { p: res.percent })}</p><a class="btn" href="#${H("quiz")}">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>` :
+      allDone() ? `<a class="btn" href="#${H("quiz")}">${t("quiz_start")}</a><p class="hint">${t("quiz_ready")}</p>` : `<p class="hint">${t("quiz_locked")}</p>`;
     render(`<section class="wrap dash"><a class="back" href="#" data-go="home">&larr; ${t("my_courses")}</a>
-      <div class="dhead"><div><h1>${t("hello", { name: esc(me().name) })}</h1><p>${t("progress", { done: d.size, total: n })}</p></div>
+      <div class="dhead"><div><p class="ctitle">${esc(ctx(ci.title))}</p><h1>${t("hello", { name: esc(me().name) })}</h1><p>${t("progress", { done: d.size, total: n })}</p></div>
         <div class="ring" style="--p:${Math.round(100 * d.size / n)}"><span>${Math.round(100 * d.size / n)}%</span></div></div>
       <div class="mods">${cards}
         <article class="mod card notescard"><div class="num nt">&#128214;</div>
-          <div class="mbody"><div class="mtop"><span class="pill on">PDF</span><span class="dur">68 ${t("pages")}</span></div>
-          <h3>${t("notes_title")}</h3><p>${t("notes_desc")}</p>
-          <div class="nbtns"><a class="btn" href="#notes">${t("notes_open")}</a><a class="btn ghost" href="${NOTES}" download>&#8681; ${t("notes_dl")}</a></div></div></article>
+          <div class="mbody"><div class="mtop"><span class="pill on">PDF</span><span class="dur">${ci.notesPages || ""} ${t("pages")}</span></div>
+          <h3>${t("notes_title")}</h3><p>${esc(ctx(ci.notesDesc)) || t("notes_desc")}</p>
+          <div class="nbtns"><a class="btn" href="#${H("notes")}">${t("notes_open")}</a><a class="btn ghost" href="${NOTES}" download>&#8681; ${t("notes_dl")}</a></div></div></article>
         <article class="mod card practicecard"><div class="num pq">&#9998;</div>
-          <div class="mbody"><div class="mtop"><span class="pill on">${t("pr_unlimited")}</span>${S.best != null ? `<span class="dur">${t("pr_best")}: ${S.best}%</span>` : ""}</div>
-          <h3>${t("pr_title")}</h3><p>${t("pr_desc")}</p>
-          <a class="btn" href="#practice">${t("pr_start")}</a></div></article></div>
+          <div class="mbody"><div class="mtop"><span class="pill on">${t("pr_unlimited")}</span>${bestOf() != null ? `<span class="dur">${t("pr_best")}: ${bestOf()}%</span>` : ""}</div>
+          <h3>${t("pr_title")}</h3><p>${esc(ctx(ci.prDesc)) || t("pr_desc")}</p>
+          <a class="btn" href="#${H("practice")}">${t("pr_start")}</a></div></article></div>
       <article class="card quizcard ${allDone() || res ? "" : "locked"}"><div class="num q">?</div><div class="mbody">
         <h3>${res && res.passed ? t("quiz_done") : t("quiz_title")}</h3>${quiz}</div></article>
     </section>`);
   }
 
   // ---------------- course hub ----------------
-  let COURSES = null;
   async function viewCourses() {
-    if (!COURSES) { try { COURSES = await (await fetch("data/courses.json", { cache: "no-cache" })).json(); } catch (e) { COURSES = [{ id: "vendor-onboarding", status: "live", title: { en: C.COURSE_NAME }, desc: { en: "" } }]; } }
     const L = S.lang === "hi" ? "hi" : "en", tx = o => (o && (o[L] || o.en)) || "";
     const cards = COURSES.map(c => {
       if (c.status !== "live") return `<article class="card ccard soon"><div class="ctop"><span class="pill">${t("soon")}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p><div class="bar"><i style="width:0"></i></div><p class="hint">${t("soon_hint")}</p></article>`;
-      const d = doneSet(), n = COURSE.modules.length, res = (S.result || {})[me().mobile];
+      const d = doneSet(c.id), n = c.modules || 1, res = resOf(c.id), Hc = v => H(v, c.id);
       const passed = res && res.passed, pctDone = passed ? 100 : Math.round(100 * Math.min(d.size, n) / (n + 1));
       const pill = passed ? `<span class="pill ok">${t("c_completed")}</span>` : res ? `<span class="pill warn">${t("c_retake_pill", { p: res.percent })}</span>`
         : d.size >= n ? `<span class="pill on">${t("c_quiz_ready")}</span>` : d.size ? `<span class="pill on">${t("c_in_progress")}</span>` : `<span class="pill">${t("status_new")}</span>`;
-      const btns = passed ? `<a class="btn" href="#certificate">${t("c_open_cert")}</a><a class="btn ghost" href="#certificate-download">&#8681; ${t("c_dl_cert")}</a><a class="btn ghost" href="#course">${t("c_review")}</a>`
-        : res ? `<a class="btn" href="#quiz">${t("retake_btn")}</a><a class="btn ghost" href="#course">${t("c_review")}</a>`
-        : `<a class="btn" href="#course">${d.size ? t("continue_btn") : t("c_start")}</a>`;
+      const btns = passed ? `<a class="btn" href="#${Hc("certificate")}">${t("c_open_cert")}</a><a class="btn ghost" href="#${Hc("certificate-download")}">&#8681; ${t("c_dl_cert")}</a><a class="btn ghost" href="#${Hc("course")}">${t("c_review")}</a>`
+        : res ? `<a class="btn" href="#${Hc("quiz")}">${t("retake_btn")}</a><a class="btn ghost" href="#${Hc("course")}">${t("c_review")}</a>`
+        : `<a class="btn" href="#${Hc("course")}">${d.size ? t("continue_btn") : t("c_start")}</a>`;
       return `<article class="card ccard ${passed ? "done" : ""}"><div class="ctop">${pill}<span class="dur">${t("c_modules", { d: Math.min(d.size, n), n })}${res ? " · " + t("c_quiz_short", { p: res.percent }) : ""}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p>
         <div class="cprog"><div class="bar"><i style="width:${pctDone}%"></i></div><b>${pctDone}%</b></div>
@@ -211,13 +228,13 @@
   }
   function viewPlayer(n) {
     const m = COURSE.modules.find(x => x.n === n);
-    if (!m || !unlocked(m)) return go("course");
+    if (!m || !unlocked(m)) return go(H("course"));
     const lang = S.lang, src = m.video[lang], vtt = m.subtitles[lang];
     const next = COURSE.modules.find(x => x.n === n + 1);
     const chapters = (m.chapters && m.chapters[lang]) || [];
     render(`<section class="wrap player-page">
       <a class="back" href="#" data-go="course">&larr; ${t("back")}</a>
-      <h1>${t("module")} ${m.n}: ${esc(m.title[lang] || m.title.en)}</h1>
+      <p class="ctitle">${esc(ctx(cinfo().title))}</p><h1>${t("module")} ${m.n}: ${esc(m.title[lang] || m.title.en)}</h1>
       <div class="player" id="pl">
         <video id="vid" playsinline preload="metadata" disablepictureinpicture disableremoteplayback controlslist="nodownload noplaybackrate" crossorigin="anonymous">
           <source src="${esc(src)}" type="video/mp4">
@@ -242,8 +259,8 @@
       ${chapters.length ? `<div class="card chapters"><h3>${t("chapters")}</h3><ol id="chap">${chapters.map(c => `<li data-t="${c.t}"><span>${fmt(c.t)}</span>${esc(c.title)}</li>`).join("")}</ol></div>` : ""}
       <div class="after" id="after" hidden>
         <p class="okmsg">${t("complete_msg")}</p>
-        ${next ? `<a class="btn" href="#module-${next.n}">${t("next_module")}: ${esc(next.title[lang] || next.title.en)} &rarr;</a>` :
-                 `<a class="btn" href="#quiz">${t("quiz_start")} &rarr;</a>`}
+        ${next ? `<a class="btn" href="#${H("module-" + next.n)}">${t("next_module")}: ${esc(next.title[lang] || next.title.en)} &rarr;</a>` :
+                 `<a class="btn" href="#${H("quiz")}">${t("quiz_start")} &rarr;</a>`}
       </div>
     </section>`);
 
@@ -274,9 +291,9 @@
     function save() { setProg(n, { max, ranges }, lang); }
     async function complete() {
       if (completed) return; completed = true;
-      const mob = me().mobile; const set = new Set(S.done[mob] || []); set.add(n); S.done[mob] = [...set].sort((a, b) => a - b); persist();
+      const key = K(), set = new Set(S.done[key] || []); set.add(n); S.done[key] = [...set].sort((a, b) => a - b); persist();
       $("#after").hidden = false; toast(t("complete_msg"));
-      try { await API.call("progress", { mobile: mob, module: n, lang, watched: Math.round(cov() * 100) }); } catch (e) {}
+      try { await API.call("progress", { mobile: me().mobile, course: CUR, module: n, lang, watched: Math.round(cov() * 100) }); } catch (e) {}
     }
     v.addEventListener("timeupdate", () => {
       const c = v.currentTime;
@@ -322,15 +339,15 @@
 
   // ---------------- quiz ----------------
   async function viewQuiz() {
-    const prevRes = (S.result || {})[me().mobile];
-    if (prevRes && prevRes.passed) return go("certificate");
-    if (!allDone()) return go("course");
+    const prevRes = resOf();
+    if (prevRes && prevRes.passed) return go(H("certificate"));
+    if (!allDone()) return go(H("course"));
     render(`<section class="wrap narrow"><p class="hint">${t("loading")}</p></section>`);
     let data;
-    try { data = await API.call("quiz", { mobile: me().mobile, lang: S.lang, pin: S.adminPin }); }
+    try { data = await API.call("quiz", { mobile: me().mobile, course: CUR, lang: S.lang, pin: S.adminPin }); }
     catch (e) {
-      if (e.code === "already_submitted") { await sync(); return go("certificate"); }
-      if (e.code === "modules_incomplete") { await sync(); return go("course"); }
+      if (e.code === "already_submitted") { await sync(); return go(H("certificate")); }
+      if (e.code === "modules_incomplete") { await sync(); return go(H("course")); }
       return render(`<section class="wrap narrow"><p class="err">${t("net_err")}</p></section>`);
     }
     const Q = data.questions, ans = {}; let i = 0;
@@ -358,11 +375,11 @@
       $("#cy", m).onclick = async () => {
         $("#cy", m).disabled = true; $("#cy", m).textContent = t("loading");
         try {
-          const r = await API.call("submit", { mobile: me().mobile, lang: S.lang, answers: ans, pin: S.adminPin });
-          S.result = S.result || {}; S.result[me().mobile] = r; persist(); m.remove(); showResult(r, Q);
+          const r = await API.call("submit", { mobile: me().mobile, course: CUR, lang: S.lang, answers: ans, pin: S.adminPin });
+          setRes(r); m.remove(); showResult(r, Q);
         } catch (e) {
           m.remove();
-          if (e.code === "already_submitted") { await sync(); return go("certificate"); }
+          if (e.code === "already_submitted") { await sync(); return go(H("certificate")); }
           toast(t("net_err"), 4000);
         }
       };
@@ -380,25 +397,27 @@
     }).join("");
     render(`<section class="wrap narrow">
       <div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div>
-        <p>${t("result_score", { s: r.score, n: r.total, p: r.percent })}</p><p>${r.passed ? t("result_pass") : t("result_fail")}</p>${r.passed ? "" : `<a class="btn big" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>`}
-        ${r.passed ? `<a class="btn big" href="#certificate">${t("get_cert")}</a>` : ""}</div>
+        <p>${t("result_score", { s: r.score, n: r.total, p: r.percent })}</p><p>${r.passed ? t("result_pass") : t("result_fail")}</p>${r.passed ? "" : `<a class="btn big" href="#${H("quiz")}">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p>`}
+        ${r.passed ? `<a class="btn big" href="#${H("certificate")}">${t("get_cert")}</a>` : ""}</div>
       <ol class="review">${rev}</ol></section>`);
   }
 
   // ---------------- notes ----------------
   function viewNotes() {
+    const NOTES = cinfo().notes;
     render(`<section class="wrap notes-page"><a class="back" href="#" data-go="course">&larr; ${t("back")}</a>
-      <div class="nhead"><div><h1>${t("notes_title")}</h1><p>${t("notes_desc")}</p></div>
+      <div class="nhead"><div><h1>${t("notes_title")}</h1><p>${esc(ctx(cinfo().notesDesc)) || t("notes_desc")}</p></div>
         <div class="nbtns"><a class="btn" href="${NOTES}" download>&#8681; ${t("notes_dl")}</a><a class="btn ghost" href="${NOTES}" target="_blank" rel="noopener">${t("notes_newtab")}</a></div></div>
       <div class="pdfwrap"><iframe src="${NOTES}#view=FitH" title="${t("notes_title")}"></iframe></div>
       <p class="hint">${t("notes_hint")}</p></section>`);
   }
 
   // ---------------- practice quiz ----------------
-  let PRACTICE = null;
+  const PRACTICES = {};
   async function viewPractice() {
     render(`<section class="wrap narrow"><p class="hint">${t("loading")}</p></section>`);
-    if (!PRACTICE) { try { PRACTICE = await (await fetch("data/practice.json", { cache: "no-cache" })).json(); } catch (e) { return render(`<section class="wrap narrow"><p class="err">${t("net_err")}</p></section>`); } }
+    if (!PRACTICES[CUR]) { try { PRACTICES[CUR] = await (await fetch(cinfo().practice || "data/practice.json", { cache: "no-cache" })).json(); } catch (e) { return render(`<section class="wrap narrow"><p class="err">${t("net_err")}</p></section>`); } }
+    const PRACTICE = PRACTICES[CUR];
     const L = S.lang === "hi" ? "hi" : "en";
     const Q = PRACTICE.map(x => {
       const perm = x.o.en.map((_, k) => k).sort(() => Math.random() - .5);
@@ -423,8 +442,8 @@
     }
     function finish() {
       const pc = Math.round(100 * score / Q.length);
-      if (S.best == null || pc > S.best) { S.best = pc; persist(); }
-      API.call("practice", { mobile: me().mobile, score, total: Q.length }).catch(() => {});
+      if (bestOf() == null || pc > bestOf()) { S.bests = S.bests || {}; S.bests[K()] = pc; persist(); }
+      API.call("practice", { mobile: me().mobile, course: CUR, score, total: Q.length }).catch(() => {});
       const rev = Q.map((q, k) => `<li class="${picked[k] === q.a ? "ok" : "no"}"><b>${esc(q.q[L])}</b>
         ${picked[k] === q.a ? "" : `<span>${t("right_answer")}: ${esc(q.o[L][q.a])}</span>`}<em>${esc(q.x[L])}</em></li>`).join("");
       render(`<section class="wrap narrow"><div class="card result"><h1>${t("pr_title")}</h1><div class="score">${pc}%</div>
@@ -442,7 +461,8 @@
     if (!S.adminPin) return adminLogin();
     render(`<section class="wrap"><p class="hint">${t("loading")}</p></section>`);
     let d;
-    try { d = await API.call("admin", { mobile: me().mobile, pin: S.adminPin }); }
+    const AC = S.adminCourse || LEGACY;
+    try { d = await API.call("admin", { mobile: me().mobile, pin: S.adminPin, course: AC }); }
     catch (e) {
       if (e.code === "not_admin") { delete S.adminPin; persist(); return adminLogin("Wrong or changed PIN. Enter the current Admin PIN."); }
       return render(`<section class="wrap"><p class="err">${t("net_err")}</p></section>`);
@@ -478,7 +498,8 @@
     const hard = (d.questions || []).slice(0, 10).map(x => `<li><span class="badge no">${Math.round(100 * x.wrong / x.asked)}% wrong</span>
       <span class="pill">M${x.module}</span> ${esc(x.q)} <small>(${x.wrong}/${x.asked})</small></li>`).join("") || `<li class="hint">No quiz submissions yet.</li>`;
     render(`<section class="wrap admin">
-      <div class="ahead"><div><h1>Admin dashboard</h1><p class="hint">Signed in as ${esc(me().name)}. Skip mode is on for you: every module is open and you can jump anywhere in the videos.</p></div>
+      <div class="ahead"><div><h1>Admin dashboard</h1><p class="hint">Signed in as ${esc(me().name)}. Skip mode is on for you: every module is open and you can jump anywhere in the videos.</p>
+        <div class="seg acourse">${(COURSES || []).filter(c => c.status === "live").map(c => `<button data-ac="${esc(c.id)}" class="${c.id === AC ? "on" : ""}">${esc(ctx(c.title, "en"))}</button>`).join("")}</div></div>
         <div class="nbtns"><button class="btn ghost" id="a_ref">&#8635; Refresh</button><button class="btn ghost" id="a_csv">&#8681; Export CSV</button><button class="btn ghost" id="a_lock">Lock</button></div></div>
       <div class="stats">
         <div class="stat"><b>${L.length}</b><span>Learners</span></div>
@@ -504,6 +525,7 @@
     $("#a_q").oninput = e => { q = e.target.value.trim().toLowerCase(); redraw(); };
     $("#a_f").onchange = e => { f = e.target.value; redraw(); };
     $("#a_ref").onclick = () => viewAdmin();
+    document.querySelectorAll("[data-ac]").forEach(b => b.onclick = () => { S.adminCourse = b.dataset.ac; persist(); viewAdmin(); });
     $("#a_lock").onclick = () => { delete S.adminPin; persist(); go("home"); };
     $("#a_csv").onclick = () => {
       const head = ["Name", "Mobile", "Language", "Registered", "Last seen", "Modules done", ...Array.from({ length: N }, (_, i) => "Module " + (i + 1)),
@@ -514,14 +536,14 @@
         x.result ? x.result.certId : "", x.result ? x.result.at : "", x.practice ? x.practice.best : "", x.practice ? x.practice.attempts : "", x.practice ? x.practice.last : ""]));
       const csv = lines.map(r => r.map(v => `"${String(v == null ? "" : v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
       const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv" }));
-      a.download = `oribrix-academy-learners-${new Date().toISOString().slice(0, 10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(() => a.remove(), 500);
+      a.download = `oribrix-academy-${AC}-learners-${new Date().toISOString().slice(0, 10)}.csv`; document.body.appendChild(a); a.click(); setTimeout(() => a.remove(), 500);
     };
     function bindReset() {
       document.querySelectorAll("[data-reset]").forEach(b => b.onclick = async () => {
         const ok = await confirmBox(`Allow ${b.dataset.name} to retake the final quiz? Their current result and certificate will be removed (kept in the ResetLog tab).`);
         if (!ok) return;
         b.disabled = true;
-        try { await API.call("admin_reset", { mobile: me().mobile, pin: S.adminPin, target: b.dataset.reset }); toast("Retake allowed for " + b.dataset.name, 3000); viewAdmin(); }
+        try { await API.call("admin_reset", { mobile: me().mobile, pin: S.adminPin, target: b.dataset.reset, course: AC }); toast("Retake allowed for " + b.dataset.name, 3000); viewAdmin(); }
         catch (e) { b.disabled = false; toast(t("net_err"), 3000); }
       });
     }
@@ -561,10 +583,10 @@
 
   // ---------------- certificate ----------------
   async function viewCertificate(autoDownload) {
-    let r = (S.result || {})[me().mobile];
-    if (!r) { await sync(); r = (S.result || {})[me().mobile]; }
-    if (!r) return go("course");
-    if (!r.passed) return render(`<section class="wrap narrow"><div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div><p>${t("result_fail")}</p><a class="btn big" href="#quiz">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p></div></section>`);
+    let r = resOf();
+    if (!r) { await sync(); r = resOf(); }
+    if (!r) return go(H("course"));
+    if (!r.passed) return render(`<section class="wrap narrow"><div class="card result"><h1>${t("result_title")}</h1><div class="score">${r.percent}%</div><p>${t("result_fail")}</p><a class="btn big" href="#${H("quiz")}">${t("retake_btn")}</a><p class="hint">${t("retake_note")}</p></div></section>`);
     const url = verifyUrl(r.certId);
     render(`<section class="wrap cert-page"><a class="back" href="#" data-go="home">&larr; ${t("my_courses")}</a><h1>${t("cert_title")}</h1>
       <div class="certbtns"><button class="btn" id="pdf">&#8681; ${t("dl_pdf")}</button><button class="btn" id="png">&#8681; ${t("dl_png")}</button>
@@ -572,7 +594,7 @@
       <div class="certwrap"><canvas id="cert" width="2000" height="1414"></canvas></div>
       <p class="hint">${esc(url)}</p></section>`);
     const cv = $("#cert"); await drawCert(cv, r, url);
-    const fname = `Oribrix-Certificate-${r.name.replace(/[^a-z0-9]+/gi, "-")}`;
+    const fname = `Oribrix-${(cinfo().short || "Certificate").replace(/[^a-z0-9]+/gi, "-")}-Certificate-${r.name.replace(/[^a-z0-9]+/gi, "-")}`;
     $("#png").onclick = () => cv.toBlob(b => {
       const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = fname + ".png";
       document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
@@ -651,7 +673,7 @@
     g = x.createLinearGradient(W / 2 - 560, 0, W / 2 + 560, 0); g.addColorStop(0, "rgba(201,153,47,0)"); g.addColorStop(.5, GOLD); g.addColorStop(1, "rgba(201,153,47,0)");
     x.strokeStyle = g; x.lineWidth = 3; x.beginPath(); x.moveTo(W / 2 - 560, 724); x.lineTo(W / 2 + 560, 724); x.stroke();
     x.fillStyle = INK; x.font = "400 34px Poppins";
-    x.fillText(`has successfully completed the ${C.COURSE_NAME},`, W / 2, 792);
+    x.fillText(`has successfully completed the ${courseName()},`, W / 2, 792);
     x.fillText(`including all ${COURSE.modules.length} video modules and the final assessment.`, W / 2, 842);
     x.font = "600 36px Poppins"; x.fillStyle = NAVY; x.fillText(`Score: ${r.percent}%`, W / 2, 912);
     // footer — middle: dates + certificate ID
@@ -688,7 +710,7 @@
     render(`<section class="wrap narrow"><div class="card result"><h1>${t("verify_title")}</h1><p>${t("loading")}</p></div></section>`);
     let r; try { r = await API.call("verify", { certId: id }); } catch (e) { r = null; }
     const body = !r ? `<p class="err">${t("net_err")}</p>` : r.valid ?
-      `<div class="vok">&#10003; ${t("verify_ok")}</div><table class="vt"><tr><th>${t("verify_name")}</th><td>${esc(r.name)}</td></tr>
+      `<div class="vok">&#10003; ${t("verify_ok")}</div><table class="vt"><tr><th>${t("verify_name")}</th><td>${esc(r.name)}</td></tr>${r.course ? `<tr><th>${t("verify_course")}</th><td>${esc(r.course)}</td></tr>` : ""}
        ${r.startDate ? `<tr><th>${t("verify_start")}</th><td>${esc(r.startDate)}</td></tr>` : ""}<tr><th>${t("verify_date")}</th><td>${esc(r.date)}</td></tr><tr><th>${t("verify_score")}</th><td>${esc(r.percent)}%</td></tr>
        <tr><th>${t("verify_id")}</th><td>${esc(id)}</td></tr></table>` : `<div class="vbad">&#10007; ${t("verify_bad")}</div>`;
     render(`<section class="wrap narrow"><div class="card result"><h1>${t("verify_title")}</h1>${body}</div></section>`);
@@ -696,8 +718,9 @@
 
   // ---------------- boot ----------------
   (async function boot() {
-    try { COURSE = await (await fetch("data/course.json", { cache: "no-cache" })).json(); }
-    catch (e) { app.innerHTML = "<p style='padding:40px'>Could not load data/course.json</p>"; return; }
+    try { COURSES = await (await fetch("data/courses.json", { cache: "no-cache" })).json(); }
+    catch (e) { COURSES = [{ id: LEGACY, status: "live", data: "data/course.json", modules: 8, notes: "notes/Oribrix-Vendor-Onboarding-Notes.pdf", title: { en: C.COURSE_NAME } }]; }
+    if (!(await useCourse(LEGACY))) { app.innerHTML = "<p style='padding:40px'>Could not load the course data.</p>"; return; }
     document.documentElement.lang = S.lang === "hi" ? "hi-Latn" : "en";
     if (me()) sync().then(() => { if (!location.hash || location.hash === "#home") route(); });
     route();

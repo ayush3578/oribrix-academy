@@ -1,0 +1,521 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.971
+Module six, aakhiri module. Account controls, staff logins, vendor profile, aur kya
+
+2
+00:00:06.971 --> 00:00:08.309
+Abhi ban raha hai.
+
+3
+00:00:10.500 --> 00:00:15.836
+Ye aakhiri module control ke baare mein hai. Kaun login kar sakta hai, kaun kya kar
+
+4
+00:00:15.836 --> 00:00:19.823
+Sakta hai, aur vendor ke saath kuch galat ho toh kya hota hai.
+
+5
+00:00:20.273 --> 00:00:24.219
+Pehle, teen admin actions: suspend, block aur delete.
+
+6
+00:00:24.669 --> 00:00:28.275
+Phir suspended vendor kya kar sakta hai aur kya nahin.
+
+7
+00:00:28.725 --> 00:00:30.218
+Phir settings page.
+
+8
+00:00:30.668 --> 00:00:35.063
+Phir staff login banana, permissions aur warehouse scope ke saatha.
+
+9
+00:00:35.513 --> 00:00:37.113
+Phir vendor profile.
+
+10
+00:00:37.563 --> 00:00:40.037
+Aur aakhir mein, kya abhi pending hai.
+
+11
+00:00:42.433 --> 00:00:45.945
+Admin ke paas vendor account pe teen actions hain.
+
+12
+00:00:45.945 --> 00:00:49.388
+Ye bahut alag hain, isliye inhe achhe se sikhiye.
+
+13
+00:00:49.838 --> 00:00:53.017
+Suspend vendor ko read only mode mein daalta hai.
+
+14
+00:00:53.017 --> 00:00:58.401
+Wo abhi bhi login kar sakta hai, apna data dekh sakta hai aur export kar sakta hai.
+
+15
+00:00:58.401 --> 00:01:03.591
+Lekin wo S K Us add nahi kar sakta, naye orders nahi le sakta, aur uski listings
+
+16
+00:01:03.591 --> 00:01:09.041
+Buyers se chhup jaati hain. Restore karne ke liye admin KYC lifecycle mein vendor ko
+
+17
+00:01:09.041 --> 00:01:10.403
+Re-approve karta hai.
+
+18
+00:01:10.853 --> 00:01:14.866
+Block zyada strong hai. Vendor bilkul login nahi kar sakta.
+
+19
+00:01:14.866 --> 00:01:20.240
+Ise serious problems ke liye use kijiye. Admin baad mein unblock kar sakta hai.
+
+20
+00:01:20.690 --> 00:01:24.575
+Delete vendor account hata deta hai. Ye last resort hai.
+
+21
+00:01:24.575 --> 00:01:28.114
+Do baar sochiye, kyunki ise undo karna mushkil hai.
+
+22
+00:01:30.500 --> 00:01:33.145
+Chaliye ise live demo mein dekhte hain.
+
+23
+00:01:36.133 --> 00:01:40.592
+Ye vendor hai, normally kaam kar raha hai, Add S K U available hai.
+
+24
+00:01:45.733 --> 00:01:51.152
+Admin panel mein, Warehouses and Vendors mein, admin is vendor ko search karta hai.
+
+25
+00:01:58.533 --> 00:02:03.973
+Actions column mein view, change requests, suspend, block aur delete ke icons hain.
+
+26
+00:02:10.533 --> 00:02:13.797
+Hover karne pe har label dikhta hai. Ye block hai.
+
+27
+00:02:20.933 --> 00:02:26.343
+Admin suspend pe click karta hai. Dialog batata hai: vendor read only mode mein
+
+28
+00:02:26.343 --> 00:02:32.027
+Switch ho jaayega. Wo dashboard dekh sakta hai aur data export kar sakta hai, lekin
+
+29
+00:02:32.027 --> 00:02:35.930
+Products, warehouses ya pricing bana ya badal nahi sakta.
+
+30
+00:02:36.530 --> 00:02:42.184
+Confirm ho gaya. Vendor approved list se gaayab ho gaya, kyunki ab wo suspended hai.
+
+31
+00:02:44.133 --> 00:02:46.778
+Chaliye ise live demo mein dekhte hain.
+
+32
+00:02:49.067 --> 00:02:54.942
+Vendor side pe, har page pe ek yellow banner aata hai: account suspended, read only
+
+33
+00:02:54.942 --> 00:02:55.296
+Mode.
+
+34
+00:02:55.896 --> 00:03:00.824
+Add S K U button gaayab ho gaya. Product listings buyers se chhup gayin.
+
+35
+00:03:02.567 --> 00:03:08.412
+Orders abhi bhi dekhe aur export kiye ja sakte hain, lekin naye orders nahi aate.
+
+36
+00:03:10.217 --> 00:03:13.865
+Suspended vendor ke liye settings bhi badal jaati hain.
+
+37
+00:03:14.315 --> 00:03:17.088
+Read only banner upar bana rehta hai.
+
+38
+00:03:17.538 --> 00:03:21.800
+Aur account suspended rahte hue password updates disabled hain.
+
+39
+00:03:21.800 --> 00:03:26.264
+Jab admin vendor ko re-approve karta hai, sab vaapas aa jaata hai.
+
+40
+00:03:28.650 --> 00:03:31.918
+Yaad rakhiye: suspend reversible hai, delete nahin.
+
+41
+00:03:31.918 --> 00:03:37.172
+Temporary problem ke liye suspend use kijiye, jaise documents expire ho gaye, dues
+
+42
+00:03:37.172 --> 00:03:40.184
+Clear nahi hue, ya complaints review mein hain.
+
+43
+00:03:40.184 --> 00:03:45.502
+Serious problems ke liye block. Aur delete sirf last resort ke roop mein, senior se
+
+44
+00:03:45.502 --> 00:03:46.847
+Check karne ke baada.
+
+45
+00:04:20.817 --> 00:04:24.209
+Ab vendor ka settings page. Isme teen tabs hain.
+
+46
+00:04:24.659 --> 00:04:30.060
+Password reset. Kyunki vendor pehle se logged in hai, O T P ki zaroorat nahin.
+
+47
+00:04:30.060 --> 00:04:32.830
+Current password, new password, confirm.
+
+48
+00:04:33.280 --> 00:04:35.733
+Staff, jahan staff logins bante hain.
+
+49
+00:04:36.183 --> 00:04:41.474
+Privacy and data, data export karne ya deletion request karne ke liye.
+
+50
+00:04:41.924 --> 00:04:43.844
+Aur change password button.
+
+51
+00:04:46.250 --> 00:04:52.059
+Staff login banate samay, main vendor exactly tick karta hai ki wo insan kaun se
+
+52
+00:04:52.059 --> 00:04:53.802
+Areas use kar sakta hai.
+
+53
+00:04:54.252 --> 00:04:57.772
+Inventory and listings: products, stock aur pricing.
+
+54
+00:04:58.222 --> 00:05:03.086
+Order management: dekhna, accept karna, status update aur dispatch.
+
+55
+00:05:03.536 --> 00:05:05.093
+Drivers and fleet.
+
+56
+00:05:05.543 --> 00:05:09.895
+E-way bills, warehouse management, aur naye warehouses add karna.
+
+57
+00:05:10.345 --> 00:05:12.073
+Disputes and returns.
+
+58
+00:05:12.523 --> 00:05:17.278
+Aur account and compliance: KYC documents dekhna ya update karna.
+
+59
+00:05:17.278 --> 00:05:21.739
+Phir warehouse scope: all warehouses, ya sirf selected vaale.
+
+60
+00:05:24.150 --> 00:05:26.795
+Chaliye ise live demo mein dekhte hain.
+
+61
+00:05:29.783 --> 00:05:34.967
+Live demo mein vendor Settings kholta hai, phir Staff tab, aur Add staff pe click
+
+62
+00:05:34.967 --> 00:05:35.607
+Karta hai.
+
+63
+00:05:40.183 --> 00:05:45.479
+Form mein full name, email, ten digit mobile number, aur kam se kam six characters
+
+64
+00:05:45.479 --> 00:05:49.612
+Ka password maanga jaata hai. Hamne ye details blur kar di hain.
+
+65
+00:05:50.212 --> 00:05:55.557
+Phir permissions. Yahan inventory and listings, aur order management tick kiye gaye.
+
+66
+00:05:55.557 --> 00:05:57.402
+Drivers and fleet chhod diya.
+
+67
+00:06:00.183 --> 00:06:05.856
+Neeche scroll karne pe aur groups dikhte hain: e-way bills, warehouse management,
+
+68
+00:06:05.856 --> 00:06:08.098
+Disputes and returns, aur K Y C.
+
+69
+00:06:16.183 --> 00:06:21.450
+Warehouse access scope. All warehouses ki jagah selected warehouses chuna gaya, aur
+
+70
+00:06:21.450 --> 00:06:23.607
+Sirf do warehouses pick kiye gaye.
+
+71
+00:06:28.183 --> 00:06:31.404
+Create sub admin. Staff account save ho gaya.
+
+72
+00:07:00.183 --> 00:07:05.749
+Staff accounts list mein har insan, uske modules ki ginti, warehouse scope, active
+
+73
+00:07:05.749 --> 00:07:08.396
+Toggle, aur edit aur delete dikhta hai.
+
+74
+00:07:16.183 --> 00:07:22.112
+Doosra staff member bhi isi tarah add kiya gaya, sirf inventory aur order management
+
+75
+00:07:22.112 --> 00:07:22.818
+Ke saatha.
+
+76
+00:08:00.183 --> 00:08:05.894
+Ab do staff accounts hain. Active toggle se kisi bhi login ko kabhi bhi off kiya ja
+
+77
+00:08:05.894 --> 00:08:07.820
+Sakta hai, bina delete kiye.
+
+78
+00:08:09.623 --> 00:08:13.186
+Login karne ke baad us staff member ko ye dikhta hai.
+
+79
+00:08:13.636 --> 00:08:18.855
+Left menu mein sirf allowed sections hain: dashboard, inventory, orders aur
+
+80
+00:08:18.855 --> 00:08:19.481
+Settings.
+
+81
+00:08:19.931 --> 00:08:24.923
+Settings mein staff tab nahi hai, sirf password reset, aur privacy and data.
+
+82
+00:08:25.373 --> 00:08:30.792
+Privacy and data mein, export my data, multi page Excel file ke roop men.
+
+83
+00:08:31.242 --> 00:08:36.904
+Aur request data deletion. Ye India ke D P D P Act twenty twenty three ke tahat hai.
+
+84
+00:08:36.904 --> 00:08:42.228
+Settlement aur G S T records law ke hisaab se eight years tak rakhe jaate hain.
+
+85
+00:08:44.623 --> 00:08:49.702
+Ek agreed change. Abhi staff login mein bhi dashboard dikhta hai, sales figures ke
+
+86
+00:08:49.702 --> 00:08:54.906
+Saatha. Session mein agree hua ki staff logins se dashboard aur sales numbers hataye
+
+87
+00:08:54.906 --> 00:08:58.994
+Jaayenge, taaki sensitive business figures owner ke paas hi rahen.
+
+88
+00:08:58.994 --> 00:09:03.020
+Aur yaad rakhiye: sirf vendor ka main login users bana sakta hai.
+
+89
+00:09:03.020 --> 00:09:05.188
+Staff doosre staff nahi bana sakta.
+
+90
+00:09:50.957 --> 00:09:53.880
+Staff logins ke liye kuch achhi aadten.
+
+91
+00:09:54.330 --> 00:10:00.362
+Har insan ka ek login. Login kabhi share mat kijiye, taaki har action kisi se trace
+
+92
+00:10:00.362 --> 00:10:00.943
+Ho sake.
+
+93
+00:10:01.393 --> 00:10:05.194
+Sirf utni permissions dijiye jitni job ke liye chahiye.
+
+94
+00:10:05.194 --> 00:10:07.750
+Packer ko earnings ki zaroorat nahin.
+
+95
+00:10:08.200 --> 00:10:13.790
+Har insan ko sirf unhin warehouses tak rakhiye jahan wo sach mein kaam karta hai.
+
+96
+00:10:14.240 --> 00:10:18.378
+Jab koi chhodkar jaaye, usi din uska toggle off kijiye.
+
+97
+00:10:18.828 --> 00:10:22.775
+Aur main login ka password sirf owner ke paas rehta hai.
+
+98
+00:10:25.190 --> 00:10:29.734
+Top right se khulne wali vendor profile mein do tarah ke fields hain.
+
+99
+00:10:30.184 --> 00:10:36.455
+Locked fields, jo KYC approval se set hote hain: name aur entity name, aur G S T I
+
+100
+00:10:36.455 --> 00:10:42.726
+N. Vendor inhe edit nahi kar sakta. Agar badalna zaroori hai, toh wo admin aur KYC
+
+101
+00:10:42.726 --> 00:10:44.179
+Se hokar jaata hai.
+
+102
+00:10:44.629 --> 00:10:48.510
+Editable fields: registered address, email aur phone number.
+
+103
+00:10:48.510 --> 00:10:53.880
+Phone number asli aur chaloo rakhiye, kyunki WhatsApp pickup slots aur alerts wahin
+
+104
+00:10:53.880 --> 00:10:54.591
+Jaate hain.
+
+105
+00:10:56.990 --> 00:11:02.754
+Eighteen November tak ye items pending the. Ho sakta hai aapke dekhne tak kuch poore
+
+106
+00:11:02.754 --> 00:11:03.646
+Ho chuke hon.
+
+107
+00:11:04.096 --> 00:11:09.131
+Instant ya express delivery option, Porter aur doosre partners check karna.
+
+108
+00:11:09.581 --> 00:11:14.381
+Warehouse add hone pe admin alert, verify then approve flow ke saatha.
+
+109
+00:11:14.831 --> 00:11:18.095
+Vendors ke liye clearer Shiprocket error messages.
+
+110
+00:11:18.545 --> 00:11:22.107
+Staff logins se dashboard aur sales numbers hatana.
+
+111
+00:11:22.557 --> 00:11:26.227
+Mobile app logo, jo kuch phones pe cropped dikhta hai.
+
+112
+00:11:26.677 --> 00:11:31.644
+Aur privacy policy theek karke app ko Apple App Store pe re-submit karna.
+
+113
+00:11:31.644 --> 00:11:37.156
+Google Play updates usually ek din mein live ho jaate hain, Apple zyada time leta
+
+114
+00:11:37.156 --> 00:11:37.429
+Hai.
+
+115
+00:11:39.823 --> 00:11:45.411
+Aakhiri quick check. Ek vendor ke documents expire ho gaye, aur renew karne mein two
+
+116
+00:11:45.411 --> 00:11:48.804
+Weeks lagenge. Admin ko kya karna chahiye? Sochiye.
+
+117
+00:11:52.754 --> 00:11:58.026
+Answer: suspend. Vendor read only ho jaata hai, listings chhup jaati hain, aur
+
+118
+00:11:58.026 --> 00:12:02.013
+Documents renew hone ke baad admin re-approve kar deta hai.
+
+119
+00:12:04.823 --> 00:12:07.788
+Poore course ko ek screen mein recap karte hain.
+
+120
+00:12:08.238 --> 00:12:13.789
+Module one. Vendor console mein ten sections hain, aur vendor propose karta hai
+
+121
+00:12:13.789 --> 00:12:15.897
+Jabki admin approve karta hai.
+
+122
+00:12:16.347 --> 00:12:22.043
+Module two. Add S K U, aur reason ke saath price aur policy change requests.
+
+123
+00:12:22.493 --> 00:12:28.040
+Module three. Shiprocket mein pickup address verify kijiye, phir warehouse approve.
+
+124
+00:12:28.490 --> 00:12:33.652
+Module four. Accept, pick, pack aur hand over. Aur dismiss, cancel nahi hai.
+
+125
+00:12:34.102 --> 00:12:39.421
+Module five. Fifty thousand rupees ya usse zyada pe e-way bill chahiye, aur
+
+126
+00:12:39.421 --> 00:12:41.974
+Settlements net payout dikhate hain.
+
+127
+00:12:42.424 --> 00:12:47.408
+Module six. Suspend, block aur delete, aur warehouse scope ke saath staff
+
+128
+00:12:47.408 --> 00:12:48.227
+Permissions.
+
+129
+00:12:50.623 --> 00:12:55.640
+Module 6 yahin khatam hota hai. Aapne chhahon modules poore kar liye hain.
+
+130
+00:12:55.640 --> 00:12:58.623
+Ab quiz dijiye, aur apna certificate lijiye.

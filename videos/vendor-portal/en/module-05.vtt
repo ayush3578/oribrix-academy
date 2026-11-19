@@ -1,0 +1,517 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.160
+Module five. E-way bills for high value orders, returns and disputes, and how the
+
+2
+00:00:06.160 --> 00:00:07.285
+Vendor gets paid.
+
+3
+00:00:09.500 --> 00:00:14.351
+This module is about paperwork and money. It's less exciting than orders, but
+
+4
+00:00:14.351 --> 00:00:16.241
+Mistakes here cost real money.
+
+5
+00:00:16.691 --> 00:00:18.761
+First, when an e-way bill is needed.
+
+6
+00:00:19.211 --> 00:00:20.981
+Then how the vendor uploads it.
+
+7
+00:00:21.431 --> 00:00:25.335
+Then how the admin reviews, approves and emails it to the customer.
+
+8
+00:00:25.785 --> 00:00:28.836
+Then returns and disputes, and what each status means.
+
+9
+00:00:29.286 --> 00:00:31.974
+Then earnings, settlements and the Tally export.
+
+10
+00:00:32.424 --> 00:00:34.408
+And finally, drivers and fleet.
+
+11
+00:00:36.800 --> 00:00:41.932
+Here's the rule. When goods worth fifty thousand rupees or more are transported, an
+
+12
+00:00:41.932 --> 00:00:47.064
+E-way bill is required by law. So, when a vendor accepts an order of fifty thousand
+
+13
+00:00:47.064 --> 00:00:51.763
+Rupees or more, that order automatically appears in the E-Way Bills section.
+
+14
+00:00:51.763 --> 00:00:56.957
+The vendor generates the e-way bill on the government portal, uploads the P D F, and
+
+15
+00:00:56.957 --> 00:01:01.718
+The admin reviews it. In Shiprocket, such orders also carry a tag: e-way bill
+
+16
+00:01:01.718 --> 00:01:02.336
+Mandatory.
+
+17
+00:02:00.200 --> 00:02:02.845
+Here's the full e-way bill flow, start to end.
+
+18
+00:02:03.295 --> 00:02:07.221
+An order of fifty thousand rupees or more is accepted and packed.
+
+19
+00:02:07.671 --> 00:02:11.724
+Its order I D appears in the E-Way Bills section as eligible.
+
+20
+00:02:12.174 --> 00:02:15.779
+The vendor uploads the P D F and sets the valid till date.
+
+21
+00:02:16.229 --> 00:02:17.893
+The status becomes submitted.
+
+22
+00:02:18.343 --> 00:02:22.525
+The admin opens the P D F, checks it, and approves or rejects.
+
+23
+00:02:22.975 --> 00:02:27.412
+Once approved, the admin can email the e-way bill to the customer directly.
+
+24
+00:02:29.800 --> 00:02:31.720
+Let's watch this in the live demo.
+
+25
+00:02:34.733 --> 00:02:38.296
+From Orders, the vendor opens E-Way Bills in the left menu.
+
+26
+00:02:38.896 --> 00:02:43.480
+Each row shows the order, the e-way bill number, the valid till date, and the
+
+27
+00:02:43.480 --> 00:02:45.445
+Status. These three are verified.
+
+28
+00:02:53.133 --> 00:02:56.781
+Clicking upload e-way bill opens the attach to order window.
+
+29
+00:02:57.381 --> 00:03:03.300
+The order I D drop down only lists eligible orders, fifty thousand rupees and above.
+
+30
+00:03:03.300 --> 00:03:06.682
+Then the valid till date, and drag in the P D F.
+
+31
+00:03:07.282 --> 00:03:11.656
+Here there's no eligible order yet, so the vendor goes back to Orders to check.
+
+32
+00:03:21.933 --> 00:03:24.280
+Let's look at the e-way bills page once more.
+
+33
+00:03:24.730 --> 00:03:26.820
+Upload e-way bill, the main button.
+
+34
+00:03:27.270 --> 00:03:30.044
+Search by order I D or e-way bill number.
+
+35
+00:03:30.494 --> 00:03:31.859
+The e-way bill number.
+
+36
+00:03:32.309 --> 00:03:37.840
+Valid till. An e-way bill expires. If the delivery is delayed past this date, a new
+
+37
+00:03:37.840 --> 00:03:38.773
+One is needed.
+
+38
+00:03:39.223 --> 00:03:42.316
+And status: submitted, verified or rejected.
+
+39
+00:03:44.733 --> 00:03:46.653
+Let's watch this in the live demo.
+
+40
+00:03:48.967 --> 00:03:53.901
+Now a real one. The vendor attached the e-way bill for an order worth over sixty
+
+41
+00:03:53.901 --> 00:03:57.479
+Four thousand rupees, and clicked submit for admin review.
+
+42
+00:03:58.079 --> 00:04:01.653
+On the admin side, E-Way Bill Review shows the totals.
+
+43
+00:04:01.653 --> 00:04:03.903
+One pending review, four approved.
+
+44
+00:04:04.503 --> 00:04:09.645
+On the vendor side, the new row shows submitted, and a message confirms: e-way bill
+
+45
+00:04:09.645 --> 00:04:10.946
+Submitted for review.
+
+46
+00:04:11.546 --> 00:04:17.172
+Back in the admin panel. Each row has the e-way bill number, the vendor, the route,
+
+47
+00:04:17.172 --> 00:04:22.595
+The value and the status. The actions are view the P D F, approve or reject, and
+
+48
+00:04:22.595 --> 00:04:23.002
+Email.
+
+49
+00:04:24.067 --> 00:04:28.443
+The admin views the P D F and checks the order, value and validity.
+
+50
+00:04:28.443 --> 00:04:29.358
+Then approves.
+
+51
+00:04:35.267 --> 00:04:37.422
+The vendor's list now shows verified.
+
+52
+00:04:41.667 --> 00:04:45.453
+And the admin's counts update: zero pending, five approved.
+
+53
+00:04:45.453 --> 00:04:49.560
+Now the admin can email the e-way bill straight to the customer.
+
+54
+00:04:52.867 --> 00:04:55.555
+Here's the admin review page as a still picture.
+
+55
+00:04:56.005 --> 00:04:59.712
+The counters: total, pending review, approved and rejected.
+
+56
+00:04:59.712 --> 00:05:01.722
+Pending should not sit for long.
+
+57
+00:05:02.172 --> 00:05:03.687
+The vendor who submitted it.
+
+58
+00:05:04.137 --> 00:05:05.225
+The order value.
+
+59
+00:05:05.675 --> 00:05:06.614
+The status.
+
+60
+00:05:07.064 --> 00:05:12.098
+And the actions: view P D F, approve or reject, and email to the customer.
+
+61
+00:05:14.500 --> 00:05:18.895
+When you review an e-way bill as admin, check these five things before approving.
+
+62
+00:05:19.345 --> 00:05:21.478
+The order I D matches the order.
+
+63
+00:05:21.928 --> 00:05:24.467
+The invoice value matches the order value.
+
+64
+00:05:24.917 --> 00:05:27.285
+The vendor's G S T I N is correct.
+
+65
+00:05:27.735 --> 00:05:30.593
+The valid till date covers the expected delivery.
+
+66
+00:05:31.043 --> 00:05:35.824
+And the from and to pincodes are right. If anything is wrong, reject it, so the
+
+67
+00:05:35.824 --> 00:05:37.699
+Vendor uploads a corrected one.
+
+68
+00:05:40.100 --> 00:05:44.132
+Some tips for vendors, so their e-way bills get approved the first time.
+
+69
+00:05:44.582 --> 00:05:48.250
+Generate the e-way bill on the government e-way bill portal.
+
+70
+00:05:48.250 --> 00:05:50.513
+Oribrix does not generate it for you.
+
+71
+00:05:50.963 --> 00:05:56.280
+Use the same invoice value as the order. A mismatch is the most common reason for
+
+72
+00:05:56.280 --> 00:05:56.936
+Rejection.
+
+73
+00:05:57.386 --> 00:06:01.781
+Set the valid till date so it covers the expected delivery, with a little buffer.
+
+74
+00:06:02.231 --> 00:06:05.303
+Upload a clear P D F, not a blurry phone photo.
+
+75
+00:06:05.753 --> 00:06:10.387
+And if it's rejected, fix it and upload again quickly, because the order can't move
+
+76
+00:06:10.387 --> 00:06:11.001
+Without it.
+
+77
+00:06:13.400 --> 00:06:17.155
+Now returns. A return request moves through these statuses.
+
+78
+00:06:17.605 --> 00:06:22.191
+Pending approval. The customer asked for a return, and it's waiting for review.
+
+79
+00:06:22.641 --> 00:06:26.978
+Picked up. This status comes from Shiprocket, when the courier collects the item
+
+80
+00:06:26.978 --> 00:06:27.953
+From the customer.
+
+81
+00:06:28.403 --> 00:06:32.798
+Refunded. This comes from Razorpay, after the admin approves the refund.
+
+82
+00:06:33.248 --> 00:06:38.111
+Escalated. The admin marks it escalated when there's a problem, for example the
+
+83
+00:06:38.111 --> 00:06:41.867
+Customer's return is wrong, or the vendor rejects the pickup.
+
+84
+00:06:44.267 --> 00:06:46.187
+Let's watch this in the live demo.
+
+85
+00:06:48.500 --> 00:06:52.959
+This is the vendor's returns page. Every return request is listed here.
+
+86
+00:06:53.559 --> 00:06:58.980
+Each card shows the product, the return I D and order I D, the customer, quantity,
+
+87
+00:06:58.980 --> 00:07:01.559
+Request date, refund amount and reason.
+
+88
+00:07:05.200 --> 00:07:09.531
+View request details opens the full return, with its photos and status.
+
+89
+00:07:13.200 --> 00:07:17.445
+Scrolling down, statuses vary: pending approval, picked up, refunded.
+
+90
+00:07:33.200 --> 00:07:37.403
+Reasons are recorded too, for example wrong item, or wrong quantity.
+
+91
+00:07:45.200 --> 00:07:49.168
+And here's one marked escalated, which means the admin is handling it.
+
+92
+00:07:58.000 --> 00:08:00.984
+Now money. Each settlement is one payout cycle.
+
+93
+00:08:00.984 --> 00:08:03.333
+Opening one shows the full breakdown.
+
+94
+00:08:03.783 --> 00:08:06.237
+The settlement period and the number of orders.
+
+95
+00:08:06.687 --> 00:08:09.332
+Gross G M V, the total value sold.
+
+96
+00:08:09.782 --> 00:08:11.233
+G S T collected.
+
+97
+00:08:11.683 --> 00:08:16.392
+Return and refund deductions, and total deductions, such as logistics and
+
+98
+00:08:16.392 --> 00:08:17.101
+Commission.
+
+99
+00:08:17.551 --> 00:08:21.016
+The bank reference, called U T R, once the money is sent.
+
+100
+00:08:21.016 --> 00:08:24.421
+The vendor can copy it to match with the bank statement.
+
+101
+00:08:24.871 --> 00:08:27.751
+And net payout, what the vendor actually receives.
+
+102
+00:08:30.167 --> 00:08:32.087
+Let's watch this in the live demo.
+
+103
+00:08:34.400 --> 00:08:38.752
+Here's the earnings page in the live demo, and a quick look at Drivers and Fleet.
+
+104
+00:08:39.352 --> 00:08:42.479
+Drivers and Fleet lists the vendor's own drivers.
+
+105
+00:08:42.479 --> 00:08:47.011
+Total drivers, on trip, and idle. Each driver can be assigned an order.
+
+106
+00:08:51.900 --> 00:08:56.963
+Back to Earnings and Settlements. On top: total settled payout, next payout,
+
+107
+00:08:56.963 --> 00:08:58.961
+Deductions, and open disputes.
+
+108
+00:08:59.561 --> 00:09:06.140
+Below, each settlement with its date range, orders, G M V, G S T, deductions, payout
+
+109
+00:09:06.140 --> 00:09:11.231
+And status. Export Tally X M L and export C S V are on the right.
+
+110
+00:09:11.831 --> 00:09:15.948
+Opening one settlement shows the full breakdown, with download statement.
+
+111
+00:09:17.750 --> 00:09:20.459
+A settlement row can show one of these statuses.
+
+112
+00:09:20.909 --> 00:09:24.451
+In progress. The current cycle. Orders are still being added.
+
+113
+00:09:24.901 --> 00:09:28.421
+Settled. It has been paid, and the U T R is available.
+
+114
+00:09:28.871 --> 00:09:34.390
+Tally synced. The data has been pushed to cloud Tally, so the accounts are up to
+
+115
+00:09:34.390 --> 00:09:38.599
+Date. Exports for Tally X M L and C S V are always available.
+
+116
+00:09:40.983 --> 00:09:45.920
+Quick check. A vendor accepted an order of sixty four thousand eight hundred ninety
+
+117
+00:09:45.920 --> 00:09:49.132
+Six rupees. What extra step is needed? Think about it.
+
+118
+00:09:53.082 --> 00:09:57.783
+The answer: upload an e-way bill for admin review, because the order is fifty
+
+119
+00:09:57.783 --> 00:09:59.248
+Thousand rupees or more.
+
+120
+00:10:02.050 --> 00:10:03.863
+Let's summarise module five.
+
+121
+00:10:04.313 --> 00:10:08.068
+An order of fifty thousand rupees or more needs an e-way bill.
+
+122
+00:10:08.518 --> 00:10:13.309
+The vendor uploads the P D F with a valid till date, and the admin approves and
+
+123
+00:10:13.309 --> 00:10:13.915
+Emails it.
+
+124
+00:10:14.365 --> 00:10:18.269
+Returns move through pending, picked up, refunded, or escalated.
+
+125
+00:10:18.719 --> 00:10:23.178
+A settlement is G M V minus deductions, which gives the net payout.
+
+126
+00:10:23.628 --> 00:10:28.980
+And everything can be exported for Tally. Next, in module six, account controls and
+
+127
+00:10:28.980 --> 00:10:29.367
+Staff.
+
+128
+00:10:31.783 --> 00:10:37.288
+That's the end of module 5. Next up, module 6: Account controls, staff and what's
+
+129
+00:10:37.288 --> 00:10:37.628
+Next.

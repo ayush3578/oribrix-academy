@@ -1,0 +1,485 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.182
+Module two. Inventory. How a vendor adds stock, and how price and policy change
+
+2
+00:00:06.182 --> 00:00:07.136
+Requests work.
+
+3
+00:00:09.333 --> 00:00:12.775
+A vendor with an approved warehouse is ready to sell.
+
+4
+00:00:12.775 --> 00:00:16.153
+But nothing is on sale until the vendor adds S K Us.
+
+5
+00:00:16.153 --> 00:00:18.101
+This module shows exactly how.
+
+6
+00:00:18.551 --> 00:00:21.090
+First, adding an S K U, step by step.
+
+7
+00:00:21.540 --> 00:00:26.148
+Then the three price fields: M R P, selling price and G S T type.
+
+8
+00:00:26.598 --> 00:00:29.883
+Then how a vendor asks for a different price, with a reason.
+
+9
+00:00:30.333 --> 00:00:33.554
+Then how to ask for a different warranty or return policy.
+
+10
+00:00:34.004 --> 00:00:37.844
+Then what the admin sees, and what happens on accept or reject.
+
+11
+00:00:38.294 --> 00:00:41.004
+And finally, stock status, sync and export.
+
+12
+00:00:43.400 --> 00:00:46.621
+Adding an S K U always follows the same six steps.
+
+13
+00:00:47.071 --> 00:00:50.463
+Open Inventory, and click Add S K U on the top right.
+
+14
+00:00:50.913 --> 00:00:55.948
+Filter by category. Only categories the admin approved for this vendor appear here.
+
+15
+00:00:56.398 --> 00:01:01.110
+Pick the product from the master catalog. The vendor never types a product name.
+
+16
+00:01:01.110 --> 00:01:03.054
+It always comes from the catalog.
+
+17
+00:01:03.504 --> 00:01:06.064
+Choose the warehouse where this stock physically sits.
+
+18
+00:01:06.514 --> 00:01:09.501
+Enter the stock quantity, and the minimum order quantity.
+
+19
+00:01:09.951 --> 00:01:14.537
+Review price and policy, set cash on delivery, and click Create S K U.
+
+20
+00:01:16.933 --> 00:01:18.853
+Let's watch this in the live demo.
+
+21
+00:01:21.867 --> 00:01:25.174
+Here is the live demo. The vendor opens Inventory.
+
+22
+00:01:32.267 --> 00:01:36.918
+The inventory page lists every S K U. The vendor clicks Add S K U.
+
+23
+00:01:44.267 --> 00:01:49.417
+First, filter by category. Cement, steel, paint and tiles are the categories
+
+24
+00:01:49.417 --> 00:01:52.331
+Approved for this vendor. Cement is chosen.
+
+25
+00:01:56.267 --> 00:02:02.027
+Then the product, from the master catalog: J K Super Protect Cement, fifty kilo bag.
+
+26
+00:02:08.267 --> 00:02:11.702
+Next, the warehouse. The vendor picks the warehouse called test.
+
+27
+00:02:20.267 --> 00:02:24.638
+Stock quantity: one hundred bags. Minimum order quantity: ten bags.
+
+28
+00:02:24.638 --> 00:02:26.987
+So a customer must buy at least ten.
+
+29
+00:02:32.267 --> 00:02:37.565
+Product pricing comes from the master catalog. M R P four hundred thirty five
+
+30
+00:02:37.565 --> 00:02:43.275
+Rupees, selling price three hundred ninety, and the tax type is exclusive of G S T.
+
+31
+00:02:56.267 --> 00:03:01.348
+Now the optional price change request. The vendor asks for four hundred rupees,
+
+32
+00:03:01.348 --> 00:03:04.950
+Because this is a metro city location with higher costs.
+
+33
+00:03:16.267 --> 00:03:20.235
+A reason is required. The admin will see this reason when deciding.
+
+34
+00:03:24.267 --> 00:03:29.482
+Below that, warranty and return policy. These also come from the master listing.
+
+35
+00:03:29.482 --> 00:03:34.827
+The vendor can request a different warranty or return policy, again with a reason.
+
+36
+00:03:40.267 --> 00:03:43.705
+At the bottom, allow cash on delivery for this listing.
+
+37
+00:03:43.705 --> 00:03:46.518
+The vendor ticks it, and clicks Create S K U.
+
+38
+00:03:52.267 --> 00:03:57.672
+The S K U is created. Stock goes up, and the new row shows the price request as
+
+39
+00:03:57.672 --> 00:03:58.219
+Pending.
+
+40
+00:04:01.067 --> 00:04:05.610
+Let's pause on the pricing part of the form, because this is where most confusion
+
+41
+00:04:05.610 --> 00:04:06.059
+Happens.
+
+42
+00:04:06.509 --> 00:04:11.138
+M R P, the maximum retail price, set by the admin in the catalog.
+
+43
+00:04:11.588 --> 00:04:14.991
+Selling price, the price the customer actually pays.
+
+44
+00:04:14.991 --> 00:04:16.431
+Also set by the admin.
+
+45
+00:04:16.881 --> 00:04:22.509
+Tax type. Here it's exclusive of G S T, which means G S T is added on top of the
+
+46
+00:04:22.509 --> 00:04:23.494
+Selling price.
+
+47
+00:04:23.944 --> 00:04:28.723
+Requested price. Optional. Only fill this if the vendor needs a different price.
+
+48
+00:04:29.173 --> 00:04:32.160
+And the reason, which is required with any request.
+
+49
+00:04:34.567 --> 00:04:37.148
+Here are all the fields once more, in one place.
+
+50
+00:04:37.598 --> 00:04:42.692
+The category filter shows only categories approved for this vendor during KYC.
+
+51
+00:04:42.692 --> 00:04:46.153
+If a category is missing, the vendor must request it.
+
+52
+00:04:46.603 --> 00:04:49.610
+The product always comes from the master catalog.
+
+53
+00:04:49.610 --> 00:04:53.046
+If a product is missing, the admin must create it first.
+
+54
+00:04:53.496 --> 00:04:58.650
+The warehouse is where the stock sits. The same product in two warehouses means two
+
+55
+00:04:58.650 --> 00:04:59.085
+S K Us.
+
+56
+00:04:59.535 --> 00:05:03.951
+Stock quantity must be honest. Customers can order whatever the app shows.
+
+57
+00:05:04.401 --> 00:05:08.501
+Minimum order quantity stops tiny orders that aren't worth delivering.
+
+58
+00:05:08.501 --> 00:05:10.609
+For bricks it might be five hundred.
+
+59
+00:05:11.059 --> 00:05:16.158
+And allow C O D switches cash on delivery on or off, for this S K U only.
+
+60
+00:05:18.567 --> 00:05:21.127
+A price request can be in one of three states.
+
+61
+00:05:21.577 --> 00:05:25.737
+While it's pending, the S K U sells at the admin's catalog price.
+
+62
+00:05:25.737 --> 00:05:28.233
+The vendor's new price is not live yet.
+
+63
+00:05:28.683 --> 00:05:32.694
+If the admin accepts, the vendor's price goes live for that S K U.
+
+64
+00:05:33.144 --> 00:05:37.832
+If the admin rejects, the price stays at the admin's price, for example three
+
+65
+00:05:37.832 --> 00:05:41.058
+Hundred ninety rupees, and the status shows rejected.
+
+66
+00:05:43.467 --> 00:05:45.387
+Let's watch this in the live demo.
+
+67
+00:05:48.400 --> 00:05:53.755
+Now the admin side. From the admin panel, the admin opens Warehouses and Vendors.
+
+68
+00:05:54.800 --> 00:05:59.650
+Every vendor is listed here. In the actions column, there's an icon for vendor
+
+69
+00:05:59.650 --> 00:06:00.645
+Change requests.
+
+70
+00:06:05.200 --> 00:06:08.656
+This vendor has no price requests, so the box is empty.
+
+71
+00:06:16.400 --> 00:06:18.363
+The admin opens the right vendor.
+
+72
+00:06:30.800 --> 00:06:35.233
+Here's the request. Current price three hundred ninety, requested price four
+
+73
+00:06:35.233 --> 00:06:37.157
+Hundred, and the vendor's reason.
+
+74
+00:06:38.800 --> 00:06:41.783
+There are two buttons: Reject and Accept price.
+
+75
+00:06:41.783 --> 00:06:43.941
+The admin clicks Reject this time.
+
+76
+00:06:50.800 --> 00:06:55.770
+Back on the vendor's inventory, the status now says rejected, and the price is back
+
+77
+00:06:55.770 --> 00:06:57.627
+To three hundred ninety rupees.
+
+78
+00:06:59.600 --> 00:07:04.187
+The same box has a second tab, for warranty and return policy requests.
+
+79
+00:07:04.637 --> 00:07:06.471
+The price tab, which we just saw.
+
+80
+00:07:06.921 --> 00:07:08.777
+And the warranty and return tab.
+
+81
+00:07:09.227 --> 00:07:14.181
+It shows the requested warranty and the requested return policy, next to the current
+
+82
+00:07:14.181 --> 00:07:14.475
+Ones.
+
+83
+00:07:14.925 --> 00:07:16.440
+And the reason from the vendor.
+
+84
+00:07:16.890 --> 00:07:22.759
+The admin can reject, or accept the policy. On accept, the new policy shows on that
+
+85
+00:07:22.759 --> 00:07:23.183
+S K U.
+
+86
+00:07:25.600 --> 00:07:30.430
+Remember this. A rejected price request does not stop the S K U from selling.
+
+87
+00:07:30.430 --> 00:07:33.629
+It just keeps selling at the admin's catalog price.
+
+88
+00:07:33.629 --> 00:07:38.835
+If the vendor still needs a change, they raise a new request with a clearer reason,
+
+89
+00:07:38.835 --> 00:07:41.344
+Like higher transport cost in that city.
+
+90
+00:08:23.600 --> 00:08:27.120
+Back to the inventory list. Each row tells the vendor a lot.
+
+91
+00:08:27.570 --> 00:08:29.917
+The product name and its S K U code.
+
+92
+00:08:30.367 --> 00:08:32.372
+The warehouse this stock belongs to.
+
+93
+00:08:32.822 --> 00:08:36.598
+The price request status: accepted, pending or rejected.
+
+94
+00:08:37.048 --> 00:08:41.315
+The stock level, and the status: in stock, low stock or out of stock.
+
+95
+00:08:41.765 --> 00:08:46.077
+And on top, sync and export buttons. Sync refreshes the data.
+
+96
+00:08:46.077 --> 00:08:48.975
+Export downloads the inventory as a file.
+
+97
+00:08:51.367 --> 00:08:53.756
+These labels appear in the inventory list.
+
+98
+00:08:54.206 --> 00:08:56.382
+In stock. There are enough units to sell.
+
+99
+00:08:56.832 --> 00:08:59.392
+Low stock. It's running out. Restock soon.
+
+100
+00:08:59.842 --> 00:09:04.045
+Out of stock. Zero units. Customers cannot order this S K U.
+
+101
+00:09:04.495 --> 00:09:07.866
+Price pending. A price request is waiting for the admin.
+
+102
+00:09:08.316 --> 00:09:12.604
+Rejected. The request was rejected, so it sells at the admin's price.
+
+103
+00:09:15.000 --> 00:09:18.477
+Here are the mistakes vendors make most often in inventory.
+
+104
+00:09:18.927 --> 00:09:22.917
+Entering stock they don't really have. That leads to cancelled orders.
+
+105
+00:09:23.367 --> 00:09:27.335
+A price request with no clear reason. It will likely be rejected.
+
+106
+00:09:27.785 --> 00:09:30.835
+The wrong warehouse. Then pickup goes to the wrong place.
+
+107
+00:09:31.285 --> 00:09:35.424
+Forgetting the minimum order quantity, so customers place tiny orders.
+
+108
+00:09:35.874 --> 00:09:39.351
+And expecting a change to be live before the admin approves it.
+
+109
+00:09:41.767 --> 00:09:45.120
+Quick check. The admin's price is three hundred ninety.
+
+110
+00:09:45.120 --> 00:09:48.840
+The vendor requested four hundred, and the admin rejected it.
+
+111
+00:09:48.840 --> 00:09:51.644
+What do customers pay now? Think for a moment.
+
+112
+00:09:55.594 --> 00:10:00.632
+The answer: three hundred ninety rupees. A rejected request falls back to the
+
+113
+00:10:00.632 --> 00:10:03.445
+Admin's price, and the S K U keeps selling.
+
+114
+00:10:06.233 --> 00:10:07.940
+Let's summarise module two.
+
+115
+00:10:08.390 --> 00:10:13.126
+Add S K U means category, product, warehouse, stock and minimum quantity.
+
+116
+00:10:13.576 --> 00:10:17.650
+Price, warranty and return policy come from the master catalog.
+
+117
+00:10:18.100 --> 00:10:20.170
+Any change request needs a reason.
+
+118
+00:10:20.620 --> 00:10:24.118
+The admin accepts or rejects it in vendor change requests.
+
+119
+00:10:24.568 --> 00:10:29.900
+And rejected means back to the admin's price. Next, in module three, warehouses and
+
+120
+00:10:29.900 --> 00:10:30.350
+Pickup.
+
+121
+00:10:32.767 --> 00:10:38.484
+That's the end of module 2. Next up, module 3: Warehouses and pickup verification.

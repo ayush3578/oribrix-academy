@@ -1,0 +1,565 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.667
+Module four. Orders. Naya order aane ke moment se, warehouse se nikalne ke moment
+
+2
+00:00:06.667 --> 00:00:07.029
+Taka.
+
+3
+00:00:09.233 --> 00:00:14.800
+Orders se hi vendor paisa kamata hai. Fast aur sahi dispatch se customers khush
+
+4
+00:00:14.800 --> 00:00:17.830
+Rahte hain aur S L A rate ooncha rehta hai.
+
+5
+00:00:18.280 --> 00:00:22.974
+Pehle, new order alert, aur accept aur dismiss asal mein kya karte hain.
+
+6
+00:00:23.424 --> 00:00:26.090
+Phir order verify aur accept karna.
+
+7
+00:00:26.540 --> 00:00:29.655
+Phir order stages: pick, pack aur hand over.
+
+8
+00:00:30.105 --> 00:00:35.225
+Phir dispatch ke do tareeke: Shiprocket, ya vendor ka apna local driver.
+
+9
+00:00:35.675 --> 00:00:38.064
+Phir WhatsApp pickup slots aur tracking.
+
+10
+00:00:38.514 --> 00:00:43.037
+Aur aakhir mein, delivery timing, aur kis pe abhi kaam chal raha hai.
+
+11
+00:00:45.433 --> 00:00:50.687
+Har order same stages se guzarta hai. Vendor jo bhi stage update karta hai, wo
+
+12
+00:00:50.687 --> 00:00:53.988
+Customer app aur admin panel mein bhi dikhta hai.
+
+13
+00:00:54.438 --> 00:00:57.744
+Ek new order alert aata hai, sound ke saatha.
+
+14
+00:00:58.194 --> 00:01:02.397
+Vendor items aur stock check karta hai, aur accept karta hai.
+
+15
+00:01:02.847 --> 00:01:06.346
+Verify and pick: maal shelf se nikala jaata hai.
+
+16
+00:01:06.796 --> 00:01:09.846
+Verify and pack: maal pack hokar ready hai.
+
+17
+00:01:10.296 --> 00:01:15.800
+Hand over: package Shiprocket courier ko, ya vendor ke local driver ko jaata hai.
+
+18
+00:01:16.250 --> 00:01:18.512
+Aur customer ki site pe deliver.
+
+19
+00:01:20.900 --> 00:01:26.780
+Jab order aata hai, toh vendor jis bhi page pe ho, wahan ye alert sound ke saath pop
+
+20
+00:01:26.780 --> 00:01:27.620
+Up hota hai.
+
+21
+00:01:28.070 --> 00:01:32.614
+Ye action required mark hota hai, auto dismiss timer ke saatha.
+
+22
+00:01:33.064 --> 00:01:36.989
+Isme order I D, quantity, aur total value dikhti hai.
+
+23
+00:01:37.439 --> 00:01:41.663
+View and Accept Order vendor ko sidhe order pe le jaata hai.
+
+24
+00:01:42.113 --> 00:01:46.738
+Aur Dismiss sirf alert band karta hai. Ye order cancel nahi karta.
+
+25
+00:01:46.738 --> 00:01:50.241
+Order, Orders mein action ka wait karta rehta hai.
+
+26
+00:01:52.633 --> 00:01:56.174
+Ye yaad rakhiye, kyunki vendors yahan galti karte hain.
+
+27
+00:01:56.174 --> 00:02:00.230
+Dismiss, cancel nahi hai. Dismiss sirf alert ko chup karta hai.
+
+28
+00:02:00.230 --> 00:02:05.509
+Order abhi bhi Orders mein, awaiting action mein pada hai, aur time chal raha hai.
+
+29
+00:02:05.509 --> 00:02:10.660
+Order mana karne ke liye vendor ko use kholkar cancel order pe click karna hoga.
+
+30
+00:02:49.367 --> 00:02:52.439
+Order kholne pe uski details dikhti hain.
+
+31
+00:02:52.889 --> 00:02:55.172
+Order I D aur delivery area.
+
+32
+00:02:55.622 --> 00:03:01.056
+Product verification. Vendor har item ko check karke tick karta hai ki wo sach mein
+
+33
+00:03:01.056 --> 00:03:01.318
+Hai.
+
+34
+00:03:01.768 --> 00:03:04.989
+Har item ke saath available stock dikhta hai.
+
+35
+00:03:05.439 --> 00:03:09.812
+Cancel order, agar vendor sach mein ise fulfil nahi kar sakta.
+
+36
+00:03:10.262 --> 00:03:16.111
+Aur verify and accept. Admin aur customer, dono ke liye status usi moment update
+
+37
+00:03:16.111 --> 00:03:16.769
+Hota hai.
+
+38
+00:03:19.167 --> 00:03:23.050
+Vaapas orders page pe, har order yahan track hota hai.
+
+39
+00:03:23.500 --> 00:03:28.279
+Awaiting action, un orders ki ginti hai jo abhi accept nahi huye.
+
+40
+00:03:28.279 --> 00:03:30.412
+Ye zero ke paas hona chahiye.
+
+41
+00:03:30.862 --> 00:03:33.976
+Status, warehouse aur payment type ke filters.
+
+42
+00:03:34.426 --> 00:03:39.333
+Status column: accepted, picking, packed, dispatched, delivered ya cancelled.
+
+43
+00:03:39.783 --> 00:03:43.815
+Aur action menu, order ko agle stage pe le jaane ke liye.
+
+44
+00:03:46.200 --> 00:03:51.614
+Order pack hone pe vendor dispatch pe click karta hai, aur do mein se ek tab chunta
+
+45
+00:03:51.614 --> 00:03:51.875
+Hai.
+
+46
+00:03:52.325 --> 00:03:57.780
+Shiprocket courier, automatic. Shiprocket sabse achha available courier chunta hai,
+
+47
+00:03:57.780 --> 00:04:03.038
+Jaise Delhivery, Blue Dart ya Shadowfax, A W B tracking number assign karta hai,
+
+48
+00:04:03.038 --> 00:04:07.639
+Shipping label banata hai, aur warehouse se pickup schedule karta hai.
+
+49
+00:04:07.639 --> 00:04:10.991
+Customer ko S M S updates Shiprocket se jaate hain.
+
+50
+00:04:11.441 --> 00:04:17.001
+Local ya in-house driver. Vendor apna driver use karta hai, Drivers and Fleet se
+
+51
+00:04:17.001 --> 00:04:22.700
+Chunkar, name, phone aur vehicle ke saatha. Zaroori baat: is case mein customer ko
+
+52
+00:04:22.700 --> 00:04:27.079
+Koi S M S nahi jaata, kyunki S M S Shiprocket handle karta hai.
+
+53
+00:04:29.467 --> 00:04:32.112
+Chaliye ise live demo mein dekhte hain.
+
+54
+00:04:35.100 --> 00:04:40.177
+Ye live demo ki dispatch window hai. Ye tab Local ya In-house driver hai.
+
+55
+00:04:43.100 --> 00:04:48.635
+Vendor drop down se saved delivery partner chun sakta hai, ya driver ka name, phone
+
+56
+00:04:48.635 --> 00:04:52.636
+Number, vehicle model aur vehicle number type kar sakta hai.
+
+57
+00:04:59.100 --> 00:05:04.859
+Phir local driver se dispatch. Yaad rakhiye, iske liye customer ko S M S nahi
+
+58
+00:05:04.859 --> 00:05:05.457
+Jaayega.
+
+59
+00:05:08.700 --> 00:05:14.178
+Ab Shiprocket courier tab. Isme automated courier assignment, destination pincode,
+
+60
+00:05:14.178 --> 00:05:16.316
+Aur pickup warehouse dikhta hai.
+
+61
+00:05:16.916 --> 00:05:20.437
+Vendor dispatch via Shiprocket pe click karta hai.
+
+62
+00:05:20.437 --> 00:05:25.718
+Lekin yahan ek notice aata hai: Shiprocket did not assign an A W B with any
+
+63
+00:05:25.718 --> 00:05:26.985
+Available courier.
+
+64
+00:05:31.100 --> 00:05:34.332
+Reason wahi tha jo hamne module three mein dekha.
+
+65
+00:05:34.332 --> 00:05:39.015
+Is warehouse ka pickup address Shiprocket mein abhi verified nahi thaa.
+
+66
+00:05:47.100 --> 00:05:52.573
+Isiliye agreed fix ye hai ki warehouse approve karne se pehle har pickup address
+
+67
+00:05:52.573 --> 00:05:57.020
+Verify ho. Vendors ke liye error text bhi aur clear kiya jaayega.
+
+68
+00:06:03.900 --> 00:06:06.545
+Chaliye ise live demo mein dekhte hain.
+
+69
+00:06:09.533 --> 00:06:13.586
+Ye same order Oribrix ke Shiprocket account ke andar hai.
+
+70
+00:06:15.933 --> 00:06:21.552
+Yellow tag dekhiye: e-way bill mandatory. Order sixty four thousand rupees se zyada
+
+71
+00:06:21.552 --> 00:06:24.125
+Ka hai, isliye e-way bill zaroori hai.
+
+72
+00:06:24.725 --> 00:06:28.065
+Aur pickup address ke neeche red dot: unverified.
+
+73
+00:06:28.065 --> 00:06:30.314
+Yahi dispatch error ki wajah hai.
+
+74
+00:06:30.914 --> 00:06:34.389
+Menu se order ko verified mark kiya ja sakta hai.
+
+75
+00:06:34.389 --> 00:06:38.786
+Shiprocket confirm karta hai: one order verified successfully.
+
+76
+00:06:42.333 --> 00:06:46.984
+Shiprocket order accept kar le, toh kuch cheezein automatically hoti hain.
+
+77
+00:06:47.434 --> 00:06:49.930
+Delivery partner assign hota hai.
+
+78
+00:06:50.380 --> 00:06:56.178
+Vendor ke registered phone pe WhatsApp message jaata hai, pickup time slot ke saath,
+
+79
+00:06:56.178 --> 00:06:58.870
+Jaise agle din subah ten se dophar two.
+
+80
+00:06:59.320 --> 00:07:04.088
+Vendor WhatsApp mein hi slot confirm kar sakta hai, ya badal sakta hai.
+
+81
+00:07:04.088 --> 00:07:08.856
+Isliye vendor ka registered number asli aur chaloo number hona chahiye.
+
+82
+00:07:09.306 --> 00:07:12.890
+Courier shipping label ke saath package pick up karta hai.
+
+83
+00:07:13.340 --> 00:07:16.199
+Live tracking link available ho jaata hai.
+
+84
+00:07:16.649 --> 00:07:18.825
+Aur order deliver ho jaata hai.
+
+85
+00:07:21.233 --> 00:07:26.723
+Session ki ek honest baata. Oribrix ek quick commerce business hai, aur speed matter
+
+86
+00:07:26.723 --> 00:07:27.377
+Karti hai.
+
+87
+00:07:27.827 --> 00:07:33.295
+Aaj, Shiprocket ke saath, delivery partner assign hone mein lagbhag twelve se twenty
+
+88
+00:07:33.295 --> 00:07:37.918
+Four hours lag sakte hain. Bulk aur long distance ke liye ye theek hai.
+
+89
+00:07:38.368 --> 00:07:43.952
+Lekin Oribrix ka goal instant delivery hai, one se two hours mein, khaskar medium
+
+90
+00:07:43.952 --> 00:07:49.674
+Value city orders ke liye, jaise ten ya twenty thousand rupees ki lights ya boards.
+
+91
+00:07:50.124 --> 00:07:55.322
+Isliye faster options explore ho rahe hain. Porter express delivery deta hai, lekin
+
+92
+00:07:55.322 --> 00:08:00.207
+Sirf two wheelers pe aur sirf kuch cities mein, isliye wo bulk load nahi le ja
+
+93
+00:08:00.207 --> 00:08:02.775
+Sakta. Doosre options check ho rahe hain.
+
+94
+00:08:05.167 --> 00:08:09.903
+Orders list mein dikhne wale order statuses, aur har ek ka matalba.
+
+95
+00:08:10.353 --> 00:08:16.034
+New, ya awaiting action. Order aa gaya hai, lekin vendor ne abhi accept nahi kiya.
+
+96
+00:08:16.034 --> 00:08:17.350
+Time chal raha hai.
+
+97
+00:08:17.800 --> 00:08:21.683
+Accepted. Vendor ne items check karke confirm kar diye.
+
+98
+00:08:22.133 --> 00:08:25.717
+Picking, phir packed. Warehouse mein maal taiyaar ho raha hai.
+
+99
+00:08:26.167 --> 00:08:30.903
+Dispatched, ya in transit. Hand over ho chuka hai aur raaste mein hai.
+
+100
+00:08:31.353 --> 00:08:36.848
+Aur delivered ya cancelled, do final states. Cancelled order ka hamesha ek clear
+
+101
+00:08:36.848 --> 00:08:38.222
+Reason hona chahiye.
+
+102
+00:08:40.633 --> 00:08:46.154
+Cancel karne se customer aur vendor ki rating, dono ko nuksaan hota hai, isliye ye
+
+103
+00:08:46.154 --> 00:08:50.126
+Rare hona chahiye. Kab theek hai, aur kab nahi, ye dekhiye.
+
+104
+00:08:50.576 --> 00:08:55.788
+Jab stock sach mein nahi hai. Aur phir turant stock number theek kijiye, taaki
+
+105
+00:08:55.788 --> 00:08:56.656
+Dobara na ho.
+
+106
+00:08:57.106 --> 00:09:00.392
+Jab item damaged hai aur replacement nahi hai.
+
+107
+00:09:00.842 --> 00:09:03.764
+Jab customer khud cancel karne ko bole.
+
+108
+00:09:04.214 --> 00:09:07.605
+Kabhi bhi sirf chhote order se bachne ke liye nahin.
+
+109
+00:09:07.605 --> 00:09:10.017
+Uske liye minimum order quantity hai.
+
+110
+00:09:10.467 --> 00:09:14.457
+Aur kabhi bhi isliye nahi ki dispatch mushkil lag raha hai.
+
+111
+00:09:14.457 --> 00:09:17.230
+Uski jagah Oribrix team se help maangiye.
+
+112
+00:09:19.633 --> 00:09:21.937
+Har order ke liye ek checklist.
+
+113
+00:09:22.387 --> 00:09:25.416
+Minutes mein accept kijiye, hours mein nahin.
+
+114
+00:09:25.866 --> 00:09:29.856
+Har item ko physically check karne ke baad hi tick kijiye.
+
+115
+00:09:30.306 --> 00:09:34.914
+Pick aur pack stages sahi update kijiye. Customer unhe dekhta hai.
+
+116
+00:09:35.364 --> 00:09:41.331
+Agar order fifty thousand rupees ya usse zyada ka hai, toh e-way bill upload kijiye.
+
+117
+00:09:41.331 --> 00:09:42.681
+Wo module five hai.
+
+118
+00:09:43.131 --> 00:09:47.995
+WhatsApp pickup slot confirm kijiye, taaki courier khali haath na laute.
+
+119
+00:09:48.445 --> 00:09:54.387
+Aur agar local driver use kar rahe hain, toh customer ko khud inform kijiye, kyunki
+
+120
+00:09:54.387 --> 00:09:55.890
+Koi S M S nahi jaata.
+
+121
+00:09:58.300 --> 00:10:02.609
+Quick check. Ek vendor ne new order alert pe dismiss click kiya.
+
+122
+00:10:02.609 --> 00:10:04.764
+Order ka kya hua? Rukke sochiye.
+
+123
+00:10:08.714 --> 00:10:13.280
+Answer: wo abhi bhi Orders mein, awaiting action mein wait kar raha hai.
+
+124
+00:10:13.280 --> 00:10:15.626
+Dismiss sirf alert ko chup karta hai.
+
+125
+00:10:18.433 --> 00:10:23.617
+Aur agar phir bhi Shiprocket dispatch fail ho, toh vendor ko ye karna chahiye.
+
+126
+00:10:24.067 --> 00:10:25.880
+Notice dhyaan se padhiye.
+
+127
+00:10:26.330 --> 00:10:30.960
+Order cancel mat kijiye. Maal pack hai aur customer wait kar raha hai.
+
+128
+00:10:31.410 --> 00:10:33.692
+Turant Oribrix team ko batayiye.
+
+129
+00:10:34.142 --> 00:10:38.473
+Admin Shiprocket mein pickup address check karke theek karta hai.
+
+130
+00:10:38.923 --> 00:10:44.618
+Phir Shiprocket dispatch retry kijiye, ya agar urgent hai, toh local driver use
+
+131
+00:10:44.618 --> 00:10:47.286
+Kijiye aur customer ko inform kijiye.
+
+132
+00:10:49.700 --> 00:10:52.260
+Module four ko summarise karte hain.
+
+133
+00:10:52.710 --> 00:10:57.617
+Alert mein view and accept, ya dismiss hai, aur dismiss, cancel nahi hai.
+
+134
+00:10:58.067 --> 00:11:01.224
+Har item verify kijiye, phir accept.
+
+135
+00:11:01.674 --> 00:11:04.255
+Stages hain pick, pack aur hand over.
+
+136
+00:11:04.705 --> 00:11:08.839
+Shiprocket se A W B aur customer S M S milta hai.
+
+137
+00:11:08.839 --> 00:11:12.129
+Local driver ka matlab koi S M S nahin.
+
+138
+00:11:12.579 --> 00:11:16.629
+Aur unverified pickup address se dispatch error aata hai.
+
+139
+00:11:16.629 --> 00:11:20.537
+Agla, module five mein, e-way bills, returns aur paisa.
+
+140
+00:11:22.933 --> 00:11:28.609
+Module 4 yahin khatam hota hai. Agla hai module 5: E-way bills, returns and
+
+141
+00:11:28.609 --> 00:11:29.290
+Earnings.

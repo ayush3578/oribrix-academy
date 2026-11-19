@@ -1,14 +1,60 @@
 [
- {"id": "vendor-onboarding", "status": "live",
-  "title": {"en": "Vendor Onboarding", "hi": "Vendor Onboarding"},
-  "desc": {"en": "How vendors apply, get approved, list stock, handle prices, orders and payouts. 8 video modules, notes and the final quiz.",
-           "hi": "Vendor kaise apply karta hai, approve hota hai, stock list karta hai, prices, orders aur payouts sambhalta hai. 8 video modules, notes aur final quiz."}},
- {"id": "admin-portal", "status": "soon",
-  "title": {"en": "Admin Portal", "hi": "Admin Portal"},
-  "desc": {"en": "A full walkthrough of the Oribrix admin panel: live ops, catalog, pricing rules, orders and reports.",
-           "hi": "Oribrix admin panel ka poora walkthrough: live ops, catalog, pricing rules, orders aur reports."}},
- {"id": "vendor-app", "status": "soon",
-  "title": {"en": "Vendor App", "hi": "Vendor App"},
-  "desc": {"en": "Using the vendor console day to day: inventory, orders, drivers, settlements and support.",
-           "hi": "Vendor console ka roz ka use: inventory, orders, drivers, settlements aur support."}}
+ {
+  "id": "vendor-onboarding",
+  "status": "live",
+  "short": "Vendor-Onboarding",
+  "modules": 8,
+  "data": "data/course.json",
+  "notes": "notes/Oribrix-Vendor-Onboarding-Notes.pdf",
+  "notesPages": 68,
+  "practice": "data/practice.json",
+  "certName": "Oribrix Vendor Onboarding Academy",
+  "title": {
+   "en": "Vendor Onboarding",
+   "hi": "Vendor Onboarding"
+  },
+  "desc": {
+   "en": "How vendors apply, get approved, list stock, handle prices, orders and payouts. 8 video modules, notes and the final quiz.",
+   "hi": "Vendor kaise apply karta hai, approve hota hai, stock list karta hai, prices, orders aur payouts sambhalta hai. 8 video modules, notes aur final quiz."
+  }
+ },
+ {
+  "id": "vendor-portal",
+  "status": "live",
+  "short": "Vendor-Portal",
+  "modules": 6,
+  "data": "data/course-vendor-portal.json",
+  "notes": "notes/Oribrix-Vendor-Portal-Notes.pdf",
+  "notesPages": 64,
+  "practice": "data/practice-vendor-portal.json",
+  "certName": "Oribrix Vendor Portal Academy",
+  "title": {
+   "en": "Vendor Portal",
+   "hi": "Vendor Portal"
+  },
+  "desc": {
+   "en": "Using the vendor console day to day: inventory and price requests, warehouses and pickup, orders and dispatch, e-way bills, returns, settlements, staff and account controls. 6 video modules, notes and the final quiz.",
+   "hi": "Vendor console ka roz ka use: inventory aur price requests, warehouses aur pickup, orders aur dispatch, e-way bills, returns, settlements, staff aur account controls. 6 video modules, notes aur final quiz."
+  },
+  "notesDesc": {
+   "en": "Detailed written notes for all 6 modules, with screenshots, rules, a glossary and a checklist.",
+   "hi": "Saare 6 modules ke detailed notes: screenshots, rules, glossary aur checklist ke saath."
+  },
+  "prDesc": {
+   "en": "16 practice questions from all 6 modules. See the right answer and explanation instantly. Unlimited tries; it does not affect your final quiz or certificate.",
+   "hi": "Saare 6 modules se 16 practice questions. Sahi answer aur explanation turant dikhega. Unlimited try; final quiz ya certificate pe koi asar nahi."
+  }
+ },
+ {
+  "id": "admin-portal",
+  "status": "soon",
+  "title": {
+   "en": "Admin Portal",
+   "hi": "Admin Portal"
+  },
+  "desc": {
+   "en": "A full walkthrough of the Oribrix admin panel: live ops, catalog, pricing rules, orders and reports.",
+   "hi": "Oribrix admin panel ka poora walkthrough: live ops, catalog, pricing rules, orders aur reports."
+  }
+ }
 ]

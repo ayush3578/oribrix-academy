@@ -1,0 +1,947 @@
+{
+ "version": 1,
+ "modules": [
+  {
+   "n": 1,
+   "title": {
+    "en": "Welcome to the Vendor Console",
+    "hi": "Welcome to the Vendor Console"
+   },
+   "desc": {
+    "en": "A tour of the vendor console after KYC approval: the ten sections, the dashboard numbers, key words and who does what.",
+    "hi": "KYC approval ke baad vendor console ka tour: ten sections, dashboard numbers, zaroori words aur kaun kya karta hai."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-01.mp4",
+    "hi": "videos/vendor-portal/hi/module-01.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-01.vtt",
+    "hi": "videos/vendor-portal/hi/module-01.vtt"
+   },
+   "duration": {
+    "en": 610.4,
+    "hi": 706.9
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.0,
+      "title": "In this module"
+     },
+     {
+      "t": 39.0,
+      "title": "Where this course starts"
+     },
+     {
+      "t": 76.1,
+      "title": "Vendor console: the left menu"
+     },
+     {
+      "t": 135.6,
+      "title": "Vendor Console > Dashboard"
+     },
+     {
+      "t": 180.7,
+      "title": "Dashboard in the live demo"
+     },
+     {
+      "t": 227.9,
+      "title": "Words you'll hear (1 of 2)"
+     },
+     {
+      "t": 260.3,
+      "title": "Words you'll hear (2 of 2)"
+     },
+     {
+      "t": 294.9,
+      "title": "Who does what"
+     },
+     {
+      "t": 326.4,
+      "title": "Vendor proposes, Admin approves"
+     },
+     {
+      "t": 396.5,
+      "title": "Vendor Console > Inventory (preview)"
+     },
+     {
+      "t": 419.8,
+      "title": "Vendor Console > Orders (preview)"
+     },
+     {
+      "t": 442.5,
+      "title": "How an order reaches the vendor"
+     },
+     {
+      "t": 485.4,
+      "title": "Questions vendors ask most"
+     },
+     {
+      "t": 527.0,
+      "title": "A vendor's daily routine"
+     },
+     {
+      "t": 558.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 576.5,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 8.8,
+      "title": "In this module"
+     },
+     {
+      "t": 45.7,
+      "title": "Where this course starts"
+     },
+     {
+      "t": 91.8,
+      "title": "Vendor console: the left menu"
+     },
+     {
+      "t": 160.9,
+      "title": "Vendor Console > Dashboard"
+     },
+     {
+      "t": 214.7,
+      "title": "Dashboard in the live demo"
+     },
+     {
+      "t": 262.7,
+      "title": "Words you'll hear (1 of 2)"
+     },
+     {
+      "t": 300.4,
+      "title": "Words you'll hear (2 of 2)"
+     },
+     {
+      "t": 341.5,
+      "title": "Who does what"
+     },
+     {
+      "t": 378.6,
+      "title": "Vendor proposes, Admin approves"
+     },
+     {
+      "t": 448.7,
+      "title": "Vendor Console > Inventory (preview)"
+     },
+     {
+      "t": 474.9,
+      "title": "Vendor Console > Orders (preview)"
+     },
+     {
+      "t": 501.3,
+      "title": "How an order reaches the vendor"
+     },
+     {
+      "t": 552.6,
+      "title": "Questions vendors ask most"
+     },
+     {
+      "t": 603.5,
+      "title": "A vendor's daily routine"
+     },
+     {
+      "t": 643.9,
+      "title": "Quick check"
+     },
+     {
+      "t": 665.8,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "en": "Inventory, SKUs & change requests",
+    "hi": "Inventory, SKUs & change requests"
+   },
+   "desc": {
+    "en": "Adding SKUs, MRP / selling price / GST type, price and policy change requests, and how the admin accepts or rejects.",
+    "hi": "SKUs add karna, MRP / selling price / GST type, price aur policy change requests, aur admin kaise accept ya reject karta hai."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-02.mp4",
+    "hi": "videos/vendor-portal/hi/module-02.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-02.vtt",
+    "hi": "videos/vendor-portal/hi/module-02.vtt"
+   },
+   "duration": {
+    "en": 639.9,
+    "hi": 700.6
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.5,
+      "title": "In this module"
+     },
+     {
+      "t": 42.6,
+      "title": "Add SKU in six steps"
+     },
+     {
+      "t": 80.3,
+      "title": "Add SKU with a price request"
+     },
+     {
+      "t": 240.3,
+      "title": "Add SKU > Product pricing"
+     },
+     {
+      "t": 273.8,
+      "title": "Add SKU: what each field means"
+     },
+     {
+      "t": 317.8,
+      "title": "What happens to a price request"
+     },
+     {
+      "t": 346.8,
+      "title": "Admin reviews vendor change requests"
+     },
+     {
+      "t": 418.8,
+      "title": "Admin > Vendor Change Requests > Warranty / Return"
+     },
+     {
+      "t": 444.8,
+      "title": "Rejected means back to the admin's price"
+     },
+     {
+      "t": 502.8,
+      "title": "Vendor Console > Inventory"
+     },
+     {
+      "t": 530.6,
+      "title": "Stock status"
+     },
+     {
+      "t": 554.2,
+      "title": "Common mistakes to avoid"
+     },
+     {
+      "t": 581.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 605.4,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 10.4,
+      "title": "In this module"
+     },
+     {
+      "t": 50.9,
+      "title": "Add SKU in six steps"
+     },
+     {
+      "t": 98.2,
+      "title": "Add SKU with a price request"
+     },
+     {
+      "t": 258.2,
+      "title": "Add SKU > Product pricing"
+     },
+     {
+      "t": 294.3,
+      "title": "Add SKU: what each field means"
+     },
+     {
+      "t": 347.9,
+      "title": "What happens to a price request"
+     },
+     {
+      "t": 382.9,
+      "title": "Admin reviews vendor change requests"
+     },
+     {
+      "t": 455.7,
+      "title": "Admin > Vendor Change Requests > Warranty / Return"
+     },
+     {
+      "t": 485.9,
+      "title": "Rejected means back to the admin's price"
+     },
+     {
+      "t": 543.9,
+      "title": "Vendor Console > Inventory"
+     },
+     {
+      "t": 574.7,
+      "title": "Stock status"
+     },
+     {
+      "t": 602.9,
+      "title": "Common mistakes to avoid"
+     },
+     {
+      "t": 635.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 660.5,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "en": "Warehouses & pickup verification",
+    "hi": "Warehouses & pickup verification"
+   },
+   "desc": {
+    "en": "Adding a warehouse, admin approval, verifying the pickup address in Shiprocket first, and Pause Intake.",
+    "hi": "Warehouse add karna, admin approval, pehle Shiprocket mein pickup address verify karna, aur Pause Intake."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-03.mp4",
+    "hi": "videos/vendor-portal/hi/module-03.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-03.vtt",
+    "hi": "videos/vendor-portal/hi/module-03.vtt"
+   },
+   "duration": {
+    "en": 606.7,
+    "hi": 682.3
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 9.4,
+      "title": "In this module"
+     },
+     {
+      "t": 40.1,
+      "title": "Vendor Console > Warehouses"
+     },
+     {
+      "t": 69.0,
+      "title": "Add new warehouse: the form"
+     },
+     {
+      "t": 111.9,
+      "title": "Adding a warehouse"
+     },
+     {
+      "t": 203.1,
+      "title": "Admin > Vendor details > Stores / Warehouses"
+     },
+     {
+      "t": 224.9,
+      "title": "Why pickup verification matters"
+     },
+     {
+      "t": 265.0,
+      "title": "Admin: verify a pickup address in Shiprocket"
+     },
+     {
+      "t": 295.0,
+      "title": "Verify in Shiprocket first, approve second"
+     },
+     {
+      "t": 347.1,
+      "title": "Warehouses > View inventory"
+     },
+     {
+      "t": 364.4,
+      "title": "Warehouse card buttons"
+     },
+     {
+      "t": 395.1,
+      "title": "Vendor: before you save a warehouse"
+     },
+     {
+      "t": 437.8,
+      "title": "Good pin vs bad pin"
+     },
+     {
+      "t": 472.5,
+      "title": "Product not showing? Check these"
+     },
+     {
+      "t": 501.3,
+      "title": "Quick check"
+     },
+     {
+      "t": 522.3,
+      "title": "Warehouse words"
+     },
+     {
+      "t": 552.9,
+      "title": "One more check"
+     },
+     {
+      "t": 576.8,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 10.3,
+      "title": "In this module"
+     },
+     {
+      "t": 45.5,
+      "title": "Vendor Console > Warehouses"
+     },
+     {
+      "t": 79.0,
+      "title": "Add new warehouse: the form"
+     },
+     {
+      "t": 127.9,
+      "title": "Adding a warehouse"
+     },
+     {
+      "t": 219.1,
+      "title": "Admin > Vendor details > Stores / Warehouses"
+     },
+     {
+      "t": 245.7,
+      "title": "Why pickup verification matters"
+     },
+     {
+      "t": 290.6,
+      "title": "Admin: verify a pickup address in Shiprocket"
+     },
+     {
+      "t": 325.5,
+      "title": "Verify in Shiprocket first, approve second"
+     },
+     {
+      "t": 377.7,
+      "title": "Warehouses > View inventory"
+     },
+     {
+      "t": 396.7,
+      "title": "Warehouse card buttons"
+     },
+     {
+      "t": 435.0,
+      "title": "Vendor: before you save a warehouse"
+     },
+     {
+      "t": 486.1,
+      "title": "Good pin vs bad pin"
+     },
+     {
+      "t": 526.0,
+      "title": "Product not showing? Check these"
+     },
+     {
+      "t": 559.7,
+      "title": "Quick check"
+     },
+     {
+      "t": 582.3,
+      "title": "Warehouse words"
+     },
+     {
+      "t": 618.6,
+      "title": "One more check"
+     },
+     {
+      "t": 646.3,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "title": {
+    "en": "Orders & dispatch",
+    "hi": "Orders & dispatch"
+   },
+   "desc": {
+    "en": "New-order alerts, verify and accept, pick, pack and hand over, Shiprocket vs local driver, WhatsApp pickup slots.",
+    "hi": "New-order alerts, verify aur accept, pick, pack aur hand over, Shiprocket vs local driver, WhatsApp pickup slots."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-04.mp4",
+    "hi": "videos/vendor-portal/hi/module-04.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-04.vtt",
+    "hi": "videos/vendor-portal/hi/module-04.vtt"
+   },
+   "duration": {
+    "en": 621.4,
+    "hi": 690.7
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.0,
+      "title": "In this module"
+     },
+     {
+      "t": 39.8,
+      "title": "Life of an order"
+     },
+     {
+      "t": 70.3,
+      "title": "New order alert (any page)"
+     },
+     {
+      "t": 96.8,
+      "title": "Dismiss is not cancel"
+     },
+     {
+      "t": 153.5,
+      "title": "Orders > Order details"
+     },
+     {
+      "t": 178.7,
+      "title": "Vendor Console > Orders"
+     },
+     {
+      "t": 201.2,
+      "title": "Two ways to dispatch"
+     },
+     {
+      "t": 245.9,
+      "title": "Dispatch: local driver and Shiprocket"
+     },
+     {
+      "t": 339.6,
+      "title": "The order inside Shiprocket"
+     },
+     {
+      "t": 373.2,
+      "title": "After handover to Shiprocket"
+     },
+     {
+      "t": 407.0,
+      "title": "Delivery speed: today vs the goal"
+     },
+     {
+      "t": 446.5,
+      "title": "Order statuses"
+     },
+     {
+      "t": 478.8,
+      "title": "When is it OK to cancel?"
+     },
+     {
+      "t": 510.0,
+      "title": "Dispatch checklist"
+     },
+     {
+      "t": 540.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 559.2,
+      "title": "If Shiprocket dispatch fails"
+     },
+     {
+      "t": 584.9,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 8.4,
+      "title": "In this module"
+     },
+     {
+      "t": 44.6,
+      "title": "Life of an order"
+     },
+     {
+      "t": 80.1,
+      "title": "New order alert (any page)"
+     },
+     {
+      "t": 111.8,
+      "title": "Dismiss is not cancel"
+     },
+     {
+      "t": 168.6,
+      "title": "Orders > Order details"
+     },
+     {
+      "t": 198.4,
+      "title": "Vendor Console > Orders"
+     },
+     {
+      "t": 225.4,
+      "title": "Two ways to dispatch"
+     },
+     {
+      "t": 273.5,
+      "title": "Dispatch: local driver and Shiprocket"
+     },
+     {
+      "t": 367.9,
+      "title": "The order inside Shiprocket"
+     },
+     {
+      "t": 401.5,
+      "title": "After handover to Shiprocket"
+     },
+     {
+      "t": 440.4,
+      "title": "Delivery speed: today vs the goal"
+     },
+     {
+      "t": 484.4,
+      "title": "Order statuses"
+     },
+     {
+      "t": 519.8,
+      "title": "When is it OK to cancel?"
+     },
+     {
+      "t": 558.8,
+      "title": "Dispatch checklist"
+     },
+     {
+      "t": 597.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 617.6,
+      "title": "If Shiprocket dispatch fails"
+     },
+     {
+      "t": 648.9,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "title": {
+    "en": "E-way bills, returns & earnings",
+    "hi": "E-way bills, returns & earnings"
+   },
+   "desc": {
+    "en": "E-way bills for ₹50,000+ orders, admin review, return statuses, settlements, Tally export and drivers.",
+    "hi": "₹50,000+ orders ke e-way bills, admin review, return statuses, settlements, Tally export aur drivers."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-05.mp4",
+    "hi": "videos/vendor-portal/hi/module-05.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-05.vtt",
+    "hi": "videos/vendor-portal/hi/module-05.vtt"
+   },
+   "duration": {
+    "en": 639.0,
+    "hi": 690.4
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.7,
+      "title": "In this module"
+     },
+     {
+      "t": 36.0,
+      "title": "Orders of ₹50,000 or more need an e-way bill"
+     },
+     {
+      "t": 119.4,
+      "title": "E-way bill flow"
+     },
+     {
+      "t": 153.1,
+      "title": "Vendor: the E-Way Bills page"
+     },
+     {
+      "t": 201.1,
+      "title": "Vendor Console > E-Way Bills"
+     },
+     {
+      "t": 228.1,
+      "title": "Submitting and admin approval"
+     },
+     {
+      "t": 292.1,
+      "title": "Admin > E-Way Bill Review"
+     },
+     {
+      "t": 313.7,
+      "title": "Admin: what to check on an e-way bill"
+     },
+     {
+      "t": 339.3,
+      "title": "Vendor: e-way bill tips"
+     },
+     {
+      "t": 372.6,
+      "title": "Return statuses"
+     },
+     {
+      "t": 407.6,
+      "title": "Returns & Disputes"
+     },
+     {
+      "t": 477.2,
+      "title": "Earnings & Settlements > Settlement details"
+     },
+     {
+      "t": 513.5,
+      "title": "Drivers, earnings and settlements"
+     },
+     {
+      "t": 556.9,
+      "title": "Settlement status"
+     },
+     {
+      "t": 580.2,
+      "title": "Quick check"
+     },
+     {
+      "t": 601.2,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 9.8,
+      "title": "In this module"
+     },
+     {
+      "t": 42.4,
+      "title": "Orders of ₹50,000 or more need an e-way bill"
+     },
+     {
+      "t": 125.8,
+      "title": "E-way bill flow"
+     },
+     {
+      "t": 166.7,
+      "title": "Vendor: the E-Way Bills page"
+     },
+     {
+      "t": 214.7,
+      "title": "Vendor Console > E-Way Bills"
+     },
+     {
+      "t": 244.0,
+      "title": "Submitting and admin approval"
+     },
+     {
+      "t": 308.0,
+      "title": "Admin > E-Way Bill Review"
+     },
+     {
+      "t": 331.1,
+      "title": "Admin: what to check on an e-way bill"
+     },
+     {
+      "t": 362.2,
+      "title": "Vendor: e-way bill tips"
+     },
+     {
+      "t": 402.9,
+      "title": "Return statuses"
+     },
+     {
+      "t": 442.1,
+      "title": "Returns & Disputes"
+     },
+     {
+      "t": 511.7,
+      "title": "Earnings & Settlements > Settlement details"
+     },
+     {
+      "t": 552.5,
+      "title": "Drivers, earnings and settlements"
+     },
+     {
+      "t": 597.8,
+      "title": "Settlement status"
+     },
+     {
+      "t": 622.3,
+      "title": "Quick check"
+     },
+     {
+      "t": 645.6,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 6,
+   "title": {
+    "en": "Account controls, staff & what's next",
+    "hi": "Account controls, staff & what's next"
+   },
+   "desc": {
+    "en": "Suspend vs block vs delete, staff logins with permissions, the vendor profile, pending items and the course recap.",
+    "hi": "Suspend vs block vs delete, permissions ke saath staff logins, vendor profile, pending items aur course recap."
+   },
+   "video": {
+    "en": "videos/vendor-portal/en/module-06.mp4",
+    "hi": "videos/vendor-portal/hi/module-06.mp4"
+   },
+   "subtitles": {
+    "en": "videos/vendor-portal/en/module-06.vtt",
+    "hi": "videos/vendor-portal/hi/module-06.vtt"
+   },
+   "duration": {
+    "en": 721.9,
+    "hi": 780.0
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.9,
+      "title": "In this module"
+     },
+     {
+      "t": 35.6,
+      "title": "Suspend vs Block vs Delete"
+     },
+     {
+      "t": 78.7,
+      "title": "Admin suspends a vendor"
+     },
+     {
+      "t": 151.6,
+      "title": "What a suspended vendor sees"
+     },
+     {
+      "t": 172.4,
+      "title": "Suspended vendor > Settings"
+     },
+     {
+      "t": 187.9,
+      "title": "Suspend is reversible. Delete is not."
+     },
+     {
+      "t": 240.0,
+      "title": "Vendor Console > Settings"
+     },
+     {
+      "t": 262.3,
+      "title": "Staff permissions"
+     },
+     {
+      "t": 299.4,
+      "title": "Creating staff logins"
+     },
+     {
+      "t": 458.7,
+      "title": "What a staff login sees"
+     },
+     {
+      "t": 491.9,
+      "title": "Staff won't see the dashboard or sales"
+     },
+     {
+      "t": 558.2,
+      "title": "Staff logins: good practice"
+     },
+     {
+      "t": 583.8,
+      "title": "Vendor profile"
+     },
+     {
+      "t": 612.8,
+      "title": "Still pending (as of 18 Nov 2026)"
+     },
+     {
+      "t": 651.1,
+      "title": "Quick check"
+     },
+     {
+      "t": 673.0,
+      "title": "Course recap"
+     }
+    ],
+    "hi": [
+     {
+      "t": 9.7,
+      "title": "In this module"
+     },
+     {
+      "t": 41.6,
+      "title": "Suspend vs Block vs Delete"
+     },
+     {
+      "t": 94.5,
+      "title": "Admin suspends a vendor"
+     },
+     {
+      "t": 168.2,
+      "title": "What a suspended vendor sees"
+     },
+     {
+      "t": 189.4,
+      "title": "Suspended vendor > Settings"
+     },
+     {
+      "t": 207.8,
+      "title": "Suspend is reversible. Delete is not."
+     },
+     {
+      "t": 260.0,
+      "title": "Vendor Console > Settings"
+     },
+     {
+      "t": 285.4,
+      "title": "Staff permissions"
+     },
+     {
+      "t": 328.2,
+      "title": "Creating staff logins"
+     },
+     {
+      "t": 488.8,
+      "title": "What a staff login sees"
+     },
+     {
+      "t": 523.8,
+      "title": "Staff won't see the dashboard or sales"
+     },
+     {
+      "t": 590.2,
+      "title": "Staff logins: good practice"
+     },
+     {
+      "t": 624.4,
+      "title": "Vendor profile"
+     },
+     {
+      "t": 656.2,
+      "title": "Still pending (as of 18 Nov 2026)"
+     },
+     {
+      "t": 699.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 724.0,
+      "title": "Course recap"
+     }
+    ]
+   }
+  }
+ ]
+}

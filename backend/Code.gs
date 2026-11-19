@@ -12,16 +12,23 @@
  * Learners who fail can retake the quiz themselves (a new question set each time); a pass ends it.
  * Earlier attempts are kept in the "ResetLog" tab. Admins can also use "Allow retake".
  * Admin: the mobiles in ADMIN_MOBILES (Settings) can open the admin dashboard with the ADMIN_PIN (Settings).
+ * Several courses share this sheet: the "course" column tells them apart (empty = vendor-onboarding).
  */
+
+const COURSES = {
+  "vendor-onboarding": { modules: 8, name: "Oribrix Vendor Onboarding Academy" },
+  "vendor-portal": { modules: 6, name: "Oribrix Vendor Portal Academy" }
+};
+const DEFAULT_COURSE = "vendor-onboarding";
 
 const TABS = {
   Learners: ["mobile", "name", "registered_at", "last_seen", "lang"],
-  Progress: ["mobile", "module", "lang", "watched_percent", "completed_at"],
-  Results: ["submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "lang", "answers_json", "same_name_other_mobile"],
-  Quiz: ["id", "module", "active", "question_en", "question_hi", "A_en", "B_en", "C_en", "D_en", "A_hi", "B_hi", "C_hi", "D_hi", "correct", "explanation_en", "explanation_hi"],
+  Progress: ["mobile", "module", "lang", "watched_percent", "completed_at", "course"],
+  Results: ["submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "lang", "answers_json", "same_name_other_mobile", "course"],
+  Quiz: ["id", "module", "active", "question_en", "question_hi", "A_en", "B_en", "C_en", "D_en", "A_hi", "B_hi", "C_hi", "D_hi", "correct", "explanation_en", "explanation_hi", "course"],
   Settings: ["key", "value", "notes"],
-  Practice: ["at", "mobile", "name", "score", "total", "percent"],
-  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "reason"]
+  Practice: ["at", "mobile", "name", "score", "total", "percent", "course"],
+  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "reason", "course"]
 };
 const DEFAULT_SETTINGS = [
   ["TOTAL_MODULES", 8, "Number of video modules a learner must complete before the quiz"],
@@ -52,6 +59,7 @@ function handle(p) {
   const lock = LockService.getScriptLock();
   try {
     lock.waitLock(20000);
+    ensureColumns();
     switch (p.action) {
       case "register": return register(p);
       case "status": return status(p);
@@ -73,6 +81,22 @@ function handle(p) {
 }
 
 /* ------------------------------------------------------------------ */
+function courseOf(p) { const c = String((p && p.course) || DEFAULT_COURSE); if (!COURSES[c]) fail("bad_course"); return c; }
+function rc(r) { return String(r.course || "").trim() || DEFAULT_COURSE; }
+function totalModules(c) { return c === DEFAULT_COURSE ? Number(setting("TOTAL_MODULES", 8)) : COURSES[c].modules; }
+function courseName(c) { return c === DEFAULT_COURSE ? setting("COURSE_NAME", COURSES[c].name) : COURSES[c].name; }
+/* Adds header cells that newer versions of this file need (e.g. "course") to sheets made by older versions. */
+function ensureColumns(force) {
+  const props = PropertiesService.getScriptProperties();
+  if (!force && props.getProperty("schema") === "2") return;
+  const ss = SpreadsheetApp.getActive();
+  Object.keys(TABS).forEach(name => {
+    const s = ss.getSheetByName(name); if (!s || s.getLastRow() === 0) return;
+    const have = s.getRange(1, 1, 1, Math.max(1, s.getLastColumn())).getValues()[0].map(String);
+    TABS[name].forEach(h => { if (have.indexOf(h) < 0) { have.push(h); s.getRange(1, have.length).setValue(h).setFontWeight("bold").setBackground("#00A4FF").setFontColor("#ffffff"); } });
+  });
+  props.setProperty("schema", "2");
+}
 function sh(name) { return SpreadsheetApp.getActive().getSheetByName(name); }
 function rows(name) {
   const s = sh(name), v = s.getDataRange().getValues(), head = v.shift();
@@ -84,8 +108,8 @@ function fail(code) { const e = new Error(code); e.code = code; throw e; }
 function cleanMobile(m) { m = String(m || "").replace(/\D/g, ""); if (!/^[6-9]\d{9}$/.test(m)) fail("bad_mobile"); return m; }
 function now() { return new Date(); }
 function learner(mobile) { return rows("Learners").find(r => String(r.mobile) === mobile); }
-function completed(mobile) { return Array.from(new Set(rows("Progress").filter(r => String(r.mobile) === mobile).map(r => Number(r.module)))).sort((a, b) => a - b); }
-function resultOf(mobile) { return rows("Results").find(r => String(r.mobile) === mobile); }
+function completed(mobile, course) { course = course || DEFAULT_COURSE; return Array.from(new Set(rows("Progress").filter(r => String(r.mobile) === mobile && rc(r) === course).map(r => Number(r.module)))).sort((a, b) => a - b); }
+function resultOf(mobile, course) { course = course || DEFAULT_COURSE; return rows("Results").find(r => String(r.mobile) === mobile && rc(r) === course); }
 function ymd(d) { try { return d ? Utilities.formatDate(new Date(d), "Asia/Kolkata", "yyyy-MM-dd") : ""; } catch (e) { return ""; } }
 function startOf(mobile) { const l = learner(String(mobile).replace(/^'/, "")); return l ? ymd(l.registered_at) : ""; }
 function publicResult(r) {
@@ -110,36 +134,46 @@ function register(p) {
 }
 
 function status(p) {
-  const mobile = cleanMobile(p.mobile), l = learner(mobile);
-  return { registered: !!l, name: l ? l.name : null, completed: l ? completed(mobile) : [], result: publicResult(resultOf(mobile)), admin: isAdminMobile(mobile) };
+  const mobile = cleanMobile(p.mobile), l = learner(mobile), course = courseOf(p);
+  const all = {};
+  if (l) {
+    const prog = rows("Progress").filter(r => String(r.mobile) === mobile), res = rows("Results").filter(r => String(r.mobile) === mobile);
+    Object.keys(COURSES).forEach(c => {
+      all[c] = { completed: Array.from(new Set(prog.filter(r => rc(r) === c).map(r => Number(r.module)))).sort((a, b) => a - b),
+                 result: publicResult(res.find(r => rc(r) === c)) };
+    });
+  }
+  return { registered: !!l, name: l ? l.name : null, completed: l ? all[course].completed : [], result: l ? all[course].result : null,
+           courses: all, admin: isAdminMobile(mobile) };
 }
 
 function progress(p) {
   const mobile = cleanMobile(p.mobile);
   if (!learner(mobile)) fail("not_registered");
-  const mod = Number(p.module); const total = Number(setting("TOTAL_MODULES", 8));
+  const course = courseOf(p), mod = Number(p.module), total = totalModules(course);
   if (!(mod >= 1 && mod <= total)) fail("bad_module");
-  if (completed(mobile).indexOf(mod) < 0)
-    append("Progress", { mobile: "'" + mobile, module: mod, lang: p.lang || "", watched_percent: Number(p.watched) || "", completed_at: now() });
-  return { ok: true, completed: completed(mobile) };
+  if (completed(mobile, course).indexOf(mod) < 0)
+    append("Progress", { mobile: "'" + mobile, module: mod, lang: p.lang || "", watched_percent: Number(p.watched) || "", completed_at: now(), course: course });
+  return { ok: true, completed: completed(mobile, course) };
 }
 
 function isPassed(r) { return !!r && (r.passed === true || String(r.passed).toUpperCase() === "TRUE"); }
-function archivedCount(mobile) { return rows("ResetLog").filter(r => String(r.mobile) === mobile).length; }
+function archivedCount(mobile, course) { return rows("ResetLog").filter(r => String(r.mobile) === mobile && rc(r) === course).length; }
 /* 0 for the first attempt, 1 for the first retake, ... (same value in quiz() and submit()). */
-function attemptNo(mobile) { return archivedCount(mobile) + (resultOf(mobile) ? 1 : 0); }
+function attemptNo(mobile, course) { return archivedCount(mobile, course) + (resultOf(mobile, course) ? 1 : 0); }
 function archiveResult(r, reason) {
   append("ResetLog", { reset_at: now(), submitted_at: r.submitted_at, mobile: "'" + String(r.mobile), name: r.name, score: r.score, total: r.total,
-                       percent: r.percent, passed: r.passed, cert_id: r.cert_id, reason: reason });
+                       percent: r.percent, passed: r.passed, cert_id: r.cert_id, reason: reason, course: rc(r) });
   sh("Results").deleteRow(r._row);
 }
 
 /* Deterministic shuffle so a learner always gets the same question set. */
 function seeded(seed) { let h = 0; for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0; return () => { h = (h * 1664525 + 1013904223) >>> 0; return h / 4294967296; }; }
-function pickQuestions(mobile, attempt) {
+function pickQuestions(mobile, attempt, course) {
+  course = course || DEFAULT_COURSE;
   const per = Number(setting("QUESTIONS_PER_MODULE", 3));
-  const all = rows("Quiz").filter(q => q.active === true || String(q.active).toUpperCase() === "TRUE");
-  const rnd = seeded(mobile + "|oribrix" + (attempt ? "|" + attempt : ""));
+  const all = rows("Quiz").filter(q => (q.active === true || String(q.active).toUpperCase() === "TRUE") && rc(q) === course);
+  const rnd = seeded(mobile + (course === DEFAULT_COURSE ? "" : "|" + course) + "|oribrix" + (attempt ? "|" + attempt : ""));
   const byMod = {};
   all.forEach(q => (byMod[q.module] = byMod[q.module] || []).push(q));
   let set = [], rest = [];
@@ -152,12 +186,11 @@ function pickQuestions(mobile, attempt) {
   if (total > set.length) set = set.concat(rest.sort(() => rnd() - 0.5).slice(0, total - set.length));
   return set.sort(() => rnd() - 0.5);
 }
-function checkEligible(mobile, p) {
+function checkEligible(mobile, p, course) {
   if (!learner(mobile)) fail("not_registered");
-  if (isPassed(resultOf(mobile))) fail("already_submitted");     // failed learners may retake
+  if (isPassed(resultOf(mobile, course))) fail("already_submitted");     // failed learners may retake
   if (p && isAdmin(p)) return;                       // admins may skip the videos
-  const total = Number(setting("TOTAL_MODULES", 8));
-  if (completed(mobile).length < total) fail("modules_incomplete");
+  if (completed(mobile, course).length < totalModules(course)) fail("modules_incomplete");
 }
 /* Option order is shuffled per learner, per attempt and per question (same order in quiz() and submit()). */
 function optionOrder(mobile, attempt, q) {
@@ -168,9 +201,9 @@ function optionOrder(mobile, attempt, q) {
   return idx;                                   // idx[shownPosition] = original option index
 }
 function quiz(p) {
-  const mobile = cleanMobile(p.mobile); checkEligible(mobile, p);
-  const lang = p.lang === "hi" ? "hi" : "en", attempt = attemptNo(mobile);
-  const qs = pickQuestions(mobile, attempt).map(q => {
+  const mobile = cleanMobile(p.mobile), course = courseOf(p); checkEligible(mobile, p, course);
+  const lang = p.lang === "hi" ? "hi" : "en", attempt = attemptNo(mobile, course);
+  const qs = pickQuestions(mobile, attempt, course).map(q => {
     const opts = ["A", "B", "C", "D"].map(k => (lang === "hi" && q[k + "_hi"]) ? q[k + "_hi"] : q[k + "_en"]);
     return { id: String(q.id), module: Number(q.module), q: (lang === "hi" && q.question_hi) ? q.question_hi : q.question_en,
              options: optionOrder(mobile, attempt, q).map(i => opts[i]) };
@@ -179,11 +212,11 @@ function quiz(p) {
 }
 
 function submit(p) {
-  const mobile = cleanMobile(p.mobile); checkEligible(mobile, p);
+  const mobile = cleanMobile(p.mobile), course = courseOf(p); checkEligible(mobile, p, course);
   const lang = p.lang === "hi" ? "hi" : "en";
   const answers = p.answers || {};
-  const attempt = attemptNo(mobile), qs = pickQuestions(mobile, attempt);
-  const prev = resultOf(mobile); if (prev) archiveResult(prev, "retake");
+  const attempt = attemptNo(mobile, course), qs = pickQuestions(mobile, attempt, course);
+  const prev = resultOf(mobile, course); if (prev) archiveResult(prev, "retake");
   let score = 0; const stored = {};
   const review = qs.map(q => {
     const order = optionOrder(mobile, attempt, q);
@@ -200,7 +233,7 @@ function submit(p) {
   const certId = passed ? newCertId() : "";
   const dup = rows("Results").some(r => String(r.name).toLowerCase() === String(l.name).toLowerCase() && String(r.mobile) !== mobile);
   append("Results", { submitted_at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: percent, passed: passed,
-                      cert_id: certId, lang: lang, answers_json: JSON.stringify(stored), same_name_other_mobile: dup ? "CHECK" : "" });
+                      cert_id: certId, lang: lang, answers_json: JSON.stringify(stored), same_name_other_mobile: dup ? "CHECK" : "", course: course });
   return { name: l.name, startDate: ymd(l.registered_at), attempt: attempt + 1, score: score, total: total, percent: percent, passed: passed, certId: certId,
            date: Utilities.formatDate(now(), "Asia/Kolkata", "yyyy-MM-dd"), review: review };
 }
@@ -219,7 +252,7 @@ function verify(p) {
   const r = rows("Results").find(x => String(x.cert_id).toUpperCase() === id && id);
   if (!r) return { valid: false };
   const pr = publicResult(r);
-  return { valid: true, name: pr.name, startDate: pr.startDate, date: pr.date, percent: pr.percent, course: setting("COURSE_NAME", "Oribrix Vendor Onboarding Academy") };
+  return { valid: true, name: pr.name, startDate: pr.startDate, date: pr.date, percent: pr.percent, course: courseName(rc(r)), courseId: rc(r) };
 }
 
 /* ------------------------------------------------------------------ */
@@ -235,6 +268,7 @@ function setup() {
       s.setFrozenRows(1);
     }
   });
+  ensureColumns(true);
   const st = ss.getSheetByName("Settings");
   const have = st.getDataRange().getValues().map(r => r[0]);
   DEFAULT_SETTINGS.forEach(r => { if (have.indexOf(r[0]) < 0) st.appendRow(r); });
@@ -242,7 +276,7 @@ function setup() {
   if (pinRow >= 0 && !String(st.getDataRange().getValues()[pinRow][1]).trim())
     st.getRange(pinRow + 1, 2).setValue("'" + String(100000 + Math.floor(Math.random() * 900000)));
   const qz = ss.getSheetByName("Quiz");
-  if (qz.getLastRow() === 1) SEED_QUESTIONS.forEach(q => qz.appendRow(q));
+  if (qz.getLastRow() === 1) allQuestions().forEach(q => qz.appendRow(q));
   ss.getSheetByName("Learners").getRange("A:A").setNumberFormat("@");
   ss.getSheetByName("Progress").getRange("A:A").setNumberFormat("@");
   ss.getSheetByName("Results").getRange("B:B").setNumberFormat("@");
@@ -275,18 +309,19 @@ function practice(p) {
   const mobile = cleanMobile(p.mobile), l = learner(mobile);
   if (!l) fail("not_registered");
   const total = Math.max(1, Math.min(100, Number(p.total) || 0)), score = Math.max(0, Math.min(total, Number(p.score) || 0));
-  append("Practice", { at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: Math.round(100 * score / total) });
+  append("Practice", { at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: Math.round(100 * score / total), course: courseOf(p) });
   return { ok: true };
 }
 
 function adminData(p) {
   needAdmin(p);
+  const course = courseOf(p), mine = r => rc(r) === course;
   const tz = "Asia/Kolkata", f = d => { try { return d ? Utilities.formatDate(new Date(d), tz, "yyyy-MM-dd HH:mm") : ""; } catch (e) { return ""; } };
-  const total = Number(setting("TOTAL_MODULES", 8));
-  const prog = {}; rows("Progress").forEach(r => { const m = String(r.mobile); (prog[m] = prog[m] || {})[Number(r.module)] = f(r.completed_at); });
-  const res = {}; rows("Results").forEach(r => { res[String(r.mobile)] = r; });
-  const att = {}; rows("ResetLog").forEach(r => { const m = String(r.mobile); att[m] = (att[m] || 0) + 1; });
-  const pr = {}; rows("Practice").forEach(r => {
+  const total = totalModules(course);
+  const prog = {}; rows("Progress").filter(mine).forEach(r => { const m = String(r.mobile); (prog[m] = prog[m] || {})[Number(r.module)] = f(r.completed_at); });
+  const res = {}; rows("Results").filter(mine).forEach(r => { res[String(r.mobile)] = r; });
+  const att = {}; rows("ResetLog").filter(mine).forEach(r => { const m = String(r.mobile); att[m] = (att[m] || 0) + 1; });
+  const pr = {}; rows("Practice").filter(mine).forEach(r => {
     const m = String(r.mobile), x = pr[m] = pr[m] || { attempts: 0, best: 0, last: null, lastAt: "" };
     x.attempts++; x.best = Math.max(x.best, Number(r.percent) || 0); x.last = Number(r.percent) || 0; x.lastAt = f(r.at);
   });
@@ -300,18 +335,19 @@ function adminData(p) {
   });
   // question statistics from submitted answers
   const key = {}, qs = {};
-  rows("Quiz").forEach(q => { key[String(q.id)] = "ABCD".indexOf(String(q.correct).trim().toUpperCase()); qs[String(q.id)] = { id: String(q.id), module: Number(q.module), q: q.question_en, asked: 0, wrong: 0 }; });
-  rows("Results").forEach(r => {
+  rows("Quiz").filter(mine).forEach(q => { key[String(q.id)] = "ABCD".indexOf(String(q.correct).trim().toUpperCase()); qs[String(q.id)] = { id: String(q.id), module: Number(q.module), q: q.question_en, asked: 0, wrong: 0 }; });
+  rows("Results").filter(mine).forEach(r => {
     let a = {}; try { a = JSON.parse(r.answers_json || "{}"); } catch (e) {}
     Object.keys(a).forEach(id => { if (qs[id]) { qs[id].asked++; if (Number(a[id]) !== key[id]) qs[id].wrong++; } });
   });
-  return { learners: learners, totalModules: total, passPercent: Number(setting("PASS_PERCENT", 80)),
+  return { course: course, courses: Object.keys(COURSES).map(c => ({ id: c, name: courseName(c), modules: totalModules(c) })),
+           learners: learners, totalModules: total, passPercent: Number(setting("PASS_PERCENT", 80)),
            questions: Object.keys(qs).map(k => qs[k]).filter(q => q.asked > 0).sort((a, b) => b.wrong / b.asked - a.wrong / a.asked) };
 }
 
 function adminReset(p) {
   needAdmin(p);
-  const target = cleanMobile(p.target), r = resultOf(target);
+  const target = cleanMobile(p.target), r = resultOf(target, courseOf(p));
   if (!r) fail("no_result");
   archiveResult(r, "admin");
   return { ok: true };
@@ -323,14 +359,19 @@ function updateQuiz() {
   setup();
   const qz = sh("Quiz");
   if (qz.getLastRow() > 1) qz.getRange(2, 1, qz.getLastRow() - 1, qz.getLastColumn()).clearContent();
-  qz.getRange(2, 1, SEED_QUESTIONS.length, TABS.Quiz.length).setValues(SEED_QUESTIONS);
+  const bank = allQuestions();
+  qz.getRange(2, 1, bank.length, TABS.Quiz.length).setValues(bank);
   const st = sh("Settings"), vals = st.getDataRange().getValues();
   DEFAULT_SETTINGS.filter(d => ["QUESTIONS_PER_MODULE", "TOTAL_QUESTIONS"].indexOf(d[0]) >= 0).forEach(d => {
     const i = vals.findIndex(r => r[0] === d[0]);
     if (i >= 0) st.getRange(i + 1, 2).setValue(d[1]); else st.appendRow(d);
   });
   SpreadsheetApp.flush();
-  return "Quiz updated: " + SEED_QUESTIONS.length + " questions in the bank. Admin PIN: " + setting("ADMIN_PIN", "");
+  return "Quiz updated: " + bank.length + " questions in the bank. Admin PIN: " + setting("ADMIN_PIN", "");
+}
+/* Every course's questions, each row ending with its course id. */
+function allQuestions() {
+  return SEED_QUESTIONS.map(r => r.concat([DEFAULT_COURSE])).concat(VP_QUESTIONS.map(r => r.concat(["vendor-portal"])));
 }
 
 /* id, module, active, question_en, question_hi, A_en, B_en, C_en, D_en, A_hi, B_hi, C_hi, D_hi, correct, explanation_en, explanation_hi */
@@ -375,4 +416,48 @@ const SEED_QUESTIONS = [
  ["Q803", 8, true, "A vendor's accountant needs settlement data for their books. What helps?", "Vendor ke accountant ko books ke liye settlement data chahiye. Kya kaam aayega?", "Screenshots of the dashboard", "A dispute for every settlement", "Asking Shiprocket for a report", "Export Tally XML or CSV from Earnings & Settlements", "Dashboard ke screenshots", "Har settlement ke liye dispute", "Shiprocket se report maangna", "Earnings & Settlements se Tally XML ya CSV export", "D", "The settlements table has Tally XML and CSV export buttons for the vendor's accountant.", "Settlements table mein vendor ke accountant ke liye Tally XML aur CSV export buttons hain."],
  ["Q804", 8, true, "On the 'ready to sell' checklist, which item is optional?", "“Ready to sell” checklist mein kaunsa item optional hai?", "Final vendor approval done", "Warehouse verified in Shiprocket", "Local drivers added as a backup", "SKUs added with real stock", "Final vendor approval hona", "Shiprocket mein warehouse verify hona", "Backup ke liye local drivers add karna", "Real stock ke saath SKUs add hona", "C", "Local drivers are a recommended backup but optional. The rest are required before a vendor can sell.", "Local drivers recommended backup hain par optional. Baaki sab sell karne se pehle zaroori hain."],
  ["Q805", 8, true, "Today, when two vendors near a customer sell the same product, what does the customer app show?", "Aaj, agar customer ke paas do vendors same product bechte hain, toh customer app kya dikhata hai?", "Both vendors' prices side by side", "The nearest vendor's product, with one price per card", "The lowest price from any vendor in UP", "The catalog price only", "Dono vendors ke prices saath mein", "Sabse paas wale vendor ka product, ek card pe ek price", "UP ke kisi bhi vendor ka sabse kam price", "Sirf catalog price", "B", "Today the app shows the nearest vendor's product and price. Showing several vendors' prices is still under discussion.", "Aaj app sabse paas wale vendor ka product aur price dikhata hai. Kai vendors ke prices dikhana abhi discussion mein hai."]
+];
+
+/* Vendor Portal course: id, module, active, question_en, question_hi, A_en..D_en, A_hi..D_hi, correct, explanation_en, explanation_hi */
+const VP_QUESTIONS = [
+ ["V101", 1, true, "A vendor's dashboard shows GMV ₹1,20,000 from 30 orders. What is the AOV?", "Vendor ke dashboard pe 30 orders se GMV ₹1,20,000 hai. AOV kitna hai?", "₹3,600", "₹4,000", "₹40,000", "₹1,20,000", "₹3,600", "₹4,000", "₹40,000", "₹1,20,000", "B", "AOV = GMV ÷ number of orders = 1,20,000 ÷ 30 = ₹4,000.", "AOV = GMV ÷ orders = 1,20,000 ÷ 30 = ₹4,000."],
+ ["V102", 1, true, "Which of these does a vendor's main login NOT do?", "Inmein se kaunsa kaam vendor ka main login NAHI karta?", "Create staff logins", "Upload e-way bills", "Approve its own new warehouse", "Accept and dispatch orders", "Staff logins banana", "E-way bills upload karna", "Apna naya warehouse khud approve karna", "Orders accept aur dispatch karna", "C", "Warehouses are approved by the admin (after verifying the pickup address in Shiprocket). Vendor proposes, admin approves.", "Warehouse admin approve karta hai (Shiprocket mein pickup address verify karke). Vendor propose karta hai, admin approve karta hai."],
+ ["V103", 1, true, "What does the SLA rate on the dashboard measure?", "Dashboard pe SLA rate kya measure karta hai?", "Share of orders handled within the promised time", "Total value sold", "Average stock per SKU", "Number of returns", "Kitne percent orders promised time ke andar handle hue", "Total bikri ki value", "Har SKU ka average stock", "Returns ki ginti", "A", "SLA rate is the percentage of orders handled within the promised time. Slow accepts pull it down.", "SLA rate woh percent hai jitne orders promised time mein handle hue. Late accept se yeh girta hai."],
+ ["V104", 1, true, "A vendor stocks the same cement bag in two warehouses. How many SKUs is that for this vendor?", "Vendor same cement bag do warehouses mein rakhta hai. Is vendor ke liye yeh kitne SKUs hain?", "1", "2", "0 until approved", "Depends on the price", "1", "2", "Approval tak 0", "Price pe depend karta hai", "B", "One SKU = one product in one warehouse with its stock and price. Two warehouses means two SKUs.", "Ek SKU = ek product, ek warehouse mein, stock aur price ke saath. Do warehouses = do SKUs."],
+ ["V105", 1, true, "A vendor says: “I changed my price yesterday but customers still see the old one.” What do you check first?", "Vendor bolta hai: “Maine kal price badla par customers ko purana dikh raha hai.” Pehle kya check karoge?", "Whether the admin has approved the request", "Whether the app needs reinstalling", "Whether COD is on", "Whether the warehouse is paused", "Kya admin ne request approve ki hai", "Kya app reinstall karna padega", "Kya COD on hai", "Kya warehouse paused hai", "A", "Vendor proposes, admin approves. A price change stays pending (selling at the admin's price) until approved.", "Vendor propose karta hai, admin approve karta hai. Approval tak price change pending rehta hai aur admin ke price pe bikta hai."],
+ ["V106", 1, true, "Which document is legally needed to move goods worth ₹50,000 or more?", "₹50,000 ya usse zyada ka maal move karne ke liye kaunsa document zaroori hai?", "AWB", "E-way bill", "Settlement statement", "Tally XML", "AWB", "E-way bill", "Settlement statement", "Tally XML", "B", "An e-way bill is the government transport document for goods worth ₹50,000 or more. The AWB is only the courier tracking number.", "E-way bill ₹50,000 ya zyada ke maal ka government transport document hai. AWB sirf courier tracking number hai."],
+ ["V107", 1, true, "Which pair is correct?", "Kaunsi jodi sahi hai?", "AWB = payout cycle; Settlement = tracking number", "AWB = courier tracking number; Settlement = payout cycle", "AWB = e-way bill number; Settlement = GST return", "AWB = SKU code; Settlement = stock count", "AWB = payout cycle; Settlement = tracking number", "AWB = courier tracking number; Settlement = payout cycle", "AWB = e-way bill number; Settlement = GST return", "AWB = SKU code; Settlement = stock count", "B", "AWB (air waybill) is the courier's tracking number. A settlement is one payout cycle to the vendor.", "AWB (air waybill) courier ka tracking number hai. Settlement vendor ka ek payout cycle hai."],
+ ["V201", 2, true, "While adding an SKU, a vendor can't find the 'Paint' category. Why?", "SKU add karte waqt vendor ko 'Paint' category nahi mil rahi. Kyun?", "Paint is not one of the vendor's approved categories", "The warehouse is paused", "COD is switched off", "The price request is pending", "Paint vendor ki approved categories mein nahi hai", "Warehouse paused hai", "COD band hai", "Price request pending hai", "A", "The category filter shows only categories approved for that vendor. A missing category must be requested.", "Category filter mein sirf vendor ki approved categories dikhti hain. Missing category request karni padti hai."],
+ ["V202", 2, true, "Admin price is ₹390. The vendor requested ₹400 and the admin rejected it. What happens?", "Admin price ₹390 hai. Vendor ne ₹400 maanga aur admin ne reject kiya. Kya hoga?", "The SKU is hidden", "It sells at ₹400", "It keeps selling at ₹390 and shows Rejected", "The SKU is deleted", "SKU chhup jaata hai", "₹400 pe bikta hai", "₹390 pe bikta rehta hai aur Rejected dikhta hai", "SKU delete ho jaata hai", "C", "A rejected request falls back to the admin's catalog price. The SKU keeps selling.", "Rejected request admin ke catalog price pe wapas aati hai. SKU bikta rehta hai."],
+ ["V203", 2, true, "What is required with every price or policy change request?", "Har price ya policy change request ke saath kya zaroori hai?", "A reason", "A GST invoice", "The customer's approval", "A new warehouse", "Reason", "GST invoice", "Customer ka approval", "Naya warehouse", "A", "Every change request needs a reason. The admin reads it when deciding.", "Har change request ke saath reason chahiye. Admin decide karte waqt use padhta hai."],
+ ["V204", 2, true, "A cement SKU is priced 'exclusive of GST' at ₹390. What does that mean?", "Cement SKU ka price ₹390 'exclusive of GST' hai. Iska matlab?", "₹390 already includes GST", "GST is added on top of ₹390", "No GST applies", "The vendor pays the GST", "₹390 mein GST shaamil hai", "GST ₹390 ke upar add hota hai", "GST lagta hi nahi", "GST vendor bharta hai", "B", "Exclusive of GST means GST is added on top of the selling price.", "Exclusive of GST ka matlab GST selling price ke upar add hota hai."],
+ ["V205", 2, true, "A vendor wants a 2-year warranty instead of the catalog's 1 year. What should they do?", "Vendor catalog ke 1 saal ki jagah 2 saal warranty chahta hai. Kya kare?", "Edit the product name", "Request a warranty change with a reason; admin approves", "Create a new product", "Raise a return", "Product ka naam edit kare", "Reason ke saath warranty change request kare; admin approve karega", "Naya product banaye", "Return raise kare", "B", "Warranty and return policy come from the master listing. Changes need a reason and admin approval (Warranty / Return tab).", "Warranty aur return policy master listing se aati hai. Change ke liye reason aur admin approval chahiye (Warranty / Return tab)."],
+ ["V206", 2, true, "Minimum order quantity for an SKU is 10. A customer wants 6. What happens?", "SKU ki minimum order quantity 10 hai. Customer 6 chahta hai. Kya hoga?", "The order goes through", "She can't order fewer than 10 of that SKU", "The admin approves it", "It ships by local driver", "Order ho jaayega", "Woh us SKU ke 10 se kam order nahi kar sakti", "Admin approve karega", "Local driver se jaayega", "B", "Minimum order quantity is the smallest quantity a customer can buy for that SKU.", "Minimum order quantity us SKU ki sabse kam quantity hai jo customer khareed sakta hai."],
+ ["V207", 2, true, "Where does the admin accept or reject a vendor's price request?", "Admin vendor ki price request kahan accept ya reject karta hai?", "Orders page", "Vendor Change Requests (from Warehouses & Vendors)", "Shiprocket settings", "Earnings & Settlements", "Orders page", "Vendor Change Requests (Warehouses & Vendors se)", "Shiprocket settings", "Earnings & Settlements", "B", "In the admin panel, Warehouses & Vendors has a change-requests action that opens the Price and Warranty / Return tabs.", "Admin panel mein Warehouses & Vendors ke change-requests action se Price aur Warranty / Return tabs khulte hain."],
+ ["V301", 3, true, "Under the agreed process, what must the admin do BEFORE approving a new warehouse?", "Agreed process ke hisaab se, naya warehouse approve karne se PEHLE admin ko kya karna hai?", "Ask the vendor to add SKUs", "Verify the pickup address in Shiprocket", "Upload an e-way bill", "Create a staff login", "Vendor se SKUs add karwana", "Shiprocket mein pickup address verify karna", "E-way bill upload karna", "Staff login banana", "B", "Verify first, approve second. Otherwise the vendor later sees a dispatch error.", "Pehle verify, phir approve. Warna vendor ko baad mein dispatch error dikhta hai."],
+ ["V302", 3, true, "Where in Shiprocket are pickup addresses verified?", "Shiprocket mein pickup address kahan verify hote hain?", "Orders > New", "Settings > Company Setup > Pick Up Addresses", "Billing > Wallet", "Channels > Add Channel", "Orders > New", "Settings > Company Setup > Pick Up Addresses", "Billing > Wallet", "Channels > Add Channel", "B", "Settings > Company Setup > Pick Up Addresses, then verify with the OTP sent to the registered phone.", "Settings > Company Setup > Pick Up Addresses, phir registered phone pe aaye OTP se verify."],
+ ["V303", 3, true, "A vendor edits the address of an approved warehouse. What is its status after saving?", "Vendor ek approved warehouse ka address edit karta hai. Save ke baad status kya hoga?", "Still approved", "Pending, for the admin to check again", "Deleted", "Paused", "Approved hi rahega", "Pending, admin dobara check karega", "Delete", "Paused", "B", "A new or edited warehouse goes to pending until the admin checks and approves it.", "Naya ya edit kiya hua warehouse admin approval tak pending rehta hai."],
+ ["V304", 3, true, "A vendor is doing a stock count and doesn't want orders from one warehouse for two days. Best option?", "Vendor stock count kar raha hai aur do din ek warehouse se orders nahi chahta. Best option?", "Delete the warehouse", "Pause Intake on that warehouse", "Set every SKU price to zero", "Ask the admin to block the vendor", "Warehouse delete karna", "Us warehouse pe Pause Intake", "Har SKU ka price zero karna", "Admin se vendor block karwana", "B", "Pause Intake temporarily hides that warehouse's items from customers. It can be resumed any time.", "Pause Intake us warehouse ke items ko temporarily customers se chhupata hai. Kabhi bhi wapas on ho sakta hai."],
+ ["V305", 3, true, "When the admin verifies a pickup address in Shiprocket, where does the OTP go?", "Admin Shiprocket mein pickup address verify kare, toh OTP kahan jaata hai?", "The customer's phone", "The phone number registered for that pickup address", "The admin's email", "No OTP is needed", "Customer ke phone pe", "Us pickup address ke registered phone number pe", "Admin ke email pe", "OTP nahi chahiye", "B", "The OTP goes to the phone number registered for that pickup address, so it must be a real, working number.", "OTP us pickup address ke registered phone number pe jaata hai, isliye woh asli aur chaalu number hona chahiye."],
+ ["V306", 3, true, "Which detail on the add-warehouse form decides when pickups can be scheduled?", "Add-warehouse form ki kaunsi detail decide karti hai ki pickup kab schedule ho sakta hai?", "Capacity", "Opening and closing time", "Vehicle types", "Warehouse photos", "Capacity", "Opening aur closing time", "Vehicle types", "Warehouse photos", "B", "Pickups are only scheduled inside the warehouse's opening and closing hours.", "Pickups sirf warehouse ke opening aur closing hours ke andar schedule hote hain."],
+ ["V307", 3, true, "A product is in stock and active, but a nearby customer can't see it. The warehouse card shows 'Pending'. Why?", "Product stock mein hai aur active hai, par paas ke customer ko nahi dikh raha. Warehouse card pe 'Pending' hai. Kyun?", "Pending warehouses can't sell until the admin approves them", "The price is too high", "COD is off", "The customer must request it", "Pending warehouse admin approval tak nahi bech sakta", "Price zyada hai", "COD band hai", "Customer ko request karna hoga", "A", "Only approved warehouses can sell. A pending one waits for the admin (who first verifies the pickup in Shiprocket).", "Sirf approved warehouse bech sakta hai. Pending wala admin ka wait karta hai (jo pehle Shiprocket mein pickup verify karta hai)."],
+ ["V401", 4, true, "A vendor clicked Dismiss on the new-order alert. What happened to the order?", "Vendor ne new-order alert pe Dismiss dabaya. Order ka kya hua?", "It was cancelled", "It's still waiting in Orders under Awaiting action", "It moved to another vendor at once", "It was auto-accepted", "Cancel ho gaya", "Abhi bhi Orders mein Awaiting action mein hai", "Turant doosre vendor ke paas gaya", "Apne aap accept ho gaya", "B", "Dismiss only silences the alert. To refuse, open the order and click Cancel order.", "Dismiss sirf alert chup karta hai. Mana karne ke liye order kholke Cancel order dabaiye."],
+ ["V402", 4, true, "What is the correct order of stages after accepting?", "Accept ke baad stages ka sahi order kya hai?", "Pack, pick, hand over", "Pick, pack, hand over", "Hand over, pick, pack", "Pick, hand over, pack", "Pack, pick, hand over", "Pick, pack, hand over", "Hand over, pick, pack", "Pick, hand over, pack", "B", "Verify & pick, then verify & pack, then hand over to Shiprocket or a local driver.", "Verify & pick, phir verify & pack, phir Shiprocket ya local driver ko hand over."],
+ ["V403", 4, true, "A vendor dispatches with their own local driver. What does the customer NOT get?", "Vendor apne local driver se dispatch karta hai. Customer ko kya NAHI milta?", "The goods", "An SMS update (SMS comes from Shiprocket)", "An order ID", "An invoice", "Maal", "SMS update (SMS Shiprocket se aata hai)", "Order ID", "Invoice", "B", "Customer SMS updates are sent by Shiprocket, so a local-driver dispatch sends no SMS. Inform the customer yourself.", "Customer SMS Shiprocket bhejta hai, isliye local-driver dispatch pe SMS nahi jaata. Customer ko khud batayein."],
+ ["V404", 4, true, "A vendor sees: “Shiprocket did not assign an AWB with any available courier.” Most likely cause from the session?", "Vendor ko dikhta hai: “Shiprocket did not assign an AWB with any available courier.” Session ke hisaab se sabse likely wajah?", "The customer cancelled", "The warehouse pickup address was not verified in Shiprocket", "The price was rejected", "The vendor is suspended", "Customer ne cancel kiya", "Warehouse ka pickup address Shiprocket mein verified nahi tha", "Price reject hua", "Vendor suspended hai", "B", "In the demo the pickup address was unverified. That's why addresses are now verified before approving warehouses.", "Demo mein pickup address unverified tha. Isliye ab warehouse approve karne se pehle address verify hota hai."],
+ ["V405", 4, true, "After Shiprocket assigns a courier, how does the vendor confirm the pickup slot?", "Shiprocket courier assign kare, toh vendor pickup slot kaise confirm karta hai?", "By email to the admin", "In a WhatsApp message on the registered phone", "By calling the customer", "In Tally", "Admin ko email karke", "Registered phone pe WhatsApp message mein", "Customer ko call karke", "Tally mein", "B", "A WhatsApp message with the pickup time slot goes to the vendor's registered phone. The vendor can confirm or change it there.", "Pickup time slot ke saath WhatsApp message vendor ke registered phone pe aata hai. Wahin confirm ya change kar sakte hain."],
+ ["V406", 4, true, "With Shiprocket today, roughly how long can courier assignment take?", "Aaj Shiprocket ke saath courier assign hone mein lagbhag kitna time lag sakta hai?", "5 to 10 minutes", "1 to 2 hours", "About 12 to 24 hours", "7 days", "5 se 10 minute", "1 se 2 ghante", "Lagbhag 12 se 24 ghante", "7 din", "C", "Assignment can take about 12 to 24 hours. That's why instant-delivery options like Porter are being explored.", "Assign hone mein lagbhag 12 se 24 ghante lag sakte hain. Isliye Porter jaise instant-delivery options dekhe ja rahe hain."],
+ ["V407", 4, true, "Why can't Porter alone solve bulk instant delivery for Oribrix?", "Sirf Porter Oribrix ki bulk instant delivery kyun solve nahi kar sakta?", "It has no API at all", "Its express service is two-wheelers only, in select cities", "It only delivers at night", "It needs an e-way bill for every order", "Uska koi API hi nahi hai", "Uski express service sirf two-wheelers pe, kuch cities mein", "Woh sirf raat mein deliver karta hai", "Har order pe e-way bill chahiye", "B", "Porter's express option is two-wheelers only and city-dependent, so it can't carry bulk loads.", "Porter ka express option sirf two-wheelers aur city pe depend, isliye bulk load nahi le ja sakta."],
+ ["V501", 5, true, "Which order needs an e-way bill upload?", "Kis order ke liye e-way bill upload chahiye?", "₹49,999", "₹50,000", "₹25,000 with COD", "Any order over 500 kg", "₹49,999", "₹50,000", "₹25,000 COD ke saath", "500 kg se upar ka koi bhi order", "B", "The rule is ₹50,000 or more, so exactly ₹50,000 qualifies and ₹49,999 does not.", "Rule hai ₹50,000 ya usse zyada, isliye exactly ₹50,000 aata hai aur ₹49,999 nahi."],
+ ["V502", 5, true, "After the vendor submits an e-way bill, who approves it, and what can they then do?", "Vendor e-way bill submit kare, toh kaun approve karta hai, aur phir kya kar sakta hai?", "Shiprocket; print a label", "The admin; email it to the customer", "The customer; pay online", "The vendor's staff; edit the GSTIN", "Shiprocket; label print", "Admin; customer ko email", "Customer; online pay", "Vendor ka staff; GSTIN edit", "B", "The admin reviews the PDF, approves or rejects, and can then email it straight to the customer.", "Admin PDF review karke approve ya reject karta hai, aur phir seedha customer ko email kar sakta hai."],
+ ["V503", 5, true, "In the e-way bill upload window, why is the order drop-down sometimes empty?", "E-way bill upload window mein order drop-down kabhi kabhi khaali kyun hota hai?", "No accepted order of ₹50,000+ is waiting for a bill", "Shiprocket is down", "The vendor is a staff login", "Tally is not synced", "₹50,000+ ka koi accepted order bill ka wait nahi kar raha", "Shiprocket down hai", "Vendor staff login hai", "Tally sync nahi hai", "A", "Only eligible orders (₹50,000 or more, accepted) appear in the drop-down.", "Drop-down mein sirf eligible orders (₹50,000 ya zyada, accepted) aate hain."],
+ ["V504", 5, true, "A return shows 'Refunded'. Where does that status come from?", "Return pe 'Refunded' dikh raha hai. Yeh status kahan se aata hai?", "Shiprocket", "Razorpay, after admin approval", "Tally", "The vendor types it", "Shiprocket", "Razorpay, admin approval ke baad", "Tally", "Vendor khud type karta hai", "B", "Refunded comes from Razorpay after the admin approves. Picked up comes from Shiprocket; Escalated is set by the admin.", "Refunded Razorpay se aata hai admin approval ke baad. Picked up Shiprocket se; Escalated admin set karta hai."],
+ ["V505", 5, true, "A settlement shows Gross GMV ₹1,440 and total deductions ₹480. What is the net payout?", "Settlement mein Gross GMV ₹1,440 aur total deductions ₹480 hain. Net payout?", "₹1,920", "₹1,440", "₹960", "₹480", "₹1,920", "₹1,440", "₹960", "₹480", "C", "Net payout = GMV − deductions = 1,440 − 480 = ₹960.", "Net payout = GMV − deductions = 1,440 − 480 = ₹960."],
+ ["V506", 5, true, "A vendor wants to match a payout with their bank statement. Which field helps?", "Vendor payout ko bank statement se match karna chahta hai. Kaunsa field kaam aayega?", "AWB", "Bank reference (UTR)", "SKU code", "HSN code", "AWB", "Bank reference (UTR)", "SKU code", "HSN code", "B", "The UTR is the bank reference of the transfer. 'Copy UTR' makes matching easy.", "UTR transfer ka bank reference hai. 'Copy UTR' se match karna aasaan hai."],
+ ["V601", 6, true, "A vendor's documents expired; renewal takes 2 weeks. Which admin action fits?", "Vendor ke documents expire ho gaye; renew mein 2 hafte lagenge. Kaunsa admin action sahi hai?", "Delete", "Block", "Suspend", "Do nothing", "Delete", "Block", "Suspend", "Kuch nahi", "C", "Suspend is reversible: read-only, listings hidden, no new orders. Re-approve after renewal.", "Suspend reversible hai: read-only, listings chhupi, naye orders nahi. Renew ke baad re-approve."],
+ ["V602", 6, true, "What can a SUSPENDED vendor still do?", "SUSPENDED vendor ab bhi kya kar sakta hai?", "Add SKUs", "Receive new orders", "Log in, view and export data", "Change prices", "SKUs add karna", "Naye orders lena", "Login karke data dekhna aur export karna", "Prices badalna", "C", "Suspended = read-only: login, view and export only.", "Suspended = read-only: sirf login, dekhna aur export."],
+ ["V603", 6, true, "What is the difference between Block and Suspend?", "Block aur Suspend mein kya farq hai?", "Block stops login completely; Suspend keeps read-only login", "They are the same", "Suspend deletes data; Block doesn't", "Block hides only prices", "Block login poora rokta hai; Suspend mein read-only login rehta hai", "Dono same hain", "Suspend data delete karta hai; Block nahi", "Block sirf prices chhupata hai", "A", "Block = no login at all. Suspend = read-only access with export.", "Block = login bilkul nahi. Suspend = export ke saath read-only access."],
+ ["V604", 6, true, "Who can create staff (sub-admin) logins for a vendor?", "Vendor ke staff (sub-admin) logins kaun bana sakta hai?", "Any staff member", "Only the vendor's main login", "Customers", "Shiprocket", "Koi bhi staff member", "Sirf vendor ka main login", "Customers", "Shiprocket", "B", "Only the main login can create users. Staff cannot create other staff.", "Sirf main login users bana sakta hai. Staff doosre staff nahi bana sakte."],
+ ["V605", 6, true, "A staff login must handle orders only at the Gorakhpur warehouse. What should be set?", "Staff login ko sirf Gorakhpur warehouse ke orders sambhalne hain. Kya set karein?", "Order Management + Selected Warehouses: Gorakhpur", "All permissions + All Warehouses", "Inventory only + All Warehouses", "Nothing; staff see everything", "Order Management + Selected Warehouses: Gorakhpur", "Saari permissions + All Warehouses", "Sirf Inventory + All Warehouses", "Kuch nahi; staff sab dekhte hain", "A", "Tick only the needed permission and limit the warehouse scope to the selected warehouse.", "Sirf zaroori permission tick karein aur warehouse scope selected warehouse tak rakhein."],
+ ["V606", 6, true, "Which profile field can a vendor edit after KYC approval?", "KYC approval ke baad vendor profile ka kaunsa field edit kar sakta hai?", "Entity name", "GSTIN", "Phone number", "Legal name", "Entity name", "GSTIN", "Phone number", "Legal name", "C", "Name, entity name and GSTIN are locked by KYC. Address, email and phone are editable.", "Name, entity name aur GSTIN KYC se locked hain. Address, email aur phone edit ho sakte hain."]
 ];

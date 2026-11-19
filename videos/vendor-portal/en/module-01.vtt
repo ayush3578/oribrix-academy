@@ -1,0 +1,525 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.397
+Welcome to the Oribrix Vendor Portal course. Module one.
+
+2
+00:00:04.397 --> 00:00:06.581
+A full tour of the vendor console.
+
+3
+00:00:08.767 --> 00:00:14.033
+In the first course you learned how a vendor applies, and how the admin approves the
+
+4
+00:00:14.033 --> 00:00:18.108
+KYC. This course starts right after that. The vendor is approved.
+
+5
+00:00:18.108 --> 00:00:21.055
+Now what does the vendor actually do every day?
+
+6
+00:00:21.505 --> 00:00:23.852
+First, where exactly this course begins.
+
+7
+00:00:24.302 --> 00:00:28.120
+Then the ten sections you see on the left side of the vendor console.
+
+8
+00:00:28.570 --> 00:00:31.536
+Then how to read the dashboard, with its four key numbers.
+
+9
+00:00:31.986 --> 00:00:34.695
+Then the words you will hear again and again in this course.
+
+10
+00:00:35.145 --> 00:00:37.428
+And finally, who is allowed to do what.
+
+11
+00:00:39.833 --> 00:00:43.956
+Here is the vendor's full journey. The first two steps were covered in the
+
+12
+00:00:43.956 --> 00:00:47.300
+Onboarding course. This course covers everything after that.
+
+13
+00:00:47.750 --> 00:00:49.990
+The vendor applied to sell on Oribrix.
+
+14
+00:00:50.440 --> 00:00:54.173
+The admin checked the documents, and the KYC is approved.
+
+15
+00:00:54.623 --> 00:00:58.655
+Now the vendor adds a warehouse, which is the place goods are picked up from.
+
+16
+00:00:59.105 --> 00:01:03.948
+Then the vendor adds SKUs, which means stock of products from the master catalog.
+
+17
+00:01:04.398 --> 00:01:08.536
+Customers order, and the vendor accepts, packs and hands over the order.
+
+18
+00:01:08.986 --> 00:01:12.081
+And at the end, the vendor gets paid through settlements.
+
+19
+00:01:12.081 --> 00:01:14.469
+We'll cover each of these in its own module.
+
+20
+00:01:16.867 --> 00:01:22.362
+This is the left menu of the vendor console. It is grouped into overview, inventory,
+
+21
+00:01:22.362 --> 00:01:26.680
+Orders and dispatch, finance, warehouses and returns, and account.
+
+22
+00:01:27.130 --> 00:01:31.610
+Dashboard is the home page. It shows orders, sales and live activity.
+
+23
+00:01:32.060 --> 00:01:37.479
+Inventory is where the vendor adds SKUs, updates stock and requests price changes.
+
+24
+00:01:37.929 --> 00:01:42.046
+Orders is where new orders are accepted, picked, packed and dispatched.
+
+25
+00:01:42.496 --> 00:01:47.040
+E-Way Bills is for high value orders, fifty thousand rupees and above.
+
+26
+00:01:47.490 --> 00:01:51.608
+Drivers and Fleet is for the vendor's own local drivers and vehicles.
+
+27
+00:01:52.058 --> 00:01:56.068
+Earnings and Settlements shows payouts, deductions and the Tally export.
+
+28
+00:01:56.518 --> 00:01:59.633
+Warehouses lists every pickup location of the vendor.
+
+29
+00:02:00.083 --> 00:02:04.158
+Returns and Disputes shows customer return requests and their status.
+
+30
+00:02:04.608 --> 00:02:09.152
+KYC shows the approved business details. These are read only now.
+
+31
+00:02:09.602 --> 00:02:13.954
+And Settings has password reset, staff accounts, and privacy and data.
+
+32
+00:02:16.367 --> 00:02:21.167
+Let's open the dashboard. This is the first screen a vendor sees after logging in.
+
+33
+00:02:21.617 --> 00:02:24.902
+Orders. The total number of orders in the selected period.
+
+34
+00:02:25.352 --> 00:02:30.961
+G M V, gross merchandise value. The total value of everything sold, before any
+
+35
+00:02:30.961 --> 00:02:31.752
+Deductions.
+
+36
+00:02:32.202 --> 00:02:36.511
+S L A rate. The percentage of orders handled within the promised time.
+
+37
+00:02:36.511 --> 00:02:37.557
+Higher is better.
+
+38
+00:02:38.007 --> 00:02:42.999
+A O V, average order value. G M V divided by the number of orders.
+
+39
+00:02:43.449 --> 00:02:48.644
+This chart shows revenue and orders day by day, so the vendor can see busy and quiet
+
+40
+00:02:48.644 --> 00:02:48.953
+Days.
+
+41
+00:02:49.403 --> 00:02:54.513
+And live activity shows the latest events, like a new order with its order I D and
+
+42
+00:02:54.513 --> 00:02:54.950
+Amount.
+
+43
+00:02:57.333 --> 00:02:59.253
+Let's watch this in the live demo.
+
+44
+00:03:01.567 --> 00:03:04.634
+This is the vendor dashboard from the live session.
+
+45
+00:03:04.634 --> 00:03:07.882
+At the top, a welcome message and the vendor's rating.
+
+46
+00:03:10.267 --> 00:03:14.192
+Hovering on the chart shows the revenue and number of orders for that day.
+
+47
+00:03:23.867 --> 00:03:27.579
+Below the chart, live activity lists new orders as they arrive.
+
+48
+00:03:34.267 --> 00:03:38.427
+Scrolling down shows warehouse capacity and what needs action right now.
+
+49
+00:03:39.867 --> 00:03:44.308
+From here the vendor moves to Inventory, which is where real work begins.
+
+50
+00:03:44.308 --> 00:03:46.011
+We'll do that in module two.
+
+51
+00:03:48.667 --> 00:03:51.248
+Before we go further, let's lock in some words.
+
+52
+00:03:51.698 --> 00:03:56.837
+S K U, stock keeping unit. For a vendor, one S K U means one product, in one
+
+53
+00:03:56.837 --> 00:03:59.272
+Warehouse, with its stock and price.
+
+54
+00:03:59.722 --> 00:04:04.489
+Master catalog. The list of all products. Only the admin creates products.
+
+55
+00:04:04.489 --> 00:04:06.164
+Vendors only pick from it.
+
+56
+00:04:06.614 --> 00:04:11.969
+G M V. The total value sold, before commission, refunds or other deductions.
+
+57
+00:04:12.419 --> 00:04:16.152
+S L A. The promised time within which an order must be handled.
+
+58
+00:04:16.602 --> 00:04:18.693
+A O V. Average order value.
+
+59
+00:04:21.100 --> 00:04:23.831
+A few more words, mostly about shipping and money.
+
+60
+00:04:24.281 --> 00:04:29.342
+Shiprocket. Oribrix's main courier partner. It assigns a courier, picks up from the
+
+61
+00:04:29.342 --> 00:04:30.745
+Warehouse and delivers.
+
+62
+00:04:31.195 --> 00:04:35.739
+A W B, air waybill. The tracking number the courier gives to a shipment.
+
+63
+00:04:36.189 --> 00:04:41.208
+E-way bill. A government transport document needed when goods worth fifty thousand
+
+64
+00:04:41.208 --> 00:04:42.738
+Rupees or more are moved.
+
+65
+00:04:43.188 --> 00:04:48.052
+Settlement. One payout cycle, where the vendor's earnings for a period are paid out.
+
+66
+00:04:48.502 --> 00:04:53.259
+And Tally. The accounting software. Settlement data can be exported for Tally.
+
+67
+00:04:55.666 --> 00:04:58.717
+Three kinds of people touch the vendor side of Oribrix.
+
+68
+00:04:59.167 --> 00:05:04.369
+The vendor's main login does the daily work. Warehouses, S K Us, orders, e-way
+
+69
+00:05:04.369 --> 00:05:06.569
+Bills, and creating staff logins.
+
+70
+00:05:07.019 --> 00:05:12.143
+Vendor staff are sub logins. They see only the sections and warehouses the main
+
+71
+00:05:12.143 --> 00:05:15.062
+Login allows. They cannot create other users.
+
+72
+00:05:15.512 --> 00:05:20.627
+And the admin, which is the Oribrix team, approves warehouses, price and policy
+
+73
+00:05:20.627 --> 00:05:24.771
+Changes, reviews e-way bills, and can suspend or block a vendor.
+
+74
+00:05:27.166 --> 00:05:31.893
+Here is the golden rule of the vendor portal. The vendor proposes, the admin
+
+75
+00:05:31.893 --> 00:05:36.932
+Approves. A new warehouse, a price change, a warranty or return policy change, an
+
+76
+00:05:36.932 --> 00:05:42.032
+E-way bill. The vendor submits it, and nothing goes live until the admin approves.
+
+77
+00:05:42.032 --> 00:05:47.195
+So when a vendor asks, why is my change not showing, the first question is: has the
+
+78
+00:05:47.195 --> 00:05:48.563
+Admin approved it yet?
+
+79
+00:06:37.266 --> 00:06:42.110
+Here's a quick preview of the inventory page, which we'll study in detail in module
+
+80
+00:06:42.110 --> 00:06:42.343
+Two.
+
+81
+00:06:42.793 --> 00:06:46.164
+Active S K Us. How many products this vendor is selling.
+
+82
+00:06:46.614 --> 00:06:50.006
+Stock quantity. The total units across all S K Us.
+
+83
+00:06:50.456 --> 00:06:54.957
+Stock status breakdown. How many are in stock, low, or out of stock.
+
+84
+00:06:55.407 --> 00:06:58.181
+And the Add S K U button, which starts everything.
+
+85
+00:07:00.566 --> 00:07:04.193
+And this is the orders page, which we'll cover in module four.
+
+86
+00:07:04.643 --> 00:07:08.461
+Awaiting action. New orders that the vendor still has to accept.
+
+87
+00:07:08.911 --> 00:07:12.581
+In fulfilment. Accepted orders that are being picked and packed.
+
+88
+00:07:13.031 --> 00:07:15.740
+On the road. Orders that are out for delivery.
+
+89
+00:07:16.190 --> 00:07:20.947
+And below, every order with its customer, warehouse, amount, payment and status.
+
+90
+00:07:23.333 --> 00:07:28.123
+Let's follow one order from the customer to the vendor, so the sections make sense
+
+91
+00:07:28.123 --> 00:07:32.037
+Together. Say a contractor in Lucknow orders twenty bags of cement.
+
+92
+00:07:32.487 --> 00:07:36.007
+The contractor places the order in the Oribrix customer app.
+
+93
+00:07:36.457 --> 00:07:41.108
+The system finds the nearest approved warehouse that has this product in stock.
+
+94
+00:07:41.558 --> 00:07:46.348
+The vendor who owns that warehouse gets a sound and a pop-up alert on the vendor
+
+95
+00:07:46.348 --> 00:07:46.827
+Console.
+
+96
+00:07:47.277 --> 00:07:49.986
+The vendor checks the items and accepts the order.
+
+97
+00:07:50.436 --> 00:07:54.943
+The vendor picks and packs the goods, and hands them over to Shiprocket or to a
+
+98
+00:07:54.943 --> 00:07:55.684
+Local driver.
+
+99
+00:07:56.134 --> 00:08:00.685
+The order is delivered, and the money reaches the vendor in the next settlement.
+
+100
+00:08:00.685 --> 00:08:03.814
+Every one of these steps is a section in the left menu.
+
+101
+00:08:06.200 --> 00:08:10.447
+If you support vendors, you will hear these five questions again and again.
+
+102
+00:08:10.447 --> 00:08:14.072
+By the end of this course, you'll be able to answer all of them.
+
+103
+00:08:14.522 --> 00:08:19.786
+Why can't customers see my product? Usually the warehouse is not approved, intake is
+
+104
+00:08:19.786 --> 00:08:21.541
+Paused, or there's no stock.
+
+105
+00:08:21.991 --> 00:08:26.889
+Why is my new warehouse still pending? Because the admin first verifies the pickup
+
+106
+00:08:26.889 --> 00:08:28.263
+Address, then approves.
+
+107
+00:08:28.713 --> 00:08:33.297
+Why didn't my price change apply? It is waiting for admin approval, or it was
+
+108
+00:08:33.297 --> 00:08:33.833
+Rejected.
+
+109
+00:08:34.283 --> 00:08:37.522
+I dismissed an alert, is the order cancelled? No.
+
+110
+00:08:37.522 --> 00:08:39.637
+Dismiss only silences the alert.
+
+111
+00:08:40.087 --> 00:08:44.835
+And why can't I add S K Us any more? The account may be suspended, which makes it
+
+112
+00:08:44.835 --> 00:08:45.421
+Read only.
+
+113
+00:08:47.833 --> 00:08:51.332
+Let's put it together. This is what a good vendor's day looks like.
+
+114
+00:08:51.782 --> 00:08:54.939
+In the morning, open the dashboard and check live activity.
+
+115
+00:08:55.389 --> 00:08:59.848
+Accept every new order quickly. A slow accept hurts the S L A rate.
+
+116
+00:09:00.298 --> 00:09:02.154
+Pick, pack and hand over on time.
+
+117
+00:09:02.604 --> 00:09:06.444
+For orders of fifty thousand rupees or more, upload the e-way bill.
+
+118
+00:09:06.894 --> 00:09:11.986
+Keep stock numbers honest. If the app shows stock that isn't there, orders fail and
+
+119
+00:09:11.986 --> 00:09:13.336
+Customers are unhappy.
+
+120
+00:09:13.786 --> 00:09:16.410
+And once a week, check returns and settlements.
+
+121
+00:09:18.800 --> 00:09:23.756
+Quick check. A vendor raised a price change yesterday, but customers still see the
+
+122
+00:09:23.756 --> 00:09:25.691
+Old price. Why? Pause and think.
+
+123
+00:09:29.641 --> 00:09:34.547
+The answer: the admin hasn't approved it yet. Vendor proposes, admin approves.
+
+124
+00:09:37.333 --> 00:09:39.061
+Let's summarise module one.
+
+125
+00:09:39.511 --> 00:09:42.839
+This course starts after the vendor's KYC is approved.
+
+126
+00:09:43.289 --> 00:09:46.532
+The vendor console has ten sections in the left menu.
+
+127
+00:09:46.982 --> 00:09:51.056
+The dashboard shows orders, G M V, S L A rate and A O V.
+
+128
+00:09:51.506 --> 00:09:54.557
+Staff logins see only what the main login allows.
+
+129
+00:09:55.007 --> 00:09:58.483
+And the golden rule: vendor proposes, admin approves.
+
+130
+00:09:58.483 --> 00:10:00.319
+In module two, we add stock.
+
+131
+00:10:02.733 --> 00:10:08.941
+That's the end of module 1. Next up, module 2: Inventory, SKUs and change requests.

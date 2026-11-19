@@ -1,0 +1,521 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.580
+Module five. High value orders ke liye e-way bills, returns aur disputes, aur vendor
+
+2
+00:00:06.580 --> 00:00:08.437
+Ko payment kaise milta hai.
+
+3
+00:00:10.633 --> 00:00:14.016
+Ye module paperwork aur paison ke baare mein hai.
+
+4
+00:00:14.016 --> 00:00:19.401
+Ye orders jitna exciting nahi hai, lekin yahan galti ka asli nuksaan hota hai.
+
+5
+00:00:19.851 --> 00:00:21.984
+Pehle, e-way bill kab chahiye.
+
+6
+00:00:22.434 --> 00:00:25.272
+Phir vendor use upload kaise karta hai.
+
+7
+00:00:25.722 --> 00:00:30.500
+Phir admin use review, approve aur customer ko email kaise karta hai.
+
+8
+00:00:30.950 --> 00:00:34.598
+Phir returns aur disputes, aur har status ka matalba.
+
+9
+00:00:35.048 --> 00:00:37.907
+Phir earnings, settlements aur Tally export.
+
+10
+00:00:38.357 --> 00:00:40.768
+Aur aakhir mein, drivers and fleet.
+
+11
+00:00:43.167 --> 00:00:48.828
+Rule ye hai. Jab fifty thousand rupees ya usse zyada ka maal transport hota hai, toh
+
+12
+00:00:48.828 --> 00:00:54.220
+Law ke hisaab se e-way bill zaroori hai. Toh jab vendor fifty thousand rupees ya
+
+13
+00:00:54.220 --> 00:00:59.612
+Usse zyada ka order accept karta hai, wo order automatically E-Way Bills section
+
+14
+00:00:59.612 --> 00:01:05.138
+Mein aa jaata hai. Vendor government portal pe e-way bill banata hai, P D F upload
+
+15
+00:01:05.138 --> 00:01:10.597
+Karta hai, aur admin use review karta hai. Shiprocket mein bhi aise orders pe tag
+
+16
+00:01:10.597 --> 00:01:12.686
+Hota hai: e-way bill mandatory.
+
+17
+00:02:06.567 --> 00:02:10.087
+Ye e-way bill ka poora flow hai, shuru se end taka.
+
+18
+00:02:10.537 --> 00:02:15.956
+Fifty thousand rupees ya usse zyada ka order accept aur pack hota hai.
+
+19
+00:02:16.406 --> 00:02:21.014
+Uska order I D E-Way Bills section mein eligible dikhta hai.
+
+20
+00:02:21.464 --> 00:02:26.200
+Vendor P D F upload karta hai aur valid till date set karta hai.
+
+21
+00:02:26.650 --> 00:02:28.719
+Status submitted ho jaata hai.
+
+22
+00:02:29.169 --> 00:02:34.502
+Admin P D F kholta hai, check karta hai, aur approve ya reject karta hai.
+
+23
+00:02:34.952 --> 00:02:40.243
+Approve hone ke baad admin e-way bill sidhe customer ko email kar sakta hai.
+
+24
+00:02:42.633 --> 00:02:45.278
+Chaliye ise live demo mein dekhte hain.
+
+25
+00:02:48.267 --> 00:02:52.171
+Orders se vendor left menu mein E-Way Bills kholta hai.
+
+26
+00:02:52.771 --> 00:02:57.845
+Har row mein order, e-way bill number, valid till date, aur status dikhta hai.
+
+27
+00:02:57.845 --> 00:02:59.342
+Ye tinon verified hain.
+
+28
+00:03:06.667 --> 00:03:11.467
+Upload e-way bill pe click karne se attach to order window khulti hai.
+
+29
+00:03:12.067 --> 00:03:17.986
+Order I D drop down mein sirf eligible orders aate hain, fifty thousand rupees aur
+
+30
+00:03:17.986 --> 00:03:21.667
+Oopra. Phir valid till date, aur P D F drag kijiye.
+
+31
+00:03:22.267 --> 00:03:27.789
+Yahan abhi koi eligible order nahi hai, isliye vendor check karne ke liye vaapas
+
+32
+00:03:27.789 --> 00:03:29.307
+Orders mein jaata hai.
+
+33
+00:03:35.467 --> 00:03:38.518
+E-way bills page ko ek baar aur dekhte hain.
+
+34
+00:03:38.968 --> 00:03:41.144
+Upload e-way bill, main button.
+
+35
+00:03:41.594 --> 00:03:44.602
+Order I D ya e-way bill number se search.
+
+36
+00:03:45.052 --> 00:03:46.417
+E-way bill number.
+
+37
+00:03:46.867 --> 00:03:52.604
+Valid till. E-way bill expire hota hai. Agar delivery is date ke baad tak delay ho,
+
+38
+00:03:52.604 --> 00:03:53.779
+Toh naya chahiye.
+
+39
+00:03:54.229 --> 00:03:57.578
+Aur status: submitted, verified ya rejected.
+
+40
+00:03:59.967 --> 00:04:02.612
+Chaliye ise live demo mein dekhte hain.
+
+41
+00:04:04.900 --> 00:04:10.479
+Ab ek asli case. Vendor ne sixty four thousand rupees se zyada ke order ke liye
+
+42
+00:04:10.479 --> 00:04:15.140
+E-way bill attach kiya, aur submit for admin review pe click kiya.
+
+43
+00:04:15.740 --> 00:04:19.362
+Admin side pe E-Way Bill Review totals dikhata hai.
+
+44
+00:04:19.362 --> 00:04:21.777
+One pending review, four approved.
+
+45
+00:04:22.377 --> 00:04:27.657
+Vendor side pe nayi row submitted dikhati hai, aur message confirm karta hai: e-way
+
+46
+00:04:27.657 --> 00:04:29.311
+Bill submitted for review.
+
+47
+00:04:29.911 --> 00:04:35.538
+Vaapas admin panel men. Har row mein e-way bill number, vendor, route, value aur
+
+48
+00:04:35.538 --> 00:04:40.321
+Status hai. Actions hain P D F dekhna, approve ya reject, aur email.
+
+49
+00:04:40.921 --> 00:04:45.929
+Admin P D F dekhta hai aur order, value aur validity check karta hai.
+
+50
+00:04:45.929 --> 00:04:47.599
+Phir approve karta hai.
+
+51
+00:04:51.200 --> 00:04:54.187
+Vendor ki list ab verified dikha rahi hai.
+
+52
+00:04:57.600 --> 00:05:02.054
+Aur admin ke counts update ho gaye: zero pending, five approved.
+
+53
+00:05:02.054 --> 00:05:06.091
+Ab admin e-way bill sidhe customer ko email kar sakta hai.
+
+54
+00:05:08.800 --> 00:05:11.659
+Ye admin review page ki still picture hai.
+
+55
+00:05:12.109 --> 00:05:15.973
+Counters: total, pending review, approved aur rejected.
+
+56
+00:05:15.973 --> 00:05:18.573
+Pending zyada der nahi rahna chahiye.
+
+57
+00:05:19.023 --> 00:05:21.156
+Jis vendor ne submit kiya.
+
+58
+00:05:21.606 --> 00:05:22.715
+Order value.
+
+59
+00:05:23.165 --> 00:05:23.997
+Status.
+
+60
+00:05:24.447 --> 00:05:29.503
+Aur actions: P D F dekhna, approve ya reject, aur customer ko email.
+
+61
+00:05:31.900 --> 00:05:37.030
+Admin ke roop mein e-way bill review karte samay, approve karne se pehle ye paanch
+
+62
+00:05:37.030 --> 00:05:38.407
+Cheezein check kijiye.
+
+63
+00:05:38.857 --> 00:05:41.609
+Order I D, order se match karta hai.
+
+64
+00:05:42.059 --> 00:05:45.237
+Invoice value, order value se match karti hai.
+
+65
+00:05:45.687 --> 00:05:48.311
+Vendor ka G S T I N sahi hai.
+
+66
+00:05:48.761 --> 00:05:52.409
+Valid till date expected delivery ko cover karti hai.
+
+67
+00:05:52.859 --> 00:05:58.241
+Aur from aur to pincodes sahi hain. Agar kuch bhi galat hai, toh reject kijiye,
+
+68
+00:05:58.241 --> 00:06:00.625
+Taaki vendor sahi wala upload kare.
+
+69
+00:06:03.033 --> 00:06:08.174
+Vendors ke liye kuch tips, taaki unke e-way bills pehli baar mein approve hon.
+
+70
+00:06:08.624 --> 00:06:12.906
+E-way bill government e-way bill portal pe generate kijiye.
+
+71
+00:06:12.906 --> 00:06:16.027
+Oribrix ise aapke liye generate nahi karta.
+
+72
+00:06:16.477 --> 00:06:22.376
+Order wali same invoice value use kijiye. Mismatch rejection ki sabse common wajah
+
+73
+00:06:22.376 --> 00:06:22.664
+Hai.
+
+74
+00:06:23.114 --> 00:06:28.321
+Valid till date aise set kijiye ki expected delivery cover ho, thode buffer ke
+
+75
+00:06:28.321 --> 00:06:28.788
+Saatha.
+
+76
+00:06:29.238 --> 00:06:33.206
+Clear P D F upload kijiye, dhundhli phone photo nahin.
+
+77
+00:06:33.656 --> 00:06:39.352
+Aur agar reject ho, toh jaldi theek karke phir se upload kijiye, kyunki iske bina
+
+78
+00:06:39.352 --> 00:06:41.251
+Order aage nahi badh sakta.
+
+79
+00:06:43.667 --> 00:06:47.656
+Ab returns. Return request in statuses se guzarti hai.
+
+80
+00:06:48.106 --> 00:06:53.461
+Pending approval. Customer ne return maanga hai, aur wo review ka wait kar raha hai.
+
+81
+00:06:53.911 --> 00:06:59.380
+Picked up. Ye status Shiprocket se aata hai, jab courier customer se item collect
+
+82
+00:06:59.380 --> 00:07:00.055
+Karta hai.
+
+83
+00:07:00.505 --> 00:07:05.710
+Refunded. Ye Razorpay se aata hai, admin ke refund approve karne ke baada.
+
+84
+00:07:06.160 --> 00:07:12.156
+Escalated. Jab koi problem ho toh admin ise escalated mark karta hai, jaise customer
+
+85
+00:07:12.156 --> 00:07:15.654
+Ka return galat ho, ya vendor pickup reject kare.
+
+86
+00:07:18.067 --> 00:07:20.712
+Chaliye ise live demo mein dekhte hain.
+
+87
+00:07:23.000 --> 00:07:27.629
+Ye vendor ka returns page hai. Har return request yahan list hoti hai.
+
+88
+00:07:28.229 --> 00:07:33.879
+Har card pe product, return I D aur order I D, customer, quantity, request date,
+
+89
+00:07:33.879 --> 00:07:36.421
+Refund amount aur reason dikhta hai.
+
+90
+00:07:39.700 --> 00:07:45.247
+View request details poora return kholta hai, uski photos aur status ke saatha.
+
+91
+00:07:47.700 --> 00:07:53.225
+Neeche scroll karne pe alag statuses hain: pending approval, picked up, refunded.
+
+92
+00:08:07.700 --> 00:08:12.287
+Reasons bhi record hote hain, jaise wrong item, ya wrong quantity.
+
+93
+00:08:19.700 --> 00:08:24.436
+Aur ye ek escalated mark hai, yaani admin ise handle kar raha hai.
+
+94
+00:08:32.500 --> 00:08:37.948
+Ab paisa. Har settlement ek payout cycle hai. Ek kholne pe poora breakdown dikhta
+
+95
+00:08:37.948 --> 00:08:38.217
+Hai.
+
+96
+00:08:38.667 --> 00:08:41.313
+Settlement period aur orders ki ginti.
+
+97
+00:08:41.763 --> 00:08:44.685
+Gross G M V, total bikri ki value.
+
+98
+00:08:45.135 --> 00:08:46.885
+G S T collected.
+
+99
+00:08:47.335 --> 00:08:53.137
+Return aur refund deductions, aur total deductions, jaise logistics aur commission.
+
+100
+00:08:53.587 --> 00:08:57.975
+Bank reference, jise U T R kahte hain, paisa bhejne ke baada.
+
+101
+00:08:57.975 --> 00:09:02.291
+Vendor ise copy karke bank statement se match kar sakta hai.
+
+102
+00:09:02.741 --> 00:09:06.069
+Aur net payout, jo vendor ko actually milta hai.
+
+103
+00:09:08.467 --> 00:09:11.112
+Chaliye ise live demo mein dekhte hain.
+
+104
+00:09:13.400 --> 00:09:18.456
+Ye live demo ka earnings page hai, aur Drivers and Fleet pe ek quick nazra.
+
+105
+00:09:19.056 --> 00:09:23.068
+Drivers and Fleet mein vendor ke apne drivers ki list hai.
+
+106
+00:09:23.068 --> 00:09:28.187
+Total drivers, on trip, aur idle. Har driver ko order assign ho sakta hai.
+
+107
+00:09:30.900 --> 00:09:35.935
+Vaapas Earnings and Settlements. Upar: total settled payout, next payout,
+
+108
+00:09:35.935 --> 00:09:38.004
+Deductions, aur open disputes.
+
+109
+00:09:38.604 --> 00:09:45.236
+Neeche, har settlement apni date range, orders, G M V, G S T, deductions, payout aur
+
+110
+00:09:45.236 --> 00:09:50.999
+Status ke saatha. Export Tally X M L aur export C S V right side pe hain.
+
+111
+00:09:51.599 --> 00:09:56.847
+Ek settlement kholne pe poora breakdown dikhta hai, download statement ke saatha.
+
+112
+00:09:58.650 --> 00:10:02.213
+Settlement row mein inmen se koi status ho sakta hai.
+
+113
+00:10:02.663 --> 00:10:06.481
+In progress. Current cycle. Orders abhi add ho rahe hain.
+
+114
+00:10:06.931 --> 00:10:10.793
+Settled. Payment ho chuka hai, aur U T R available hai.
+
+115
+00:10:11.243 --> 00:10:16.926
+Tally synced. Data cloud Tally mein push ho chuka hai, toh accounts up to date hain.
+
+116
+00:10:16.926 --> 00:10:20.715
+Tally X M L aur C S V ke exports hamesha available hain.
+
+117
+00:10:23.117 --> 00:10:28.427
+Quick check. Ek vendor ne sixty four thousand eight hundred ninety six rupees ka
+
+118
+00:10:28.427 --> 00:10:32.077
+Order accept kiya. Kaun sa extra step chahiye? Sochiye.
+
+119
+00:10:36.027 --> 00:10:41.655
+Answer: admin review ke liye e-way bill upload karna, kyunki order fifty thousand
+
+120
+00:10:41.655 --> 00:10:43.600
+Rupees ya usse zyada ka hai.
+
+121
+00:10:46.383 --> 00:10:49.007
+Module five ko summarise karte hain.
+
+122
+00:10:49.457 --> 00:10:54.449
+Fifty thousand rupees ya usse zyada ke order ko e-way bill chahiye.
+
+123
+00:10:54.899 --> 00:11:00.665
+Vendor valid till date ke saath P D F upload karta hai, aur admin approve karke
+
+124
+00:11:00.665 --> 00:11:01.832
+Email karta hai.
+
+125
+00:11:02.282 --> 00:11:06.848
+Returns pending, picked up, refunded, ya escalated se guzarte hain.
+
+126
+00:11:07.298 --> 00:11:12.546
+Settlement yaani G M V minus deductions, jisse net payout nikalta hai.
+
+127
+00:11:12.996 --> 00:11:16.314
+Aur sab kuch Tally ke liye export ho sakta hai.
+
+128
+00:11:16.314 --> 00:11:19.844
+Agla, module six mein, account controls aur staff.
+
+129
+00:11:22.250 --> 00:11:28.092
+Module 5 yahin khatam hota hai. Agla hai module 6: Account controls, staff and
+
+130
+00:11:28.092 --> 00:11:28.991
+What's next.

@@ -1,0 +1,561 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.474
+Oribrix Vendor Portal course mein aapka welcome hai.
+
+2
+00:00:04.474 --> 00:00:07.371
+Module one. Vendor console ka poora tour.
+
+3
+00:00:09.567 --> 00:00:15.031
+Pehle course mein aapne sikha ki vendor apply kaise karta hai, aur admin KYC kaise
+
+4
+00:00:15.031 --> 00:00:19.228
+Approve karta hai. Ye course theek uske baad se shuru hota hai.
+
+5
+00:00:19.228 --> 00:00:23.626
+Vendor approve ho chuka hai. Ab vendor roz actually karta kya hai?
+
+6
+00:00:24.076 --> 00:00:27.617
+Pehle, ye course exactly kahan se shuru hota hai.
+
+7
+00:00:28.067 --> 00:00:32.355
+Phir vendor console ke left side pe dikhne wale ten sections.
+
+8
+00:00:32.805 --> 00:00:36.773
+Phir dashboard kaise padhein, uske chaar key numbers ke saatha.
+
+9
+00:00:37.223 --> 00:00:40.551
+Phir wo words jo is course mein baar baar aayenge.
+
+10
+00:00:41.001 --> 00:00:44.116
+Aur aakhir mein, kisko kya karne ki permission hai.
+
+11
+00:00:46.500 --> 00:00:51.772
+Ye vendor ki poori journey hai. Pehle do steps onboarding course mein cover ho chuke
+
+12
+00:00:51.772 --> 00:00:55.161
+Hain. Ye course uske baad ka sab kuch cover karta hai.
+
+13
+00:00:55.611 --> 00:00:59.067
+Vendor ne Oribrix pe bechne ke liye apply kiya.
+
+14
+00:00:59.517 --> 00:01:03.635
+Admin ne documents check kiye, aur KYC approve ho gaya.
+
+15
+00:01:04.085 --> 00:01:09.738
+Ab vendor ek warehouse add karta hai, yaani wo jagah jahan se maal pick up hota hai.
+
+16
+00:01:10.188 --> 00:01:15.777
+Phir vendor SKUs add karta hai, yaani master catalog ke products ka stock.
+
+17
+00:01:16.227 --> 00:01:21.625
+Customers order karte hain, aur vendor order accept, pack aur hand over karta hai.
+
+18
+00:01:22.075 --> 00:01:26.593
+Aur aakhir mein, vendor ko settlements ke through payment milta hai.
+
+19
+00:01:26.593 --> 00:01:30.181
+Inmen se har ek ko hum alag module mein cover karenge.
+
+20
+00:01:32.566 --> 00:01:38.240
+Ye vendor console ka left menu hai. Ye groups mein banta hai: overview, inventory,
+
+21
+00:01:38.240 --> 00:01:42.806
+Orders and dispatch, finance, warehouses and returns, aur account.
+
+22
+00:01:43.256 --> 00:01:48.397
+Dashboard home page hai. Isme orders, sales aur live activity dikhti hai.
+
+23
+00:01:48.847 --> 00:01:54.590
+Inventory mein vendor SKUs add karta hai, stock update karta hai aur price change
+
+24
+00:01:54.590 --> 00:01:55.866
+Request karta hai.
+
+25
+00:01:56.316 --> 00:02:00.433
+Orders mein naye orders accept, pick, pack aur dispatch hote hain.
+
+26
+00:02:00.883 --> 00:02:06.238
+E-Way Bills high value orders ke liye hai, fifty thousand rupees aur usse oopra.
+
+27
+00:02:06.688 --> 00:02:11.765
+Drivers and Fleet vendor ke apne local drivers aur vehicles ke liye hai.
+
+28
+00:02:12.215 --> 00:02:17.186
+Earnings and Settlements mein payouts, deductions aur Tally export dikhta hai.
+
+29
+00:02:17.636 --> 00:02:21.967
+Warehouses mein vendor ki har pickup location ki list hoti hai.
+
+30
+00:02:22.417 --> 00:02:28.113
+Returns and Disputes mein customer ki return requests aur unka status dikhta hai.
+
+31
+00:02:28.563 --> 00:02:32.038
+KYC mein approved business details dikhti hain.
+
+32
+00:02:32.038 --> 00:02:33.960
+Ye ab sirf read only hain.
+
+33
+00:02:34.410 --> 00:02:39.253
+Aur Settings mein password reset, staff accounts, aur privacy and data hai.
+
+34
+00:02:41.666 --> 00:02:47.419
+Chaliye dashboard kholte hain. Login karne ke baad vendor ko sabse pehle yahi screen
+
+35
+00:02:47.419 --> 00:02:48.173
+Dikhti hai.
+
+36
+00:02:48.623 --> 00:02:52.121
+Orders. Selected period mein kul kitne orders aaye.
+
+37
+00:02:52.571 --> 00:02:58.355
+G M V, yaani gross merchandise value. Jo kuch bika uski total value, kisi bhi
+
+38
+00:02:58.355 --> 00:02:59.782
+Deduction se pahle.
+
+39
+00:03:00.232 --> 00:03:05.073
+S L A rate. Kitne percent orders promised time ke andar handle huye.
+
+40
+00:03:05.073 --> 00:03:06.781
+Jitna zyada, utna achha.
+
+41
+00:03:07.231 --> 00:03:13.226
+A O V, yaani average order value. G M V ko orders ki ginti se divide karo.
+
+42
+00:03:13.676 --> 00:03:19.662
+Ye chart revenue aur orders day by day dikhata hai, taaki vendor busy aur quiet days
+
+43
+00:03:19.662 --> 00:03:20.375
+Dekh sake.
+
+44
+00:03:20.825 --> 00:03:26.943
+Aur live activity latest events dikhati hai, jaise naya order, uske order I D aur
+
+45
+00:03:26.943 --> 00:03:28.227
+Amount ke saatha.
+
+46
+00:03:30.633 --> 00:03:33.278
+Chaliye ise live demo mein dekhte hain.
+
+47
+00:03:35.566 --> 00:03:40.782
+Ye live session ka vendor dashboard hai. Upar ek welcome message aur vendor ki
+
+48
+00:03:40.782 --> 00:03:41.518
+Rating hai.
+
+49
+00:03:44.266 --> 00:03:49.514
+Chart pe hover karne se us din ka revenue aur orders ki ginti dikhti hai.
+
+50
+00:03:57.866 --> 00:04:02.687
+Chart ke neeche live activity naye orders ko aate hi list karti hai.
+
+51
+00:04:08.266 --> 00:04:13.904
+Neeche scroll karne pe warehouse capacity aur abhi kis pe action chahiye, wo dikhta
+
+52
+00:04:13.904 --> 00:04:14.175
+Hai.
+
+53
+00:04:14.775 --> 00:04:19.612
+Yahan se vendor Inventory mein jaata hai, jahan asli kaam shuru hota hai.
+
+54
+00:04:19.612 --> 00:04:21.666
+Wo hum module two mein karenge.
+
+55
+00:04:23.466 --> 00:04:27.114
+Aage badhne se pehle kuch words pakke kar lete hain.
+
+56
+00:04:27.564 --> 00:04:33.488
+S K U, yaani stock keeping unit. Vendor ke liye ek S K U ka matlab hai ek product,
+
+57
+00:04:33.488 --> 00:04:37.100
+Ek warehouse mein, uske stock aur price ke saatha.
+
+58
+00:04:37.550 --> 00:04:42.679
+Master catalog. Saare products ki list. Products sirf admin banata hai.
+
+59
+00:04:42.679 --> 00:04:44.846
+Vendor bas usme se chunta hai.
+
+60
+00:04:45.296 --> 00:04:51.099
+G M V. Total bikri ki value, commission, refunds ya doosre deductions se pahle.
+
+61
+00:04:51.549 --> 00:04:56.157
+S L A. Wo promised time jiske andar order handle hona chahiye.
+
+62
+00:04:56.607 --> 00:04:58.825
+A O V. Average order value.
+
+63
+00:05:01.233 --> 00:05:05.116
+Kuch aur words, zyadatar shipping aur paison ke baare men.
+
+64
+00:05:05.566 --> 00:05:10.962
+Shiprocket. Oribrix ka main courier partner. Ye courier assign karta hai, warehouse
+
+65
+00:05:10.962 --> 00:05:13.758
+Se pick up karta hai aur deliver karta hai.
+
+66
+00:05:14.208 --> 00:05:19.349
+A W B, yaani air waybill. Courier jo tracking number shipment ko deta hai.
+
+67
+00:05:19.799 --> 00:05:25.730
+E-way bill. Ek government transport document, jo fifty thousand rupees ya usse zyada
+
+68
+00:05:25.730 --> 00:05:27.778
+Ka maal move hone pe chahiye.
+
+69
+00:05:28.228 --> 00:05:33.860
+Settlement. Ek payout cycle, jismen vendor ki ek period ki kamayi pay out hoti hai.
+
+70
+00:05:34.310 --> 00:05:39.856
+Aur Tally. Accounting software. Settlement data Tally ke liye export ho sakta hai.
+
+71
+00:05:42.266 --> 00:05:46.255
+Oribrix ke vendor side pe teen tarah ke log kaam karte hain.
+
+72
+00:05:46.705 --> 00:05:53.027
+Vendor ka main login roz ka kaam karta hai. Warehouses, S K Us, orders, e-way bills,
+
+73
+00:05:53.027 --> 00:05:54.833
+Aur staff logins banana.
+
+74
+00:05:55.283 --> 00:06:00.830
+Vendor staff sub logins hote hain. Unhe sirf wahi sections aur warehouses dikhte
+
+75
+00:06:00.830 --> 00:06:05.545
+Hain jo main login allow karta hai. Wo doosre users nahi bana sakte.
+
+76
+00:06:05.995 --> 00:06:11.533
+Aur admin, yaani Oribrix team, warehouses, price aur policy changes approve karti
+
+77
+00:06:11.533 --> 00:06:17.003
+Hai, e-way bills review karti hai, aur vendor ko suspend ya block kar sakti hai.
+
+78
+00:06:19.400 --> 00:06:24.385
+Vendor portal ka golden rule ye hai. Vendor propose karta hai, admin approve karta
+
+79
+00:06:24.385 --> 00:06:29.249
+Hai. Naya warehouse, price change, warranty ya return policy change, e-way bill.
+
+80
+00:06:29.249 --> 00:06:33.869
+Vendor submit karta hai, aur admin approval ke bina kuch bhi live nahi hota.
+
+81
+00:06:33.869 --> 00:06:38.976
+Toh jab koi vendor poochhe ki mera change dikh kyun nahi raha, toh pehla sawaal yahi
+
+82
+00:06:38.976 --> 00:06:41.651
+Hai: kya admin ne abhi tak approve kiya hai?
+
+83
+00:07:29.500 --> 00:07:34.709
+Ye inventory page ka ek quick preview hai, jise hum module two mein detail mein
+
+84
+00:07:34.709 --> 00:07:35.303
+Padhenge.
+
+85
+00:07:35.753 --> 00:07:39.635
+Active S K Us. Ye vendor kitne products bech raha hai.
+
+86
+00:07:40.085 --> 00:07:43.819
+Stock quantity. Saare S K Us milakar total units.
+
+87
+00:07:44.269 --> 00:07:49.389
+Stock status breakdown. Kitne in stock hain, kitne low, aur kitne out of stock.
+
+88
+00:07:49.839 --> 00:07:53.252
+Aur Add S K U button, jisse sab shuru hota hai.
+
+89
+00:07:55.666 --> 00:08:00.039
+Aur ye orders page hai, jise hum module four mein cover karenge.
+
+90
+00:08:00.489 --> 00:08:05.289
+Awaiting action. Naye orders jinhe vendor ko abhi accept karna hai.
+
+91
+00:08:05.739 --> 00:08:09.793
+In fulfilment. Accepted orders jo pick aur pack ho rahe hain.
+
+92
+00:08:10.243 --> 00:08:13.720
+On the road. Orders jo delivery ke liye nikal chuke hain.
+
+93
+00:08:14.170 --> 00:08:19.260
+Aur neeche, har order, uske customer, warehouse, amount, payment aur status ke
+
+94
+00:08:19.260 --> 00:08:19.717
+Saatha.
+
+95
+00:08:22.133 --> 00:08:27.372
+Ek order ko customer se vendor tak follow karte hain, taaki saare sections saath
+
+96
+00:08:27.372 --> 00:08:32.742
+Mein samajh aayen. Maan lijiye Lucknow mein ek contractor twenty bags cement order
+
+97
+00:08:32.742 --> 00:08:33.397
+Karta hai.
+
+98
+00:08:33.847 --> 00:08:37.836
+Contractor Oribrix customer app mein order place karta hai.
+
+99
+00:08:38.286 --> 00:08:44.095
+System sabse paas wala approved warehouse dhoondhta hai jismen ye product stock mein
+
+100
+00:08:44.095 --> 00:08:44.302
+Ho.
+
+101
+00:08:44.752 --> 00:08:50.611
+Jis vendor ka wo warehouse hai, use vendor console pe sound aur pop-up alert milta
+
+102
+00:08:50.611 --> 00:08:50.896
+Hai.
+
+103
+00:08:51.346 --> 00:08:55.336
+Vendor items check karta hai aur order accept karta hai.
+
+104
+00:08:55.786 --> 00:09:01.342
+Vendor maal pick aur pack karta hai, aur Shiprocket ya local driver ko hand over
+
+105
+00:09:01.342 --> 00:09:02.036
+Karta hai.
+
+106
+00:09:02.486 --> 00:09:07.891
+Order deliver hota hai, aur paisa agle settlement mein vendor tak pahunchta hai.
+
+107
+00:09:07.891 --> 00:09:10.998
+Inmen se har step left menu ka ek section hai.
+
+108
+00:09:13.400 --> 00:09:18.910
+Agar aap vendors ko support karte hain, toh ye paanch sawaal aapko baar baar sunne
+
+109
+00:09:18.910 --> 00:09:23.277
+Ko milenge. Is course ke end tak aap in sabka jawaab de paayenge.
+
+110
+00:09:23.727 --> 00:09:29.084
+Customers ko mera product kyun nahi dikh raha? Usually warehouse approved nahi hai,
+
+111
+00:09:29.084 --> 00:09:31.471
+Intake paused hai, ya stock nahi hai.
+
+112
+00:09:31.921 --> 00:09:37.196
+Mera naya warehouse abhi bhi pending kyun hai? Kyunki admin pehle pickup address
+
+113
+00:09:37.196 --> 00:09:39.900
+Verify karta hai, phir approve karta hai.
+
+114
+00:09:40.350 --> 00:09:45.984
+Mera price change apply kyun nahi hua? Wo admin approval ka wait kar raha hai, ya
+
+115
+00:09:45.984 --> 00:09:47.027
+Reject ho gaya.
+
+116
+00:09:47.477 --> 00:09:50.970
+Maine alert dismiss kiya, kya order cancel ho gaya?
+
+117
+00:09:50.970 --> 00:09:53.984
+Nahin. Dismiss sirf alert ko chup karta hai.
+
+118
+00:09:54.434 --> 00:09:59.763
+Aur main ab S K Us add kyun nahi kar paa raha? Ho sakta hai account suspend ho,
+
+119
+00:09:59.763 --> 00:10:01.922
+Jisse wo read only ho jaata hai.
+
+120
+00:10:04.333 --> 00:10:08.578
+Sab jodte hain. Ek achhe vendor ka din kuch aisa dikhta hai.
+
+121
+00:10:09.028 --> 00:10:12.868
+Subah dashboard kholiye aur live activity check kijiye.
+
+122
+00:10:13.318 --> 00:10:19.185
+Har naya order jaldi accept kijiye. Late accept se S L A rate kharab hota hai.
+
+123
+00:10:19.635 --> 00:10:22.451
+Time pe pick, pack aur hand over kijiye.
+
+124
+00:10:22.901 --> 00:10:28.874
+Fifty thousand rupees ya usse zyada ke orders ke liye e-way bill upload kijiye.
+
+125
+00:10:29.324 --> 00:10:34.367
+Stock numbers sahi rakhiye. Agar app mein aisa stock dikhe jo hai hi nahi, toh
+
+126
+00:10:34.367 --> 00:10:37.794
+Orders fail hote hain aur customers naaraz hote hain.
+
+127
+00:10:38.244 --> 00:10:42.254
+Aur hafte mein ek baar returns aur settlements check kijiye.
+
+128
+00:10:44.666 --> 00:10:50.006
+Quick check. Ek vendor ne kal price change request daali, lekin customers ko abhi
+
+129
+00:10:50.006 --> 00:10:53.434
+Bhi purana price dikh raha hai. Kyun? Rukke sochiye.
+
+130
+00:10:57.384 --> 00:11:03.122
+Answer: admin ne abhi tak approve nahi kiya. Vendor propose karta hai, admin approve
+
+131
+00:11:03.122 --> 00:11:03.805
+Karta hai.
+
+132
+00:11:06.600 --> 00:11:09.160
+Module one ko summarise karte hain.
+
+133
+00:11:09.610 --> 00:11:14.346
+Ye course vendor ka KYC approve hone ke baad se shuru hota hai.
+
+134
+00:11:14.796 --> 00:11:18.295
+Vendor console ke left menu mein ten sections hain.
+
+135
+00:11:18.745 --> 00:11:23.737
+Dashboard mein orders, G M V, S L A rate aur A O V dikhte hain.
+
+136
+00:11:24.187 --> 00:11:28.752
+Staff logins ko sirf wahi dikhta hai jo main login allow karta hai.
+
+137
+00:11:29.202 --> 00:11:33.681
+Aur golden rule: vendor propose karta hai, admin approve karta hai.
+
+138
+00:11:33.681 --> 00:11:36.221
+Module two mein hum stock add karenge.
+
+139
+00:11:38.633 --> 00:11:44.783
+Module 1 yahin khatam hota hai. Agla hai module 2: Inventory, SKUs and change
+
+140
+00:11:44.783 --> 00:11:45.502
+Requests.

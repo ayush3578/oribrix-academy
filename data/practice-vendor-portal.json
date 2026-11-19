@@ -1,0 +1,386 @@
+[
+ {
+  "m": 1,
+  "q": {
+   "en": "Which section shows payouts and the Tally export?",
+   "hi": "Payouts aur Tally export kis section mein dikhte hain?"
+  },
+  "o": {
+   "en": [
+    "Inventory",
+    "Earnings & Settlements",
+    "Warehouses"
+   ],
+   "hi": [
+    "Inventory",
+    "Earnings & Settlements",
+    "Warehouses"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Earnings & Settlements shows each payout cycle, deductions and the Tally XML / CSV export.",
+   "hi": "Earnings & Settlements mein har payout cycle, deductions aur Tally XML / CSV export hai."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "GMV means…",
+   "hi": "GMV ka matlab…"
+  },
+  "o": {
+   "en": [
+    "Total value sold before deductions",
+    "Net payout after commission",
+    "GST collected"
+   ],
+   "hi": [
+    "Deductions se pehle total bikri ki value",
+    "Commission ke baad net payout",
+    "GST collected"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "GMV (gross merchandise value) is the total value sold, before commission, refunds and other deductions.",
+   "hi": "GMV (gross merchandise value) commission, refunds aur deductions se pehle ki total bikri hai."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "Golden rule of the vendor portal?",
+   "hi": "Vendor portal ka golden rule?"
+  },
+  "o": {
+   "en": [
+    "Vendor proposes, admin approves",
+    "Customer decides prices",
+    "Staff approve warehouses"
+   ],
+   "hi": [
+    "Vendor propose karta hai, admin approve karta hai",
+    "Customer price decide karta hai",
+    "Staff warehouse approve karte hain"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Warehouses, price and policy changes and e-way bills all need admin approval.",
+   "hi": "Warehouses, price aur policy changes aur e-way bills sab admin approval maangte hain."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "Where does a product's name always come from?",
+   "hi": "Product ka naam hamesha kahan se aata hai?"
+  },
+  "o": {
+   "en": [
+    "The vendor types it",
+    "The admin's master catalog",
+    "Shiprocket"
+   ],
+   "hi": [
+    "Vendor type karta hai",
+    "Admin ka master catalog",
+    "Shiprocket"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Vendors never type product names. They pick from the master catalog.",
+   "hi": "Vendor kabhi product ka naam type nahi karta. Master catalog se chunta hai."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "While a price request is pending, the SKU sells at…",
+   "hi": "Price request pending rehte hue SKU kis price pe bikta hai?"
+  },
+  "o": {
+   "en": [
+    "The requested price",
+    "The admin's catalog price",
+    "It doesn't sell"
+   ],
+   "hi": [
+    "Requested price",
+    "Admin ka catalog price",
+    "Bikta hi nahi"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Until the admin accepts, the admin's price applies.",
+   "hi": "Admin accept kare tab tak admin ka price lagta hai."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "Allow COD is set…",
+   "hi": "Allow COD kahan set hota hai?"
+  },
+  "o": {
+   "en": [
+    "Per SKU",
+    "Per vendor account only",
+    "By Shiprocket"
+   ],
+   "hi": [
+    "Har SKU pe",
+    "Sirf vendor account pe",
+    "Shiprocket dwara"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Cash on delivery is a checkbox on each SKU.",
+   "hi": "Cash on delivery har SKU pe ek checkbox hai."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "A new warehouse is saved. Its status?",
+   "hi": "Naya warehouse save hua. Status?"
+  },
+  "o": {
+   "en": [
+    "Approved",
+    "Pending",
+    "Paused"
+   ],
+   "hi": [
+    "Approved",
+    "Pending",
+    "Paused"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "New warehouses are pending until the admin verifies the pickup address and approves.",
+   "hi": "Naya warehouse admin ke verify aur approve karne tak pending rehta hai."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "What does Pause Intake do?",
+   "hi": "Pause Intake kya karta hai?"
+  },
+  "o": {
+   "en": [
+    "Deletes the warehouse",
+    "Temporarily hides that warehouse's items",
+    "Blocks the vendor"
+   ],
+   "hi": [
+    "Warehouse delete karta hai",
+    "Us warehouse ke items temporarily chhupata hai",
+    "Vendor ko block karta hai"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Pause Intake hides items temporarily, e.g. during a stock count or holiday.",
+   "hi": "Pause Intake items ko temporarily chhupata hai, jaise stock count ya holiday mein."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "Verify pickup first or approve first?",
+   "hi": "Pehle pickup verify ya pehle approve?"
+  },
+  "o": {
+   "en": [
+    "Approve first",
+    "Verify in Shiprocket first, then approve",
+    "Either"
+   ],
+   "hi": [
+    "Pehle approve",
+    "Pehle Shiprocket mein verify, phir approve",
+    "Koi bhi"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Agreed process: verify in Shiprocket, then approve, so vendors never see a pickup error.",
+   "hi": "Agreed process: Shiprocket mein verify, phir approve, taaki vendor ko pickup error na dikhe."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Dismiss on the new-order alert…",
+   "hi": "New-order alert pe Dismiss…"
+  },
+  "o": {
+   "en": [
+    "Cancels the order",
+    "Only silences the alert",
+    "Accepts the order"
+   ],
+   "hi": [
+    "Order cancel karta hai",
+    "Sirf alert chup karta hai",
+    "Order accept karta hai"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Dismiss is not cancel. The order still waits in Orders.",
+   "hi": "Dismiss cancel nahi hai. Order Orders mein wait karta rehta hai."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Which dispatch option sends customer SMS updates?",
+   "hi": "Kaunsa dispatch option customer ko SMS bhejta hai?"
+  },
+  "o": {
+   "en": [
+    "Local driver",
+    "Shiprocket courier",
+    "Neither"
+   ],
+   "hi": [
+    "Local driver",
+    "Shiprocket courier",
+    "Dono nahi"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "SMS comes from Shiprocket. Local-driver dispatch sends none.",
+   "hi": "SMS Shiprocket se aata hai. Local driver pe nahi jaata."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Where does the pickup slot confirmation arrive?",
+   "hi": "Pickup slot confirmation kahan aata hai?"
+  },
+  "o": {
+   "en": [
+    "WhatsApp on the vendor's registered phone",
+    "The customer's email",
+    "The admin panel only"
+   ],
+   "hi": [
+    "Vendor ke registered phone pe WhatsApp",
+    "Customer ka email",
+    "Sirf admin panel"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Shiprocket sends the slot by WhatsApp; the vendor confirms or changes it there.",
+   "hi": "Shiprocket WhatsApp pe slot bhejta hai; vendor wahin confirm ya change karta hai."
+  }
+ },
+ {
+  "m": 5,
+  "q": {
+   "en": "An order of ₹64,896 is accepted. Extra step?",
+   "hi": "₹64,896 ka order accept hua. Extra step?"
+  },
+  "o": {
+   "en": [
+    "None",
+    "Upload an e-way bill",
+    "Call the admin"
+   ],
+   "hi": [
+    "Kuch nahi",
+    "E-way bill upload",
+    "Admin ko call"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "₹50,000 or more needs an e-way bill, reviewed by the admin.",
+   "hi": "₹50,000 ya zyada pe e-way bill chahiye, admin review karta hai."
+  }
+ },
+ {
+  "m": 5,
+  "q": {
+   "en": "'Picked up' on a return comes from…",
+   "hi": "Return pe 'Picked up' kahan se aata hai?"
+  },
+  "o": {
+   "en": [
+    "Shiprocket",
+    "Razorpay",
+    "Tally"
+   ],
+   "hi": [
+    "Shiprocket",
+    "Razorpay",
+    "Tally"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Picked up comes from Shiprocket; Refunded from Razorpay; Escalated from the admin.",
+   "hi": "Picked up Shiprocket se; Refunded Razorpay se; Escalated admin se."
+  }
+ },
+ {
+  "m": 6,
+  "q": {
+   "en": "A suspended vendor can…",
+   "hi": "Suspended vendor kya kar sakta hai?"
+  },
+  "o": {
+   "en": [
+    "Add SKUs",
+    "View and export data",
+    "Receive new orders"
+   ],
+   "hi": [
+    "SKUs add",
+    "Data dekhna aur export",
+    "Naye orders lena"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Suspended means read-only: view and export only.",
+   "hi": "Suspended matlab read-only: sirf dekhna aur export."
+  }
+ },
+ {
+  "m": 6,
+  "q": {
+   "en": "What was agreed about staff logins?",
+   "hi": "Staff logins ke baare mein kya agree hua?"
+  },
+  "o": {
+   "en": [
+    "Staff can create users",
+    "Remove dashboard and sales from staff logins",
+    "Staff see all warehouses always"
+   ],
+   "hi": [
+    "Staff users bana sakte hain",
+    "Staff logins se dashboard aur sales hatana",
+    "Staff hamesha saare warehouses dekhte hain"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Dashboard and sales numbers will be removed from staff logins so business figures stay with the owner.",
+   "hi": "Staff logins se dashboard aur sales hataye jaayenge taaki business figures owner ke paas rahein."
+  }
+ }
+]

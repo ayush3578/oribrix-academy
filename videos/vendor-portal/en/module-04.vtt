@@ -1,0 +1,537 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:05.729
+Module four. Orders. From the moment a new order arrives, to the moment it leaves
+
+2
+00:00:05.729 --> 00:00:06.581
+The warehouse.
+
+3
+00:00:08.767 --> 00:00:13.833
+Orders are where the vendor earns money. A fast, correct dispatch keeps customers
+
+4
+00:00:13.833 --> 00:00:16.084
+Happy and keeps the S L A rate high.
+
+5
+00:00:16.534 --> 00:00:20.396
+First, the new order alert, and what accept and dismiss really do.
+
+6
+00:00:20.846 --> 00:00:23.150
+Then verifying and accepting the order.
+
+7
+00:00:23.600 --> 00:00:26.693
+Then the order stages: pick, pack and hand over.
+
+8
+00:00:27.143 --> 00:00:31.644
+Then the two ways to dispatch: Shiprocket, or the vendor's own local driver.
+
+9
+00:00:32.094 --> 00:00:34.270
+Then WhatsApp pickup slots and tracking.
+
+10
+00:00:34.720 --> 00:00:38.198
+And finally, delivery timing, and what is still being worked on.
+
+11
+00:00:40.600 --> 00:00:45.629
+Every order moves through the same stages. Each stage the vendor updates is mirrored
+
+12
+00:00:45.629 --> 00:00:48.024
+In the customer app and the admin panel.
+
+13
+00:00:48.474 --> 00:00:50.693
+A new order alert appears, with a sound.
+
+14
+00:00:51.143 --> 00:00:53.959
+The vendor checks the items and stock, and accepts.
+
+15
+00:00:54.409 --> 00:00:57.566
+Verify and pick: the goods are taken from the shelf.
+
+16
+00:00:58.016 --> 00:01:00.981
+Verify and pack: the goods are packed and ready.
+
+17
+00:01:01.431 --> 00:01:06.466
+Hand over: the package goes to the Shiprocket courier, or the vendor's local driver.
+
+18
+00:01:06.916 --> 00:01:08.729
+And delivered to the customer's site.
+
+19
+00:01:11.133 --> 00:01:15.987
+When an order arrives, this alert pops up on whatever page the vendor is on, with a
+
+20
+00:01:15.987 --> 00:01:16.338
+Sound.
+
+21
+00:01:16.788 --> 00:01:20.159
+It's marked action required, with an auto dismiss timer.
+
+22
+00:01:20.609 --> 00:01:24.044
+It shows the order I D, the quantity, and the total value.
+
+23
+00:01:24.494 --> 00:01:27.758
+View and Accept Order takes the vendor straight to the order.
+
+24
+00:01:28.208 --> 00:01:32.254
+And Dismiss only closes the alert. It does not cancel the order.
+
+25
+00:01:32.254 --> 00:01:35.162
+The order stays in Orders, waiting for action.
+
+26
+00:01:37.567 --> 00:01:40.635
+Remember this one, because vendors get it wrong.
+
+27
+00:01:40.635 --> 00:01:44.151
+Dismiss is not cancel. Dismiss only silences the alert.
+
+28
+00:01:44.151 --> 00:01:49.456
+The order is still sitting in Orders, under awaiting action, and the clock is still
+
+29
+00:01:49.456 --> 00:01:54.314
+Running. To refuse an order, the vendor must open it and click cancel order.
+
+30
+00:02:34.300 --> 00:02:36.348
+Opening the order shows its details.
+
+31
+00:02:36.798 --> 00:02:39.123
+The order I D and the delivery area.
+
+32
+00:02:39.573 --> 00:02:44.352
+Product verification. The vendor ticks each item after checking it's really there.
+
+33
+00:02:44.802 --> 00:02:47.447
+Available stock is shown next to each item.
+
+34
+00:02:47.897 --> 00:02:50.948
+Cancel order, if the vendor truly cannot fulfil it.
+
+35
+00:02:51.398 --> 00:02:56.616
+And verify and accept. The status updates for the admin and the customer at the same
+
+36
+00:02:56.616 --> 00:02:57.051
+Moment.
+
+37
+00:02:59.467 --> 00:03:02.368
+Back on the orders page, every order is tracked here.
+
+38
+00:03:02.818 --> 00:03:05.787
+Awaiting action counts orders not yet accepted.
+
+39
+00:03:05.787 --> 00:03:07.618
+This should be close to zero.
+
+40
+00:03:08.068 --> 00:03:10.906
+Filters by status, warehouse and payment type.
+
+41
+00:03:11.356 --> 00:03:16.092
+The status column: accepted, picking, packed, dispatched, delivered or cancelled.
+
+42
+00:03:16.542 --> 00:03:19.635
+And the action menu, to move the order to the next stage.
+
+43
+00:03:22.033 --> 00:03:26.428
+When the order is packed, the vendor clicks dispatch, and chooses one of two tabs.
+
+44
+00:03:26.878 --> 00:03:32.358
+Shiprocket courier, automatic. Shiprocket chooses the best available courier, like
+
+45
+00:03:32.358 --> 00:03:37.838
+Delhivery, Blue Dart or Shadowfax, assigns an A W B tracking number, generates the
+
+46
+00:03:37.838 --> 00:03:41.580
+Shipping label, and schedules pickup from the warehouse.
+
+47
+00:03:41.580 --> 00:03:44.520
+Customer S M S updates come from Shiprocket.
+
+48
+00:03:44.970 --> 00:03:50.889
+Local or in-house driver. The vendor uses their own driver, picked from Drivers and
+
+49
+00:03:50.889 --> 00:03:56.665
+Fleet, with name, phone and vehicle. Important: in this case no S M S goes to the
+
+50
+00:03:56.665 --> 00:04:00.160
+Customer, because S M S is handled by Shiprocket.
+
+51
+00:04:02.567 --> 00:04:04.487
+Let's watch this in the live demo.
+
+52
+00:04:07.500 --> 00:04:12.769
+Here's the dispatch window from the live demo. This tab is Local or In-house driver.
+
+53
+00:04:15.500 --> 00:04:20.183
+The vendor can select a saved delivery partner from the drop down, or type the
+
+54
+00:04:20.183 --> 00:04:23.905
+Driver's name, phone number, vehicle model and vehicle number.
+
+55
+00:04:31.500 --> 00:04:36.728
+Then dispatch with the local driver. Remember, the customer won't get an S M S for
+
+56
+00:04:36.728 --> 00:04:37.047
+This.
+
+57
+00:04:41.100 --> 00:04:45.837
+Now the Shiprocket courier tab. It shows the automated courier assignment, the
+
+58
+00:04:45.837 --> 00:04:48.631
+Destination pincode, and the pickup warehouse.
+
+59
+00:04:49.231 --> 00:04:54.812
+The vendor clicks dispatch via Shiprocket. But here a notice appears: Shiprocket did
+
+60
+00:04:54.812 --> 00:04:57.935
+Not assign an A W B with any available courier.
+
+61
+00:05:03.500 --> 00:05:08.624
+The reason was the one we saw in module three. This warehouse's pickup address was
+
+62
+00:05:08.624 --> 00:05:10.561
+Not yet verified in Shiprocket.
+
+63
+00:05:19.500 --> 00:05:24.217
+That's why the agreed fix is to verify every pickup address before approving the
+
+64
+00:05:24.217 --> 00:05:27.991
+Warehouse. The error text will also be made clearer for vendors.
+
+65
+00:05:36.300 --> 00:05:38.220
+Let's watch this in the live demo.
+
+66
+00:05:41.233 --> 00:05:44.860
+This is the same order inside the Oribrix Shiprocket account.
+
+67
+00:05:47.633 --> 00:05:52.999
+Notice the yellow tag: e-way bill mandatory. The order is worth over sixty four
+
+68
+00:05:52.999 --> 00:05:56.124
+Thousand rupees, so an e-way bill is required.
+
+69
+00:05:56.724 --> 00:05:59.678
+And under pickup address, a red dot: unverified.
+
+70
+00:05:59.678 --> 00:06:02.078
+That's the cause of the dispatch error.
+
+71
+00:06:02.678 --> 00:06:05.900
+From the menu, the order can be marked as verified.
+
+72
+00:06:05.900 --> 00:06:09.249
+Shiprocket confirms: one order verified successfully.
+
+73
+00:06:14.033 --> 00:06:17.980
+Once Shiprocket accepts the order, a few things happen automatically.
+
+74
+00:06:18.430 --> 00:06:20.286
+A delivery partner is assigned.
+
+75
+00:06:20.736 --> 00:06:25.610
+A WhatsApp message goes to the vendor's registered phone, with a pickup time slot,
+
+76
+00:06:25.610 --> 00:06:29.653
+For example ten in the morning to two in the afternoon the next day.
+
+77
+00:06:30.103 --> 00:06:33.922
+The vendor can confirm the slot, or change it, right in WhatsApp.
+
+78
+00:06:33.922 --> 00:06:37.740
+So the vendor's registered number must be a real, working number.
+
+79
+00:06:38.190 --> 00:06:40.793
+The courier picks up the package with the shipping label.
+
+80
+00:06:41.243 --> 00:06:43.440
+A live tracking link becomes available.
+
+81
+00:06:43.890 --> 00:06:45.362
+And the order is delivered.
+
+82
+00:06:47.767 --> 00:06:52.646
+One honest point from the session. Oribrix is a quick commerce business, and speed
+
+83
+00:06:52.646 --> 00:06:53.122
+Matters.
+
+84
+00:06:53.572 --> 00:06:58.682
+Today, with Shiprocket, assigning a delivery partner can take about twelve to twenty
+
+85
+00:06:58.682 --> 00:07:01.785
+Four hours. That's fine for bulk and long distance.
+
+86
+00:07:02.235 --> 00:07:07.756
+But the Oribrix goal is instant delivery, in one to two hours, especially for medium
+
+87
+00:07:07.756 --> 00:07:12.816
+Value city orders, like lights or boards worth ten or twenty thousand rupees.
+
+88
+00:07:13.266 --> 00:07:18.498
+So faster options are being explored. Porter offers express delivery, but only on
+
+89
+00:07:18.498 --> 00:07:22.826
+Two wheelers and only in some cities, so it can't carry bulk loads.
+
+90
+00:07:22.826 --> 00:07:24.893
+Other options are being checked.
+
+91
+00:07:27.300 --> 00:07:31.503
+Here are the order statuses you'll see in the orders list, and what each one means.
+
+92
+00:07:31.953 --> 00:07:36.943
+New, or awaiting action. The order has arrived, but the vendor hasn't accepted it
+
+93
+00:07:36.943 --> 00:07:38.545
+Yet. The clock is running.
+
+94
+00:07:38.995 --> 00:07:41.939
+Accepted. The vendor checked and confirmed the items.
+
+95
+00:07:42.389 --> 00:07:45.951
+Picking, then packed. The goods are being prepared in the warehouse.
+
+96
+00:07:46.401 --> 00:07:50.497
+Dispatched, or in transit. It has been handed over and is on the way.
+
+97
+00:07:50.947 --> 00:07:53.959
+And delivered or cancelled, the two final states.
+
+98
+00:07:53.959 --> 00:07:57.155
+A cancelled order should always have a clear reason.
+
+99
+00:07:59.567 --> 00:08:03.843
+Cancelling hurts the customer and the vendor's rating, so it should be rare.
+
+100
+00:08:03.843 --> 00:08:06.543
+Here is when it's acceptable, and when it isn't.
+
+101
+00:08:06.993 --> 00:08:11.284
+When the stock really isn't there. And then fix the stock number straight away, so
+
+102
+00:08:11.284 --> 00:08:12.540
+It doesn't happen again.
+
+103
+00:08:12.990 --> 00:08:15.912
+When the item is damaged and there's no replacement.
+
+104
+00:08:16.362 --> 00:08:18.133
+When the customer asks to cancel.
+
+105
+00:08:18.583 --> 00:08:23.404
+Never just to avoid a small order. The minimum order quantity exists for that.
+
+106
+00:08:23.854 --> 00:08:28.377
+And never because dispatch looks hard. Ask the Oribrix team for help instead.
+
+107
+00:08:30.767 --> 00:08:32.687
+Here's a checklist for every order.
+
+108
+00:08:33.137 --> 00:08:35.078
+Accept within minutes, not hours.
+
+109
+00:08:35.528 --> 00:08:38.280
+Tick each item only after physically checking it.
+
+110
+00:08:38.730 --> 00:08:42.485
+Update pick and pack stages honestly. The customer sees them.
+
+111
+00:08:42.935 --> 00:08:47.200
+If the order is fifty thousand rupees or more, upload the e-way bill.
+
+112
+00:08:47.200 --> 00:08:48.375
+That's module five.
+
+113
+00:08:48.825 --> 00:08:52.750
+Confirm the WhatsApp pickup slot, so the courier doesn't come back empty.
+
+114
+00:08:53.200 --> 00:08:58.672
+And if you use a local driver, inform the customer yourself, because no S M S goes
+
+115
+00:08:58.672 --> 00:08:58.939
+Out.
+
+116
+00:09:01.333 --> 00:09:04.559
+Quick check. A vendor clicked dismiss on a new order alert.
+
+117
+00:09:04.559 --> 00:09:06.965
+What happened to the order? Pause and think.
+
+118
+00:09:10.915 --> 00:09:15.082
+The answer: it's still waiting in Orders, under awaiting action.
+
+119
+00:09:15.082 --> 00:09:17.166
+Dismiss only silences the alert.
+
+120
+00:09:19.967 --> 00:09:23.935
+And if a Shiprocket dispatch fails anyway, here's what the vendor should do.
+
+121
+00:09:24.385 --> 00:09:25.857
+Read the notice carefully.
+
+122
+00:09:26.307 --> 00:09:30.275
+Don't cancel the order. The goods are packed and the customer is waiting.
+
+123
+00:09:30.725 --> 00:09:32.624
+Tell the Oribrix team straight away.
+
+124
+00:09:33.074 --> 00:09:36.466
+The admin checks the pickup address in Shiprocket and fixes it.
+
+125
+00:09:36.916 --> 00:09:41.993
+Then retry the Shiprocket dispatch, or, if it's urgent, use a local driver and
+
+126
+00:09:41.993 --> 00:09:43.294
+Inform the customer.
+
+127
+00:09:45.700 --> 00:09:47.471
+Let's summarise module four.
+
+128
+00:09:47.921 --> 00:09:52.017
+The alert has view and accept, or dismiss, and dismiss is not cancel.
+
+129
+00:09:52.467 --> 00:09:54.493
+Verify each item, then accept.
+
+130
+00:09:54.943 --> 00:09:57.439
+The stages are pick, pack and hand over.
+
+131
+00:09:57.889 --> 00:10:04.012
+Shiprocket gives an A W B and customer S M S. A local driver means no S M S.
+
+132
+00:10:04.462 --> 00:10:08.384
+And an unverified pickup address causes the dispatch error.
+
+133
+00:10:08.384 --> 00:10:11.907
+Next, in module five, e-way bills, returns and money.
+
+134
+00:10:14.300 --> 00:10:19.975
+That's the end of module 4. Next up, module 5: E-way bills, returns and earnings.
