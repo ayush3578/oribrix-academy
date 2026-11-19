@@ -77,6 +77,13 @@
   }
   function footer() { return `<footer class="foot"><div class="wrap"><img src="assets/img/mark_blue.png" alt=""> ${esc(C.ORG_NAME)} · ${t("footer")}</div></footer>`; }
   function render(html) { app.innerHTML = header() + `<main>${html}</main>` + footer(); window.scrollTo(0, 0); }
+  // Scroll-reveal: elements with .reveal fade up once as they enter the viewport (skipped with reduced motion).
+  function reveal() {
+    const els = app.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) { els.forEach(e => e.classList.add("in")); return; }
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -4% 0px", threshold: 0.05 });
+    els.forEach(e => io.observe(e));
+  }
 
   document.addEventListener("click", e => {
     const el = e.target.closest("[data-lang],[data-go],[data-act]"); if (!el) return;
@@ -109,28 +116,46 @@
 
   // ---------------- register ----------------
   function viewRegister() {
-    const total = COURSE.modules.reduce((a, m) => a + modDuration(m), 0);
+    const L = S.lang === "hi" ? "hi" : "en", tx = o => (o && (o[L] || o.en)) || "";
+    const live = (COURSES || []).filter(c => c.status === "live" && DATA[c.id]), soon = (COURSES || []).filter(c => c.status === "soon");
+    const mins = id => Math.round(DATA[id].modules.reduce((a, m) => a + modDuration(m), 0) / 60);
+    const nMods = live.reduce((a, c) => a + DATA[c.id].modules.length, 0), hours = live.reduce((a, c) => a + mins(c.id), 0) / 60;
+    const courseCard = (c, i) => `<article class="lc reveal" style="--i:${i}">
+        <div class="lc-top"><span class="pill live">${t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
+        <h3>${esc(tx(c.title))}</h3><p>${esc(tx(c.desc))}</p>
+        <ol class="lc-mods">${DATA[c.id].modules.map(m => `<li>${esc(m.title[L] || m.title.en)}</li>`).join("")}</ol>
+        <div class="lc-foot"><span>${t("land_inc")}</span></div></article>`;
+    const steps = [1, 2, 3, 4].map(k => `<li class="reveal" style="--i:${k - 1}"><b>${k}</b><h4>${t("land_s" + k)}</h4><p>${t("land_s" + k + "d")}</p></li>`).join("");
+    const feats = ["f1", "f2", "f3", "f4"].map((k, i) => `<div class="feat reveal" style="--i:${i}"><span class="fi fi-${k}" aria-hidden="true"></span><h4>${t("land_" + k)}</h4><p>${t("land_" + k + "d")}</p></div>`).join("");
     render(`<section class="hero"><div class="wrap hero-in">
       <div class="hero-txt">
         <img class="hero-mark" src="assets/img/mark_white.png" alt="">
-        <h1>${esc(C.COURSE_NAME)}</h1><p>${t("tagline")}</p>
-        <div class="stats">
-          <div><b>${COURSE.modules.length}</b><span>${t("stat_modules")}</span></div>
-          <div><b>~${Math.round(total / 60)}</b><span>${t("stat_minutes")}</span></div>
-          <div><b>1</b><span>${t("stat_quiz")}</span></div>
-          <div><b>1</b><span>${t("stat_cert")}</span></div>
+        <p class="eyebrow">${t("land_eyebrow")}</p>
+        <h1>${t("land_title")}</h1><p>${t("land_tag")}</p>
+        <div class="hstats">
+          <div><b>${live.length}</b><span>${t("land_courses")}</span></div>
+          <div><b>${nMods}</b><span>${t("stat_modules")}</span></div>
+          <div><b>${hours >= 1 ? hours.toFixed(1).replace(/\.0$/, "") : Math.round(hours * 60)}</b><span>${hours >= 1 ? t("land_hours") : t("stat_minutes")}</span></div>
+          <div><b>${live.length}</b><span>${t("land_certs")}</span></div>
         </div>
       </div>
       <form class="card reg" id="reg" novalidate>
-        <h2>${t("reg_title")}</h2>
+        <h2>${t("land_reg")}</h2>
         <label>${t("reg_name")}<input id="r_name" autocomplete="name" maxlength="60" required></label>
         <label>${t("reg_mobile")}<div class="tel"><span>+91</span><input id="r_mob" inputmode="numeric" autocomplete="tel-national" maxlength="10" required></div></label>
         <label>${t("reg_lang")}<div class="seg"><button type="button" data-l="en" class="${S.lang === "en" ? "on" : ""}">English</button><button type="button" data-l="hi" class="${S.lang === "hi" ? "on" : ""}">Hinglish</button></div></label>
         <p class="err" id="r_err"></p>
-        <button class="btn big" id="r_btn">${t("reg_btn")}</button>
+        <button class="btn big" id="r_btn">${t("land_btn")}</button>
         <p class="note">${t("reg_note")}</p>
       </form></div></section>
-      <section class="wrap mods-preview">${COURSE.modules.map(m => `<div class="mp"><span>${m.n}</span>${esc(m.title[S.lang] || m.title.en)}</div>`).join("")}</section>`);
+      <section class="wrap lsec"><div class="lhead reveal"><h2>${t("land_c_title")}</h2><p>${t("land_c_sub")}</p></div>
+        <div class="lcards">${live.map(courseCard).join("")}
+        ${soon.map((c, i) => `<article class="lc soon reveal" style="--i:${live.length + i}"><div class="lc-top"><span class="pill">${t("soon")}</span></div><h3>${esc(tx(c.title))}</h3><p>${esc(tx(c.desc))}</p></article>`).join("")}</div></section>
+      <section class="lband"><div class="wrap lsec"><div class="lhead reveal"><h2>${t("land_h_title")}</h2></div><ol class="steps">${steps}</ol></div></section>
+      <section class="wrap lsec"><div class="lhead reveal"><h2>${t("land_f_title")}</h2></div><div class="feats">${feats}</div></section>
+      <section class="wrap lsec lcta reveal"><h2>${t("land_cta")}</h2><p>${t("land_cta_d")}</p><a class="btn" href="#" id="to_reg">${t("land_btn")}</a></section>`);
+    $("#to_reg").onclick = e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); setTimeout(() => $("#r_name").focus({ preventScroll: true }), 400); };
+    reveal();
     $("#reg").querySelectorAll(".seg button").forEach(b => b.onclick = () => { S.lang = b.dataset.l; persist(); route(); });
     $("#reg").onsubmit = async e => {
       e.preventDefault();
@@ -721,6 +746,7 @@
     try { COURSES = await (await fetch("data/courses.json", { cache: "no-cache" })).json(); }
     catch (e) { COURSES = [{ id: LEGACY, status: "live", data: "data/course.json", modules: 8, notes: "notes/Oribrix-Vendor-Onboarding-Notes.pdf", title: { en: C.COURSE_NAME } }]; }
     if (!(await useCourse(LEGACY))) { app.innerHTML = "<p style='padding:40px'>Could not load the course data.</p>"; return; }
+    await Promise.all(COURSES.filter(c => c.status === "live" && !DATA[c.id]).map(async c => { try { DATA[c.id] = await (await fetch(c.data, { cache: "no-cache" })).json(); } catch (e) {} }));
     document.documentElement.lang = S.lang === "hi" ? "hi-Latn" : "en";
     if (me()) sync().then(() => { if (!location.hash || location.hash === "#home") route(); });
     route();
