@@ -17,7 +17,9 @@
 
 const COURSES = {
   "vendor-onboarding": { modules: 8, name: "Oribrix Vendor Onboarding Academy" },
-  "vendor-portal": { modules: 6, name: "Oribrix Vendor Portal Academy" }
+  "vendor-portal": { modules: 6, name: "Oribrix Vendor Portal Academy" },
+  // restricted: true = opens only for learners an admin has allowed (Access tab)
+  "whatsapp-care": { modules: 4, name: "Oribrix WhatsApp Customer Care Academy", restricted: true }
 };
 const DEFAULT_COURSE = "vendor-onboarding";
 
@@ -28,7 +30,8 @@ const TABS = {
   Quiz: ["id", "module", "active", "question_en", "question_hi", "A_en", "B_en", "C_en", "D_en", "A_hi", "B_hi", "C_hi", "D_hi", "correct", "explanation_en", "explanation_hi", "course"],
   Settings: ["key", "value", "notes"],
   Practice: ["at", "mobile", "name", "score", "total", "percent", "course"],
-  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "reason", "course"]
+  ResetLog: ["reset_at", "submitted_at", "mobile", "name", "score", "total", "percent", "passed", "cert_id", "reason", "course"],
+  Access: ["mobile", "name", "course", "status", "requested_at", "decided_at", "decided_by"]
 };
 const DEFAULT_SETTINGS = [
   ["TOTAL_MODULES", 8, "Number of video modules a learner must complete before the quiz"],
@@ -71,6 +74,8 @@ function handle(p) {
       case "admin_check": return adminCheck(p);
       case "admin": return adminData(p);
       case "admin_reset": return adminReset(p);
+      case "request_access": return requestAccess(p);
+      case "admin_access": return adminAccess(p);
     }
     return { error: "unknown_action" };
   } catch (err) {
@@ -84,18 +89,28 @@ function handle(p) {
 function courseOf(p) { const c = String((p && p.course) || DEFAULT_COURSE); if (!COURSES[c]) fail("bad_course"); return c; }
 function rc(r) { return String(r.course || "").trim() || DEFAULT_COURSE; }
 function totalModules(c) { return c === DEFAULT_COURSE ? Number(setting("TOTAL_MODULES", 8)) : COURSES[c].modules; }
+function isRestricted(c) { return !!(COURSES[c] && COURSES[c].restricted); }
+/* "open" (no permission needed), "granted", "requested", "rejected" or "none". Admins always have access. */
+function accessOf(mobile, course, accRows) {
+  if (!isRestricted(course) || isAdminMobile(mobile)) return "open";
+  const mine = (accRows || rows("Access")).filter(r => String(r.mobile) === mobile && String(r.course) === course);
+  return mine.length ? String(mine[mine.length - 1].status || "none") : "none";
+}
+function needAccess(mobile, course) { const a = accessOf(mobile, course); if (a !== "open" && a !== "granted") fail("no_access"); }
 function courseName(c) { return c === DEFAULT_COURSE ? setting("COURSE_NAME", COURSES[c].name) : COURSES[c].name; }
 /* Adds header cells that newer versions of this file need (e.g. "course") to sheets made by older versions. */
 function ensureColumns(force) {
   const props = PropertiesService.getScriptProperties();
-  if (!force && props.getProperty("schema") === "2") return;
+  if (!force && props.getProperty("schema") === "3") return;
   const ss = SpreadsheetApp.getActive();
   Object.keys(TABS).forEach(name => {
-    const s = ss.getSheetByName(name); if (!s || s.getLastRow() === 0) return;
+    let s = ss.getSheetByName(name);
+    if (!s) { s = ss.insertSheet(name); s.appendRow(TABS[name]); s.getRange(1, 1, 1, TABS[name].length).setFontWeight("bold").setBackground("#00A4FF").setFontColor("#ffffff"); s.setFrozenRows(1); s.getRange("A:A").setNumberFormat("@"); return; }
+    if (s.getLastRow() === 0) return;
     const have = s.getRange(1, 1, 1, Math.max(1, s.getLastColumn())).getValues()[0].map(String);
     TABS[name].forEach(h => { if (have.indexOf(h) < 0) { have.push(h); s.getRange(1, have.length).setValue(h).setFontWeight("bold").setBackground("#00A4FF").setFontColor("#ffffff"); } });
   });
-  props.setProperty("schema", "2");
+  props.setProperty("schema", "3");
 }
 function sh(name) { return SpreadsheetApp.getActive().getSheetByName(name); }
 function rows(name) {
@@ -137,10 +152,10 @@ function status(p) {
   const mobile = cleanMobile(p.mobile), l = learner(mobile), course = courseOf(p);
   const all = {};
   if (l) {
-    const prog = rows("Progress").filter(r => String(r.mobile) === mobile), res = rows("Results").filter(r => String(r.mobile) === mobile);
+    const prog = rows("Progress").filter(r => String(r.mobile) === mobile), res = rows("Results").filter(r => String(r.mobile) === mobile), acc = rows("Access");
     Object.keys(COURSES).forEach(c => {
       all[c] = { completed: Array.from(new Set(prog.filter(r => rc(r) === c).map(r => Number(r.module)))).sort((a, b) => a - b),
-                 result: publicResult(res.find(r => rc(r) === c)) };
+                 result: publicResult(res.find(r => rc(r) === c)), access: accessOf(mobile, c, acc) };
     });
   }
   return { registered: !!l, name: l ? l.name : null, completed: l ? all[course].completed : [], result: l ? all[course].result : null,
@@ -151,6 +166,7 @@ function progress(p) {
   const mobile = cleanMobile(p.mobile);
   if (!learner(mobile)) fail("not_registered");
   const course = courseOf(p), mod = Number(p.module), total = totalModules(course);
+  needAccess(mobile, course);
   if (!(mod >= 1 && mod <= total)) fail("bad_module");
   if (completed(mobile, course).indexOf(mod) < 0)
     append("Progress", { mobile: "'" + mobile, module: mod, lang: p.lang || "", watched_percent: Number(p.watched) || "", completed_at: now(), course: course });
@@ -188,6 +204,7 @@ function pickQuestions(mobile, attempt, course) {
 }
 function checkEligible(mobile, p, course) {
   if (!learner(mobile)) fail("not_registered");
+  if (!(p && isAdmin(p))) needAccess(mobile, course);
   if (isPassed(resultOf(mobile, course))) fail("already_submitted");     // failed learners may retake
   if (p && isAdmin(p)) return;                       // admins may skip the videos
   if (completed(mobile, course).length < totalModules(course)) fail("modules_incomplete");
@@ -308,6 +325,7 @@ function adminCheck(p) {
 function practice(p) {
   const mobile = cleanMobile(p.mobile), l = learner(mobile);
   if (!l) fail("not_registered");
+  needAccess(mobile, courseOf(p));
   const total = Math.max(1, Math.min(100, Number(p.total) || 0)), score = Math.max(0, Math.min(total, Number(p.score) || 0));
   append("Practice", { at: now(), mobile: "'" + mobile, name: l.name, score: score, total: total, percent: Math.round(100 * score / total), course: courseOf(p) });
   return { ok: true };
@@ -325,13 +343,14 @@ function adminData(p) {
     const m = String(r.mobile), x = pr[m] = pr[m] || { attempts: 0, best: 0, last: null, lastAt: "" };
     x.attempts++; x.best = Math.max(x.best, Number(r.percent) || 0); x.last = Number(r.percent) || 0; x.lastAt = f(r.at);
   });
+  const acc = rows("Access");
   const learners = rows("Learners").map(l => {
     const m = String(l.mobile), r = res[m], done = prog[m] || {};
     return { mobile: m, name: l.name, registered: f(l.registered_at), lastSeen: f(l.last_seen), lang: l.lang,
       modules: Object.keys(done).map(Number).sort((a, b) => a - b), moduleDates: done,
       result: r ? { score: Number(r.score), total: Number(r.total), percent: Number(r.percent), passed: r.passed === true || r.passed === "TRUE",
                     certId: r.cert_id, at: f(r.submitted_at), lang: r.lang, flag: r.same_name_other_mobile } : null,
-      attempts: (att[m] || 0) + (r ? 1 : 0), practice: pr[m] || null, admin: isAdminMobile(m) };
+      attempts: (att[m] || 0) + (r ? 1 : 0), practice: pr[m] || null, admin: isAdminMobile(m), access: accessOf(m, course, acc) };
   });
   // question statistics from submitted answers
   const key = {}, qs = {};
@@ -340,9 +359,31 @@ function adminData(p) {
     let a = {}; try { a = JSON.parse(r.answers_json || "{}"); } catch (e) {}
     Object.keys(a).forEach(id => { if (qs[id]) { qs[id].asked++; if (Number(a[id]) !== key[id]) qs[id].wrong++; } });
   });
-  return { course: course, courses: Object.keys(COURSES).map(c => ({ id: c, name: courseName(c), modules: totalModules(c) })),
+  const latest = {}; acc.forEach(a => { latest[String(a.mobile) + "|" + a.course] = a; });
+  const requests = Object.keys(latest).map(k => latest[k]).filter(a => String(a.status) === "requested" && COURSES[a.course])
+    .map(a => ({ mobile: String(a.mobile), name: a.name, course: String(a.course), courseName: courseName(String(a.course)), at: f(a.requested_at) }));
+  return { course: course, restricted: isRestricted(course), requests: requests,
+           courses: Object.keys(COURSES).map(c => ({ id: c, name: courseName(c), modules: totalModules(c), restricted: isRestricted(c) })),
            learners: learners, totalModules: total, passPercent: Number(setting("PASS_PERCENT", 80)),
            questions: Object.keys(qs).map(k => qs[k]).filter(q => q.asked > 0).sort((a, b) => b.wrong / b.asked - a.wrong / a.asked) };
+}
+
+function requestAccess(p) {
+  const mobile = cleanMobile(p.mobile), l = learner(mobile), course = courseOf(p);
+  if (!l) fail("not_registered");
+  const a = accessOf(mobile, course);
+  if (a === "open" || a === "granted" || a === "requested") return { ok: true, access: a };
+  append("Access", { mobile: "'" + mobile, name: l.name, course: course, status: "requested", requested_at: now() });
+  return { ok: true, access: "requested" };
+}
+
+function adminAccess(p) {
+  needAdmin(p);
+  const target = cleanMobile(p.target), l = learner(target), course = courseOf(p);
+  if (!l) fail("not_registered");
+  const status = p.grant === true || p.grant === "true" ? "granted" : (p.reject ? "rejected" : "revoked");
+  append("Access", { mobile: "'" + target, name: l.name, course: course, status: status, decided_at: now(), decided_by: cleanMobile(p.mobile) });
+  return { ok: true, access: status };
 }
 
 function adminReset(p) {
@@ -367,11 +408,12 @@ function updateQuiz() {
     if (i >= 0) st.getRange(i + 1, 2).setValue(d[1]); else st.appendRow(d);
   });
   SpreadsheetApp.flush();
-  return "Quiz updated: " + bank.length + " questions in the bank. Admin PIN: " + setting("ADMIN_PIN", "");
+  return "Quiz updated: " + bank.length + " questions in the bank (all courses). Admin PIN: " + setting("ADMIN_PIN", "");
 }
 /* Every course's questions, each row ending with its course id. */
 function allQuestions() {
-  return SEED_QUESTIONS.map(r => r.concat([DEFAULT_COURSE])).concat(VP_QUESTIONS.map(r => r.concat(["vendor-portal"])));
+  return SEED_QUESTIONS.map(r => r.concat([DEFAULT_COURSE])).concat(VP_QUESTIONS.map(r => r.concat(["vendor-portal"])))
+    .concat(WA_QUESTIONS.map(r => r.concat(["whatsapp-care"])));
 }
 
 /* id, module, active, question_en, question_hi, A_en, B_en, C_en, D_en, A_hi, B_hi, C_hi, D_hi, correct, explanation_en, explanation_hi */
@@ -460,4 +502,40 @@ const VP_QUESTIONS = [
  ["V604", 6, true, "Who can create staff (sub-admin) logins for a vendor?", "Vendor ke staff (sub-admin) logins kaun bana sakta hai?", "Any staff member", "Only the vendor's main login", "Customers", "Shiprocket", "Koi bhi staff member", "Sirf vendor ka main login", "Customers", "Shiprocket", "B", "Only the main login can create users. Staff cannot create other staff.", "Sirf main login users bana sakta hai. Staff doosre staff nahi bana sakte."],
  ["V605", 6, true, "A staff login must handle orders only at the Gorakhpur warehouse. What should be set?", "Staff login ko sirf Gorakhpur warehouse ke orders sambhalne hain. Kya set karein?", "Order Management + Selected Warehouses: Gorakhpur", "All permissions + All Warehouses", "Inventory only + All Warehouses", "Nothing; staff see everything", "Order Management + Selected Warehouses: Gorakhpur", "Saari permissions + All Warehouses", "Sirf Inventory + All Warehouses", "Kuch nahi; staff sab dekhte hain", "A", "Tick only the needed permission and limit the warehouse scope to the selected warehouse.", "Sirf zaroori permission tick karein aur warehouse scope selected warehouse tak rakhein."],
  ["V606", 6, true, "Which profile field can a vendor edit after KYC approval?", "KYC approval ke baad vendor profile ka kaunsa field edit kar sakta hai?", "Entity name", "GSTIN", "Phone number", "Legal name", "Entity name", "GSTIN", "Phone number", "Legal name", "C", "Name, entity name and GSTIN are locked by KYC. Address, email and phone are editable.", "Name, entity name aur GSTIN KYC se locked hain. Address, email aur phone edit ho sakte hain."]
+];
+
+/* WhatsApp Customer Care course */
+const WA_QUESTIONS = [
+ ["W101", 1, true, "Which number can be connected to the WhatsApp Business API?", "WhatsApp Business API se kaunsa number connect ho sakta hai?", "Any number already on WhatsApp Business app", "A number that is not on any WhatsApp app", "Only a landline", "The owner's personal WhatsApp number", "Koi bhi number jo WhatsApp Business app pe hai", "Aisa number jo kisi bhi WhatsApp app pe nahi hai", "Sirf landline", "Owner ka personal WhatsApp number", "B", "The API number must not be registered on the WhatsApp or WhatsApp Business app; remove WhatsApp first or use a fresh number.", "API number kisi WhatsApp ya WhatsApp Business app pe registered nahi hona chahiye; pehle WhatsApp hataiye ya naya number lijiye."],
+ ["W102", 1, true, "Which is NOT required for onboarding?", "Onboarding ke liye inmein se kya zaroori NAHI hai?", "A Facebook page or website", "A Facebook account at least 6 months old", "GST, MSME or similar documents", "10,000 existing WhatsApp followers", "Facebook page ya website", "Kam se kam 6 mahine purana Facebook account", "GST, MSME jaise documents", "10,000 existing WhatsApp followers", "D", "You need a fresh number, a Facebook page or website, a 6-month-old Facebook account and business documents. Followers are not required.", "Fresh number, Facebook page ya website, 6 mahine purana Facebook account aur business documents chahiye. Followers zaroori nahi."],
+ ["W103", 1, true, "Roughly what is the daily messaging limit when a new account starts?", "Naye account ki shuruaati daily messaging limit lagbhag kitni hoti hai?", "About 2,000 people a day", "Unlimited", "100 people a day", "1,00,000 people a day", "Lagbhag 2,000 log roz", "Unlimited", "100 log roz", "1,00,000 log roz", "A", "It starts around 2,000 a day and can grow to 10,000 and up to 1,00,000 with good use.", "Shuru mein lagbhag 2,000 roz; achhe use ke saath 10,000 aur 1,00,000 tak badh sakti hai."],
+ ["W104", 1, true, "What makes Meta raise the daily limit over time?", "Meta daily limit kis wajah se badhata hai?", "Sending as many messages as possible", "Good campaigns with few blocks and reports", "Paying an extra fee", "Using more agents", "Jitne ho sake utne messages bhejna", "Achhe campaigns jinmein kam blocks aur reports hon", "Extra fee dena", "Zyada agents use karna", "B", "Meta looks at quality. Messages people want, with few blocks or reports, help the limit grow.", "Meta quality dekhta hai. Log jo messages chahte hain aur kam blocks/reports, limit badhate hain."],
+ ["W105", 1, true, "What is the WhatsApp link and QR option on the dashboard used for?", "Dashboard pe WhatsApp link aur QR option kis kaam aata hai?", "Paying the wallet", "Letting customers open a chat with you from a link or QR code", "Approving templates", "Adding agents", "Wallet pay karna", "Customers ko link ya QR se aapke saath chat kholne dena", "Templates approve karna", "Agents add karna", "B", "It creates a link or QR code that opens a WhatsApp chat with the business; useful on invoices and posters.", "Yeh link ya QR banata hai jo business ke saath chat kholta hai; invoices aur posters pe kaam aata hai."],
+ ["W106", 1, true, "Which use of the API lets up to 15 agents answer customers on one number?", "API ka kaunsa use ek number pe 15 tak agents ko customers ko jawab dene deta hai?", "Marketing", "Live chat and shared inbox", "Authentication", "Website widget", "Marketing", "Live chat aur shared inbox", "Authentication", "Website widget", "B", "Live chat with a shared inbox lets up to 15 agents chat with customers in real time.", "Shared inbox wala live chat 15 tak agents ko real time chat karne deta hai."],
+ ["W107", 1, true, "What does BSP mean here?", "Yahan BSP ka matlab kya hai?", "Bulk SMS Package", "Business Solution Provider: the platform company you use", "Basic Support Plan", "Business Sender Profile", "Bulk SMS Package", "Business Solution Provider: woh platform company jise aap use karte hain", "Basic Support Plan", "Business Sender Profile", "B", "A BSP is the company whose platform you use to run the WhatsApp Business API.", "BSP woh company hai jiska platform WhatsApp Business API chalane ke liye use hota hai."],
+ ["W108", 1, true, "Where is money for sending messages taken from?", "Messages bhejne ka paisa kahan se katta hai?", "The customer's account", "The platform wallet credit", "The agent's salary", "It is always free", "Customer ke account se", "Platform ke wallet credit se", "Agent ki salary se", "Hamesha free hai", "B", "Messages are paid from the wallet credit; check and recharge it before big campaigns.", "Messages wallet credit se pay hote hain; bade campaign se pehle check aur recharge kijiye."],
+ ["W201", 2, true, "Why must the first message to a customer use a template?", "Customer ko pehla message template se kyun bhejna zaroori hai?", "Templates look prettier", "Meta must pre-approve business-initiated messages to stop spam", "Templates are free", "Agents can't type", "Templates sundar dikhte hain", "Spam rokne ke liye Meta business ki taraf se shuru hone wale messages pehle approve karta hai", "Templates free hain", "Agents type nahi kar sakte", "B", "Business-initiated messages need Meta-approved templates. This protects customers and the number.", "Business ki taraf se shuru hone wale messages ke liye Meta-approved template chahiye. Isse customers aur number dono bachte hain."],
+ ["W202", 2, true, "'Your refund of ₹1,250 has been processed.' Which category?", "'Aapka ₹1,250 ka refund process ho gaya hai.' Kaunsi category?", "Marketing", "Utility", "Authentication", "Any of them", "Marketing", "Utility", "Authentication", "Koi bhi", "B", "It's an important update the customer expects, so utility.", "Yeh customer ka expected zaroori update hai, isliye utility."],
+ ["W203", 2, true, "What happens if a template's category changes in the middle of a campaign?", "Campaign ke beech template ki category badal jaaye toh kya hota hai?", "Nothing", "The campaign stops", "Messages become free", "The template is deleted", "Kuch nahi", "Campaign ruk jaata hai", "Messages free ho jaate hain", "Template delete ho jaata hai", "B", "Campaign safety stops the campaign so messages don't go out under the wrong category.", "Campaign safety campaign rok deti hai taaki galat category mein messages na jaayein."],
+ ["W204", 2, true, "What is the maximum length of a template body?", "Template body ki maximum length kitni hai?", "160 characters", "1,024 characters", "5,000 characters", "No limit", "160 characters", "1,024 characters", "5,000 characters", "Koi limit nahi", "B", "The body can be up to 1,024 characters.", "Body 1,024 characters tak ho sakti hai."],
+ ["W205", 2, true, "Why do you enter sample values for variables like {{1}}?", "{{1}} jaise variables ke liye sample values kyun daalte hain?", "They are sent to every customer", "So Meta's reviewer understands the message", "To set the price", "They replace the footer", "Woh har customer ko jaati hain", "Taaki Meta ka reviewer message samjhe", "Price set karne ke liye", "Footer ki jagah", "B", "Sample values are examples for Meta's review. Real values are filled per customer at send time.", "Sample values Meta review ke examples hain. Asli values bhejte waqt har customer ke liye bharti hain."],
+ ["W206", 2, true, "Who sees the template name, e.g. 'order_dispatched'?", "Template ka naam, jaise 'order_dispatched', kaun dekhta hai?", "Every customer", "Only your team", "Meta only", "Nobody, it's random", "Har customer", "Sirf aapki team", "Sirf Meta", "Koi nahi, random hai", "B", "The name is for internal reference; customers never see it.", "Naam internal reference ke liye hai; customers ise kabhi nahi dekhte."],
+ ["W207", 2, true, "Which button type opens a link like 'Track order'?", "Kaunsa button type 'Track order' jaisa link kholta hai?", "Quick reply", "Visit website (URL)", "Call phone", "Footer", "Quick reply", "Visit website (URL)", "Call phone", "Footer", "B", "A URL button opens a website link.", "URL button website link kholta hai."],
+ ["W208", 2, true, "A template was rejected. What should you do?", "Template reject ho gaya. Kya karna chahiye?", "Send it anyway", "Read the reason, fix it and submit again", "Change it to authentication", "Wait 30 days", "Phir bhi bhej do", "Reason padhiye, theek kijiye aur dobara submit kijiye", "Authentication mein badal do", "30 din wait", "B", "Fix the cause (category, samples, misleading text) and resubmit.", "Wajah theek kijiye (category, samples, misleading text) aur dobara submit kijiye."],
+ ["W301", 3, true, "Which two CSV columns are mandatory for a CSV broadcast?", "CSV broadcast ke liye kaunse do columns zaroori hain?", "Name and phone number", "Email and city", "Order ID and amount", "Phone number and GSTIN", "Name aur phone number", "Email aur city", "Order ID aur amount", "Phone number aur GSTIN", "A", "Name and phone number are mandatory; other columns are optional.", "Name aur phone number zaroori hain; baaki columns optional."],
+ ["W302", 3, true, "A CSV cell for {{1}} (name) is empty. What is sent?", "{{1}} (name) ka CSV cell khaali hai. Kya jaayega?", "Nothing; the message fails", "The fallback value you set", "The phone number", "A random name", "Kuch nahi; message fail", "Aapki set ki hui fallback value", "Phone number", "Koi random naam", "B", "The fallback value is used when a cell is empty, so set a sensible one like 'customer'.", "Cell khaali ho toh fallback value jaati hai, isliye 'customer' jaisi samajhdaar value rakhiye."],
+ ["W303", 3, true, "Which messages are you charged for?", "Kin messages ka charge lagta hai?", "All rows in the CSV", "Sent and delivered messages, not failed ones", "Only read messages", "Only replies", "CSV ki saari rows", "Sent aur delivered messages, failed nahi", "Sirf read messages", "Sirf replies", "B", "Charges apply to sent/delivered messages; failed ones aren't charged.", "Charge sent/delivered pe lagta hai; failed ka nahi."],
+ ["W304", 3, true, "Where should you check the estimated cost before sending?", "Bhejne se pehle estimated cost kahan check karni chahiye?", "After the campaign ends", "On the last screen, next to the wallet balance", "In the chatbot builder", "In Contacts", "Campaign khatam hone ke baad", "Aakhri screen pe, wallet balance ke saath", "Chatbot builder mein", "Contacts mein", "B", "The final step shows estimated cost, balance and per-message price before Send now.", "Aakhri step pe Send now se pehle estimated cost, balance aur per-message price dikhta hai."],
+ ["W305", 3, true, "For an API campaign, what name should the campaign have?", "API campaign ka naam kya hona chahiye?", "Any random name", "The same as the template name", "The customer's name", "The API key", "Koi bhi random naam", "Template ke naam jaisa", "Customer ka naam", "API key", "B", "Using the template's name makes each API campaign easy to identify.", "Template jaisa naam rakhne se har API campaign pehchanna aasaan hota hai."],
+ ["W306", 3, true, "What must you do to send a new template through the API?", "Naya template API se bhejne ke liye kya karna hoga?", "Nothing", "Create an API campaign for it and Set live", "Print it", "Add it to the chatbot", "Kuch nahi", "Uske liye API campaign banakar Set live karna", "Print karna", "Chatbot mein daalna", "B", "Each new template sent via API must be set live through an API campaign.", "API se bhejne wala har naya template API campaign se set live karna padta hai."],
+ ["W307", 3, true, "Why must the API key be kept secret?", "API key secret kyun rakhni chahiye?", "It expires if seen", "Anyone with it can send messages as Oribrix", "It shows the wallet balance", "Meta asks for it daily", "Dekhne se expire ho jaati hai", "Jiske paas hai woh Oribrix banke messages bhej sakta hai", "Wallet balance dikhati hai", "Meta roz maangta hai", "B", "The key authorises sending; a leaked key can be misused and cost money or reputation.", "Key se bhejne ki permission milti hai; leak hone pe misuse ho sakta hai."],
+ ["W308", 3, true, "From a campaign's analytics, you want to message only people who did not read it. What do you use?", "Campaign analytics se sirf un logon ko message karna hai jinhone nahi padha. Kya use karein?", "Delete the campaign", "Select that group and re-broadcast a template", "Chatbot", "Opt-out management", "Campaign delete", "Woh group select karke template re-broadcast", "Chatbot", "Opt-out management", "B", "You can select a filtered group in the campaign and re-broadcast a new template to them.", "Campaign mein filtered group select karke naya template re-broadcast kar sakte hain."],
+ ["W401", 4, true, "A customer wrote 30 hours ago and got no reply. How can you contact them?", "Customer ne 30 ghante pehle likha aur jawab nahi mila. Ab kaise contact karein?", "Type any reply", "Only with an approved template", "Not at all", "Through the chatbot only", "Koi bhi reply type", "Sirf approved template se", "Bilkul nahi", "Sirf chatbot se", "B", "The 24-hour window has closed, so only an approved template can restart the chat.", "24 ghante ki window band ho gayi, isliye sirf approved template se chat dobara shuru hogi."],
+ ["W402", 4, true, "Which role should most customer care staff get?", "Zyada tar customer care staff ko kaunsa role milna chahiye?", "Owner", "Manager", "Agent", "No login, share the owner's", "Owner", "Manager", "Agent", "Login nahi, owner ka share karo", "C", "Agents get live chat and campaigns only. Each person needs their own login.", "Agent ko sirf live chat aur campaigns milte hain. Har insaan ka apna login ho."],
+ ["W403", 4, true, "A customer replies 'STOP'. What happens?", "Customer 'STOP' reply karta hai. Kya hota hai?", "Nothing", "They are marked opted out and skipped in future campaigns", "The number is banned", "An agent must call them", "Kuch nahi", "Woh opted out mark hote hain aur aage ke campaigns mein skip hote hain", "Number ban ho jaata hai", "Agent ko call karna padega", "B", "Opt-out management automatically excludes them from future campaigns.", "Opt-out management unhe aage ke campaigns se apne aap hata deta hai."],
+ ["W404", 4, true, "Where do chats older than 24 hours go?", "24 ghante se purani chats kahan jaati hain?", "They are deleted", "History", "Wallet", "Templates", "Delete ho jaati hain", "History", "Wallet", "Templates", "B", "They move to History, where you can still filter them by tags and attributes.", "Woh History mein jaati hain, jahan tags aur attributes se filter kar sakte hain."],
+ ["W405", 4, true, "How many chatbot flows can you build on this platform?", "Is platform pe kitne chatbot flows bana sakte hain?", "1", "Up to 5", "Up to 50", "Unlimited", "1", "5 tak", "50 tak", "Unlimited", "B", "Up to five flows can be built with the drag-and-drop builder.", "Drag-and-drop builder se 5 tak flows bana sakte hain."],
+ ["W406", 4, true, "What should every chatbot flow include?", "Har chatbot flow mein kya hona chahiye?", "Only text", "A 'talk to support' option to reach a person", "A payment link", "The API key", "Sirf text", "Insaan tak pahunchne ke liye 'talk to support' option", "Payment link", "API key", "B", "Customers must never get stuck with the bot; always offer a human option.", "Customer bot ke saath kabhi atakna nahi chahiye; hamesha insaan ka option dijiye."],
+ ["W407", 4, true, "What is an away (off-hours) message for?", "Away (off-hours) message kis liye hai?", "Advertising", "Telling customers the team is unavailable and when to expect a reply", "Blocking customers", "Sending OTPs", "Advertising", "Customers ko batana ki team abhi available nahi aur reply kab aayega", "Customers block karna", "OTP bhejna", "B", "It sets expectations outside working hours.", "Yeh working hours ke bahar expectations set karta hai."],
+ ["W408", 4, true, "Which is against Oribrix customer care standards?", "Inmein se kya Oribrix customer care standards ke khilaaf hai?", "Tagging every chat", "Replying the same day", "Sharing an OTP in chat to help a customer", "Escalating a refund the same day", "Har chat tag karna", "Usi din reply karna", "Customer ki madad ke liye chat mein OTP share karna", "Refund usi din escalate karna", "C", "Never share OTPs, passwords or the API key.", "OTP, password ya API key kabhi share mat kijiye."]
 ];

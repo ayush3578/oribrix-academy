@@ -46,6 +46,45 @@
   }
  },
  {
+  "id": "whatsapp-care",
+  "status": "live",
+  "restricted": true,
+  "short": "WhatsApp-Customer-Care",
+  "modules": 4,
+  "data": "data/course-whatsapp-care.json",
+  "notes": "notes/Oribrix-WhatsApp-Customer-Care-Notes.pdf",
+  "notesPages": 23,
+  "practice": "data/practice-whatsapp-care.json",
+  "certName": "Oribrix WhatsApp Customer Care Academy",
+  "demo": {
+   "youtube": "BL5IkLy2Exs",
+   "title": {
+    "en": "Official platform demo (Combirds, English)",
+    "hi": "Official platform demo (Combirds, English)"
+   },
+   "desc": {
+    "en": "The full 19-minute walkthrough by the platform team. Optional: watch it after the modules to see every screen.",
+    "hi": "Platform team ka poora 19 minute walkthrough. Optional: modules ke baad har screen dekhne ke liye."
+   }
+  },
+  "title": {
+   "en": "WhatsApp Customer Care",
+   "hi": "WhatsApp Customer Care"
+  },
+  "desc": {
+   "en": "Using the WhatsApp Business API platform for customer care: templates, campaigns, live chat, tags, opt-outs and chatbot flows. 4 video modules, notes and the final quiz.",
+   "hi": "Customer care ke liye WhatsApp Business API platform: templates, campaigns, live chat, tags, opt-outs aur chatbot flows. 4 video modules, notes aur final quiz."
+  },
+  "notesDesc": {
+   "en": "Detailed written notes for all 4 modules, with rules, a glossary and checklists.",
+   "hi": "Saare 4 modules ke detailed notes: rules, glossary aur checklists ke saath."
+  },
+  "prDesc": {
+   "en": "16 practice questions from all 4 modules. Unlimited tries; it does not affect your final quiz or certificate.",
+   "hi": "Saare 4 modules se 16 practice questions. Unlimited try; final quiz ya certificate pe koi asar nahi."
+  }
+ },
+ {
   "id": "admin-portal",
   "status": "soon",
   "title": {
@@ -55,6 +94,7 @@
   "desc": {
    "en": "A full walkthrough of the Oribrix admin panel: live ops, catalog, pricing rules, orders and reports.",
    "hi": "Oribrix admin panel ka poora walkthrough: live ops, catalog, pricing rules, orders aur reports."
-  }
+  },
+  "restricted": true
  }
 ]

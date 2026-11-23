@@ -1,0 +1,329 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.542
+Module four, the last module. Live chat and customer care.
+
+2
+00:00:04.542 --> 00:00:08.736
+What to do when customers reply, and how to keep the number safe.
+
+3
+00:00:10.933 --> 00:00:16.234
+This is the heart of customer care. Every reply, question and complaint arrives in
+
+4
+00:00:16.234 --> 00:00:21.664
+Live chat. How fast and how well you answer decides what customers think of Oribrix.
+
+5
+00:00:22.114 --> 00:00:23.970
+First, the live chat inbox.
+
+6
+00:00:24.420 --> 00:00:26.510
+Then tags, history and contacts.
+
+7
+00:00:26.960 --> 00:00:28.560
+Then agents and their roles.
+
+8
+00:00:29.010 --> 00:00:32.018
+Then opt-out management, which keeps the number safe.
+
+9
+00:00:32.468 --> 00:00:34.452
+Then welcome and away messages.
+
+10
+00:00:34.902 --> 00:00:37.846
+And finally, chatbot flows and integrations.
+
+11
+00:00:40.233 --> 00:00:43.305
+Here's what happens when a customer writes to Oribrix.
+
+12
+00:00:43.755 --> 00:00:47.040
+The message arrives in Live chat, from the menu on the left.
+
+13
+00:00:47.490 --> 00:00:49.133
+Agents get a notification.
+
+14
+00:00:49.583 --> 00:00:54.383
+An agent picks up the conversation. A manager can also step in at any time.
+
+15
+00:00:54.833 --> 00:00:59.805
+The agent replies. Inside the twenty four hour window you can write freely, with no
+
+16
+00:00:59.805 --> 00:01:00.764
+Template needed.
+
+17
+00:01:01.214 --> 00:01:05.800
+The agent tags the chat, for example hot lead, complaint or order issue.
+
+18
+00:01:06.250 --> 00:01:11.147
+After twenty four hours, the chat moves to History, where you can still find it and
+
+19
+00:01:11.147 --> 00:01:12.032
+Filter by tags.
+
+20
+00:01:14.433 --> 00:01:18.317
+This is the most important rule in customer care on WhatsApp.
+
+21
+00:01:18.317 --> 00:01:23.601
+After a customer's last message, you have twenty four hours to reply with any text.
+
+22
+00:01:23.601 --> 00:01:28.631
+Once that window closes, you can only restart the conversation with an approved
+
+23
+00:01:28.631 --> 00:01:33.916
+Template. So answer customers the same day. A late reply costs more and feels worse
+
+24
+00:01:33.916 --> 00:01:34.934
+To the customer.
+
+25
+00:02:23.267 --> 00:02:25.208
+Good records make follow-up easy.
+
+26
+00:02:25.658 --> 00:02:30.941
+Tags are your own labels. Create a small, fixed set, like hot lead, complaint,
+
+27
+00:02:30.941 --> 00:02:34.192
+Refund, vendor enquiry, and use them every time.
+
+28
+00:02:34.642 --> 00:02:37.372
+History keeps chats older than twenty four hours.
+
+29
+00:02:37.822 --> 00:02:42.708
+Contacts holds everyone who messaged Oribrix or was messaged in a campaign.
+
+30
+00:02:43.158 --> 00:02:46.336
+You can import contact lists, and export the database.
+
+31
+00:02:46.786 --> 00:02:50.968
+Filter contacts by tags and attributes, and broadcast to that group.
+
+32
+00:02:51.418 --> 00:02:53.636
+And manage blocked and opted-in numbers.
+
+33
+00:02:56.033 --> 00:02:59.062
+You can add up to fifteen team members, each with a role.
+
+34
+00:02:59.512 --> 00:03:04.976
+The owner sees and controls everything, including billing, settings and the API key.
+
+35
+00:03:04.976 --> 00:03:07.448
+Keep this to one or two senior people.
+
+36
+00:03:07.898 --> 00:03:11.866
+A manager runs the team: campaigns, reports and live chat.
+
+37
+00:03:12.316 --> 00:03:15.675
+An agent has access only to live chat and campaigns.
+
+38
+00:03:15.675 --> 00:03:21.099
+Most customer care staff should be agents. Give each person their own login, never a
+
+39
+00:03:21.099 --> 00:03:21.810
+Shared one.
+
+40
+00:03:24.200 --> 00:03:29.165
+If customers block or report the Oribrix number, Meta can lower its limits or
+
+41
+00:03:29.165 --> 00:03:32.776
+Restrict it. Opt-out management is how you prevent that.
+
+42
+00:03:33.226 --> 00:03:38.026
+When a customer replies with words like stop, unsubscribe or not interested,
+
+43
+00:03:38.476 --> 00:03:41.441
+The platform marks them as opted out automatically.
+
+44
+00:03:41.891 --> 00:03:44.835
+From the next campaign on, they won't receive messages.
+
+45
+00:03:45.285 --> 00:03:49.552
+Fewer blocks and reports keep the number healthy and the daily limit growing.
+
+46
+00:03:50.002 --> 00:03:55.399
+And never add opted-out people back by hand. Respecting a no is good customer care.
+
+47
+00:03:57.800 --> 00:04:02.600
+Under Manage and the settings menu, set these once, and they work for you every day.
+
+48
+00:04:03.050 --> 00:04:07.402
+A welcome message, sent automatically when someone writes for the first time.
+
+49
+00:04:07.852 --> 00:04:12.396
+An away message for off hours, so customers know when to expect a reply.
+
+50
+00:04:12.846 --> 00:04:16.323
+Working hours, so the platform knows when the team is on and off.
+
+51
+00:04:16.773 --> 00:04:21.787
+Campaign safety. If a template's category changes midway, the campaign stops.
+
+52
+00:04:22.237 --> 00:04:23.858
+Analytics by day and month.
+
+53
+00:04:24.308 --> 00:04:28.788
+And billing and usage, plus notification settings for phone or laptop.
+
+54
+00:04:31.200 --> 00:04:35.212
+A chatbot answers common questions automatically, day and night.
+
+55
+00:04:35.212 --> 00:04:38.347
+You can build up to five flows with drag and drop.
+
+56
+00:04:38.797 --> 00:04:40.162
+Open the flow builder.
+
+57
+00:04:40.612 --> 00:04:44.623
+Drag in a start message, like welcome to Oribrix, how can we help?
+
+58
+00:04:45.073 --> 00:04:50.129
+Add buttons or a list: track my order, prices, become a vendor, talk to support.
+
+59
+00:04:50.579 --> 00:04:55.424
+Add actions, like sending media, asking for a location, or showing a product
+
+60
+00:04:55.424 --> 00:04:56.061
+Catalogue.
+
+61
+00:04:56.511 --> 00:04:59.733
+Connect a branch to a human agent, or to another flow.
+
+62
+00:05:00.183 --> 00:05:05.495
+Click Active, and save. The flow is now live. Always keep a talk to support option,
+
+63
+00:05:05.495 --> 00:05:08.183
+So customers never get stuck with the bot.
+
+64
+00:05:10.567 --> 00:05:14.706
+Finally, the standards every Oribrix customer care agent should follow.
+
+65
+00:05:15.156 --> 00:05:18.526
+Reply the same day, inside the twenty four hour window.
+
+66
+00:05:18.976 --> 00:05:22.496
+Greet customers by name, and keep messages short and clear.
+
+67
+00:05:22.946 --> 00:05:26.168
+Tag every chat, so anyone can pick up where you left off.
+
+68
+00:05:26.618 --> 00:05:31.759
+Never share O T Ps, passwords or the API key, in chat or anywhere else.
+
+69
+00:05:32.209 --> 00:05:33.468
+Respect opt-outs.
+
+70
+00:05:33.918 --> 00:05:37.822
+And escalate refunds and complaints to the right person the same day.
+
+71
+00:05:40.233 --> 00:05:44.600
+Last quick check. A customer wrote thirty hours ago, and nobody replied.
+
+72
+00:05:44.600 --> 00:05:47.572
+How can you message them now? Think for a moment.
+
+73
+00:05:51.522 --> 00:05:56.361
+The answer: only with an approved template, because the twenty four hour window has
+
+74
+00:05:56.361 --> 00:05:56.770
+Closed.
+
+75
+00:05:59.567 --> 00:06:01.231
+Let's recap the whole course.
+
+76
+00:06:01.681 --> 00:06:06.566
+Module one. A fresh number, business documents, daily limits and the dashboard.
+
+77
+00:06:07.016 --> 00:06:10.920
+Module two. Templates in three categories, approved by Meta.
+
+78
+00:06:11.370 --> 00:06:16.640
+Module three. CSV broadcasts, analytics, and the API with a secret key.
+
+79
+00:06:17.090 --> 00:06:22.355
+Module four. The twenty four hour window, tags, roles, opt-outs and the chatbot.
+
+80
+00:06:22.355 --> 00:06:27.159
+Now try the practice quiz, then take the final quiz for your certificate.
+
+81
+00:06:29.567 --> 00:06:33.323
+That's the end of module 4. You've completed all four modules.
+
+82
+00:06:33.323 --> 00:06:35.988
+Now take the quiz, and get your certificate.

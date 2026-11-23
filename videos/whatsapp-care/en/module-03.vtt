@@ -1,0 +1,321 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.245
+Module three. Campaigns. Sending a template to many customers at once, reading the
+
+2
+00:00:06.245 --> 00:00:10.229
+Results, and sending messages automatically through the API.
+
+3
+00:00:12.433 --> 00:00:16.947
+A campaign is how you send an approved template to a list of customers.
+
+4
+00:00:16.947 --> 00:00:21.715
+For customer care, you'll use campaigns for updates, reminders and win-back
+
+5
+00:00:21.715 --> 00:00:26.992
+Messages, and the API for messages that go out automatically when something happens
+
+6
+00:00:26.992 --> 00:00:28.390
+In the Oribrix system.
+
+7
+00:00:28.840 --> 00:00:30.718
+First, the three campaign types.
+
+8
+00:00:31.168 --> 00:00:33.792
+Then a CSV broadcast, step by step.
+
+9
+00:00:34.242 --> 00:00:36.802
+Then variables, fallback values and media.
+
+10
+00:00:37.252 --> 00:00:39.214
+Then the cost estimate and the wallet.
+
+11
+00:00:39.664 --> 00:00:41.542
+Then reading the campaign analytics.
+
+12
+00:00:41.992 --> 00:00:45.533
+And finally, API campaigns for automatic messages.
+
+13
+00:00:47.933 --> 00:00:52.349
+From Campaigns, click Launch on the top right. You'll see three campaign types.
+
+14
+00:00:52.799 --> 00:00:58.090
+Broadcast. Send to contacts already saved on the platform, filtered by tags or
+
+15
+00:00:58.090 --> 00:00:58.836
+Attributes.
+
+16
+00:00:59.286 --> 00:01:05.191
+CSV broadcast. Upload an Excel or C S V file. Use it when you have a new list of
+
+17
+00:01:05.191 --> 00:01:05.708
+People.
+
+18
+00:01:06.158 --> 00:01:11.469
+API campaign. The Oribrix system sends the message automatically, one at a time,
+
+19
+00:01:11.469 --> 00:01:15.054
+When an event happens, like an order being dispatched.
+
+20
+00:01:17.467 --> 00:01:20.240
+Here's a CSV broadcast from start to finish.
+
+21
+00:01:20.690 --> 00:01:23.250
+Click Launch, and choose CSV broadcast.
+
+22
+00:01:23.700 --> 00:01:27.306
+Give the campaign a clear name, like November dispatch reminder.
+
+23
+00:01:27.756 --> 00:01:32.991
+Upload the C S V. Two columns are mandatory: the name and the phone number.
+
+24
+00:01:32.991 --> 00:01:36.481
+Other columns, like product or city, are optional.
+
+25
+00:01:36.931 --> 00:01:41.537
+Map the columns, so the platform knows which column is the name and which is the
+
+26
+00:01:41.537 --> 00:01:42.286
+Phone number.
+
+27
+00:01:42.736 --> 00:01:46.277
+Pick an approved template, and fill its variables from the columns.
+
+28
+00:01:46.727 --> 00:01:49.458
+Check the estimated cost, then click Send now.
+
+29
+00:01:51.867 --> 00:01:56.390
+A few details make the difference between a good campaign and an embarrassing one.
+
+30
+00:01:56.840 --> 00:02:01.674
+Map each variable to a column. For example, variable one to the name column,
+
+31
+00:02:01.674 --> 00:02:03.901
+Variable two to the product column.
+
+32
+00:02:04.351 --> 00:02:08.065
+Set a sensible fallback value, used when a cell is empty.
+
+33
+00:02:08.065 --> 00:02:12.692
+A fallback like customer reads much better than an empty gap or a zero.
+
+34
+00:02:13.142 --> 00:02:17.793
+If the template has an image or video header, upload the real file at this step.
+
+35
+00:02:18.243 --> 00:02:21.681
+And keep phone numbers in one format, with the country code.
+
+36
+00:02:21.681 --> 00:02:23.171
+Wrong numbers simply fail.
+
+37
+00:02:25.567 --> 00:02:30.527
+Before clicking Send now, the last screen shows the estimated cost, your available
+
+38
+00:02:30.527 --> 00:02:34.035
+Wallet balance and the price per message. Always check it.
+
+39
+00:02:34.035 --> 00:02:37.059
+If the wallet is short, the campaign won't finish.
+
+40
+00:02:37.059 --> 00:02:42.079
+You are charged only for messages that are sent and delivered, not for failed ones.
+
+41
+00:03:23.567 --> 00:03:28.095
+Click a campaign's name to open its analytics. You'll see when it was launched, how
+
+42
+00:03:28.095 --> 00:03:30.223
+Long it should take, and these numbers.
+
+43
+00:03:30.673 --> 00:03:32.849
+Sent. The message left the platform.
+
+44
+00:03:33.299 --> 00:03:35.560
+Delivered. It reached the customer's phone.
+
+45
+00:03:36.010 --> 00:03:37.866
+Read. The customer opened it.
+
+46
+00:03:38.316 --> 00:03:42.362
+Replied or clicked. The customer tapped a button or wrote back.
+
+47
+00:03:42.362 --> 00:03:44.546
+These replies arrive in live chat.
+
+48
+00:03:44.996 --> 00:03:49.068
+And failed. The message was not delivered, for example a wrong number.
+
+49
+00:03:49.068 --> 00:03:50.756
+You're not charged for these.
+
+50
+00:03:53.167 --> 00:03:57.135
+The campaign page is more than a report. Here's what you can do from it.
+
+51
+00:03:57.585 --> 00:04:01.126
+See exactly which customers received, read or replied.
+
+52
+00:04:01.576 --> 00:04:02.878
+Download the report.
+
+53
+00:04:03.328 --> 00:04:07.515
+Select a group, for example everyone who didn't read it, and re-broadcast a
+
+54
+00:04:07.515 --> 00:04:09.301
+Different template to just them.
+
+55
+00:04:09.751 --> 00:04:11.564
+Track which buttons people clicked.
+
+56
+00:04:12.014 --> 00:04:15.876
+And keep the list of failed numbers, so you can correct them in your records.
+
+57
+00:04:18.267 --> 00:04:23.911
+Now automatic messages through the API. This is how the Oribrix system can send, for
+
+58
+00:04:23.911 --> 00:04:28.614
+Example, an order dispatched message without anyone pressing a button.
+
+59
+00:04:29.064 --> 00:04:31.282
+Click Launch, and choose API campaign.
+
+60
+00:04:31.732 --> 00:04:36.071
+Name the campaign exactly the same as the template, so you can tell them apart
+
+61
+00:04:36.071 --> 00:04:36.404
+Later.
+
+62
+00:04:36.854 --> 00:04:41.845
+Click Set live. Every new template you want to send through the API must be set live
+
+63
+00:04:41.845 --> 00:04:42.380
+This way.
+
+64
+00:04:42.830 --> 00:04:44.878
+Go back to Campaigns, and open it.
+
+65
+00:04:45.328 --> 00:04:52.084
+Copy the c U R L test command. The API key and full documentation are under Manage,
+
+66
+00:04:52.084 --> 00:04:53.712
+API key, read A P I.
+
+67
+00:04:54.162 --> 00:04:57.720
+The developers then call it from the Oribrix backend.
+
+68
+00:04:57.720 --> 00:05:02.354
+Keep the API key secret: anyone with it can send messages as Oribrix.
+
+69
+00:05:04.767 --> 00:05:09.002
+Quick check. Your C S V has one thousand rows, and forty numbers fail.
+
+70
+00:05:09.002 --> 00:05:12.511
+How many messages are you charged for? Think for a moment.
+
+71
+00:05:16.461 --> 00:05:21.627
+The answer: nine hundred and sixty. You pay only for sent and delivered messages,
+
+72
+00:05:21.627 --> 00:05:22.648
+Not failed ones.
+
+73
+00:05:25.433 --> 00:05:27.182
+Let's summarise module three.
+
+74
+00:05:27.632 --> 00:05:32.240
+Campaigns can be broadcasts, CSV broadcasts, or API campaigns.
+
+75
+00:05:32.690 --> 00:05:36.104
+A C S V needs name and phone columns, and you map them.
+
+76
+00:05:36.554 --> 00:05:39.732
+Fill the variables, set fallbacks, and upload the media.
+
+77
+00:05:40.182 --> 00:05:43.980
+Check the cost against the wallet. Failed messages aren't charged.
+
+78
+00:05:44.430 --> 00:05:49.781
+And for the API, name the campaign like the template, set it live, and keep the key
+
+79
+00:05:49.781 --> 00:05:53.134
+Secret. In module four, live chat and customer care.
+
+80
+00:05:55.533 --> 00:06:01.421
+That's the end of module 3. Next up, module 4: Live chat, chatbot and customer care.

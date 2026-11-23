@@ -1,0 +1,357 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.614
+Module four, aakhiri module. Live chat aur customer care.
+
+2
+00:00:04.614 --> 00:00:10.101
+Jab customers reply karein toh kya karna hai, aur number ko safe kaise rakhna hai.
+
+3
+00:00:12.300 --> 00:00:17.566
+Ye customer care ka dil hai. Har reply, sawaal aur complaint live chat mein aati
+
+4
+00:00:17.566 --> 00:00:23.029
+Hai. Aap kitni jaldi aur kitni achhi tarah jawaab dete hain, usi se tay hota hai ki
+
+5
+00:00:23.029 --> 00:00:26.188
+Customers Oribrix ke baare mein kya sochte hain.
+
+6
+00:00:26.638 --> 00:00:28.622
+Pehle, live chat inbox.
+
+7
+00:00:29.072 --> 00:00:31.504
+Phir tags, history aur contacts.
+
+8
+00:00:31.954 --> 00:00:34.130
+Phir agents aur unke roles.
+
+9
+00:00:34.580 --> 00:00:38.100
+Phir opt-out management, jo number ko safe rakhta hai.
+
+10
+00:00:38.550 --> 00:00:40.790
+Phir welcome aur away messages.
+
+11
+00:00:41.240 --> 00:00:44.611
+Aur aakhir mein, chatbot flows aur integrations.
+
+12
+00:00:47.000 --> 00:00:50.819
+Jab koi customer Oribrix ko likhta hai toh ye hota hai.
+
+13
+00:00:51.269 --> 00:00:54.853
+Message, left menu wale Live chat mein aata hai.
+
+14
+00:00:55.303 --> 00:00:58.012
+Agents ko notification milta hai.
+
+15
+00:00:58.462 --> 00:01:03.987
+Ek agent conversation uthata hai. Manager bhi kabhi bhi bich mein aa sakta hai.
+
+16
+00:01:04.437 --> 00:01:10.023
+Agent reply karta hai. Twenty four hour window ke andar aap freely likh sakte hain,
+
+17
+00:01:10.023 --> 00:01:11.840
+Template ki zaroorat nahin.
+
+18
+00:01:12.290 --> 00:01:17.474
+Agent chat ko tag karta hai, jaise hot lead, complaint ya order issue.
+
+19
+00:01:17.924 --> 00:01:23.210
+Twenty four hours ke baad chat History mein chali jaati hai, jahan aap use phir bhi
+
+20
+00:01:23.210 --> 00:01:26.585
+Dhoondh sakte hain aur tags se filter kar sakte hain.
+
+21
+00:01:29.000 --> 00:01:32.412
+WhatsApp pe customer care ka ye sabse zaroori rule hai.
+
+22
+00:01:32.412 --> 00:01:37.562
+Customer ke aakhiri message ke baad aapke paas twenty four hours hain kisi bhi text
+
+23
+00:01:37.562 --> 00:01:42.464
+Se reply karne ke liye. Window band hone ke baad aap conversation sirf approved
+
+24
+00:01:42.464 --> 00:01:47.676
+Template se hi phir shuru kar sakte hain. Isliye customers ko usi din jawaab dijiye.
+
+25
+00:01:47.676 --> 00:01:52.019
+Late reply zyada mahanga padta hai aur customer ko bhi bura lagta hai.
+
+26
+00:02:37.833 --> 00:02:40.990
+Achhe records se follow-up aasaan hota hai.
+
+27
+00:02:41.440 --> 00:02:46.817
+Tags aapke apne labels hain. Ek chhota, fixed set banaiye, jaise hot lead,
+
+28
+00:02:46.817 --> 00:02:51.467
+Complaint, refund, vendor enquiry, aur har baar inhe use kijiye.
+
+29
+00:02:51.917 --> 00:02:55.864
+History mein twenty four hours se purani chats rehti hain.
+
+30
+00:02:56.314 --> 00:03:01.976
+Contacts mein wo sab hain jinhonne Oribrix ko message kiya ya jinhe campaign mein
+
+31
+00:03:01.976 --> 00:03:02.884
+Message gaya.
+
+32
+00:03:03.334 --> 00:03:08.518
+Aap contact lists import kar sakte hain, aur database export kar sakte hain.
+
+33
+00:03:08.968 --> 00:03:14.750
+Contacts ko tags aur attributes se filter kijiye, aur us group ko broadcast kijiye.
+
+34
+00:03:15.200 --> 00:03:18.378
+Aur blocked aur opted-in numbers manage kijiye.
+
+35
+00:03:20.766 --> 00:03:25.502
+Aap fifteen tak team members add kar sakte hain, har ek ke role ke saatha.
+
+36
+00:03:25.952 --> 00:03:31.652
+Owner sab kuch dekhta aur control karta hai, billing, settings aur API key sameta.
+
+37
+00:03:31.652 --> 00:03:34.293
+Ise ek ya do senior logon tak rakhiye.
+
+38
+00:03:34.743 --> 00:03:38.861
+Manager team chalata hai: campaigns, reports aur live chat.
+
+39
+00:03:39.311 --> 00:03:43.817
+Agent ke paas sirf live chat aur campaigns ka access hota hai.
+
+40
+00:03:43.817 --> 00:03:47.379
+Zyadatar customer care staff agents hone chahiye.
+
+41
+00:03:47.379 --> 00:03:51.449
+Har insan ko uska apna login dijiye, kabhi shared nahin.
+
+42
+00:03:53.833 --> 00:03:59.315
+Agar customers Oribrix ka number block ya report karte hain, toh Meta uski limits
+
+43
+00:03:59.315 --> 00:04:04.865
+Ghata sakta hai ya use restrict kar sakta hai. Opt-out management se aap ise rokte
+
+44
+00:04:04.865 --> 00:04:05.204
+Hain.
+
+45
+00:04:05.654 --> 00:04:11.648
+Jab customer stop, unsubscribe ya not interested jaise words se reply karta hai,
+
+46
+00:04:12.098 --> 00:04:16.450
+Toh platform unhe automatically opted out mark kar deta hai.
+
+47
+00:04:16.900 --> 00:04:20.314
+Agle campaign se unhe messages nahi jaayenge.
+
+48
+00:04:20.764 --> 00:04:26.630
+Kam blocks aur reports se number healthy rehta hai aur daily limit badhti rehti hai.
+
+49
+00:04:27.080 --> 00:04:31.426
+Aur opted-out logon ko kabhi haath se vaapas add mat kijiye.
+
+50
+00:04:31.426 --> 00:04:35.336
+Kisi ki na ka samman karna hi achhi customer care hai.
+
+51
+00:04:37.733 --> 00:04:43.368
+Manage aur settings menu mein inhe ek baar set kijiye, aur ye roz aapke liye kaam
+
+52
+00:04:43.368 --> 00:04:44.133
+Karte hain.
+
+53
+00:04:44.583 --> 00:04:49.276
+Welcome message, jo koi pehli baar likhe toh automatically jaata hai.
+
+54
+00:04:49.726 --> 00:04:55.230
+Off hours ke liye away message, taaki customers ko pata ho ki reply kab aayega.
+
+55
+00:04:55.680 --> 00:05:00.651
+Working hours, taaki platform ko pata ho ki team kab on hai aur kab off.
+
+56
+00:05:01.101 --> 00:05:06.235
+Campaign safety. Agar bich mein template ki category badal jaaye, toh campaign ruk
+
+57
+00:05:06.235 --> 00:05:06.861
+Jaata hai.
+
+58
+00:05:07.311 --> 00:05:10.084
+Day aur month ke hisaab se analytics.
+
+59
+00:05:10.534 --> 00:05:16.017
+Aur billing and usage, saath mein phone ya laptop ke liye notification settings.
+
+60
+00:05:18.433 --> 00:05:23.309
+Chatbot common savalon ke jawaab automatically deta hai, din aur raata.
+
+61
+00:05:23.309 --> 00:05:26.881
+Aap drag and drop se five tak flows bana sakte hain.
+
+62
+00:05:27.331 --> 00:05:28.867
+Flow builder kholiye.
+
+63
+00:05:29.317 --> 00:05:34.288
+Ek start message drag kijiye, jaise welcome to Oribrix, how can we help?
+
+64
+00:05:34.738 --> 00:05:40.327
+Buttons ya list jodiye: track my order, prices, become a vendor, talk to support.
+
+65
+00:05:40.777 --> 00:05:47.177
+Actions jodiye, jaise media bhejna, location maangna, ya product catalogue dikhana.
+
+66
+00:05:47.627 --> 00:05:52.384
+Kisi branch ko human agent se, ya doosre flow se connect kijiye.
+
+67
+00:05:52.834 --> 00:05:56.796
+Active pe click kijiye, aur save kijiye. Flow ab live hai.
+
+68
+00:05:56.796 --> 00:06:02.259
+Hamesha talk to support option rakhiye, taaki customers bot ke saath kabhi atken
+
+69
+00:06:02.259 --> 00:06:02.669
+Nahin.
+
+70
+00:06:05.066 --> 00:06:10.470
+Aakhir mein, wo standards jo har Oribrix customer care agent ko follow karne
+
+71
+00:06:10.470 --> 00:06:11.039
+Chahiye.
+
+72
+00:06:11.489 --> 00:06:15.628
+Usi din reply kijiye, twenty four hour window ke andra.
+
+73
+00:06:16.078 --> 00:06:20.963
+Customers ko naam se greet kijiye, aur messages chhote aur clear rakhiye.
+
+74
+00:06:21.413 --> 00:06:27.195
+Har chat ko tag kijiye, taaki koi bhi wahin se aage badha sake jahan aapne chhoda.
+
+75
+00:06:27.645 --> 00:06:33.810
+O T Ps, passwords ya API key kabhi share mat kijiye, na chat mein na kahin aura.
+
+76
+00:06:34.260 --> 00:06:36.287
+Opt-outs ka samman kijiye.
+
+77
+00:06:36.737 --> 00:06:41.921
+Aur refunds aur complaints ko usi din sahi insan tak escalate kijiye.
+
+78
+00:06:44.333 --> 00:06:50.034
+Aakhiri quick check. Ek customer ne thirty hours pehle likha, aur kisi ne reply nahi
+
+79
+00:06:50.034 --> 00:06:53.223
+Kiya. Ab aap unhe message kaise kar sakte hain?
+
+80
+00:06:53.223 --> 00:06:54.445
+Ek second sochiye.
+
+81
+00:06:58.395 --> 00:07:03.707
+Answer: sirf approved template se, kyunki twenty four hour window band ho chuki hai.
+
+82
+00:07:06.500 --> 00:07:08.591
+Poore course ko recap karte hain.
+
+83
+00:07:09.041 --> 00:07:13.883
+Module one. Fresh number, business documents, daily limits aur dashboard.
+
+84
+00:07:14.333 --> 00:07:18.493
+Module two. Teen categories mein templates, Meta se approved.
+
+85
+00:07:18.943 --> 00:07:24.469
+Module three. CSV broadcasts, analytics, aur secret key ke saath API.
+
+86
+00:07:24.919 --> 00:07:30.017
+Module four. Twenty four hour window, tags, roles, opt-outs aur chatbot.
+
+87
+00:07:30.017 --> 00:07:35.116
+Ab practice quiz try kijiye, phir certificate ke liye final quiz dijiye.
+
+88
+00:07:37.500 --> 00:07:42.505
+Module 4 yahin khatam hota hai. Aapne charon modules poore kar liye hain.
+
+89
+00:07:42.505 --> 00:07:45.521
+Ab quiz dijiye, aur apna certificate lijiye.

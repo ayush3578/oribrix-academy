@@ -1,0 +1,353 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:04.487
+Welcome to the WhatsApp Customer Care course. Module one.
+
+2
+00:00:04.487 --> 00:00:08.949
+The basics of the WhatsApp Business API, and a tour of the dashboard.
+
+3
+00:00:11.133 --> 00:00:16.091
+Customers already live on WhatsApp. For Oribrix, that makes it one of the best
+
+4
+00:00:16.091 --> 00:00:20.541
+Places to answer questions, send order updates and win back customers.
+
+5
+00:00:20.541 --> 00:00:25.753
+This course shows you how the WhatsApp Business API platform works, so you can use
+
+6
+00:00:25.753 --> 00:00:26.706
+It confidently.
+
+7
+00:00:27.156 --> 00:00:30.143
+First, what the WhatsApp Business API actually is.
+
+8
+00:00:30.593 --> 00:00:33.878
+Then how it differs from the normal WhatsApp app on your phone.
+
+9
+00:00:34.328 --> 00:00:36.654
+Then the four main ways businesses use it.
+
+10
+00:00:37.104 --> 00:00:40.048
+Then what a business needs before it can be onboarded.
+
+11
+00:00:40.498 --> 00:00:43.207
+Then the daily message limits that Meta sets.
+
+12
+00:00:43.657 --> 00:00:46.046
+And finally, a tour of the main dashboard.
+
+13
+00:00:48.433 --> 00:00:53.764
+The WhatsApp Business API is designed for medium and large businesses that need to
+
+14
+00:00:53.764 --> 00:00:57.990
+Talk to customers at scale. Let's compare it with the normal app.
+
+15
+00:00:58.440 --> 00:01:02.618
+The normal WhatsApp app is one phone and one person typing by hand.
+
+16
+00:01:02.618 --> 00:01:07.294
+It has no connection to your systems, and it's fine for a handful of chats.
+
+17
+00:01:07.744 --> 00:01:13.221
+The Business API lets several agents share one number, sends messages automatically
+
+18
+00:01:13.221 --> 00:01:18.699
+From your system, connects to your website, app or C R M, and handles large volumes
+
+19
+00:01:18.699 --> 00:01:23.780
+Of chats. Brands use it for alerts, O T Ps, order updates and offers, because
+
+20
+00:01:23.780 --> 00:01:28.928
+WhatsApp messages have some of the highest open and read rates of any channel.
+
+21
+00:01:31.333 --> 00:01:34.764
+There are four main ways to use the WhatsApp Business API.
+
+22
+00:01:34.764 --> 00:01:39.674
+For customer care, the second and fourth matter most, but you should know all four.
+
+23
+00:01:40.124 --> 00:01:45.377
+One, marketing. Sending promotional messages to customers who have opted in, without
+
+24
+00:01:45.377 --> 00:01:50.442
+Risking the number getting banned. You can manage opt-ins and opt-outs, and track
+
+25
+00:01:50.442 --> 00:01:51.943
+Delivery and read rates.
+
+26
+00:01:52.393 --> 00:01:58.084
+Two, live chat and a shared inbox. Up to fifteen agents can log in from mobile or
+
+27
+00:01:58.084 --> 00:02:01.246
+Desktop and chat with customers in real time.
+
+28
+00:02:01.696 --> 00:02:07.948
+Three, API integration. Your website or app sends messages automatically, like O T
+
+29
+00:02:07.948 --> 00:02:13.667
+Ps, alerts and order updates. It can also connect to shops like Shopify and
+
+30
+00:02:13.667 --> 00:02:14.582
+WooCommerce.
+
+31
+00:02:15.032 --> 00:02:20.408
+Four, the chatbot. An automatic assistant that answers common questions, captures
+
+32
+00:02:20.408 --> 00:02:25.784
+Leads and guides customers, built with a drag and drop builder, no coding needed.
+
+33
+00:02:28.200 --> 00:02:31.617
+Before a business can use the API, it needs four things.
+
+34
+00:02:31.617 --> 00:02:34.301
+Onboarding itself is free with the platform.
+
+35
+00:02:34.751 --> 00:02:39.592
+A phone number that is not on WhatsApp at all. Not on the normal app and not on
+
+36
+00:02:39.592 --> 00:02:42.901
+WhatsApp Business. If it is, it must be removed first.
+
+37
+00:02:43.351 --> 00:02:45.228
+A Facebook page, or a website.
+
+38
+00:02:45.678 --> 00:02:48.366
+A Facebook account that is at least six months old.
+
+39
+00:02:48.816 --> 00:02:55.067
+And business documents for verification, such as G S T or M S M E registration.
+
+40
+00:02:57.467 --> 00:03:01.110
+Remember this, because it's the most common onboarding mistake.
+
+41
+00:03:01.110 --> 00:03:05.737
+The number you connect to the API must not already be on WhatsApp, in either the
+
+42
+00:03:05.737 --> 00:03:10.537
+Normal app or the WhatsApp Business app. Use a fresh number, or delete the WhatsApp
+
+43
+00:03:10.537 --> 00:03:15.279
+Account from it first. Once it is on the API, you won't be able to use that number
+
+44
+00:03:15.279 --> 00:03:16.262
+In the phone app.
+
+45
+00:04:08.800 --> 00:04:12.486
+Meta sets a daily limit on how many people you can message.
+
+46
+00:04:12.486 --> 00:04:15.797
+It starts small and grows as you show good behaviour.
+
+47
+00:04:16.247 --> 00:04:19.575
+At the start, the limit is around two thousand people per day.
+
+48
+00:04:20.025 --> 00:04:23.524
+Once the business account is verified, you can begin to grow.
+
+49
+00:04:23.974 --> 00:04:29.078
+Meta watches how your campaigns perform. Messages people want, and few blocks or
+
+50
+00:04:29.078 --> 00:04:30.993
+Reports, count in your favour.
+
+51
+00:04:31.443 --> 00:04:33.811
+The limit can rise to ten thousand per day.
+
+52
+00:04:34.261 --> 00:04:39.277
+And over time up to one lakh per day. Spammy messages do the opposite and can get
+
+53
+00:04:39.277 --> 00:04:40.639
+The number restricted.
+
+54
+00:04:43.033 --> 00:04:46.207
+After logging in, the first screen is the main dashboard.
+
+55
+00:04:46.207 --> 00:04:47.321
+Here's what's on it.
+
+56
+00:04:47.771 --> 00:04:52.805
+Live status. Once the Facebook account and number are connected, the account shows
+
+57
+00:04:52.805 --> 00:04:53.296
+As live.
+
+58
+00:04:53.746 --> 00:04:57.160
+The daily messaging limit set by Meta, which we just covered.
+
+59
+00:04:57.610 --> 00:05:02.384
+Profile and display picture. The picture and About text that customers see.
+
+60
+00:05:02.384 --> 00:05:05.631
+Keep the Oribrix logo and a clear description here.
+
+61
+00:05:06.081 --> 00:05:10.753
+Wallet credit. Messages are paid from this balance, so check it before a big
+
+62
+00:05:10.753 --> 00:05:12.844
+Campaign and recharge when needed.
+
+63
+00:05:13.294 --> 00:05:19.047
+WhatsApp link and Q R. Create a link or Q R code that opens a chat with Oribrix.
+
+64
+00:05:19.047 --> 00:05:22.787
+It's useful on invoices, visiting cards and posters.
+
+65
+00:05:23.237 --> 00:05:27.013
+And the website widget, a small WhatsApp chat button for the website.
+
+66
+00:05:29.400 --> 00:05:31.427
+A few words you'll hear throughout this course.
+
+67
+00:05:31.877 --> 00:05:35.653
+W A B A, the WhatsApp Business Account that lives with Meta.
+
+68
+00:05:36.103 --> 00:05:41.495
+B S P, Business Solution Provider. The company whose platform you use to run the
+
+69
+00:05:41.495 --> 00:05:43.719
+API, like the one in this course.
+
+70
+00:05:44.169 --> 00:05:47.636
+Template. A message format that Meta approves in advance.
+
+71
+00:05:47.636 --> 00:05:49.886
+You need one to start a conversation.
+
+72
+00:05:50.336 --> 00:05:55.496
+Opt-in and opt-out. Whether the customer agreed to receive messages, or asked to
+
+73
+00:05:55.496 --> 00:05:55.819
+Stop.
+
+74
+00:05:56.269 --> 00:06:01.459
+And the twenty four hour window. After a customer messages you, you can reply freely
+
+75
+00:06:01.459 --> 00:06:05.229
+For twenty four hours. After that, you need a template again.
+
+76
+00:06:07.633 --> 00:06:12.250
+Quick check. Oribrix wants to connect its office number, which is already on the
+
+77
+00:06:12.250 --> 00:06:16.060
+WhatsApp Business app. What must happen first? Think for a moment.
+
+78
+00:06:20.010 --> 00:06:23.751
+The answer: WhatsApp must be removed from that number first.
+
+79
+00:06:23.751 --> 00:06:26.495
+An API number cannot be on any WhatsApp app.
+
+80
+00:06:29.300 --> 00:06:31.028
+Let's summarise module one.
+
+81
+00:06:31.478 --> 00:06:36.662
+The API gives you many agents on one number, automation, integrations and scale.
+
+82
+00:06:37.112 --> 00:06:41.144
+It's used for marketing, live chat, automatic alerts and chatbots.
+
+83
+00:06:41.594 --> 00:06:46.292
+To start, you need a fresh number, a Facebook page or website, a six month old
+
+84
+00:06:46.292 --> 00:06:48.762
+Facebook account, and business documents.
+
+85
+00:06:49.212 --> 00:06:52.881
+The daily limit starts around two thousand and grows with good use.
+
+86
+00:06:53.331 --> 00:06:58.416
+And the dashboard shows status, limit, profile, wallet, link and Q R, and the
+
+87
+00:06:58.416 --> 00:07:02.313
+Website widget. In module two, we create message templates.
+
+88
+00:07:04.700 --> 00:07:09.159
+That's the end of module 1. Next up, module 2: Message templates.

@@ -58,6 +58,9 @@
   function pct(m, lang = S.lang) { const p = progOf(m.n, lang); return Math.min(100, Math.round(100 * covered(p.ranges) / modDuration(m, lang))); }
   function admUser(u) { u = u || S.user; return !!(u && (u.admin || (C.ADMIN_MOBILES || []).includes(u.mobile))); }
   function isAdm() { return !!(admUser() && S.adminPin); }
+  // Restricted courses open only after an admin allows the learner (admins always have access).
+  function accessOf(id = CUR) { if (!cinfo(id).restricted || admUser()) return "open"; return ((S.access || {})[K(id)]) || "none"; }
+  const canOpen = (id = CUR) => ["open", "granted"].includes(accessOf(id));
   function unlocked(m) { if (isAdm() || !C.SEQUENTIAL || m.n === 1) return true; return doneSet().has(m.n - 1) || doneSet().has(m.n); }
   function allDone() { if (isAdm()) return true; const d = doneSet(); return COURSE.modules.every(m => d.has(m.n)); }
 
@@ -104,6 +107,7 @@
     if (!(await useCourse(cid))) { await useCourse(LEGACY); if (me()) return viewCourses(); }
     if (!me()) return viewRegister();
     if (h === "admin") return viewAdmin();
+    if (!canOpen()) { await sync(); if (!canOpen()) { toast(t("acc_locked_toast"), 4000); return viewCourses(); } }
     if (h.startsWith("module-")) return viewPlayer(parseInt(h.split("-")[1], 10));
     if (h === "quiz") return viewQuiz();
     if (h === "certificate") return viewCertificate();
@@ -121,7 +125,7 @@
     const mins = id => Math.round(DATA[id].modules.reduce((a, m) => a + modDuration(m), 0) / 60);
     const nMods = live.reduce((a, c) => a + DATA[c.id].modules.length, 0), hours = live.reduce((a, c) => a + mins(c.id), 0) / 60;
     const courseCard = (c, i) => `<article class="lc reveal" style="--i:${i}">
-        <div class="lc-top"><span class="pill live">${t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
+        <div class="lc-top"><span class="pill ${c.restricted ? "lock" : "live"}">${c.restricted ? "&#128274; " + t("acc_pill") : t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
         <h3>${esc(tx(c.title))}</h3><p>${esc(tx(c.desc))}</p>
         <ol class="lc-mods">${DATA[c.id].modules.map(m => `<li>${esc(m.title[L] || m.title.en)}</li>`).join("")}</ol>
         <div class="lc-foot"><span>${t("land_inc")}</span></div></article>`;
@@ -184,6 +188,7 @@
         const set = new Set([...(S.done[K(id)] || []), ...(per[id].completed || [])].map(Number));
         S.done[K(id)] = [...set].sort((a, b) => a - b);
         S.result = S.result || {}; if (per[id].result) S.result[K(id)] = per[id].result;
+        if (per[id].access) { S.access = S.access || {}; S.access[K(id)] = per[id].access; }
       });
       persist(); return s;
     } catch (e) { return null; }
@@ -218,18 +223,30 @@
         <article class="mod card practicecard"><div class="num pq">&#9998;</div>
           <div class="mbody"><div class="mtop"><span class="pill on">${t("pr_unlimited")}</span>${bestOf() != null ? `<span class="dur">${t("pr_best")}: ${bestOf()}%</span>` : ""}</div>
           <h3>${t("pr_title")}</h3><p>${esc(ctx(ci.prDesc)) || t("pr_desc")}</p>
-          <a class="btn" href="#${H("practice")}">${t("pr_start")}</a></div></article></div>
+          <a class="btn" href="#${H("practice")}">${t("pr_start")}</a></div></article>
+        ${ci.demo ? `<article class="mod card democard"><div class="num yt">&#9654;</div>
+          <div class="mbody"><div class="mtop"><span class="pill">${t("demo_optional")}</span><span class="dur">YouTube</span></div>
+          <h3>${esc(ctx(ci.demo.title))}</h3><p>${esc(ctx(ci.demo.desc))}</p>
+          <div class="ytwrap" id="ytwrap"><button class="btn ghost" id="ytplay">&#9654; ${t("demo_watch")}</button></div></div></article>` : ""}</div>
       <article class="card quizcard ${allDone() || res ? "" : "locked"}"><div class="num q">?</div><div class="mbody">
         <h3>${res && res.passed ? t("quiz_done") : t("quiz_title")}</h3>${quiz}</div></article>
     </section>`);
+    const yb = $("#ytplay");
+    if (yb) yb.onclick = () => { $("#ytwrap").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(ci.demo.youtube)}?autoplay=1&rel=0" title="${esc(ctx(ci.demo.title))}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>`; };
   }
 
   // ---------------- course hub ----------------
   async function viewCourses() {
+    if (me() && Date.now() - (window.__sy || 0) > 20000) { window.__sy = Date.now(); await sync(); }
     const L = S.lang === "hi" ? "hi" : "en", tx = o => (o && (o[L] || o.en)) || "";
     const cards = COURSES.map(c => {
       if (c.status !== "live") return `<article class="card ccard soon"><div class="ctop"><span class="pill">${t("soon")}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p><div class="bar"><i style="width:0"></i></div><p class="hint">${t("soon_hint")}</p></article>`;
+      const acc = accessOf(c.id);
+      if (!["open", "granted"].includes(acc)) return `<article class="card ccard locked"><div class="ctop"><span class="pill lock">&#128274; ${t("acc_pill")}</span><span class="dur">${t("c_modules", { d: 0, n: c.modules || 0 })}</span></div>
+        <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p>
+        <p class="hint">${acc === "requested" ? t("acc_requested") : acc === "rejected" ? t("acc_rejected") : t("acc_hint")}</p>
+        <div class="nbtns">${acc === "requested" ? `<button class="btn ghost" disabled>${t("acc_sent")}</button>` : `<button class="btn" data-req="${esc(c.id)}">${t("acc_btn")}</button>`}</div></article>`;
       const d = doneSet(c.id), n = c.modules || 1, res = resOf(c.id), Hc = v => H(v, c.id);
       const passed = res && res.passed, pctDone = passed ? 100 : Math.round(100 * Math.min(d.size, n) / (n + 1));
       const pill = passed ? `<span class="pill ok">${t("c_completed")}</span>` : res ? `<span class="pill warn">${t("c_retake_pill", { p: res.percent })}</span>`
@@ -244,6 +261,11 @@
     }).join("");
     render(`<section class="wrap hub"><div class="dhead"><div><h1>${t("hello", { name: esc(me().name) })}</h1><p>${t("my_courses_sub")}</p></div></div>
       <div class="ccards">${cards}</div></section>`);
+    document.querySelectorAll("[data-req]").forEach(b => b.onclick = async () => {
+      b.disabled = true; b.textContent = t("loading");
+      try { const r = await API.call("request_access", { mobile: me().mobile, course: b.dataset.req }); S.access = S.access || {}; S.access[K(b.dataset.req)] = r.access || "requested"; persist(); toast(t("acc_sent_toast"), 4000); viewCourses(); }
+      catch (e) { b.disabled = false; b.textContent = t("acc_btn"); toast(t("net_err")); }
+    });
   }
 
   // ---------------- player ----------------
@@ -492,7 +514,8 @@
       if (e.code === "not_admin") { delete S.adminPin; persist(); return adminLogin("Wrong or changed PIN. Enter the current Admin PIN."); }
       return render(`<section class="wrap"><p class="err">${t("net_err")}</p></section>`);
     }
-    const N = d.totalModules || 8, L = d.learners.filter(x => !x.admin);
+    const N = d.totalModules || 8, L = d.learners.filter(x => !x.admin), R = !!d.restricted, reqs = d.requests || [];
+    const accLabel = { granted: "Allowed", requested: "Requested", rejected: "Rejected", revoked: "Removed", none: "No access", open: "Open" };
     const started = L.filter(x => x.modules.length > 0).length, allDoneN = L.filter(x => x.modules.length >= N).length;
     const taken = L.filter(x => x.result), passed = taken.filter(x => x.result.passed);
     const avg = taken.length ? Math.round(taken.reduce((a, x) => a + x.result.percent, 0) / taken.length) : 0;
@@ -504,7 +527,7 @@
     function rowsHtml() {
       const list = L.filter(x => (f === "all" || statusOf(x) === f) && (!q || (x.name + " " + x.mobile).toLowerCase().includes(q)))
         .sort((a, b) => String(b.lastSeen).localeCompare(String(a.lastSeen)));
-      if (!list.length) return `<tr><td colspan="7" class="hint" style="text-align:center;padding:24px">No learners match.</td></tr>`;
+      if (!list.length) return `<tr><td colspan="${R ? 8 : 7}" class="hint" style="text-align:center;padding:24px">No learners match.</td></tr>`;
       return list.map(x => {
         const st = statusOf(x);
         const dots = Array.from({ length: N }, (_, i) => `<i class="${x.modules.includes(i + 1) ? "on" : ""}" title="Module ${i + 1}${x.moduleDates[i + 1] ? ": " + x.moduleDates[i + 1] : ""}"></i>`).join("");
@@ -514,6 +537,7 @@
         const pr = x.practice ? `<b>${x.practice.best}%</b> best<br><small>${x.practice.attempts} attempt${x.practice.attempts > 1 ? "s" : ""} · last ${x.practice.last}%</small>` : `<span class="hint">—</span>`;
         return `<tr><td><b>${esc(x.name)}</b><br><small>${esc(x.mobile)} · ${x.lang === "hi" ? "Hinglish" : "English"}</small></td>
           <td><span class="badge s-${st}">${label[st]}</span></td>
+          ${R ? `<td><span class="badge a-${x.access}">${accLabel[x.access] || x.access}</span><br>${x.access === "granted" ? `<button class="btn ghost sm" data-acc="${esc(x.mobile)}" data-grant="0">Remove</button>` : `<button class="btn sm" data-acc="${esc(x.mobile)}" data-grant="1">Allow</button>`}</td>` : ""}
           <td><div class="dots">${dots}</div><small>${x.modules.length}/${N}</small></td>
           <td>${quiz}</td><td>${pr}</td>
           <td><small>${esc(x.registered)}<br>seen ${esc(x.lastSeen)}</small></td>
@@ -526,6 +550,8 @@
       <div class="ahead"><div><h1>Admin dashboard</h1><p class="hint">Signed in as ${esc(me().name)}. Skip mode is on for you: every module is open and you can jump anywhere in the videos.</p>
         <div class="seg acourse">${(COURSES || []).filter(c => c.status === "live").map(c => `<button data-ac="${esc(c.id)}" class="${c.id === AC ? "on" : ""}">${esc(ctx(c.title, "en"))}</button>`).join("")}</div></div>
         <div class="nbtns"><button class="btn ghost" id="a_ref">&#8635; Refresh</button><button class="btn ghost" id="a_csv">&#8681; Export CSV</button><button class="btn ghost" id="a_lock">Lock</button></div></div>
+      ${reqs.length ? `<div class="card areq"><h3>Access requests <span class="badge warn">${reqs.length}</span></h3><ul>${reqs.map(r => `<li><div><b>${esc(r.name)}</b> <small>${esc(r.mobile)}</small><br><small>${esc(r.courseName)} · ${esc(r.at)}</small></div>
+        <div class="nbtns"><button class="btn sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="1">Allow</button><button class="btn ghost sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="0" data-reject="1">Reject</button></div></li>`).join("")}</ul></div>` : ""}
       <div class="stats">
         <div class="stat"><b>${L.length}</b><span>Learners</span></div>
         <div class="stat"><b>${started}</b><span>Started</span></div>
@@ -543,10 +569,19 @@
         <div class="tools"><input id="a_q" placeholder="Search name or mobile"><select id="a_f">
           <option value="all">All learners</option><option value="new">Not started</option><option value="progress">In progress</option>
           <option value="ready">Quiz pending</option><option value="passed">Passed</option><option value="failed">Failed</option></select></div>
-        <div class="tablewrap"><table class="atable"><thead><tr><th>Learner</th><th>Status</th><th>Modules</th><th>Final quiz</th><th>Practice quiz</th><th>Registered / last seen</th><th></th></tr></thead>
+        <div class="tablewrap"><table class="atable"><thead><tr><th>Learner</th><th>Status</th>${R ? "<th>Access</th>" : ""}<th>Modules</th><th>Final quiz</th><th>Practice quiz</th><th>Registered / last seen</th><th></th></tr></thead>
           <tbody id="a_rows">${rowsHtml()}</tbody></table></div>
       </div></section>`);
-    const redraw = () => { $("#a_rows").innerHTML = rowsHtml(); bindReset(); };
+    function bindAccess() {
+      document.querySelectorAll("[data-acc]").forEach(b => b.onclick = async () => {
+        const course = b.dataset.course || AC, grant = b.dataset.grant === "1";
+        b.disabled = true;
+        try { await API.call("admin_access", { mobile: me().mobile, pin: S.adminPin, target: b.dataset.acc, course, grant, reject: !!b.dataset.reject }); toast(grant ? "Access allowed" : "Access removed"); viewAdmin(); }
+        catch (e) { b.disabled = false; toast(e.code === "not_admin" ? "PIN expired. Open admin again." : t("net_err")); }
+      });
+    }
+    bindAccess();
+    const redraw = () => { $("#a_rows").innerHTML = rowsHtml(); bindReset(); bindAccess(); };
     $("#a_q").oninput = e => { q = e.target.value.trim().toLowerCase(); redraw(); };
     $("#a_f").onchange = e => { f = e.target.value; redraw(); };
     $("#a_ref").onclick = () => viewAdmin();

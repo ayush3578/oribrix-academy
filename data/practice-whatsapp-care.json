@@ -1,0 +1,382 @@
+[
+ {
+  "m": 1,
+  "q": {
+   "en": "The API number can also stay on the WhatsApp phone app.",
+   "hi": "API number WhatsApp phone app pe bhi reh sakta hai."
+  },
+  "o": {
+   "en": [
+    "True",
+    "False"
+   ],
+   "hi": [
+    "Sahi",
+    "Galat"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "False. An API number can't be on any WhatsApp app.",
+   "hi": "Galat. API number kisi WhatsApp app pe nahi ho sakta."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "Minimum age of the Facebook account needed?",
+   "hi": "Facebook account kam se kam kitna purana chahiye?"
+  },
+  "o": {
+   "en": [
+    "1 month",
+    "6 months",
+    "2 years"
+   ],
+   "hi": [
+    "1 mahina",
+    "6 mahine",
+    "2 saal"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "At least six months old.",
+   "hi": "Kam se kam 6 mahine purana."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "How many agents can share one number in live chat?",
+   "hi": "Live chat mein ek number pe kitne agents ho sakte hain?"
+  },
+  "o": {
+   "en": [
+    "1",
+    "Up to 15",
+    "Up to 500"
+   ],
+   "hi": [
+    "1",
+    "15 tak",
+    "500 tak"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Up to 15 team members.",
+   "hi": "15 tak team members."
+  }
+ },
+ {
+  "m": 1,
+  "q": {
+   "en": "Daily limit can grow up to…",
+   "hi": "Daily limit kahan tak badh sakti hai?"
+  },
+  "o": {
+   "en": [
+    "5,000",
+    "1,00,000",
+    "It never changes"
+   ],
+   "hi": [
+    "5,000",
+    "1,00,000",
+    "Kabhi nahi badalti"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "From about 2,000 up to 1,00,000 with good use.",
+   "hi": "Lagbhag 2,000 se 1,00,000 tak, achhe use ke saath."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "An OTP template belongs to…",
+   "hi": "OTP template kis category mein aata hai?"
+  },
+  "o": {
+   "en": [
+    "Utility",
+    "Marketing",
+    "Authentication"
+   ],
+   "hi": [
+    "Utility",
+    "Marketing",
+    "Authentication"
+   ]
+  },
+  "a": 2,
+  "x": {
+   "en": "Authentication is for one-time passwords only.",
+   "hi": "Authentication sirf OTP ke liye hai."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "A 'Diwali 10% off' message is…",
+   "hi": "'Diwali 10% off' message kya hai?"
+  },
+  "o": {
+   "en": [
+    "Utility",
+    "Marketing",
+    "Authentication"
+   ],
+   "hi": [
+    "Utility",
+    "Marketing",
+    "Authentication"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Offers and promotions are marketing.",
+   "hi": "Offers aur promotions marketing hain."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "Do you upload the real image when creating an image template?",
+   "hi": "Image template banate waqt asli image upload karte hain?"
+  },
+  "o": {
+   "en": [
+    "Yes, always",
+    "No, you add it when sending the campaign"
+   ],
+   "hi": [
+    "Haan, hamesha",
+    "Nahi, campaign bhejte waqt add karte hain"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "The real media is added at send time.",
+   "hi": "Asli media bhejte waqt add hota hai."
+  }
+ },
+ {
+  "m": 2,
+  "q": {
+   "en": "How long does Meta usually take to review a template?",
+   "hi": "Meta template review mein aam taur pe kitna time leta hai?"
+  },
+  "o": {
+   "en": [
+    "A few minutes",
+    "A week",
+    "A month"
+   ],
+   "hi": [
+    "Kuch minute",
+    "Ek hafta",
+    "Ek mahina"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Usually a few minutes.",
+   "hi": "Aam taur pe kuch minute."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "Best campaign type for a new Excel list of people?",
+   "hi": "Logon ki nayi Excel list ke liye best campaign type?"
+  },
+  "o": {
+   "en": [
+    "API campaign",
+    "CSV broadcast",
+    "Chatbot"
+   ],
+   "hi": [
+    "API campaign",
+    "CSV broadcast",
+    "Chatbot"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "CSV broadcast uploads a new list.",
+   "hi": "CSV broadcast nayi list upload karta hai."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "Failed messages are…",
+   "hi": "Failed messages…"
+  },
+  "o": {
+   "en": [
+    "Charged double",
+    "Not charged",
+    "Retried forever"
+   ],
+   "hi": [
+    "Double charge",
+    "Charge nahi hote",
+    "Hamesha retry"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Only sent and delivered messages are charged.",
+   "hi": "Sirf sent aur delivered ka charge lagta hai."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "Order-dispatched messages sent automatically by the Oribrix system use…",
+   "hi": "Oribrix system se apne aap jaane wale order-dispatched messages kya use karte hain?"
+  },
+  "o": {
+   "en": [
+    "CSV broadcast",
+    "API campaign",
+    "Live chat"
+   ],
+   "hi": [
+    "CSV broadcast",
+    "API campaign",
+    "Live chat"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "The API sends messages automatically when events happen.",
+   "hi": "API events hone pe apne aap messages bhejta hai."
+  }
+ },
+ {
+  "m": 3,
+  "q": {
+   "en": "Where is the API documentation?",
+   "hi": "API documentation kahan hai?"
+  },
+  "o": {
+   "en": [
+    "Manage > API key > read API",
+    "Live chat",
+    "Wallet"
+   ],
+   "hi": [
+    "Manage > API key > read API",
+    "Live chat",
+    "Wallet"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Under Manage, API key, read API.",
+   "hi": "Manage, API key, read API mein."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Within 24 hours of a customer's message you can…",
+   "hi": "Customer ke message ke 24 ghante ke andar aap…"
+  },
+  "o": {
+   "en": [
+    "Reply freely",
+    "Only send templates",
+    "Not reply"
+   ],
+   "hi": [
+    "Freely reply kar sakte hain",
+    "Sirf templates bhej sakte hain",
+    "Reply nahi kar sakte"
+   ]
+  },
+  "a": 0,
+  "x": {
+   "en": "Inside the 24-hour window, any text is allowed.",
+   "hi": "24 ghante ki window mein koi bhi text chal jaata hai."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Why use tags like 'hot lead' or 'complaint'?",
+   "hi": "'hot lead' ya 'complaint' jaise tags kyun?"
+  },
+  "o": {
+   "en": [
+    "Decoration",
+    "To filter, follow up and hand over chats",
+    "To pay less"
+   ],
+   "hi": [
+    "Decoration",
+    "Filter, follow-up aur chats hand over karne ke liye",
+    "Kam pay karne ke liye"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Tags make follow-up and filtering easy.",
+   "hi": "Tags se follow-up aur filter aasaan hota hai."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "An opted-out customer should be…",
+   "hi": "Opted-out customer ko…"
+  },
+  "o": {
+   "en": [
+    "Added back by hand",
+    "Left out of campaigns",
+    "Called daily"
+   ],
+   "hi": [
+    "Haath se wapas add karna",
+    "Campaigns se bahar rakhna",
+    "Roz call karna"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Respect the opt-out; it keeps the number healthy.",
+   "hi": "Opt-out ka samman kijiye; isse number healthy rehta hai."
+  }
+ },
+ {
+  "m": 4,
+  "q": {
+   "en": "Who should have the Owner role?",
+   "hi": "Owner role kisko milna chahiye?"
+  },
+  "o": {
+   "en": [
+    "Every agent",
+    "One or two senior people",
+    "Customers"
+   ],
+   "hi": [
+    "Har agent",
+    "Ek ya do senior log",
+    "Customers"
+   ]
+  },
+  "a": 1,
+  "x": {
+   "en": "Owners control billing, settings and the API key.",
+   "hi": "Owner billing, settings aur API key control karta hai."
+  }
+ }
+]

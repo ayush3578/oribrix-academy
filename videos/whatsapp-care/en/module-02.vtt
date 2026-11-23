@@ -1,0 +1,297 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:05.819
+Module two. Message templates. The pre-approved messages you need before you can
+
+2
+00:00:05.819 --> 00:00:07.136
+Start a conversation.
+
+3
+00:00:09.333 --> 00:00:13.563
+On the API, a business cannot simply message anyone with any text.
+
+4
+00:00:13.563 --> 00:00:18.370
+The first message to a customer must use a template that Meta has approved.
+
+5
+00:00:18.370 --> 00:00:23.498
+That protects customers from spam, and it protects the Oribrix number from being
+
+6
+00:00:23.498 --> 00:00:24.010
+Blocked.
+
+7
+00:00:24.460 --> 00:00:26.252
+First, why templates exist.
+
+8
+00:00:26.702 --> 00:00:28.644
+Then the three template categories.
+
+9
+00:00:29.094 --> 00:00:31.398
+Then building a template, field by field.
+
+10
+00:00:31.848 --> 00:00:34.130
+Then variables, buttons and the preview.
+
+11
+00:00:34.580 --> 00:00:37.738
+And finally, Meta approval and what each status means.
+
+12
+00:00:40.133 --> 00:00:42.862
+Every template must be in one of three categories.
+
+13
+00:00:42.862 --> 00:00:47.173
+Picking the right one matters, because Meta prices and checks them differently.
+
+14
+00:00:47.623 --> 00:00:52.588
+Utility. Important updates and notifications the customer expects, like order
+
+15
+00:00:52.588 --> 00:00:56.199
+Confirmed, dispatched or delivered, or payment received.
+
+16
+00:00:56.649 --> 00:01:02.003
+Marketing. Anything promotional. Offers, new products, a festive sale, or a message
+
+17
+00:01:02.003 --> 00:01:04.841
+To bring back a customer who has gone quiet.
+
+18
+00:01:05.291 --> 00:01:10.880
+Authentication. Only for one-time passwords, like a login or verification code.
+
+19
+00:01:13.267 --> 00:01:17.542
+Don't try to hide an offer inside a utility template to make it cheaper.
+
+20
+00:01:17.542 --> 00:01:21.461
+Meta checks the content and can move it to the marketing category.
+
+21
+00:01:21.461 --> 00:01:26.448
+And if a template's category changes in the middle of a campaign, the platform stops
+
+22
+00:01:26.448 --> 00:01:30.248
+That campaign, so the remaining customers don't get the message.
+
+23
+00:02:10.433 --> 00:02:12.289
+Here's how to create a new template.
+
+24
+00:02:12.739 --> 00:02:17.422
+Open Manage, then Template messages. There are ready-made templates for different
+
+25
+00:02:17.422 --> 00:02:20.312
+Industries, which you can use as a starting point.
+
+26
+00:02:20.762 --> 00:02:23.216
+Or click New on the top right to make your own.
+
+27
+00:02:23.666 --> 00:02:28.733
+Choose the category, the language, and a name. The name is only for your reference.
+
+28
+00:02:28.733 --> 00:02:32.519
+Customers never see it. Use clear names like order dispatched.
+
+29
+00:02:32.969 --> 00:02:37.108
+Pick the header type: text, image, video, carousel or document.
+
+30
+00:02:37.558 --> 00:02:40.694
+Write the body, add an optional footer, and add buttons.
+
+31
+00:02:41.144 --> 00:02:43.661
+Check the preview on the right, then click Submit.
+
+32
+00:02:46.067 --> 00:02:47.816
+Let's look closer at the fields.
+
+33
+00:02:48.266 --> 00:02:52.052
+The body text can be up to one thousand and twenty four characters.
+
+34
+00:02:52.052 --> 00:02:53.408
+Keep it short and clear.
+
+35
+00:02:53.858 --> 00:02:58.634
+Variables, written as numbers in double curly brackets, are filled for each
+
+36
+00:02:58.634 --> 00:03:03.602
+Customer. For example, hello, then variable one for the name, your order, then
+
+37
+00:03:03.602 --> 00:03:06.914
+Variable two for the order I D, has been dispatched.
+
+38
+00:03:07.364 --> 00:03:12.131
+Sample values. For each variable, give an example value, so Meta's reviewer
+
+39
+00:03:12.131 --> 00:03:13.657
+Understands the message.
+
+40
+00:03:14.107 --> 00:03:18.379
+Media. For an image or video header, you don't need the real file now.
+
+41
+00:03:18.379 --> 00:03:21.552
+You add the actual image when you send the campaign.
+
+42
+00:03:22.002 --> 00:03:25.608
+Footer. A short line at the bottom, like the Oribrix tagline.
+
+43
+00:03:26.058 --> 00:03:30.303
+And the language. Many Indian and international languages are available.
+
+44
+00:03:32.700 --> 00:03:36.860
+Buttons make it easy for customers to respond. There are a few types.
+
+45
+00:03:37.310 --> 00:03:41.494
+Quick reply. One tap answers, like interested or not interested.
+
+46
+00:03:41.494 --> 00:03:46.398
+The reply comes back to the live chat, so you know exactly what they chose.
+
+47
+00:03:46.848 --> 00:03:52.018
+Visit website. A button that opens a link, for example track order, or download the
+
+48
+00:03:52.018 --> 00:03:52.267
+App.
+
+49
+00:03:52.717 --> 00:03:56.919
+Call phone. A button that calls a number, like the Oribrix support line.
+
+50
+00:03:57.369 --> 00:04:01.593
+And a talk to support quick reply, which starts a live chat with an agent.
+
+51
+00:04:04.000 --> 00:04:07.968
+After you submit, the template appears in the All section with its status.
+
+52
+00:04:08.418 --> 00:04:12.557
+Pending. Meta is reviewing it. Usually this takes only a few minutes.
+
+53
+00:04:13.007 --> 00:04:16.804
+Approved. It's ready to use in campaigns and through the API.
+
+54
+00:04:17.254 --> 00:04:21.259
+Rejected. Read the reason, fix the template, and submit again.
+
+55
+00:04:21.259 --> 00:04:26.491
+Common reasons are the wrong category, missing sample values, or misleading text.
+
+56
+00:04:28.900 --> 00:04:33.636
+Here's a starter set of templates that Oribrix customer care would use every day.
+
+57
+00:04:34.086 --> 00:04:36.497
+Order confirmed, as a utility template.
+
+58
+00:04:36.947 --> 00:04:39.379
+Order dispatched, with a tracking link button.
+
+59
+00:04:39.829 --> 00:04:42.965
+Order delivered, with quick reply buttons for feedback.
+
+60
+00:04:43.415 --> 00:04:45.825
+Payment received, or refund processed.
+
+61
+00:04:46.275 --> 00:04:50.478
+A marketing template to bring back customers who haven't ordered in a while.
+
+62
+00:04:50.928 --> 00:04:55.451
+And a talk to support button on most templates, so customers can reach a person.
+
+63
+00:04:57.867 --> 00:05:02.398
+Quick check. Which category should a, your order has been dispatched, template use?
+
+64
+00:05:02.398 --> 00:05:03.435
+Think for a moment.
+
+65
+00:05:07.385 --> 00:05:12.654
+The answer: utility. It's an important update the customer expects, not a promotion.
+
+66
+00:05:15.467 --> 00:05:17.174
+Let's summarise module two.
+
+67
+00:05:17.624 --> 00:05:21.165
+The first message to a customer must use an approved template.
+
+68
+00:05:21.615 --> 00:05:25.050
+The categories are utility, marketing and authentication.
+
+69
+00:05:25.500 --> 00:05:30.267
+The body is up to one thousand twenty four characters, and variables need sample
+
+70
+00:05:30.267 --> 00:05:30.684
+Values.
+
+71
+00:05:31.134 --> 00:05:34.526
+Buttons can be quick replies, website links or a call button.
+
+72
+00:05:34.976 --> 00:05:38.048
+And a template is pending, approved or rejected.
+
+73
+00:05:38.048 --> 00:05:40.288
+In module three, we send campaigns.
+
+74
+00:05:42.700 --> 00:05:48.417
+That's the end of module 2. Next up, module 3: Campaigns and automatic messages.

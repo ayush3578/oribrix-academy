@@ -1,0 +1,449 @@
+{
+ "version": 1,
+ "modules": [
+  {
+   "n": 1,
+   "title": {
+    "en": "WhatsApp Business API basics",
+    "hi": "WhatsApp Business API basics"
+   },
+   "desc": {
+    "en": "What the WhatsApp Business API is, what you need to get onboarded, daily limits and a tour of the dashboard.",
+    "hi": "WhatsApp Business API kya hai, onboarding ke liye kya chahiye, daily limits aur dashboard ka tour."
+   },
+   "video": {
+    "en": "videos/whatsapp-care/en/module-01.mp4",
+    "hi": "videos/whatsapp-care/hi/module-01.mp4"
+   },
+   "subtitles": {
+    "en": "videos/whatsapp-care/en/module-01.vtt",
+    "hi": "videos/whatsapp-care/hi/module-01.vtt"
+   },
+   "duration": {
+    "en": 430.6,
+    "hi": 488.7
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 10.3,
+      "title": "In this module"
+     },
+     {
+      "t": 47.6,
+      "title": "Normal WhatsApp vs WhatsApp Business API"
+     },
+     {
+      "t": 90.5,
+      "title": "Four ways businesses use the API"
+     },
+     {
+      "t": 147.4,
+      "title": "What you need to get onboarded"
+     },
+     {
+      "t": 176.7,
+      "title": "The API number cannot be on WhatsApp"
+     },
+     {
+      "t": 248.0,
+      "title": "Daily message limit grows with good use"
+     },
+     {
+      "t": 282.2,
+      "title": "The main dashboard"
+     },
+     {
+      "t": 328.6,
+      "title": "Words you'll hear"
+     },
+     {
+      "t": 366.8,
+      "title": "Quick check"
+     },
+     {
+      "t": 388.5,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 10.6,
+      "title": "In this module"
+     },
+     {
+      "t": 56.0,
+      "title": "Normal WhatsApp vs WhatsApp Business API"
+     },
+     {
+      "t": 105.1,
+      "title": "Four ways businesses use the API"
+     },
+     {
+      "t": 169.6,
+      "title": "What you need to get onboarded"
+     },
+     {
+      "t": 202.3,
+      "title": "The API number cannot be on WhatsApp"
+     },
+     {
+      "t": 273.6,
+      "title": "Daily message limit grows with good use"
+     },
+     {
+      "t": 317.1,
+      "title": "The main dashboard"
+     },
+     {
+      "t": 368.7,
+      "title": "Words you'll hear"
+     },
+     {
+      "t": 415.2,
+      "title": "Quick check"
+     },
+     {
+      "t": 439.1,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "en": "Message templates",
+    "hi": "Message templates"
+   },
+   "desc": {
+    "en": "Template categories, building a template with variables and buttons, and Meta approval.",
+    "hi": "Template categories, variables aur buttons ke saath template banana, aur Meta approval."
+   },
+   "video": {
+    "en": "videos/whatsapp-care/en/module-02.mp4",
+    "hi": "videos/whatsapp-care/hi/module-02.mp4"
+   },
+   "subtitles": {
+    "en": "videos/whatsapp-care/en/module-02.vtt",
+    "hi": "videos/whatsapp-care/hi/module-02.vtt"
+   },
+   "duration": {
+    "en": 349.9,
+    "hi": 393.7
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 8.5,
+      "title": "In this module"
+     },
+     {
+      "t": 39.3,
+      "title": "The three template categories"
+     },
+     {
+      "t": 72.5,
+      "title": "Don't hide marketing inside utility"
+     },
+     {
+      "t": 129.6,
+      "title": "Create a template"
+     },
+     {
+      "t": 165.3,
+      "title": "Template fields explained"
+     },
+     {
+      "t": 211.9,
+      "title": "Buttons you can add"
+     },
+     {
+      "t": 243.2,
+      "title": "After you submit"
+     },
+     {
+      "t": 268.1,
+      "title": "Templates Oribrix customer care needs"
+     },
+     {
+      "t": 297.1,
+      "title": "Quick check"
+     },
+     {
+      "t": 314.7,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 9.7,
+      "title": "In this module"
+     },
+     {
+      "t": 42.3,
+      "title": "The three template categories"
+     },
+     {
+      "t": 80.3,
+      "title": "Don't hide marketing inside utility"
+     },
+     {
+      "t": 137.4,
+      "title": "Create a template"
+     },
+     {
+      "t": 179.1,
+      "title": "Template fields explained"
+     },
+     {
+      "t": 231.5,
+      "title": "Buttons you can add"
+     },
+     {
+      "t": 267.6,
+      "title": "After you submit"
+     },
+     {
+      "t": 296.2,
+      "title": "Templates Oribrix customer care needs"
+     },
+     {
+      "t": 333.3,
+      "title": "Quick check"
+     },
+     {
+      "t": 353.2,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "en": "Campaigns & automatic messages",
+    "hi": "Campaigns & automatic messages"
+   },
+   "desc": {
+    "en": "CSV broadcasts, fallback values, cost and wallet, campaign analytics and automatic messages through the API.",
+    "hi": "CSV broadcasts, fallback values, cost aur wallet, campaign analytics aur API se automatic messages."
+   },
+   "video": {
+    "en": "videos/whatsapp-care/en/module-03.mp4",
+    "hi": "videos/whatsapp-care/hi/module-03.mp4"
+   },
+   "subtitles": {
+    "en": "videos/whatsapp-care/en/module-03.vtt",
+    "hi": "videos/whatsapp-care/hi/module-03.vtt"
+   },
+   "duration": {
+    "en": 362.9,
+    "hi": 413.2
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 11.6,
+      "title": "In this module"
+     },
+     {
+      "t": 47.1,
+      "title": "Three ways to launch a campaign"
+     },
+     {
+      "t": 76.7,
+      "title": "CSV broadcast in six steps"
+     },
+     {
+      "t": 111.1,
+      "title": "Filling variables and media"
+     },
+     {
+      "t": 144.8,
+      "title": "Check the cost and the wallet before Send now"
+     },
+     {
+      "t": 202.8,
+      "title": "Campaign analytics"
+     },
+     {
+      "t": 232.4,
+      "title": "What you can do from a campaign"
+     },
+     {
+      "t": 257.5,
+      "title": "API campaign: automatic messages"
+     },
+     {
+      "t": 304.0,
+      "title": "Quick check"
+     },
+     {
+      "t": 324.6,
+      "title": "Summary"
+     }
+    ],
+    "hi": [
+     {
+      "t": 12.1,
+      "title": "In this module"
+     },
+     {
+      "t": 50.4,
+      "title": "Three ways to launch a campaign"
+     },
+     {
+      "t": 84.3,
+      "title": "CSV broadcast in six steps"
+     },
+     {
+      "t": 124.7,
+      "title": "Filling variables and media"
+     },
+     {
+      "t": 166.3,
+      "title": "Check the cost and the wallet before Send now"
+     },
+     {
+      "t": 224.3,
+      "title": "Campaign analytics"
+     },
+     {
+      "t": 257.9,
+      "title": "What you can do from a campaign"
+     },
+     {
+      "t": 291.3,
+      "title": "API campaign: automatic messages"
+     },
+     {
+      "t": 344.8,
+      "title": "Quick check"
+     },
+     {
+      "t": 368.0,
+      "title": "Summary"
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "title": {
+    "en": "Live chat, chatbot & customer care",
+    "hi": "Live chat, chatbot & customer care"
+   },
+   "desc": {
+    "en": "Live chat, the 24-hour window, tags, roles, opt-outs, welcome/away messages, chatbot flows and care standards.",
+    "hi": "Live chat, 24 ghante ki window, tags, roles, opt-outs, welcome/away messages, chatbot flows aur care standards."
+   },
+   "video": {
+    "en": "videos/whatsapp-care/en/module-04.mp4",
+    "hi": "videos/whatsapp-care/hi/module-04.mp4"
+   },
+   "subtitles": {
+    "en": "videos/whatsapp-care/en/module-04.vtt",
+    "hi": "videos/whatsapp-care/hi/module-04.vtt"
+   },
+   "duration": {
+    "en": 397.4,
+    "hi": 467.0
+   },
+   "chapters": {
+    "en": [
+     {
+      "t": 10.1,
+      "title": "In this module"
+     },
+     {
+      "t": 39.4,
+      "title": "Handling a customer message"
+     },
+     {
+      "t": 73.6,
+      "title": "Reply inside 24 hours, or you'll need a template"
+     },
+     {
+      "t": 142.5,
+      "title": "Tags, history and contacts"
+     },
+     {
+      "t": 175.2,
+      "title": "Team roles (up to 15 members)"
+     },
+     {
+      "t": 203.4,
+      "title": "Opt-out management keeps the number safe"
+     },
+     {
+      "t": 237.0,
+      "title": "Live chat settings"
+     },
+     {
+      "t": 270.4,
+      "title": "Build a chatbot flow (no code)"
+     },
+     {
+      "t": 309.8,
+      "title": "Oribrix customer care standards"
+     },
+     {
+      "t": 339.4,
+      "title": "Quick check"
+     },
+     {
+      "t": 358.8,
+      "title": "Course recap"
+     }
+    ],
+    "hi": [
+     {
+      "t": 11.5,
+      "title": "In this module"
+     },
+     {
+      "t": 46.2,
+      "title": "Handling a customer message"
+     },
+     {
+      "t": 88.2,
+      "title": "Reply inside 24 hours, or you'll need a template"
+     },
+     {
+      "t": 157.0,
+      "title": "Tags, history and contacts"
+     },
+     {
+      "t": 200.0,
+      "title": "Team roles (up to 15 members)"
+     },
+     {
+      "t": 233.0,
+      "title": "Opt-out management keeps the number safe"
+     },
+     {
+      "t": 276.9,
+      "title": "Live chat settings"
+     },
+     {
+      "t": 317.6,
+      "title": "Build a chatbot flow (no code)"
+     },
+     {
+      "t": 364.3,
+      "title": "Oribrix customer care standards"
+     },
+     {
+      "t": 403.5,
+      "title": "Quick check"
+     },
+     {
+      "t": 425.7,
+      "title": "Course recap"
+     }
+    ]
+   }
+  }
+ ]
+}

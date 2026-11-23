@@ -2,6 +2,11 @@
 window.I18N = {
   en: {
     tagline: "Learn how vendors are onboarded, approved and supported on Oribrix.",
+    demo_optional: "Optional", demo_watch: "Watch the demo",
+    acc_pill: "Needs admin approval", acc_hint: "This course opens after an admin allows you. Send a request and you'll get access once it's approved.",
+    acc_btn: "Request access", acc_sent: "Request sent", acc_requested: "Your request has been sent. The course opens here as soon as an admin approves it.",
+    acc_rejected: "Your last request was not approved. You can ask again, or speak to your manager.", acc_sent_toast: "Request sent to the admin.",
+    acc_locked_toast: "This course needs admin approval. Request access from your courses page.",
     land_eyebrow: "Oribrix Academy", land_title: "Learn the Oribrix vendor platform, start to finish",
     land_tag: "Video courses for the Oribrix team: how vendors are onboarded, and how they run their store on the vendor portal. In English or Hinglish.",
     land_courses: "courses", land_hours: "hours of video", land_certs: "certificates",
@@ -59,6 +64,11 @@ window.I18N = {
   },
   hi: {
     tagline: "Seekhiye Oribrix pe vendors ko kaise onboard, approve aur support kiya jaata hai.",
+    demo_optional: "Optional", demo_watch: "Demo dekhiye",
+    acc_pill: "Admin approval chahiye", acc_hint: "Yeh course admin ki permission ke baad khulta hai. Request bhejiye, approve hote hi access mil jaayega.",
+    acc_btn: "Access request kijiye", acc_sent: "Request bhej di", acc_requested: "Aapki request chali gayi hai. Admin approve karte hi course yahan khul jaayega.",
+    acc_rejected: "Pichli request approve nahi hui. Dobara request kar sakte hain, ya apne manager se baat kijiye.", acc_sent_toast: "Request admin ko bhej di gayi.",
+    acc_locked_toast: "Is course ke liye admin approval chahiye. Apne courses page se access request kijiye.",
     land_eyebrow: "Oribrix Academy", land_title: "Oribrix vendor platform shuru se end tak seekhiye",
     land_tag: "Oribrix team ke liye video courses: vendors ka onboarding kaise hota hai, aur woh vendor portal pe apna store kaise chalate hain. English ya Hinglish mein.",
     land_courses: "courses", land_hours: "ghante ka video", land_certs: "certificates",

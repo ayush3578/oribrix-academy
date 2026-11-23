@@ -1,0 +1,309 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:06.776
+Module two. Message templates. Wo pre-approved messages jinke bina aap conversation
+
+2
+00:00:06.776 --> 00:00:08.288
+Shuru nahi kar sakte.
+
+3
+00:00:10.500 --> 00:00:14.316
+API pe business kisi ko bhi koi bhi text nahi bhej sakta.
+
+4
+00:00:14.316 --> 00:00:19.805
+Customer ko pehla message aise template se jaana chahiye jise Meta ne approve kiya
+
+5
+00:00:19.805 --> 00:00:25.294
+Ho. Isse customers spam se bachte hain, aur Oribrix ka number block hone se bachta
+
+6
+00:00:25.294 --> 00:00:25.561
+Hai.
+
+7
+00:00:26.011 --> 00:00:27.953
+Pehle, templates kyun hote hain.
+
+8
+00:00:28.403 --> 00:00:30.472
+Phir teen template categories.
+
+9
+00:00:30.922 --> 00:00:33.567
+Phir template banana, field by field.
+
+10
+00:00:34.017 --> 00:00:36.428
+Phir variables, buttons aur preview.
+
+11
+00:00:36.878 --> 00:00:40.739
+Aur aakhir mein, Meta approval aur har status ka matalba.
+
+12
+00:00:43.133 --> 00:00:47.119
+Har template teen mein se kisi ek category mein hona chahiye.
+
+13
+00:00:47.119 --> 00:00:52.477
+Sahi category chunna zaroori hai, kyunki Meta inhe alag price aur check karta hai.
+
+14
+00:00:52.927 --> 00:00:59.016
+Utility. Zaroori updates aur notifications jinki customer ko ummid hai, jaise order
+
+15
+00:00:59.016 --> 00:01:03.124
+Confirmed, dispatched ya delivered, ya payment received.
+
+16
+00:01:03.574 --> 00:01:09.176
+Marketing. Kuch bhi promotional. Offers, naye products, festive sale, ya chup ho
+
+17
+00:01:09.176 --> 00:01:12.257
+Chuke customer ko vaapas laane wala message.
+
+18
+00:01:12.707 --> 00:01:18.680
+Authentication. Sirf one-time passwords ke liye, jaise login ya verification code.
+
+19
+00:01:21.066 --> 00:01:26.301
+Utility template ke andar offer chhupakar use sasta banane ki koshish mat kijiye.
+
+20
+00:01:26.301 --> 00:01:31.213
+Meta content check karta hai aur use marketing category mein daal sakta hai.
+
+21
+00:01:31.213 --> 00:01:36.384
+Aur agar campaign ke bich mein template ki category badal jaaye, toh platform wo
+
+22
+00:01:36.384 --> 00:01:40.714
+Campaign rok deta hai, jisse baaki customers ko message nahi jaata.
+
+23
+00:02:18.233 --> 00:02:20.537
+Naya template aise banate hain.
+
+24
+00:02:20.987 --> 00:02:26.509
+Manage kholiye, phir Template messages. Alag industries ke liye ready-made templates
+
+25
+00:02:26.509 --> 00:02:29.072
+Hain, jinse aap shuruat kar sakte hain.
+
+26
+00:02:29.522 --> 00:02:33.448
+Ya apna banane ke liye top right pe New pe click kijiye.
+
+27
+00:02:33.898 --> 00:02:38.848
+Category, language, aur name chuniye. Name sirf aapke reference ke liye hai.
+
+28
+00:02:38.848 --> 00:02:43.732
+Customers ise kabhi nahi dekhte. Order dispatched jaise clear naam rakhiye.
+
+29
+00:02:44.182 --> 00:02:48.534
+Header type chuniye: text, image, video, carousel ya document.
+
+30
+00:02:48.984 --> 00:02:52.910
+Body likhiye, optional footer jodiye, aur buttons jodiye.
+
+31
+00:02:53.360 --> 00:02:57.498
+Right side pe preview check kijiye, phir Submit pe click kijiye.
+
+32
+00:02:59.900 --> 00:03:02.396
+Fields ko thoda karib se dekhte hain.
+
+33
+00:03:02.846 --> 00:03:07.156
+Body text one thousand twenty four characters tak ho sakta hai.
+
+34
+00:03:07.156 --> 00:03:09.139
+Ise chhota aur clear rakhiye.
+
+35
+00:03:09.589 --> 00:03:14.561
+Variables, jo double curly brackets mein numbers ki tarah likhe jaate hain, har
+
+36
+00:03:14.561 --> 00:03:19.469
+Customer ke liye bharte hain. Jaise, hello, phir variable one yaani name, your
+
+37
+00:03:19.469 --> 00:03:23.371
+Order, phir variable two yaani order I D, has been dispatched.
+
+38
+00:03:23.821 --> 00:03:29.580
+Sample values. Har variable ke liye ek example value dijiye, taaki Meta ka reviewer
+
+39
+00:03:29.580 --> 00:03:30.967
+Message samajh sake.
+
+40
+00:03:31.417 --> 00:03:36.340
+Media. Image ya video header ke liye abhi asli file ki zaroorat nahin.
+
+41
+00:03:36.340 --> 00:03:39.716
+Campaign bhejte samay asli image add karte hain.
+
+42
+00:03:40.166 --> 00:03:44.241
+Footer. Neeche ek chhoti line, jaise Oribrix ki tagline.
+
+43
+00:03:44.691 --> 00:03:49.896
+Aur language. Bahut saari Indian aur international languages available hain.
+
+44
+00:03:52.300 --> 00:03:56.322
+Buttons se customers ke liye jawaab dena aasaan hota hai.
+
+45
+00:03:56.322 --> 00:03:57.804
+Inke kuch types hain.
+
+46
+00:03:58.254 --> 00:04:03.048
+Quick reply. One tap wale jawaab, jaise interested ya not interested.
+
+47
+00:04:03.048 --> 00:04:08.537
+Reply vaapas live chat mein aata hai, taaki aapko pata ho ki unhonne kya chuna.
+
+48
+00:04:08.987 --> 00:04:14.704
+Visit website. Ek button jo link kholta hai, jaise track order, ya download the app.
+
+49
+00:04:15.154 --> 00:04:20.231
+Call phone. Ek button jo number call karta hai, jaise Oribrix support line.
+
+50
+00:04:20.681 --> 00:04:25.972
+Aur talk to support quick reply, jo agent ke saath live chat shuru karta hai.
+
+51
+00:04:28.366 --> 00:04:33.401
+Submit ke baad template, All section mein apne status ke saath dikhta hai.
+
+52
+00:04:33.851 --> 00:04:38.544
+Pending. Meta review kar raha hai. Usually isme bas kuch minutes lagte hain.
+
+53
+00:04:38.994 --> 00:04:43.453
+Approved. Ye campaigns mein aur API ke through use ke liye ready hai.
+
+54
+00:04:43.903 --> 00:04:49.062
+Rejected. Reason padhiye, template theek kijiye, aur phir se submit kijiye.
+
+55
+00:04:49.062 --> 00:04:54.633
+Common reasons hain galat category, sample values ka na hona, ya misleading text.
+
+56
+00:04:57.033 --> 00:05:02.473
+Ye templates ka ek starter set hai jo Oribrix customer care roz use karega.
+
+57
+00:05:02.923 --> 00:05:05.995
+Order confirmed, utility template ke roop men.
+
+58
+00:05:06.445 --> 00:05:09.517
+Order dispatched, tracking link button ke saatha.
+
+59
+00:05:09.967 --> 00:05:14.042
+Order delivered, feedback ke liye quick reply buttons ke saatha.
+
+60
+00:05:14.492 --> 00:05:17.180
+Payment received, ya refund processed.
+
+61
+00:05:17.630 --> 00:05:23.681
+Ek marketing template un customers ko vaapas laane ke liye jinhonne kaafi samay se
+
+62
+00:05:23.681 --> 00:05:24.862
+Order nahi kiya.
+
+63
+00:05:25.312 --> 00:05:30.740
+Aur zyadatar templates pe talk to support button, taaki customers kisi insan tak
+
+64
+00:05:30.740 --> 00:05:31.690
+Pahunch saken.
+
+65
+00:05:34.100 --> 00:05:39.284
+Quick check. Your order has been dispatched wala template kis category mein hona
+
+66
+00:05:39.284 --> 00:05:41.033
+Chahiye? Ek second sochiye.
+
+67
+00:05:44.983 --> 00:05:50.778
+Answer: utility. Ye ek zaroori update hai jiski customer ko ummid hai, promotion
+
+68
+00:05:50.778 --> 00:05:51.213
+Nahin.
+
+69
+00:05:54.000 --> 00:05:56.560
+Module two ko summarise karte hain.
+
+70
+00:05:57.010 --> 00:06:01.383
+Customer ko pehla message approved template se hi jaana chahiye.
+
+71
+00:06:01.833 --> 00:06:05.567
+Categories hain utility, marketing aur authentication.
+
+72
+00:06:06.017 --> 00:06:11.437
+Body one thousand twenty four characters tak hoti hai, aur variables ke liye sample
+
+73
+00:06:11.437 --> 00:06:12.417
+Values chahiye.
+
+74
+00:06:12.867 --> 00:06:17.048
+Buttons quick replies, website links ya call button ho sakte hain.
+
+75
+00:06:17.498 --> 00:06:20.921
+Aur template pending, approved ya rejected hota hai.
+
+76
+00:06:20.921 --> 00:06:23.621
+Module three mein hum campaigns bhejenge.
+
+77
+00:06:26.033 --> 00:06:32.241
+Module 2 yahin khatam hota hai. Agla hai module 3: Campaigns and automatic messages.
