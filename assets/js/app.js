@@ -63,6 +63,8 @@
   const isLocked = id => { const m = (S.modes || {})[id]; return m ? m === "approval" : !!cinfo(id).restricted; };
   function accessOf(id = CUR) { if (!isLocked(id) || admUser()) return "open"; return ((S.access || {})[K(id)]) || "none"; }
   const canOpen = (id = CUR) => ["open", "granted"].includes(accessOf(id));
+  // Approval-only courses stay invisible to a learner until an admin allows them.
+  const shown = c => !isLocked(c.id) || admUser() || (me() && ((S.access || {})[K(c.id)]) === "granted");
   function unlocked(m) { if (isAdm() || !C.SEQUENTIAL || m.n === 1) return true; return doneSet().has(m.n - 1) || doneSet().has(m.n); }
   function allDone() { if (isAdm()) return true; const d = doneSet(); return COURSE.modules.every(m => d.has(m.n)); }
 
@@ -123,11 +125,11 @@
   // ---------------- register ----------------
   function viewRegister() {
     const L = S.lang === "hi" ? "hi" : "en", tx = o => (o && (o[L] || o.en)) || "";
-    const live = (COURSES || []).filter(c => c.status === "live" && DATA[c.id]), soon = (COURSES || []).filter(c => c.status === "soon");
+    const live = (COURSES || []).filter(c => c.status === "live" && DATA[c.id] && !isLocked(c.id)), soon = (COURSES || []).filter(c => c.status === "soon" && !isLocked(c.id));
     const mins = id => Math.round(DATA[id].modules.reduce((a, m) => a + modDuration(m), 0) / 60);
     const nMods = live.reduce((a, c) => a + DATA[c.id].modules.length, 0), hours = live.reduce((a, c) => a + mins(c.id), 0) / 60;
     const courseCard = (c, i) => `<article class="lc reveal" style="--i:${i}">
-        <div class="lc-top"><span class="pill ${isLocked(c.id) ? "lock" : "live"}">${isLocked(c.id) ? "&#128274; " + t("acc_pill") : t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
+        <div class="lc-top"><span class="pill live">${t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
         <h3>${esc(tx(c.title))}</h3><p>${esc(tx(c.desc))}</p>
         <ol class="lc-mods">${DATA[c.id].modules.map(m => `<li>${esc(m.title[L] || m.title.en)}</li>`).join("")}</ol>
         <div class="lc-foot"><span>${t("land_inc")}</span></div></article>`;
@@ -242,14 +244,9 @@
   async function viewCourses() {
     if (me() && Date.now() - (window.__sy || 0) > 20000) { window.__sy = Date.now(); await sync(); }
     const L = S.lang === "hi" ? "hi" : "en", tx = o => (o && (o[L] || o.en)) || "";
-    const cards = COURSES.map(c => {
+    const cards = COURSES.filter(shown).map(c => {
       if (c.status !== "live") return `<article class="card ccard soon"><div class="ctop"><span class="pill">${t("soon")}</span></div>
         <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p><div class="bar"><i style="width:0"></i></div><p class="hint">${t("soon_hint")}</p></article>`;
-      const acc = accessOf(c.id);
-      if (!["open", "granted"].includes(acc)) return `<article class="card ccard locked"><div class="ctop"><span class="pill lock">&#128274; ${t("acc_pill")}</span><span class="dur">${t("c_modules", { d: 0, n: c.modules || 0 })}</span></div>
-        <h2>${esc(tx(c.title))}</h2><p>${esc(tx(c.desc))}</p>
-        <p class="hint">${acc === "requested" ? t("acc_requested") : acc === "rejected" ? t("acc_rejected") : t("acc_hint")}</p>
-        <div class="nbtns">${acc === "requested" ? `<button class="btn ghost" disabled>${t("acc_sent")}</button>` : `<button class="btn" data-req="${esc(c.id)}">${t("acc_btn")}</button>`}</div></article>`;
       const d = doneSet(c.id), n = c.modules || 1, res = resOf(c.id), Hc = v => H(v, c.id);
       const passed = res && res.passed, pctDone = passed ? 100 : Math.round(100 * Math.min(d.size, n) / (n + 1));
       const pill = passed ? `<span class="pill ok">${t("c_completed")}</span>` : res ? `<span class="pill warn">${t("c_retake_pill", { p: res.percent })}</span>`
@@ -264,11 +261,6 @@
     }).join("");
     render(`<section class="wrap hub"><div class="dhead"><div><h1>${t("hello", { name: esc(me().name) })}</h1><p>${t("my_courses_sub")}</p></div></div>
       <div class="ccards">${cards}</div></section>`);
-    document.querySelectorAll("[data-req]").forEach(b => b.onclick = async () => {
-      b.disabled = true; b.textContent = t("loading");
-      try { const r = await API.call("request_access", { mobile: me().mobile, course: b.dataset.req }); S.access = S.access || {}; S.access[K(b.dataset.req)] = r.access || "requested"; persist(); toast(t("acc_sent_toast"), 4000); viewCourses(); }
-      catch (e) { b.disabled = false; b.textContent = t("acc_btn"); toast(t("net_err")); }
-    });
   }
 
   // ---------------- player ----------------
@@ -517,7 +509,20 @@
       if (e.code === "not_admin") { delete S.adminPin; persist(); return adminLogin("Wrong or changed PIN. Enter the current Admin PIN."); }
       return render(`<section class="wrap"><p class="err">${t("net_err")}</p></section>`);
     }
-    const N = d.totalModules || 8, L = d.learners.filter(x => !x.admin), R = !!d.restricted, reqs = d.requests || [];
+    const N = d.totalModules || 8, L = d.learners.filter(x => !x.admin), R = !!d.restricted;
+    const cName = id => { const c = (COURSES || []).find(x => x.id === id); return c ? ctx(c.title, "en") : id; };
+    const lockedIds = (d.lockedCourses || []).filter(id => (COURSES || []).some(c => c.id === id)), people = d.people || [];
+    let pq = "";
+    function peopleHtml() {
+      const list = people.filter(p => !pq || (p.name + " " + p.mobile).toLowerCase().includes(pq)).sort((a, b) => String(a.name).localeCompare(String(b.name)));
+      if (!list.length) return `<li class="hint">No learners match.</li>`;
+      return list.map(p => {
+        const has = lockedIds.filter(id => p.access[id] === "granted"), not = lockedIds.filter(id => p.access[id] !== "granted");
+        return `<li><div class="pwho"><b>${esc(p.name)}</b><br><small>${esc(p.mobile)}</small></div>
+          <div class="pchips">${has.map(id => `<span class="chip">${esc(cName(id))}<button aria-label="Remove ${esc(cName(id))} for ${esc(p.name)}" data-acc="${esc(p.mobile)}" data-course="${esc(id)}" data-grant="0">&times;</button></span>`).join("") || `<span class="hint">No extra courses</span>`}</div>
+          ${not.length ? `<div class="pgive"><select aria-label="Course to give ${esc(p.name)}" data-pick="${esc(p.mobile)}">${not.map(id => `<option value="${esc(id)}">${esc(cName(id))}</option>`).join("")}</select><button class="btn sm" data-give="${esc(p.mobile)}">Give access</button></div>` : ""}</li>`;
+      }).join("");
+    }
     const accLabel = { granted: "Allowed", requested: "Requested", rejected: "Rejected", revoked: "Removed", none: "No access", open: "Open" };
     const started = L.filter(x => x.modules.length > 0).length, allDoneN = L.filter(x => x.modules.length >= N).length;
     const taken = L.filter(x => x.result), passed = taken.filter(x => x.result.passed);
@@ -553,12 +558,13 @@
       <div class="ahead"><div><h1>Admin dashboard</h1><p class="hint">Signed in as ${esc(me().name)}. Skip mode is on for you: every module is open and you can jump anywhere in the videos.</p>
         <div class="seg acourse">${(COURSES || []).filter(c => c.status === "live").map(c => `<button data-ac="${esc(c.id)}" class="${c.id === AC ? "on" : ""}">${esc(ctx(c.title, "en"))}</button>`).join("")}</div></div>
         <div class="nbtns"><button class="btn ghost" id="a_ref">&#8635; Refresh</button><button class="btn ghost" id="a_csv">&#8681; Export CSV</button><button class="btn ghost" id="a_lock">Lock</button></div></div>
-      <div class="card amodes"><h3>Course access</h3><p class="hint">Open = every learner can start it. Needs approval = learners request access and you allow them. New courses start as "Needs approval".</p>
+      <div class="card amodes"><h3>Course access</h3><p class="hint">Open = every learner sees it. Needs approval = hidden until you give a learner access below. New courses start as "Needs approval".</p>
         <ul>${(COURSES || []).map(c => { const m = (d.modes || {})[c.id] || (["vendor-onboarding", "vendor-portal"].includes(c.id) ? "open" : "approval"), on = m === "approval";
           return `<li><div><b>${esc(ctx(c.title, "en"))}</b> <span class="pill ${c.status === "live" ? "live" : ""}">${c.status === "live" ? "Live" : "Coming soon"}</span><br><small>${on ? "&#128274; Needs approval" : "Open for all"}</small></div>
           <label class="switch" title="Needs approval"><input type="checkbox" role="switch" data-mode="${esc(c.id)}" ${on ? "checked" : ""} aria-label="${esc(ctx(c.title, "en"))}: needs admin approval"><span></span></label></li>`; }).join("")}</ul></div>
-      ${reqs.length ? `<div class="card areq"><h3>Access requests <span class="badge warn">${reqs.length}</span></h3><ul>${reqs.map(r => `<li><div><b>${esc(r.name)}</b> <small>${esc(r.mobile)}</small><br><small>${esc(r.courseName)} · ${esc(r.at)}</small></div>
-        <div class="nbtns"><button class="btn sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="1">Allow</button><button class="btn ghost sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="0" data-reject="1">Reject</button></div></li>`).join("")}</ul></div>` : ""}
+      <div class="card apeople"><h3>Learner access</h3>
+        <p class="hint">Courses that need approval are hidden from learners. Pick a course next to a name and press Give access. They see it the next time they open the site.</p>
+        ${lockedIds.length ? `<input id="p_q" placeholder="Search name or mobile"><ul id="p_rows">${peopleHtml()}</ul>` : `<p class="hint">No course needs approval right now. Switch one to "Needs approval" above.</p>`}</div>
       <div class="stats">
         <div class="stat"><b>${L.length}</b><span>Learners</span></div>
         <div class="stat"><b>${started}</b><span>Started</span></div>
@@ -588,6 +594,16 @@
       });
     }
     bindAccess();
+    function bindPeople() {
+      document.querySelectorAll("[data-give]").forEach(b => b.onclick = async () => {
+        const sel = document.querySelector(`[data-pick="${b.dataset.give}"]`), course = sel.value; b.disabled = true; b.textContent = "Saving…";
+        try { await API.call("admin_access", { mobile: me().mobile, pin: S.adminPin, target: b.dataset.give, course, grant: true });
+          const p = people.find(x => x.mobile === b.dataset.give); p.access[course] = "granted"; $("#p_rows").innerHTML = peopleHtml(); bindPeople(); bindAccess(); toast(`${cName(course)} opened for ${p.name}`); }
+        catch (e) { b.disabled = false; b.textContent = "Give access"; toast(e.code === "not_admin" ? "PIN expired. Open admin again." : t("net_err")); }
+      });
+    }
+    bindPeople();
+    if ($("#p_q")) $("#p_q").oninput = e => { pq = e.target.value.trim().toLowerCase(); $("#p_rows").innerHTML = peopleHtml(); bindPeople(); bindAccess(); };
     document.querySelectorAll("[data-mode]").forEach(inp => inp.onchange = async () => {
       const mode = inp.checked ? "approval" : "open"; inp.disabled = true;
       try { await API.call("admin_course_mode", { mobile: me().mobile, pin: S.adminPin, course: inp.dataset.mode, mode }); S.modes = Object.assign({}, S.modes, { [inp.dataset.mode]: mode }); persist(); toast(mode === "open" ? "Course is now open for all" : "Course now needs approval"); viewAdmin(); }

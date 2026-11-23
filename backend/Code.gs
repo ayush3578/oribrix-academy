@@ -77,7 +77,7 @@ function handle(p) {
       case "request_access": return requestAccess(p);
       case "admin_access": return adminAccess(p);
       case "admin_course_mode": return adminCourseMode(p);
-      case "meta": return { modes: courseModes(Object.keys(COURSES)) };
+      case "meta": return { modes: courseModes(knownIds()) };
     }
     return { error: "unknown_action" };
   } catch (err) {
@@ -94,6 +94,8 @@ function totalModules(c) { return c === DEFAULT_COURSE ? Number(setting("TOTAL_M
 /* Per-course access mode, switchable from the admin dashboard (Settings key COURSE_ACCESS, JSON {"course-id": "open" | "approval"}).
    Courses without an entry: "open" if listed in OPEN_BY_DEFAULT, otherwise "approval" (so new courses start locked). */
 const OPEN_BY_DEFAULT = ["vendor-onboarding", "vendor-portal"];
+// Upcoming courses listed on the site but not built yet. Admins can already allow learners for them.
+const EXTRA_IDS = ["admin-portal"];
 let _accessMap = null;
 function accessMap() {
   if (_accessMap) return _accessMap;
@@ -101,6 +103,7 @@ function accessMap() {
   return _accessMap;
 }
 function isRestricted(c) { const m = accessMap()[c]; return m ? m === "approval" : OPEN_BY_DEFAULT.indexOf(c) < 0; }
+function knownIds() { return Object.keys(COURSES).concat(Object.keys(accessMap()), EXTRA_IDS).filter((c, i, a) => a.indexOf(c) === i); }
 function courseModes(ids) { const out = {}; ids.forEach(c => { out[c] = isRestricted(c) ? "approval" : "open"; }); return out; }
 /* "open" (no permission needed), "granted", "requested", "rejected" or "none". Admins always have access. */
 function accessOf(mobile, course, accRows) {
@@ -165,13 +168,14 @@ function status(p) {
   const all = {};
   if (l) {
     const prog = rows("Progress").filter(r => String(r.mobile) === mobile), res = rows("Results").filter(r => String(r.mobile) === mobile), acc = rows("Access");
+    knownIds().filter(c => !COURSES[c]).forEach(c => { all[c] = { completed: [], result: null, access: accessOf(mobile, c, acc) }; });
     Object.keys(COURSES).forEach(c => {
       all[c] = { completed: Array.from(new Set(prog.filter(r => rc(r) === c).map(r => Number(r.module)))).sort((a, b) => a - b),
                  result: publicResult(res.find(r => rc(r) === c)), access: accessOf(mobile, c, acc) };
     });
   }
   return { registered: !!l, name: l ? l.name : null, completed: l ? all[course].completed : [], result: l ? all[course].result : null,
-           courses: all, modes: courseModes(Object.keys(COURSES)), admin: isAdminMobile(mobile) };
+           courses: all, modes: courseModes(knownIds()), admin: isAdminMobile(mobile) };
 }
 
 function progress(p) {
@@ -374,8 +378,12 @@ function adminData(p) {
   const latest = {}; acc.forEach(a => { latest[String(a.mobile) + "|" + a.course] = a; });
   const requests = Object.keys(latest).map(k => latest[k]).filter(a => String(a.status) === "requested" && COURSES[a.course])
     .map(a => ({ mobile: String(a.mobile), name: a.name, course: String(a.course), courseName: courseName(String(a.course)), at: f(a.requested_at) }));
-  const allIds = Object.keys(COURSES).concat(Object.keys(accessMap())).filter((c, i, a) => a.indexOf(c) === i);
-  return { course: course, restricted: isRestricted(course), requests: requests, modes: courseModes(allIds),
+  const allIds = knownIds(), locked = allIds.filter(isRestricted);
+  const people = rows("Learners").filter(l => !isAdminMobile(String(l.mobile))).map(l => {
+    const m = String(l.mobile), a = {}; locked.forEach(c => { const x = latest[m + "|" + c]; a[c] = x ? String(x.status) : "none"; });
+    return { mobile: m, name: l.name, lastSeen: f(l.last_seen), access: a };
+  });
+  return { course: course, restricted: isRestricted(course), requests: requests, modes: courseModes(allIds), people: people, lockedCourses: locked,
            courses: Object.keys(COURSES).map(c => ({ id: c, name: courseName(c), modules: totalModules(c), restricted: isRestricted(c) })),
            learners: learners, totalModules: total, passPercent: Number(setting("PASS_PERCENT", 80)),
            questions: Object.keys(qs).map(k => qs[k]).filter(q => q.asked > 0).sort((a, b) => b.wrong / b.asked - a.wrong / a.asked) };
@@ -392,8 +400,9 @@ function requestAccess(p) {
 
 function adminAccess(p) {
   needAdmin(p);
-  const target = cleanMobile(p.target), l = learner(target), course = courseOf(p);
+  const target = cleanMobile(p.target), l = learner(target), course = String(p.course || "").trim();
   if (!l) fail("not_registered");
+  if (!/^[a-z0-9-]{2,40}$/.test(course)) fail("bad_course");
   const status = p.grant === true || p.grant === "true" ? "granted" : (p.reject ? "rejected" : "revoked");
   append("Access", { mobile: "'" + target, name: l.name, course: course, status: status, decided_at: now(), decided_by: cleanMobile(p.mobile) });
   return { ok: true, access: status };
