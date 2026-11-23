@@ -18,8 +18,8 @@
 const COURSES = {
   "vendor-onboarding": { modules: 8, name: "Oribrix Vendor Onboarding Academy" },
   "vendor-portal": { modules: 6, name: "Oribrix Vendor Portal Academy" },
-  // restricted: true = opens only for learners an admin has allowed (Access tab)
-  "whatsapp-care": { modules: 4, name: "Oribrix WhatsApp Customer Care Academy", restricted: true }
+  // Open-for-all vs needs-approval is switched per course in the admin dashboard (see isRestricted below)
+  "whatsapp-care": { modules: 4, name: "Oribrix WhatsApp Customer Care Academy" }
 };
 const DEFAULT_COURSE = "vendor-onboarding";
 
@@ -76,6 +76,8 @@ function handle(p) {
       case "admin_reset": return adminReset(p);
       case "request_access": return requestAccess(p);
       case "admin_access": return adminAccess(p);
+      case "admin_course_mode": return adminCourseMode(p);
+      case "meta": return { modes: courseModes(Object.keys(COURSES)) };
     }
     return { error: "unknown_action" };
   } catch (err) {
@@ -89,7 +91,17 @@ function handle(p) {
 function courseOf(p) { const c = String((p && p.course) || DEFAULT_COURSE); if (!COURSES[c]) fail("bad_course"); return c; }
 function rc(r) { return String(r.course || "").trim() || DEFAULT_COURSE; }
 function totalModules(c) { return c === DEFAULT_COURSE ? Number(setting("TOTAL_MODULES", 8)) : COURSES[c].modules; }
-function isRestricted(c) { return !!(COURSES[c] && COURSES[c].restricted); }
+/* Per-course access mode, switchable from the admin dashboard (Settings key COURSE_ACCESS, JSON {"course-id": "open" | "approval"}).
+   Courses without an entry: "open" if listed in OPEN_BY_DEFAULT, otherwise "approval" (so new courses start locked). */
+const OPEN_BY_DEFAULT = ["vendor-onboarding", "vendor-portal"];
+let _accessMap = null;
+function accessMap() {
+  if (_accessMap) return _accessMap;
+  try { _accessMap = JSON.parse(String(setting("COURSE_ACCESS", "{}")) || "{}"); } catch (e) { _accessMap = {}; }
+  return _accessMap;
+}
+function isRestricted(c) { const m = accessMap()[c]; return m ? m === "approval" : OPEN_BY_DEFAULT.indexOf(c) < 0; }
+function courseModes(ids) { const out = {}; ids.forEach(c => { out[c] = isRestricted(c) ? "approval" : "open"; }); return out; }
 /* "open" (no permission needed), "granted", "requested", "rejected" or "none". Admins always have access. */
 function accessOf(mobile, course, accRows) {
   if (!isRestricted(course) || isAdminMobile(mobile)) return "open";
@@ -159,7 +171,7 @@ function status(p) {
     });
   }
   return { registered: !!l, name: l ? l.name : null, completed: l ? all[course].completed : [], result: l ? all[course].result : null,
-           courses: all, admin: isAdminMobile(mobile) };
+           courses: all, modes: courseModes(Object.keys(COURSES)), admin: isAdminMobile(mobile) };
 }
 
 function progress(p) {
@@ -362,7 +374,8 @@ function adminData(p) {
   const latest = {}; acc.forEach(a => { latest[String(a.mobile) + "|" + a.course] = a; });
   const requests = Object.keys(latest).map(k => latest[k]).filter(a => String(a.status) === "requested" && COURSES[a.course])
     .map(a => ({ mobile: String(a.mobile), name: a.name, course: String(a.course), courseName: courseName(String(a.course)), at: f(a.requested_at) }));
-  return { course: course, restricted: isRestricted(course), requests: requests,
+  const allIds = Object.keys(COURSES).concat(Object.keys(accessMap())).filter((c, i, a) => a.indexOf(c) === i);
+  return { course: course, restricted: isRestricted(course), requests: requests, modes: courseModes(allIds),
            courses: Object.keys(COURSES).map(c => ({ id: c, name: courseName(c), modules: totalModules(c), restricted: isRestricted(c) })),
            learners: learners, totalModules: total, passPercent: Number(setting("PASS_PERCENT", 80)),
            questions: Object.keys(qs).map(k => qs[k]).filter(q => q.asked > 0).sort((a, b) => b.wrong / b.asked - a.wrong / a.asked) };
@@ -384,6 +397,18 @@ function adminAccess(p) {
   const status = p.grant === true || p.grant === "true" ? "granted" : (p.reject ? "rejected" : "revoked");
   append("Access", { mobile: "'" + target, name: l.name, course: course, status: status, decided_at: now(), decided_by: cleanMobile(p.mobile) });
   return { ok: true, access: status };
+}
+
+/* Switch a course between "open" (everyone) and "approval" (admin must allow each learner). Works for upcoming course ids too. */
+function adminCourseMode(p) {
+  needAdmin(p);
+  const id = String(p.course || "").trim(), mode = p.mode === "open" ? "open" : "approval";
+  if (!/^[a-z0-9-]{2,40}$/.test(id)) fail("bad_course");
+  const map = accessMap(); map[id] = mode;
+  const st = sh("Settings"), vals = st.getDataRange().getValues(), i = vals.findIndex(r => r[0] === "COURSE_ACCESS"), json = JSON.stringify(map);
+  if (i >= 0) st.getRange(i + 1, 2).setValue(json); else st.appendRow(["COURSE_ACCESS", json, "Course access set from the admin dashboard: open = everyone, approval = admin must allow"]);
+  _accessMap = map;
+  return { ok: true, modes: map };
 }
 
 function adminReset(p) {

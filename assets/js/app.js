@@ -59,7 +59,9 @@
   function admUser(u) { u = u || S.user; return !!(u && (u.admin || (C.ADMIN_MOBILES || []).includes(u.mobile))); }
   function isAdm() { return !!(admUser() && S.adminPin); }
   // Restricted courses open only after an admin allows the learner (admins always have access).
-  function accessOf(id = CUR) { if (!cinfo(id).restricted || admUser()) return "open"; return ((S.access || {})[K(id)]) || "none"; }
+  // Mode per course comes from the server (admin switch); courses.json "restricted" is only the fallback.
+  const isLocked = id => { const m = (S.modes || {})[id]; return m ? m === "approval" : !!cinfo(id).restricted; };
+  function accessOf(id = CUR) { if (!isLocked(id) || admUser()) return "open"; return ((S.access || {})[K(id)]) || "none"; }
   const canOpen = (id = CUR) => ["open", "granted"].includes(accessOf(id));
   function unlocked(m) { if (isAdm() || !C.SEQUENTIAL || m.n === 1) return true; return doneSet().has(m.n - 1) || doneSet().has(m.n); }
   function allDone() { if (isAdm()) return true; const d = doneSet(); return COURSE.modules.every(m => d.has(m.n)); }
@@ -125,7 +127,7 @@
     const mins = id => Math.round(DATA[id].modules.reduce((a, m) => a + modDuration(m), 0) / 60);
     const nMods = live.reduce((a, c) => a + DATA[c.id].modules.length, 0), hours = live.reduce((a, c) => a + mins(c.id), 0) / 60;
     const courseCard = (c, i) => `<article class="lc reveal" style="--i:${i}">
-        <div class="lc-top"><span class="pill ${c.restricted ? "lock" : "live"}">${c.restricted ? "&#128274; " + t("acc_pill") : t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
+        <div class="lc-top"><span class="pill ${isLocked(c.id) ? "lock" : "live"}">${isLocked(c.id) ? "&#128274; " + t("acc_pill") : t("land_live")}</span><span class="lc-meta">${DATA[c.id].modules.length} ${t("stat_modules")} · ~${mins(c.id)} ${t("stat_minutes")}</span></div>
         <h3>${esc(tx(c.title))}</h3><p>${esc(tx(c.desc))}</p>
         <ol class="lc-mods">${DATA[c.id].modules.map(m => `<li>${esc(m.title[L] || m.title.en)}</li>`).join("")}</ol>
         <div class="lc-foot"><span>${t("land_inc")}</span></div></article>`;
@@ -183,6 +185,7 @@
       const s = await API.call("status", { mobile: me().mobile, course: CUR });
       if (s.name) S.user.name = s.name;
       S.user.admin = !!s.admin;
+      if (s.modes) S.modes = s.modes;
       const per = s.courses || { [CUR]: { completed: s.completed, result: s.result } };
       Object.keys(per).forEach(id => {
         const set = new Set([...(S.done[K(id)] || []), ...(per[id].completed || [])].map(Number));
@@ -550,6 +553,10 @@
       <div class="ahead"><div><h1>Admin dashboard</h1><p class="hint">Signed in as ${esc(me().name)}. Skip mode is on for you: every module is open and you can jump anywhere in the videos.</p>
         <div class="seg acourse">${(COURSES || []).filter(c => c.status === "live").map(c => `<button data-ac="${esc(c.id)}" class="${c.id === AC ? "on" : ""}">${esc(ctx(c.title, "en"))}</button>`).join("")}</div></div>
         <div class="nbtns"><button class="btn ghost" id="a_ref">&#8635; Refresh</button><button class="btn ghost" id="a_csv">&#8681; Export CSV</button><button class="btn ghost" id="a_lock">Lock</button></div></div>
+      <div class="card amodes"><h3>Course access</h3><p class="hint">Open = every learner can start it. Needs approval = learners request access and you allow them. New courses start as "Needs approval".</p>
+        <ul>${(COURSES || []).map(c => { const m = (d.modes || {})[c.id] || (["vendor-onboarding", "vendor-portal"].includes(c.id) ? "open" : "approval"), on = m === "approval";
+          return `<li><div><b>${esc(ctx(c.title, "en"))}</b> <span class="pill ${c.status === "live" ? "live" : ""}">${c.status === "live" ? "Live" : "Coming soon"}</span><br><small>${on ? "&#128274; Needs approval" : "Open for all"}</small></div>
+          <label class="switch" title="Needs approval"><input type="checkbox" role="switch" data-mode="${esc(c.id)}" ${on ? "checked" : ""} aria-label="${esc(ctx(c.title, "en"))}: needs admin approval"><span></span></label></li>`; }).join("")}</ul></div>
       ${reqs.length ? `<div class="card areq"><h3>Access requests <span class="badge warn">${reqs.length}</span></h3><ul>${reqs.map(r => `<li><div><b>${esc(r.name)}</b> <small>${esc(r.mobile)}</small><br><small>${esc(r.courseName)} · ${esc(r.at)}</small></div>
         <div class="nbtns"><button class="btn sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="1">Allow</button><button class="btn ghost sm" data-acc="${esc(r.mobile)}" data-course="${esc(r.course)}" data-grant="0" data-reject="1">Reject</button></div></li>`).join("")}</ul></div>` : ""}
       <div class="stats">
@@ -581,6 +588,11 @@
       });
     }
     bindAccess();
+    document.querySelectorAll("[data-mode]").forEach(inp => inp.onchange = async () => {
+      const mode = inp.checked ? "approval" : "open"; inp.disabled = true;
+      try { await API.call("admin_course_mode", { mobile: me().mobile, pin: S.adminPin, course: inp.dataset.mode, mode }); S.modes = Object.assign({}, S.modes, { [inp.dataset.mode]: mode }); persist(); toast(mode === "open" ? "Course is now open for all" : "Course now needs approval"); viewAdmin(); }
+      catch (e) { inp.checked = !inp.checked; inp.disabled = false; toast(e.code === "not_admin" ? "PIN expired. Open admin again." : t("net_err")); }
+    });
     const redraw = () => { $("#a_rows").innerHTML = rowsHtml(); bindReset(); bindAccess(); };
     $("#a_q").oninput = e => { q = e.target.value.trim().toLowerCase(); redraw(); };
     $("#a_f").onchange = e => { f = e.target.value; redraw(); };
@@ -781,6 +793,7 @@
     try { COURSES = await (await fetch("data/courses.json", { cache: "no-cache" })).json(); }
     catch (e) { COURSES = [{ id: LEGACY, status: "live", data: "data/course.json", modules: 8, notes: "notes/Oribrix-Vendor-Onboarding-Notes.pdf", title: { en: C.COURSE_NAME } }]; }
     if (!(await useCourse(LEGACY))) { app.innerHTML = "<p style='padding:40px'>Could not load the course data.</p>"; return; }
+    try { const m = await Promise.race([API.call("meta", {}), new Promise((_, r) => setTimeout(r, 3000))]); if (m && m.modes) { S.modes = m.modes; persist(); } } catch (e) {}
     await Promise.all(COURSES.filter(c => c.status === "live" && !DATA[c.id]).map(async c => { try { DATA[c.id] = await (await fetch(c.data, { cache: "no-cache" })).json(); } catch (e) {} }));
     document.documentElement.lang = S.lang === "hi" ? "hi-Latn" : "en";
     if (me()) sync().then(() => { if (!location.hash || location.hash === "#home") route(); });
